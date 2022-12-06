@@ -1,0 +1,61 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[american voltages]
+    \draw (0,0) to (3,0) to (3,3) to (0,3) to (0,0);
+        \node at (1.5,2.25) {$Circuit$};
+        \node at (1.5,1.75) {$Board$};
+        \node at (0.5,0.5) {$V_{in}$};
+        \node at (2.5,0.5) {$V_{out}$};
+            \draw [->,very thick] (3,0.5) to (4,0.5) to (4,1.5) to (5,1.5);
+    
+    \draw (-2,0) to (-5,0) to (-5,3) to (-2,3) to (-2,0);
+        \node at (-3.5,2.25) {$Function$};
+        \node at (-3.5,1.75) {$Generator$};
+        \node at (-4.2,0.75) {$Trigger$};
+        \node at (-4.2,0.25) {$Output$};
+            \draw [->,very thick] (-4.2,0) to (-4.2,-0.5) to (5,-0.5);
+        \node at (-2.7,0.75) {$Signal$};
+        \node at (-2.7,0.25) {$Output$};
+            \draw [->, very thick] (-2,0.5) to (0,0.5);
+            \draw [->, very thick] (-1,0.5) to (-1,3.25) to (5,3.25);
+
+    \draw (0,4) to (3,4) to (3,6) to (0,6) to (0,4);
+        \node at (1.5,5.5) {$DC~Power$};
+        \node at (1.5,5) {$Supply$};
+        \node at (0.5,4.25) {$+15~V$};
+            \draw [->,very thick] (0.5,4) to (0.5,3);
+        \node at (1.5,4.25) {$0V~$};
+            \draw [->,very thick] (1.5,4) to (1.5,3);
+        \node at (2.5,4.25) {$-15V~$};
+            \draw [->,very thick] (2.5,4) to (2.5,3);
+
+    \draw (7,-1) to (5,-1) to (5,4) to (7,4);
+        \node at (6,3.25) {$Channel~ 1$};
+            \node at (6,2.75) {$V_{in}$};
+        \node at (6,1.5) {$Channel~ 2$};
+            \node at (6,1) {$V_{out}$};
+        \node at (6,-0.25) {$Channel ~4$};
+            \node at (6,-0.75) {$Trigger$};
+        \node at (5.5,-1.5) {$Oscilloscope$};
+
+    
+    
+\end{circuitikz} 
+
+
+
+\end{document}
+
+
+ 

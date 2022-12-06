@@ -1,0 +1,36 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[american voltages]
+    \draw (0,0) node[npn](Q){2N3904};
+    \draw (Q.B) -- ++(-2,0) to [C, l2=$C_{in}$  and 220 nF, l2 halign=c] ++(-1,0) 
+        to [short, -o] ++(-1,0) node[anchor = east]{$V_{in}$};
+    \draw (Q.E) to [R, l2=$R_{E1}$ and 1 k$\Omega$] ++(0,-3) node[ground](GND){} to [short, *-] ++(-1,0) 
+        to ++(-1,0) to [R, l2=$R_2$ and 10 k$\Omega$, l2 halign=c] ++(0,3.77)
+        to [short, *-] ++(0,1.25) to [R, l2=$R_1$ and 47 k$\Omega$, l2 halign=c] ++(0,2) to [short, -*] ++(0,.52);
+   \draw (Q.C) to [short,*-] ++(1.25,0) node[npn, anchor=B](W){2N3904};
+   \draw (W.C) to [short, -*] ++(0,2.225);
+   \draw (W.E) to [short,*-] ++(1.5,0) to [C, l2_=$C_{out}$  and 47 $\mu $F, l2 halign=c] ++(1,0) 
+        to [short,-o] ++(1,0) node[anchor = west]{$V_{out}$};
+    \draw (W.E) to [R, l2=$R_{E2}$ and 820 $\Omega$] ++(0,-3.775) to [short] ++(-2.1,0);
+    \draw (Q.C) to [R, l2_=$R_C$ and 2.74 k$\Omega$, l2 halign=c] ++(0,3) coordinate(FT) 
+        to [short, *-o] ++(4,0) node[anchor = west]{$+15~V$}
+        (FT) to ++(-3,0) to [C, l2=$C$  and 47 $\mu$F, l2 halign=c] ++(-2,0) node[ground]{};
+\end{circuitikz}
+
+
+
+\end{document}
+
+
+ 
