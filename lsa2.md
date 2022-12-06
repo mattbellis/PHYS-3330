@@ -76,7 +76,7 @@ The default plot style in Mathematica does not look very good for presentation q
 
 Watch the [screencast on changing the plot style.](https://tinyurl.com/y4hxvmjn)
 
-![Plot of $sin(t)$ for $t$ between $0$ and $10$. Modifying the plot options can improve the viewing of the plot within Mathematica and for printing. Notice that the default axes and sine curve are very thin when printed.](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lsa2fig/plot.png){#fig:plot width="15cm"}
+![Plot of $sin(t)$ for $t$ between $0$ and $10$. Modifying the plot options can improve the viewing of the plot within Mathematica and for printing. Notice that the default axes and sine curve are very thin when printed.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lsa2fig/plot.png){#fig:plot width="15cm"}
 
 **Default**
 

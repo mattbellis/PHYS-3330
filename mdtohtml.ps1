@@ -8,3 +8,5 @@ pandoc .\lab7.md --toc --filter pandoc-xnos --mathjax -N -s --template=canvasTem
 pandoc .\lab8.md --toc --filter pandoc-xnos --mathjax -N -s --template=canvasTemplate.html -o lab8.html
 pandoc .\lab9.md --toc --filter pandoc-xnos --mathjax -N -s --template=canvasTemplate.html -o lab9.html
 pandoc .\lab10.md --toc --filter pandoc-xnos --mathjax -N -s --template=canvasTemplate.html -o lab10.html
+pandoc .\lsa1.md --toc --filter pandoc-xnos --mathjax -N -s --template=canvasTemplate.html -o lsa1.html
+pandoc .\lsa2.md --toc --filter pandoc-xnos --mathjax -N -s --template=canvasTemplate.html -o lsa2.html

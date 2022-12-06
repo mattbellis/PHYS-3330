@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab7.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab7.pdf).
 
 -->
 
@@ -59,7 +59,7 @@ In many practical applications it is better to use an op-amp as a source of gain
 
 The three terminals of a bipolar transistor are called the emitter, base, and collector (Figure @fig:NPN). A small current into the base controls a large current flow from the collector to the emitter. The current at the base is typically about 1% of the collector-emitter current. This means that the transistor acts as a current amplifier with a typical current gain ($h_{fe}$ or $\beta$) of about 100. Moreover, the large collector current flow is almost independent of the voltage across the transistor from collector to emitter. This makes it possible to obtain a large amplification of voltage by having the collector current flow through a resistor.
 
-![Diagram of an NPN bipolar junction transistor (left) and schematic symbol (right)](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab7fig/npn.png){#fig:NPN}
+![Diagram of an NPN bipolar junction transistor (left) and schematic symbol (right)](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab7fig/npn.png){#fig:NPN}
 
 # Current Amplifier Model of a Bipolar Transistor
 
@@ -91,15 +91,15 @@ $$G=\frac{-R_C}{R_E}$$
 
 **Note:** this gain is about the change in voltage, which is a bit different than the gains you have been working with so far.
 
-![Emitter follower transistor circuit](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab7fig/emitterf.png){#fig:emitterf width="7cm"}
+![Emitter follower transistor circuit](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab7fig/emitterf.png){#fig:emitterf width="7cm"}
 
-![Emitter amplifier transistor circuit](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab7fig/emittera.png){#fig:emittera width="7cm"}
+![Emitter amplifier transistor circuit](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab7fig/emittera.png){#fig:emittera width="7cm"}
 
 # Biasing a Transistor Amplifier
 
 Figure @fig:emittera shows the basic common emitter amplifier, while Figure @fig:emitterabn shows the common emitter amplifier circuit that you will build with the biasing resistors, power filter capacitor, and coupling capacitors in place. The power filter capacitor connecting +15 V to ground serves to ensure that electronic noise from the power supply does not enter the circuit. The coupling capacitors on the input and output serve to transmit the AC signal and block the DC voltage. For the input, this is essential because if you feed DC voltage into something providing its own voltage, bad things will happen. In this case, if the biasing DC voltage is directly connected to the output of the function generator ($V_{in}$) the output buffer in the function generator will break. For the output, the coupling capacitor is simply convenient as we don't care about the DC voltages, just the AC signal.
 
-![Common emitter amplifier with biasing network and coupling capacitors in place](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab7fig/emitterabn.png){#fig:emitterabn width="13cm"}
+![Common emitter amplifier with biasing network and coupling capacitors in place](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab7fig/emitterabn.png){#fig:emitterabn width="13cm"}
 
 This brings us to the biasing network. While we are usually trying to amplify a small AC signal, it is essential that we setup the proper "quiescent point" or bias voltages. These are the DC voltages present when the signal is zero. Setting up the proper biasing often requires an iterative process. Here are the steps to understand what is happening in a transistor setup.
 
@@ -239,7 +239,7 @@ which shows that the common emitter gain is not infinite when the external emitt
 3. Attach the speaker to your circuit board. Connect the black wire to ground and connect the red wire to a free row on the circuit board. Drive the speaker directly with the function generator output. You should hear a tone. Vary the frequency and amplitude to check the effect on the output of the speaker. Then setup the same amplitude that you used in the previous section and a frequency of 1 kHz
 4. Switch back to driving the common emitter amplifier circuit with the function generator and connect the speaker to the output, just like you did with the 470 $\Omega$ load resistor. Describe the results of both speaker tests. Does the gain provided by the common emitter amplifier result in a louder tone from the speaker? Explain your results. You may want to measure the impedance of the speaker with your DMM and do a calculation similar to section @sec:cea\.6 to understand what is going on.
 
-![Dual stage amplifier](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab7fig/dualsa.png){#fig:dualsa width="15cm"}
+![Dual stage amplifier](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab7fig/dualsa.png){#fig:dualsa width="15cm"}
 
 # Dual Stage Amplifier
 

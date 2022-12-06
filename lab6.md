@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6.pdf).
 
 -->
 
@@ -53,7 +53,7 @@ A diode is a semiconductor device that has two terminals, an anode and a cathode
 
 The fundamental property of a diode is its tendency to conduct electric current in only one direction. The diode can be operated in three regions. The first region, called forward biased, is when the cathode has a higher potential relative to the anode. Once this potential difference is greater than some threshold voltage (about 0.6 V for silicon diodes) the diode conducts with almost zero resistance and has a constant 0.6 V drop across it. The second region of operation is where the cathode has a lower potential relative to the anode. This region is called reversed biased and essentially no current can flow. Finally, if the potential difference from the cathode to the anode is negative and larger than some breakdown voltage, the diode will again conduct. Regular diodes are not used in the break down region, but Zener diodes are used for this purpose.
 
-![ [Diode characteristics](https://commons.wikimedia.org/wiki/File:Diode_current_wiki.png)](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/diode-characteristics.png){#fig:diode-char width="15cm"}
+![ [Diode characteristics](https://commons.wikimedia.org/wiki/File:Diode_current_wiki.png)](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/diode-characteristics.png){#fig:diode-char width="15cm"}
 
 ## Light emitting diode (LED)
 
@@ -61,7 +61,7 @@ The HLMP-C625 light emitting diode used in this lab acts electrically like any o
 
 ## Photodiode
 
-![Diagram and schematic symbol for a PIN silicon photodiode.](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/photodiode.png){#fig:photodiode}
+![Diagram and schematic symbol for a PIN silicon photodiode.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/photodiode.png){#fig:photodiode}
 
 The PD204 photodiode used in this experiment is a p-intrinsic-n (PIN) silicon diode operated in reverse bias. A sketch of the photodiode structure is shown in Figure @fig:photodiode. The very thin p-type conducting layer acts as a window to admit light into the crystal. The reverse bias voltage maintains a strong electric field throughout the intrinsic region forming an extended depletion layer. The depletion layer should be thicker than the absorption length for photons in silicon in order to maximize the efficiency. An incident photon whose energy exceeds the bandgap energy can be absorbed to produce an electron-hole pair by photoelectric excitation of a valence electron into the conduction band. The charge carriers are swept out of the crystal by the internal electric field to appear as a photocurrent at the terminals. The photocurrent is proportional to light intensity over a range of more than 6 orders of magnitude.
 
@@ -85,7 +85,7 @@ $$S_{\lambda} = S_{940}~RSR(\lambda)$$
 
 Figure @fig:pd204 shows the RSR from the PD204 data sheet. You can see the maximum sensitivity is around 940 nm.
 
-![PD204 Relative Spectral Sensitivity](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/pd204-rss.png){#fig:pd204 width="10cm"}
+![PD204 Relative Spectral Sensitivity](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/pd204-rss.png){#fig:pd204 width="10cm"}
 
 # Current to Voltage Amplifier (Transimpedance Amplifier)
 
@@ -95,7 +95,7 @@ $$G=\frac{V_{out}}{I_{in}}=-R_F$$
 
 This gain has the units of impedance i.e., Ohms, and it is often called a transimpedance gain. The current-to-voltage amplifier is also called a transimpedance amplifier. This type of amplifier is very common in research labs, and is used to amplify the current from photodiodes, photo multiplier tubes, ion detectors, etc.
 
-![Photodetector circuit](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/photodetector.png){#fig:photodetector width="10cm"}
+![Photodetector circuit](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/photodetector.png){#fig:photodetector width="10cm"}
 
 In our photometer circuit the current $I_{in}$ flows through the reverse-biased photodiode when it is illuminated (it flows out of the op-amp negative input node and the resulting $V_{out}$ is positive). The feedback capacitor $C_F$ enhances stability, i.e., it helps to avoid spontaneous oscillations of the op-amp by reducing the bandwidth of the amplifier (just like an active low-pass filter).
 
@@ -103,13 +103,13 @@ In our photometer circuit the current $I_{in}$ flows through the reverse-biased 
 
 The basic optical communication link is composed of two circuits (Figure @fig:photodetector and Figure @fig:ocl). The circuit in Figure @fig:ocl uses an AC voltage source to produce a light signal from the LED. The circuit in Figure @fig:photodetector is the photometer, composed of a photodiode connected to a transimpedance amplifier to convert the light into a measurable voltage.
 
-![Optical communication link circuit](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/ocl.png){#fig:ocl width="9cm"}
+![Optical communication link circuit](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/ocl.png){#fig:ocl width="9cm"}
 
 # LF356 Pin Out and Schematic
 
 All op-amp circuits start out by making the basic power connections. Op-amps are active components, which means they need external power to function, unlike passive components such as resistors and capacitors.
 
-![LF356 schematic and pin-out](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/lf356.png){#fig:lf356 width="10cm"}
+![LF356 schematic and pin-out](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/lf356.png){#fig:lf356 width="10cm"}
 
 # Useful Readings
 
@@ -149,7 +149,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 # Introducing Diodes
 
-![Simple diode circuit](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/diode-cir.png){#fig:diode-cir width="7cm"}
+![Simple diode circuit](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/diode-cir.png){#fig:diode-cir width="7cm"}
 
 ## Determine the I-V characteristics for a silicon diode {#sec:iv-silicon}
 
@@ -167,7 +167,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 # Test with Inverting Amplifier
 
-![Inverting amplifier circuit](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/inv-amp-cir.png){#fig:inv-amp-cir width="12cm"}
+![Inverting amplifier circuit](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/inv-amp-cir.png){#fig:inv-amp-cir width="12cm"}
 
 1.  We will first build the amplifier in a normal voltage amplifier configuration to test the setup and all the connections. Build the inverting amplifier circuit shown in Figure @fig:inv-amp-cir. Use a value for $R_F = R$ close to what you found in @sec:trans-pre, and a 10 pF capacitor $C_F$ in parallel with the feedback resistor to avoid spontaneous oscillations. Draw the schematic in your lab notebook and record the values of the components.
 
@@ -211,7 +211,7 @@ $$F(lm) = 683 ~y(\lambda)~P(W)$$
 
 The dimensionless quantity $y(\lambda)$ is the photopic standard luminosity function and is shown in Figure @fig:lum and tabulated in the Datasheets section of Canvas. At $\lambda$ = 555 nm, where the eye is most sensitive, $y(\lambda)$ = 1. Therefore, two sources with the same luminous flux will have the same subjective brightness to a human observer (even though the outputted power may be different). This kind of color corrected unit is helpful if you want to design a control panel with lots of colored lights, and you want them all to have the same perceived brightness. We may also be interested in the luminous flux per unit area (similar to intensity). This is measured in units of lux, where 1 lux = 1 $lm/m^2$.
 
-![The photopic standard luminosity function](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab6fig/lum.png){#fig:lum width="10cm"}
+![The photopic standard luminosity function](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/lum.png){#fig:lum width="10cm"}
 
 # Appendix B: Light Output in Lumens for Various Light Sources {#appendix-b-light-output-in-lumens-for-various-light-sources .unnumbered}
 

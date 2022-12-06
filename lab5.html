@@ -1,0 +1,607 @@
+<div style="max-width: 1100px;">
+<hr/>
+<h1 class="title">Contents</h1>
+<nav id="TOC">
+<ul>
+<li><a href="#goals" id="toc-goals"><span
+class="toc-section-number">1</span> Goals</a></li>
+<li><a href="#definitions" id="toc-definitions"><span
+class="toc-section-number">2</span> Definitions</a></li>
+<li><a href="#inverting-amplifier-theory"
+id="toc-inverting-amplifier-theory"><span
+class="toc-section-number">3</span> Inverting Amplifier Theory</a>
+<ul>
+<li><a href="#input-and-output-impedances-of-inverting-amplifiers"
+id="toc-input-and-output-impedances-of-inverting-amplifiers"><span
+class="toc-section-number">3.1</span> Input and output impedances of
+inverting amplifiers</a></li>
+</ul></li>
+<li><a href="#summing-amplifier-theory"
+id="toc-summing-amplifier-theory"><span
+class="toc-section-number">4</span> Summing Amplifier Theory</a></li>
+<li><a href="#integrator-theory" id="toc-integrator-theory"><span
+class="toc-section-number">5</span> Integrator Theory</a></li>
+<li><a href="#useful-readings" id="toc-useful-readings"><span
+class="toc-section-number">6</span> Useful Readings</a></li>
+<li><a href="#prelab" id="toc-prelab"><span
+class="toc-section-number">7</span> Prelab</a>
+<ul>
+<li><a href="#inverting-amplifier" id="toc-inverting-amplifier"><span
+class="toc-section-number">7.1</span> Inverting amplifier</a></li>
+<li><a href="#summing-amplifier---digital-to-analog-converter"
+id="toc-summing-amplifier---digital-to-analog-converter"><span
+class="toc-section-number">7.2</span> Summing amplifier - digital to
+analog converter</a></li>
+<li><a href="#integrator" id="toc-integrator"><span
+class="toc-section-number">7.3</span> Integrator</a></li>
+<li><a href="#lab-activities" id="toc-lab-activities"><span
+class="toc-section-number">7.4</span> Lab activities</a></li>
+</ul></li>
+<li><a href="#lf356-pin-out-and-schematic"
+id="toc-lf356-pin-out-and-schematic"><span
+class="toc-section-number">8</span> LF356 Pin Out and Schematic</a></li>
+<li><a href="#general-op-amp-tips" id="toc-general-op-amp-tips"><span
+class="toc-section-number">9</span> General Op-Amp Tips</a></li>
+<li><a
+href="#inverting-amplifier-application---frequency-dependent-gain"
+id="toc-inverting-amplifier-application---frequency-dependent-gain"><span
+class="toc-section-number">10</span> Inverting Amplifier Application -
+Frequency Dependent Gain</a></li>
+<li><a href="#summing-amplifier-application"
+id="toc-summing-amplifier-application"><span
+class="toc-section-number">11</span> Summing Amplifier Application</a>
+<ul>
+<li><a href="#first-tests" id="toc-first-tests"><span
+class="toc-section-number">11.1</span> First tests</a></li>
+<li><a href="#digital-to-analog-conversion"
+id="toc-digital-to-analog-conversion"><span
+class="toc-section-number">11.2</span> Digital-to-analog
+conversion</a></li>
+</ul></li>
+<li><a href="#integrator-application"
+id="toc-integrator-application"><span
+class="toc-section-number">12</span> Integrator Application</a></li>
+<li><a href="#summary-and-conclusions"
+id="toc-summary-and-conclusions"><span
+class="toc-section-number">13</span> Summary and Conclusions</a></li>
+</ul>
+</nav>
+<hr/>
+<!---
+
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5.pdf).
+
+-->
+<h1 data-number="1" id="goals"><span
+class="header-section-number">1</span> Goals</h1>
+<p>In this lab, you will characterize the gain and frequency dependence
+of inverting op-amp circuits. You will work with a few applications of
+negative feedback including a circuit to sum voltages.</p>
+<p>Proficiency with new equipment:</p>
+<ul>
+<li>Inverting op-amps: basic, summing, differentiator, and
+integrator</li>
+</ul>
+<p>Experimental Design:</p>
+<ul>
+<li>Designing, building, and characterizing your own op-amp circuit</li>
+</ul>
+<p>Modeling the physical system:</p>
+<ul>
+<li><p>Frequency dependence of op-amp circuits</p></li>
+<li><p>Input and output impedances of op-amp circuits</p></li>
+</ul>
+<p>Applications:</p>
+<ul>
+<li>Build a digital to analog converter</li>
+</ul>
+<h1 data-number="2" id="definitions"><span
+class="header-section-number">2</span> Definitions</h1>
+<p><strong>Closed-loop gain, <span
+class="math inline">\(G\)</span></strong> - gain of the <em>op-amp
+circuit</em> at all frequencies with feedback applied</p>
+<p><strong>Low frequency gain, <span
+class="math inline">\(G_{0}\)</span></strong> - gain of the <em>op-amp
+circuit</em> at DC (<span class="math inline">\(f\)</span> = 0 Hz)</p>
+<p><strong>Open-loop gain, <span
+class="math inline">\(A\)</span></strong> - gain of the <em>op-amp
+itself</em> at all frequencies with no feedback applied</p>
+<p><strong>DC gain, <span class="math inline">\(A_{0}\)</span></strong>
+- gain of the <em>op-amp itself</em> at DC (<span
+class="math inline">\(f\)</span> = 0 Hz) with no feedback applied</p>
+<p><strong>f<em><sub>0</sub></em></strong> - 3 dB frequency for an
+<em>op-amp itself</em> with no feedback</p>
+<p><strong>f<em><sub>B</sub></em></strong> - 3 dB frequency for an
+<em>op-amp circuit</em> with feedback applied</p>
+<p><strong>f<em><sub>T</sub></em></strong> - unity gain frequency,
+frequency where the open loop gain A is equal to one</p>
+<h1 data-number="3" id="inverting-amplifier-theory"><span
+class="header-section-number">3</span> Inverting Amplifier Theory</h1>
+<div id="fig:invamp" class="fignos">
+<figure>
+<img
+src="https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/invamp.png"
+style="width:10cm" alt="Figure 1: Inverting amplifier" />
+<figcaption aria-hidden="true"><span>Figure 1:</span> Inverting
+amplifier</figcaption>
+</figure>
+</div>
+<p>The basic inverting amplifier is shown in Figure <a
+href="#fig:invamp">1</a>. We can use the Golden Rules to determine the
+low-frequency gain. Since the positive input is grounded, the op-amp
+will do everything it can to keep the negative input at ground as well.
+In the limit of infinite open loop gain the inverting input of the
+op-amp is a <u>virtual ground</u>, a circuit node that will stay at
+ground as long as the circuit is working, even though it is not directly
+connected to ground. When <strong><em>A is infinite,</em></strong> the
+gain of an inverting amplifier is</p>
+<p><span
+class="math display">\[G_0=\frac{V_{out}}{V_{in}}=-\frac{R_f}{R}\]</span></p>
+<p>This is the "Golden Rule" result. For the frequency dependence of the
+gain we need to consider what happens when <span
+class="math inline">\(A\)</span> is not infinite, as we did for the
+non-inverting case. We use the same definitions as for the non-inverting
+case. The op-amp open loop gain is <span
+class="math inline">\(A\)</span>, and the divider ratio <span
+class="math inline">\(B\)</span> is the same as before:</p>
+<p><span class="math display">\[B=\frac{R}{R+R_f}\]</span></p>
+<p>When <strong><em>A is finite</em></strong> the gain for an inverting
+amplifier is given by</p>
+<p><span
+class="math display">\[G_0=\frac{V_{out}}{V_{in}}=-\frac{A(1-B)}{1+AB}\]</span></p>
+<p>The above formulas are still correct when <span
+class="math inline">\(A\)</span> and/or <span
+class="math inline">\(B\)</span> depend on frequency. <span
+class="math inline">\(B\)</span> will be frequency independent if we
+only have resistors (in other cases that use complex impedance it may
+not be), but <span class="math inline">\(A\)</span> always varies with
+frequency. For most op-amps, including the LF356, the open loop gain
+varies with frequency like an RC low-pass filter:</p>
+<p><span
+class="math display">\[A(f)=\frac{A_0}{1+j\frac{f}{f_0}}\]</span></p>
+<p>The 3 B frequency, <span class="math inline">\(f_0\)</span>, is
+usually very low, around 10 Hz. Data sheets do not usually give <span
+class="math inline">\(f_0\)</span> directly; instead they give the DC
+gain, <span class="math inline">\(A_0\)</span>, and the unity gain
+frequency, <span class="math inline">\(f_T\)</span>, which is the
+frequency where the magnitude of the open loop gain <span
+class="math inline">\(A\)</span> is equal to one. The relation between
+<span class="math inline">\(A_0\)</span>, <span
+class="math inline">\(f_0\)</span>, and <span
+class="math inline">\(f_T\)</span> is</p>
+<p><span class="math display">\[f_{T} = A_{0}f_{0}\]</span></p>
+<p>The frequency dependence of the closed loop gain <span
+class="math inline">\(G\)</span> is then given by</p>
+<p><span
+class="math display">\[G=\frac{G_0}{1+j\frac{f}{f_B}}\]</span></p>
+<p>The frequency response of the amplifier with feedback is therefore
+also the same as for an RC low-pass filter.</p>
+<h2 data-number="3.1"
+id="input-and-output-impedances-of-inverting-amplifiers"><span
+class="header-section-number">3.1</span> Input and output impedances of
+inverting amplifiers</h2>
+<p>Formulas for the input and output impedance for an inverting
+amplifier are derived in H&amp;H Section 4.26. When the open loop gain
+is large, the negative input of the op-amp is a virtual ground and so
+the input impedance is just equal to <span
+class="math inline">\(R\)</span>. This is very different from the
+non-inverting case where the input impedance is proportional to <span
+class="math inline">\(A\)</span> for large <span
+class="math inline">\(A\)</span>. In practice, the input impedance of an
+inverting amplifier is not usually greater than about 100 k<span
+class="math inline">\(\Omega\)</span>, while the input impedance of a
+non-inverting amplifier can easily be as large as 10<sup>12</sup> <span
+class="math inline">\(\Omega\)</span>. When <span
+class="math inline">\(A\)</span> is not large the formulas for the input
+impedance and output impedance of the entire circuit are derived in
+H&amp;H Section 4.26. The results are</p>
+<p><span class="math display">\[R_{i}^{&#39;} = R + \frac{R_{f}}{1 +
+A}\]</span></p>
+<p><span class="math display">\[R_{o}^{&#39;} = \frac{R_{o}}{(1 +
+AB)}\]</span></p>
+<p>The output impedance is the same for both the inverting and
+non-inverting amplifiers.</p>
+<p>The gain-bandwidth product for inverting amplifier is slightly
+modified compared to non-inverting amps.</p>
+<p><span class="math display">\[A_{0}f_{0} = \frac{{{- G}_{0}f}_{B}}{1 -
+B} = f_{T}\]</span></p>
+<p>This is the same (except for the sign) as the non-inverting result
+when the closed loop gain is large (<span class="math inline">\(B \ll 1,
+|G0| \gg 1\)</span>), but at unity closed loop gain (<span
+class="math inline">\(B = 1/2, G_0 = -1\)</span>) the inverting
+amplifier has only half as much bandwidth as a non-inverting
+amplifier.</p>
+<h1 data-number="4" id="summing-amplifier-theory"><span
+class="header-section-number">4</span> Summing Amplifier Theory</h1>
+<div id="fig:sumamp" class="fignos">
+<figure>
+<img
+src="https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/sumamp.png"
+style="width:10cm" alt="Figure 2: Summing amplifier" />
+<figcaption aria-hidden="true"><span>Figure 2:</span> Summing
+amplifier</figcaption>
+</figure>
+</div>
+<p>The Summing Amplifier, shown in Figure <a href="#fig:sumamp">2</a>,
+is a very flexible circuit based upon the standard inverting op-amp
+configuration that can be used for combining multiple inputs. The
+standard inverting amplifier, shown in Figure <a
+href="#fig:invamp">1</a>, has a single input voltage, <span
+class="math inline">\(V_{in}\)</span>, applied to the inverting input
+terminal. If we add more input resistors to the input, the circuit can
+become a voltage adder with different gain for each input. There are
+many applications for summing amplifiers including audio mixers and
+digital to analog converters. Using the Golden Rules we can determine
+the transfer function listed below.</p>
+<p><span
+class="math display">\[V_{out}=-\left[V_1\left(\frac{R_F}{R_1}\right) +
+V_2\left(\frac{R_F}{R_2}\right) +
+V_3\left(\frac{R_F}{R_3}\right)\right]\]</span></p>
+<p>This circuit has many applications including working as an adder in
+any basis-set you specify. If you only restrict yourself to input
+voltages of 0 or 1 V (or on and off), you get to a binary adder and can
+convert binary signals to analog (e.g. base 2 to base 10).
+Digital-to-analog converters are found in every research lab (or
+computer, or phone, etc.) where you want to create any value of a signal
+from just 1’s and 0’s. If you want a refresher on binary or counting in
+binary, you can use <a
+href="https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary">this
+Wikipedia entry</a>.</p>
+<h1 data-number="5" id="integrator-theory"><span
+class="header-section-number">5</span> Integrator Theory</h1>
+<div id="fig:integrator" class="fignos">
+<figure>
+<img
+src="https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/integrator.png"
+style="width:10cm" alt="Figure 3: Integrator" />
+<figcaption aria-hidden="true"><span>Figure 3:</span>
+Integrator</figcaption>
+</figure>
+</div>
+<p>The basic op-amp integrator is shown in Figure <a
+href="#fig:integrator">3</a>. As compared to the inverting amplifier in
+Figure <a href="#fig:invamp">1</a>, the only change is a replacement of
+the feedback resistor <span class="math inline">\(R_F\)</span> with a
+capacitor <span class="math inline">\(C\)</span>. An integrator is the
+same circuit as a low-pass filter. If you are interested in what
+frequencies get passed, you call it a low-pass filter. If you are
+interested in integrating the input signal, you call it an integrator.
+We can understand how the integrator works by applying the Golden Rules
+and remembering the defining equation for capacitors. Just as in the
+integrating amplifier, the Golden Rules tells us that <span
+class="math inline">\(V_-\approx V_+ = 0\)</span> and that the current
+across both components is the same because no current flows into the
+op-amp. We label <span class="math inline">\(I_R\)</span> as the current
+through the resistor, which is <span
+class="math inline">\(V_{in}/R\)</span> since <span
+class="math inline">\(V_-\)</span> is at ground. We label <span
+class="math inline">\(I_C\)</span> as the current across the capacitor.
+The defining equation for capacitors is <span
+class="math inline">\(Q=CV\)</span>. The current through a capacitor is
+<span class="math inline">\(I=dQ/dt = d(CV)/dt = CdV/dt\)</span>.
+Therefore, the equation <span class="math inline">\(I_R=I_C\)</span>
+becomes:</p>
+<p><span
+class="math display">\[\frac{V_{in}}{R}=-C~\frac{dV_{out}}{dt}\]</span></p>
+<p>Solving this equation for <span
+class="math inline">\(V_{out}\)</span> gives the following:</p>
+<p><span class="math display">\[V_{out}=-\frac{1}{RC}\int V_{in}
+~dt\]</span></p>
+<p>This is why it is called an integrator. Choosing values for the
+resistor and capacitor depends on several considerations. First, one
+needs to determine the value of the product <span
+class="math inline">\(RC\)</span>. This will depend on the expected
+signal (size and shape), the expected integration time, and the desired
+output (remembering the op-amp limitations on maximum output voltage and
+slew rate). Once <span class="math inline">\(RC\)</span> is determined,
+some considerations for choosing <span class="math inline">\(R\)</span>
+and <span class="math inline">\(C\)</span> are:</p>
+<ul>
+<li><p>Availability: resistors from 1 <span
+class="math inline">\(\Omega\)</span> to 10 M<span
+class="math inline">\(\Omega\)</span> and capacitors from 2 pF to 1
+<span class="math inline">\(\mu\)</span>F are readily
+available.</p></li>
+<li><p>Input impedance: generally a high input impedance (&gt; 1 k<span
+class="math inline">\(\Omega\)</span>) is desired to avoid loading the
+input signal.</p></li>
+<li><p>Avoiding effect of stray capacitance: there are many sources of
+capacitance, such as cables, which can unintentionally couple to your
+circuit. For this reason, it is advisable to avoid very small capacitors
+as the stray capacitances may end up dominating. A few hundred pF should
+be sufficient.</p></li>
+<li><p>Dealing with DC signal: A DC signal in the input results in the
+capacitor eventually charging up to the<br />
+maximum output voltage of the op-amp. This DC signal can result from the
+op-amp. One way to mitigate this is to add another resistor in parallel
+with the capacitor such that at low frequencies (large impedance in
+capacitor) the circuit acts like an inverting amplifier. As the
+impedance of a resistor is proportional to <span
+class="math inline">\(R\)</span> while the impedance of a capacitor is
+inversely proportional to <span class="math inline">\(C\)</span>, to
+ensure that the signal mainly goes through the capacitor, one would like
+large resistor and/or large capacitor values. Of course, the resistor
+chosen here in combination to the main resistor in the circuit leads to
+a DC gain as calculated for the inverting amplifier so this should be
+considered in making your choice. You can alternatively try placing the
+high impedance resistor between <span
+class="math inline">\(V_{out}\)</span> and ground instead of in parallel
+with the capacitor.</p></li>
+</ul>
+<h1 data-number="6" id="useful-readings"><span
+class="header-section-number">6</span> Useful Readings</h1>
+<ol type="1">
+<li><p><a
+href="https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf">Steck</a>
+Sections 7.1, 7.2, 7.3.1, 7.3.2, 7.3.4, 2.2.1, 7.4.2</p></li>
+<li><p>Fischer-Cripps Sections 12.2–12.15</p></li>
+<li><p>Horowitz and Hill 2<sup>nd</sup> Ed., Sections 4.04–4.08,
+4.19–4.20 and Sections 1.13–1.15</p></li>
+</ol>
+<h1 data-number="7" id="prelab"><span
+class="header-section-number">7</span> Prelab</h1>
+<p>Answer the following questions using Mathematica for the plots. You
+can use either Mathematica for the rest the questions as well or do them
+by hand in your lab book. <strong>Bring an electronic copy of your
+notebook to lab, preferably on your own laptop. You will use it to plot
+your data during the lab session.</strong></p>
+<h2 data-number="7.1" id="inverting-amplifier"><span
+class="header-section-number">7.1</span> Inverting amplifier</h2>
+<ol type="1">
+<li><p>Calculate the values of low frequency gain, <span
+class="math inline">\(G_0\)</span>, and the bandwidth, <span
+class="math inline">\(f_B\)</span>, for the inverting amplifier in
+Figure <a href="#fig:invamp">1</a> for the following circuit you will
+build in lab with the following resistors: <span
+class="math inline">\(R_F = 10 ~k\Omega\)</span> and <span
+class="math inline">\(R = 10 ~\Omega\)</span> .</p></li>
+<li><p>Graph a Bode plot for the open loop gain and the closed loop gain
+for the circuit from above on the same graph using Mathematica (making
+sure to label axes and curves).</p></li>
+</ol>
+<h2 data-number="7.2"
+id="summing-amplifier---digital-to-analog-converter"><span
+class="header-section-number">7.2</span> Summing amplifier - digital to
+analog converter</h2>
+<ol type="1">
+<li><p>Design a three input summing amplifier (Figure <a
+href="#fig:sumamp">2</a>) that can create an analog voltage of integers
+from 0 to -7 volts (<span class="math inline">\(|V_{out}|= 0, 1, 2, 3,
+4, 5, 6,~ and ~7 ~V\)</span>) using only two possible input states on
+each input (<span class="math inline">\(V_{low}= 0 ~V\)</span> and <span
+class="math inline">\(V_{high} = 1~ V\)</span>). Draw a schematic of
+your circuit and label all the resistors. <em>Hint: Write down the
+binary numbers from 000 binary = 0 in decimal to 111 binary = 7 in
+decimal.</em> Think about the relative values of <span
+class="math inline">\(R_1\)</span>, <span
+class="math inline">\(R_2\)</span>, and <span
+class="math inline">\(R_3\)</span>. We suggest you use <span
+class="math inline">\(R_F = 40 k\Omega\)</span>.</p></li>
+<li><p>Draw a table that lists the input voltages and corresponding
+output voltages to create <span class="math inline">\(|V_{out}|= 0, 1,
+2, 3, 4, 5, 6,~ and ~7 ~V\)</span>.</p></li>
+</ol>
+<h2 data-number="7.3" id="integrator"><span
+class="header-section-number">7.3</span> Integrator</h2>
+<p>So far you have been looking at the output versus frequency (Bode
+plots). Now you will also consider the output versus time.</p>
+<ol type="1">
+<li><p>Design an integrator based on Figure <a
+href="#fig:integrator">3</a> and the discussion above. Choose values for
+the components (resistors and capacitors) and describe why you chose
+those values.</p></li>
+<li><p>List some possible applications for the integrator.</p></li>
+<li><p>Sketch the time response of your circuit (or you could use
+Mathematica if you wish) for the following input waveforms: square wave,
+triangle wave, and sine wave. <em>Hint: What happens when you integrate
+a constant, a linear function, and a sine function?</em></p></li>
+</ol>
+<h2 data-number="7.4" id="lab-activities"><span
+class="header-section-number">7.4</span> Lab activities</h2>
+<ol type="1">
+<li><p>Read through all of the lab steps and identify the step (or
+sub-step) that you think will be the most challenging.</p></li>
+<li><p>List at least one question you have about the lab
+activity.</p></li>
+</ol>
+<h1 data-number="8" id="lf356-pin-out-and-schematic"><span
+class="header-section-number">8</span> LF356 Pin Out and Schematic</h1>
+<p>All op-amp circuits start out by making the basic power connections.
+Op-amps are active components, which means they need external power to
+function unlike passive components such as resistors.</p>
+<div id="fig:lf356" class="fignos">
+<figure>
+<img
+src="https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/lf356.png"
+style="width:10cm" alt="Figure 4: LF356 schematic and pin-out" />
+<figcaption aria-hidden="true"><span>Figure 4:</span> LF356 schematic
+and pin-out</figcaption>
+</figure>
+</div>
+<div id="fig:pb" class="fignos">
+<figure>
+<img
+src="https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/pb-example.png"
+style="width:10cm"
+alt="Figure 5: Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections." />
+<figcaption aria-hidden="true"><span>Figure 5:</span> Good placement of
+op-amp and bypass capacitors on a protoboard. Note that short wires are
+used for all connections.</figcaption>
+</figure>
+</div>
+<h1 data-number="9" id="general-op-amp-tips"><span
+class="header-section-number">9</span> General Op-Amp Tips</h1>
+<p><strong>These are reminders of the basics steps you should always
+follow when working with op-amps.</strong></p>
+<ol type="1">
+<li><p>This experiment will use both +15 V and –15 V to power the LF356
+op-amp. <span style="color: red;">Make sure you <strong>unplug</strong>
+the DC supplies while wiring your op-amp (you may find it useful to plug
+them into their own power strip). Everyone makes mistakes in wiring-up
+circuits. You should always check your circuit over before applying
+power.</span> Figure <a href="#fig:lf356">4</a> shows a pin-out for the
+LF356 chip. Familiarize yourself with the layout. The following
+procedure will help you wire up a circuit accurately:</p>
+<ol type="1">
+<li><p>Draw a complete schematic in your lab notebook, including all
+ground and power connections, and all IC pin numbers. Try to layout your
+prototype so the parts are arranged in the same way as on the schematic,
+as far as possible.</p></li>
+<li><p>Measure all resistor values before putting them in the circuit.
+Make sure you are using the correct capacitors. Some capacitors indicate
+the capacitance directly, but small capacitors usually just have a
+number where 10 = 10 pF, 102 = 10x10<sup>2</sup> pF = 1 nF, 103 =
+10x10<sup>3</sup> = 10 nF, 104 = 10x10<sup>4</sup> pF = 100 nF. Also,
+see the important note below about polarized capacitors.</p></li>
+<li><p>Adhere to a color code for wires. For example:</p>
+<ul>
+<li><p><span style="color: black;">0V (ground) Black</span></p></li>
+<li><p><span style="color: red;">+15V Red</span></p></li>
+<li><p><span style="color: blue;">-15V Blue</span></p></li>
+</ul></li>
+</ol></li>
+<li><p>The op-amp chip sits across a groove in the prototyping board
+(see Figure <a href="#fig:pb">5</a>). Before inserting a chip, ensure
+the pins are straight (using a needle-nose pliers or something similar).
+After insertion, check visually that no pin is broken or bent under the
+chip. To remove the chip, use a small screwdriver in the groove to pry
+it out.</p></li>
+<li><p>You will have less trouble with spontaneous oscillations if the
+circuit layout is neat and compact, in particular the feedback path
+should be as short as possible to reduce unwanted capacitive coupling
+(see Figure <a href="#fig:pb">5</a>). Also, wire around the chip rather
+than over it.</p></li>
+<li><p>To help prevent spontaneous oscillations due to unintended
+coupling via the power supplies, use bypass capacitors to filter the
+power supply lines. A bypass capacitor between each power supply lead
+and ground will provide a miniature current “reservoir” that can quickly
+supply current when needed. This capacitor is normally in the range 1-10
+µF. <span style="color: red;">Compact capacitors in this range are
+usually <strong><em>polarized</em></strong>, meaning that one terminal
+must always be positive relative to the other. If you put a polarized
+capacitor in backwards, it will burn out.</span> You will probably hear
+a pop and smell something foul. Please don’t do this. The negative side
+should have an arrow on the capacitor. Also, the positive side should
+have a longer lead but this is not a good identification method as the
+leads can (and should) be cut. Bypass capacitors should be placed close
+to the op-amp pins. If you are connecting the +15 V supply to ground,
+the negative capacitor lead is connected to ground and the positive lead
+is connected to +15 V. If you are connecting the -15 V supply to ground,
+the negative capacitor lead is connected to -15 V and the positive lead
+is connected to ground.</p></li>
+</ol>
+<h1 data-number="10"
+id="inverting-amplifier-application---frequency-dependent-gain"><span
+class="header-section-number">10</span> Inverting Amplifier Application
+- Frequency Dependent Gain</h1>
+<ol type="1">
+<li><p>Build the inverting amplifier shown in Figure <a
+href="#fig:invamp">1</a>, with <span class="math inline">\(R_F = 100
+~k\Omega\)</span> and <span class="math inline">\(R = 10
+~k\Omega\)</span>. Measure <span class="math inline">\(R\)</span> and
+<span class="math inline">\(R_F\)</span> with the DMM before inserting
+them into the circuit board. Predict <span
+class="math inline">\(G_0\)</span> and <span
+class="math inline">\(f_B\)</span> from these measured values and the
+op-amps value of <span class="math inline">\(f_T\)</span> from the data
+sheet. (You should be able to review your prelab work here!)</p></li>
+<li><p>Use the function generator to measure the low frequency gain.
+What frequency should you use to test the low frequency gain (i.e., what
+frequency should the signal be below?) Consider the gain-bandwidth
+product and how it relates to your circuit. What is the predicted gain
+for the frequency you chose? Measure the low frequency gain <span
+class="math inline">\(G_0\)</span> by measuring <span
+class="math inline">\(V_{in}\)</span> and <span
+class="math inline">\(V_{out}\)</span> using the scope (as you did in
+Lab 4). Do your measurements agree with your predictions?</p></li>
+<li><p>Predict the 3 dB frequency for your circuit. Include your
+calculations in your lab book. Now, determine the 3 dB frequency
+experimentally. Describe the procedure you followed to determine <span
+class="math inline">\(f_B\)</span>. Does your measurement agree with
+your prediction? Explicitly record what criteria you used to determine
+whether or not the model and measurements agree.</p></li>
+<li><p>Using the gain-bandwidth relation and your measurements of <span
+class="math inline">\(G_0\)</span> and <span
+class="math inline">\(f_B\)</span> to determine <span
+class="math inline">\(f_T\)</span> for your op-amp. Does your measured
+value of <span class="math inline">\(f_T\)</span> agree with the one
+from the datasheet?</p></li>
+<li><p>Measure the frequency dependence of your circuit. Measure the
+gain at every decade in frequency from 10 Hz to 10 MHz. Should you use a
+10X probe or coax cable to make your measurements? Explain your
+reasoning. Plot your measurements and predicted gain curve on the same
+plot. Where, if at all, is the simple model of the op-amp circuit not
+valid? Can you suggest possible model refinements and/or physical system
+refinements to get better agreement between the model predictions and
+measurements.</p></li>
+</ol>
+<h1 data-number="11" id="summing-amplifier-application"><span
+class="header-section-number">11</span> Summing Amplifier
+Application</h1>
+<h2 data-number="11.1" id="first-tests"><span
+class="header-section-number">11.1</span> First tests</h2>
+<ol type="1">
+<li><p>Modify your basic inverting op-amp circuit to make it a summing
+amplifier as shown in Figure <a href="#fig:sumamp">2</a>. Use the
+component values you determined in your prelab for the resistors (you
+may want to check with your instructor to be sure they make sense). Draw
+the schematic in your lab notebook and label all components. Measure the
+resistors before inserting them into your circuit and record the
+values.</p></li>
+<li><p>Determine the transfer function for your exact component values.
+What is <span class="math inline">\(V_{out}\)</span> in terms of <span
+class="math inline">\(V_1\)</span>, <span
+class="math inline">\(V_2\)</span>, and <span
+class="math inline">\(V_3\)</span>?</p></li>
+<li><p>Confirm your summing amplifier is working according to your model
+by measuring <span class="math inline">\(V_{out}\)</span> for different
+input voltages. Predict the output voltage for your set of test input
+voltages and measure <span class="math inline">\(V_{out}\)</span>. What
+is the best available measurement device to make these measurements? Why
+did you choose that device? Do your measurements agree with your
+predictions?</p></li>
+</ol>
+<h2 data-number="11.2" id="digital-to-analog-conversion"><span
+class="header-section-number">11.2</span> Digital-to-analog
+conversion</h2>
+<p>Use your summing amplifier in “digital to analog conversion mode” to
+create integer output voltages from 0 to -7 V from two input voltages (0
+V and 1 V). Predict what set of input voltages is required to get each
+desired output voltage (<em>Hint: You did this in your prelab</em>). Do
+your measurements agree with your predictions for all eight voltages?
+How accurately were you able to make integer values of voltage? Describe
+a way to refine the physical system to more accurately create exact
+integer voltages.</p>
+<h1 data-number="12" id="integrator-application"><span
+class="header-section-number">12</span> Integrator Application</h1>
+<p>By now, you should be somewhat comfortable with experimental design
+and reporting of outcomes, especially with op-amps and voltage dividers.
+In this last section, you will design and characterize an integrator.
+Your starting point should be the integrator circuit you designed in the
+prelab. Items you likely wish to include in your lab notebook:</p>
+<ul>
+<li><p>Describe the circuit you are building and testing. It is
+suggested that you use R = 10 k<span
+class="math inline">\(\Omega\)</span> and the necessary capacitor to
+obtain a time constant of 1 ms.</p></li>
+<li><p>Draw the schematic of the circuit with component values
+labeled.</p></li>
+<li><p>List your predictions / models. It is fine to start by using
+ideal models.</p></li>
+<li><p>How do you plan to test it? Be sure to use square, triangle, and
+sine waves at various frequencies.</p></li>
+<li><p>The results of the tests with various inputs.</p></li>
+<li><p>Do the results match your model? What didn’t match?</p></li>
+<li><p>How would you refine your model or physical system to get better
+agreement?</p></li>
+</ul>
+<p>If you have an issue where the output seems to be at the rail voltage
+of the op-amp, you likely have a DC signal on the input (in addition to
+the AC signal). You should review the integrator theory section for ways
+to alleviate this.</p>
+<h1 data-number="13" id="summary-and-conclusions"><span
+class="header-section-number">13</span> Summary and Conclusions</h1>
+<p>Write a two-paragraph summary in your lab notebook of what you
+learned and any important takeaways.</p>
+<hr/>
+</div>

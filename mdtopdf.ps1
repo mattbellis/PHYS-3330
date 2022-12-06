@@ -8,3 +8,5 @@ pandoc .\lab7.md --pdf-engine=xelatex --filter pandoc-xnos --standalone --templa
 pandoc .\lab8.md --pdf-engine=xelatex --filter pandoc-xnos --standalone --template=eisvogel.tex --mathjax -N -o lab8.pdf
 pandoc .\lab9.md --pdf-engine=xelatex --filter pandoc-xnos --standalone --template=eisvogel.tex --mathjax -N -o lab9.pdf
 pandoc .\lab10.md --pdf-engine=xelatex --filter pandoc-xnos --standalone --template=eisvogel.tex --mathjax -N -o lab10.pdf
+pandoc .\lsa1.md --pdf-engine=xelatex --filter pandoc-xnos --standalone --template=eisvogel.tex --mathjax -N -o lsa1.pdf
+pandoc .\lsa2.md --pdf-engine=xelatex --filter pandoc-xnos --standalone --template=eisvogel.tex --mathjax -N -o lsa2.pdf

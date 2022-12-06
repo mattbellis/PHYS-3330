@@ -1,0 +1,167 @@
+<div style="max-width: 1100px;">
+<hr/>
+<h1 class="title">Contents</h1>
+<nav id="TOC">
+<ul>
+<li><a href="#goals" id="toc-goals"><span
+class="toc-section-number">1</span> Goals</a></li>
+<li><a href="#sec:basic" id="toc-sec:basic"><span
+class="toc-section-number">2</span> A Few More Mathematica
+Basics</a></li>
+<li><a href="#sec:plots" id="toc-sec:plots"><span
+class="toc-section-number">3</span> Creating Plots of Data and Function
+Together</a></li>
+<li><a href="#fitting-data" id="toc-fitting-data"><span
+class="toc-section-number">4</span> Fitting Data</a></li>
+<li><a href="#making-classy-plots-in-mathematica"
+id="toc-making-classy-plots-in-mathematica"><span
+class="toc-section-number">5</span> Making Classy Plots in
+Mathematica</a></li>
+</ul>
+</nav>
+<hr/>
+<h1 data-number="1" id="goals"><span
+class="header-section-number">1</span> Goals</h1>
+<p>You will be…</p>
+<ol type="1">
+<li><p>…able to define and use functions in Mathematica.</p></li>
+<li><p>…able to scale and shift lists (arrays) of data.</p></li>
+<li><p>…able to generate and combine plots of data and
+functions.</p></li>
+<li><p>…able to perform least-squares fits of data.</p></li>
+<li><p>…able to create pretty looking plots.</p></li>
+</ol>
+<h1 data-number="2" id="sec:basic"><span
+class="header-section-number">2</span> A Few More Mathematica
+Basics</h1>
+<p>Defining functions that perform a sequence of mathematical or logical
+steps is a key part of every programming language. <a
+href="https://tinyurl.com/54n854z5">Watch the screencast on defining and
+using functions in Mathematica.</a></p>
+<ol type="1">
+<li>Define a function in Mathematica that represents <span
+class="math inline">\(f(x) = sin(x)/x\)</span></li>
+<li>Explain the difference between how Mathematica interprets the
+following two expressions:
+<ol type="1">
+<li><code>y = x^3</code></li>
+<li><code>y[x] := x^3</code></li>
+</ol></li>
+</ol>
+<p>A “List” in Mathematica is the equivalent of an “array” in most other
+programming languages (like C, Python, MATLAB). This exercise requires
+you to create a list and perform the basic list manipulations like
+shifting and scaling all list values by a constant. You may need to
+consult the Mathematica help documentation.</p>
+<ol start="3" type="1">
+<li>Create a list named <code>sinTable</code> using the
+<code>Table</code> function to evaluate the expression
+<code>Sin[x]</code> at 100 points between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(4\pi\)</span>.</li>
+<li>Increase all values of the list <code>sinTable</code> by a constant
+(e.g., 1).</li>
+<li>Multiply all the values of the list <code>sinTable</code> by a
+constant value (e.g., 10).</li>
+</ol>
+<h1 data-number="3" id="sec:plots"><span
+class="header-section-number">3</span> Creating Plots of Data and
+Function Together</h1>
+<p>In Mathematica Plot is used for plotting functions and ListPlot is
+used for plotting data. If we want to combine a plot of a theoretical
+prediction or a best fit curve with our data we need to combine these
+two different kinds of plots. The key method is Mathematica’s Show
+function.</p>
+<p>Watch the screencast on <a
+href="https://tinyurl.com/bdhebupv">combining plots of data and
+functions</a>.</p>
+<ol type="1">
+<li>Write down a mathematical expression for the predicted output signal
+of a waveform generator for either the square wave, saw tooth wave, or
+triangle wave. You can write a formal math expression or use the builtin
+Mathematica functions for <code>Sin</code>, <code>SquareWave</code>,
+<code>SawtoothWave</code>, and <code>TriangleWave</code> (consult
+Mathematica’s help for using these appropriately).</li>
+<li>Make a plot of your prediction using the expression you created
+above.</li>
+<li>Scale your <code>sinTable</code> function from Sections <a
+href="#sec:basic">2</a>.3-5 to the same frequency, amplitude, and offset
+as the expression you created in <a href="#sec:plots">3</a>.1. Combine
+the plot of your oscilloscope data with your prediction. Do they match
+up exactly? If not, did you make a mistake, or is there a good reason
+for the difference?</li>
+</ol>
+<h1 data-number="4" id="fitting-data"><span
+class="header-section-number">4</span> Fitting Data</h1>
+<p>Scientists often need to perform fits to their data. This could be
+because they know the functional form the data should follow and use a
+fit to determine one or more parameters in the function. Or because they
+don’t know the functional form and try various functions to see which
+one best fits the data. After completing this activity, you will be able
+to use the <code>LinearModelFit</code> and
+<code>NonlinearModelFit</code> functions for doing least squares fitting
+of data. You will demonstrate your proficiency by fitting an exponential
+decay. The data are the number of counts detected as a function of time
+for cosmic ray muon decays. The data were taken in a previous semester
+as part of the muon lifetime lab. The decay time you estimate from the
+least-squares fit is the lifetime of the muon. The muon data is
+available as Muon_lifetime_data.csv in Canvas.</p>
+<p>Watch the <a href="https://tinyurl.com/ynudcc4t">screencast on
+fitting data in Mathematica.</a></p>
+<ol type="1">
+<li>Write down a mathematical expression for the function you will use
+to fit your data.</li>
+<li>How many free parameters do you need? Give a brief explanation in
+words, or with a graph to explain what they mean.</li>
+<li>How do you relate your fit parameters to the muon lifetime <span
+class="math inline">\(\tau_{muon}\)</span>?</li>
+<li>Is the fit function linear or nonlinear?</li>
+<li>Fit the data and obtain <span
+class="math inline">\(\tau_{muon}\)</span>.</li>
+<li>Make a combined plot of the data and fit.</li>
+</ol>
+<h1 data-number="5" id="making-classy-plots-in-mathematica"><span
+class="header-section-number">5</span> Making Classy Plots in
+Mathematica</h1>
+<p>The default plot style in Mathematica does not look very good for
+presentation quality graphics. This screencast give some options for
+changing the plot style. Figure <a href="#fig:plot">1</a> shows an
+example of the plot style changes you will be able to implement after
+watching the screencast. The screencast also demonstrates the use of the
+<code>SetOptions</code> function which allows you to set the default
+plot options.</p>
+<p>Watch the <a href="https://tinyurl.com/y4hxvmjn">screencast on
+changing the plot style.</a></p>
+<div id="fig:plot" class="fignos">
+<figure>
+<img
+src="https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lsa2fig/plot.png"
+style="width:15cm"
+alt="Figure 1: Plot of sin(t) for t between 0 and 10. Modifying the plot options can improve the viewing of the plot within Mathematica and for printing. Notice that the default axes and sine curve are very thin when printed." />
+<figcaption aria-hidden="true"><span>Figure 1:</span> Plot of <span
+class="math inline">\(sin(t)\)</span> for <span
+class="math inline">\(t\)</span> between <span
+class="math inline">\(0\)</span> and <span
+class="math inline">\(10\)</span>. Modifying the plot options can
+improve the viewing of the plot within Mathematica and for printing.
+Notice that the default axes and sine curve are very thin when
+printed.</figcaption>
+</figure>
+</div>
+<p><strong>Default</strong></p>
+<pre><code>Plot[Sin[x], {x, 0, 10}, 
+    AxesLabel -&gt; {&quot;Time (s)&quot;, &quot;Displacement (cm)&quot;}]</code></pre>
+<p><strong>Modified</strong></p>
+<pre><code>Plot[Sin[x], {x, 0, 10},
+    Frame -&gt; True,
+    Axes -&gt; False,
+    LabelStyle -&gt; {FontFamily -&gt; &quot;Arial&quot;, FontSize -&gt; 13},
+    FrameLabel -&gt; {&quot;Time (s)&quot;, &quot;Displacement (cm)&quot;},
+    FrameStyle -&gt; Thickness[0.005],
+    PlotStyle -&gt; {Red, Thickness[0.01]}]</code></pre>
+<ol type="1">
+<li>Modify any one of the plots produced earlier in this activity and
+make it “classier”.</li>
+</ol>
+<hr/>
+</div>

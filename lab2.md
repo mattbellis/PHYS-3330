@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab2.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab2.pdf).
 
 -->
 
@@ -99,9 +99,9 @@ A non-ideal voltage source has an output impedance (resistance). First consider 
 
 2. List at least one question you have about the lab activity.
 
-![Ideal Voltage Divider](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab2fig/ideal-vd.png){#fig:ideal-vd height="7cm"}
+![Ideal Voltage Divider](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab2fig/ideal-vd.png){#fig:ideal-vd height="7cm"}
 
-![Modified Voltage Divider](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab2fig/modified-vd.png){#fig:modified-vd height="7cm"}
+![Modified Voltage Divider](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab2fig/modified-vd.png){#fig:modified-vd height="7cm"}
 
 # Setting Up Your Prototyping Board
 

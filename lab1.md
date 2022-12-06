@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1.pdf).
 
 -->
 
@@ -132,7 +132,7 @@ A voltage source maintains a constant potential difference while the current out
 4.  Vary the value of the voltage and current. Describe the behavior of the voltage and current readings and the mode (CV/CC) of the power supply. What happens when you short the output to ground (have too small a load)? What is the maximum output of current and voltage your supply can produce?
 
 
-![Keysight EDU36311A DC power supply connections](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1fig/EDU36311A.png){#fig:ps width="15cm"}
+![Keysight EDU36311A DC power supply connections](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1fig/EDU36311A.png){#fig:ps width="15cm"}
 
 
 # Measuring Voltage with the Oscilloscope
@@ -161,9 +161,9 @@ The Tektronix TBS 2000 Series has four independent channels so that four separat
 
 
 
-![BNC Plug Connector](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1fig/bnc-plug.jpg){#fig:bnc width="10cm"}
+![BNC Plug Connector](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1fig/bnc-plug.jpg){#fig:bnc width="10cm"}
 
-![Mini Grabber to BNC Socket Connector](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1fig/mini-grabber-to-bnc.jpg){#fig:grabber width="10cm"}
+![Mini Grabber to BNC Socket Connector](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1fig/mini-grabber-to-bnc.jpg){#fig:grabber width="10cm"}
 
 ## Triggering an AC waveform on the scope
 
@@ -315,12 +315,12 @@ You can select various measurements and which channel to measure. *Be very caref
 
 1.  Press a channel \[Setup\] key to open the channel configuration screen. Note that the current output termination values (both 50 $\Omega$ in this case) appear on the tabs at the top of the screen.
 
-![Keysight EDU33212A Setup Menu](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1fig/EDU33212A-term1.png){#fig:setup width="10cm"}
+![Keysight EDU33212A Setup Menu](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1fig/EDU33212A-term1.png){#fig:setup width="10cm"}
 
 2.  Begin specifying the output termination by pressing Output Load.
 
-![Keysight EDU33212A Output Selection](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1fig/EDU33212A-term2.png){#fig:output width="10cm"}
+![Keysight EDU33212A Output Selection](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1fig/EDU33212A-term2.png){#fig:output width="10cm"}
 
 3.  Select the desired output termination either by using the knob or numeric keypad to select the desired load impedance or by pressing Set to 50 $\Omega$ or Set to High Z. You can also set a specific value by pressing Load.
 
-![Keysight EDU33212A Termination Selection](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab1fig/EDU33212A-term3.png){#fig:termination width="10cm"}
+![Keysight EDU33212A Termination Selection](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab1fig/EDU33212A-term3.png){#fig:termination width="10cm"}

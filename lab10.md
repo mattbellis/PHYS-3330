@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab10.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab10.pdf).
 
 -->
 

@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9.pdf).
 
 -->
 
@@ -52,7 +52,7 @@ Logic gates alone can be used to construct arbitrary combinatorial logic (they c
 
 The voltage in a digital circuit is allowed to be in only one of two states: HIGH or LOW. HIGH is taken to mean logical (1) or logical TRUE. LOW is taken to mean logical (0) or logical FALSE. In the TTL logic family (see Figure @fig:TTLvolt), the “ideal” HIGH and LOW voltage levels are 5 V and 0 V, respectively, but any input voltage in the range of 2–5 V is interpreted as HIGH, and any input voltage in the range of 0–0.8 V as LOW. Voltages outside this range are undefined, and therefore “illegal,” except if they occur briefly during transitions. If the input to a TTL circuit is a voltage in this undefined range, the response is unpredictable, with the circuit sometimes interpreting it as a “1” and sometimes as a “0.” Avoid sending voltages in the undefined range into TTL components.
 
-![TTL voltage levels](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/TTLvolt.png){#fig:TTLvolt}
+![TTL voltage levels](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/TTLvolt.png){#fig:TTLvolt}
 
 # Digital Logic Gates
 
@@ -62,9 +62,9 @@ Logic signals interact by means of gates. The three fundamental gates, AND, OR, 
 
 The function of each gate is defined by a truth table, which specifies the output state for every possible combination of input states. The output values of the truth tables can be understood in terms of two switches. If the switches are in series, you get the AND function. Parallel switches perform the OR operation. The most common gates are shown in Figure @fig:simpgates and Figure @fig:compgates. A small circle after a gate or at an input indicates negation (NOT).
 
-![Simple logic gates](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/simpgates.png){#fig:simpgates}
+![Simple logic gates](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/simpgates.png){#fig:simpgates}
 
-![Compound logic gates](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/compgates.png){#fig:compgates}
+![Compound logic gates](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/compgates.png){#fig:compgates}
 
 # Memory Elements and Flip-Flops
 
@@ -74,7 +74,7 @@ In sequential logic circuits, the output depends upon previous values of the inp
 
 The truth table for the RS memory element shows how the circuit remembers. Suppose it starts in a state with Q=0 and R=S=0. A positive pulse S at the input sets it into the state Q=1, where it remains after S returns to zero. A later pulse R on the other input resets the circuit to Q=0, where it remains until the next S pulse.
 
-![RS memory element](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/rsmem.png){#fig:rsmem}
+![RS memory element](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/rsmem.png){#fig:rsmem}
 
 ## JK flip-flop (TTL74107)
 
@@ -88,19 +88,19 @@ There are two outputs: $Q$ and it's complement (not-$Q$).
 
 The index *n* counts the number of clock pulses since the start of the experiment. In the absence of a clock pulse, the output remains unchanged at the previously acquired value, $Q_n$, which is independent of the present-time data inputs J and K. Only on the arrival of a clock pulse, C, can the output change to a new value, $Q_{n+1}$. The value of $Q_n$ depends on the J and K inputs in the way specified in the truth table. The change occurs at the falling (trailing) edge of the clock pulse, indicated by a downward arrow in the truth table in Figure @fig:jkflipflop. The direct input, CLR, overrides the clock and data inputs. During normal operation, CLR = 1. At the moment CLR goes to zero, the output goes to zero and remains there as long as CLR = 0.
 
-![JK flip-flop](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/jkflipflop.png){#fig:jkflipflop}
+![JK flip-flop](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/jkflipflop.png){#fig:jkflipflop}
 
 ## 555 timer and digital clock
 
 See [Steck](https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf) section 15.1.1 for a description of the guts of the 555 timer chip. Figure @fig:555timer shows the circuit for generating a clock with the 555 and summarizes the formulas relating the resistor and capacitor values to the output low time T1 and the output high time T2. Much more information is available in [Steck](https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf) section 15.1.2.
 
-![Summary of information for generating a clock with a 555 Timer](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/555timer.png){#fig:555timer}
+![Summary of information for generating a clock with a 555 Timer](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/555timer.png){#fig:555timer}
 
 # Digital Logic Chip Pin-Outs
 
 Each chip has a dot or notch to indicate the end where pins 1 and 14 are located. The pin numbers increase sequentially as you go counterclockwise around the chip viewed from above. In 74xx family logic chips, pin 7 is always grounded (0 V) and pin 14 is always connected to the +5 V supply. You connect these to the breadboard the same way as the op-amp (across the groove in the middle of the breadboard).
 
-![Some descriptive text](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/logicchips.png){#fig:logicchips}
+![Some descriptive text](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/logicchips.png){#fig:logicchips}
 
 # Useful Readings
 
@@ -172,7 +172,7 @@ Answer the following questions using Mathematica or by hand.
 2. Set CLR = 1 and J = K = 1. Now drive the clock input of the flip-flop with 4 kHz pulses from your clock circuit. Use the oscilloscope to measure the clock input and the output, $Q$, of the flip-flop. You may find Figure @fig:jkfftest helpful to setup this part. Record your measurements and compare with your prediction from section @sec:jkffpre. Include a screen shot showing the results.
 3. Do the same test with J = K = 0 and record what happens.
 
-![JK flip-flop test setup](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/jkfftest.png){#fig:jkfftest}
+![JK flip-flop test setup](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/jkfftest.png){#fig:jkfftest}
 
 # Summary and Conclusions
 
@@ -251,7 +251,7 @@ Boolean algebra can be used to simplify logical expressions and reduce the numbe
 
 **Direct implementation** using NOT, NOR, and NAND
 
-![Logic](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab9fig/logic.png){#fig:logic}
+![Logic](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/logic.png){#fig:logic}
 
 **Simplified circuit**
 

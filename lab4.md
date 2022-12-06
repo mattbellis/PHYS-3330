@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4.pdf).
 
 -->
 
@@ -61,7 +61,7 @@ $\mathbf{f_T}$- unity gain frequency, frequency where the open loop gain $A$ is 
 
 One of the main purposes of an amplifier is to increase the voltage level of a signal while preserving as accurately as possible the original waveform. In the physical sciences, transducers are used to convert basic physical quantities into electric signals, as shown in Figure @fig:lab-measurement. An amplifier is usually needed to raise the small transducer voltage ($\mu V$ to $mV$) to a useful level ($mV$ to $V$).
 
-![Typical laboratory measurement system](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/lab-measurement.png){#fig:lab-measurement}
+![Typical laboratory measurement system](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/lab-measurement.png){#fig:lab-measurement}
 
 Measuring and recording equipment typically requires input signals of $10~
 mV$ to $10~ V$. To meet such needs, a typical laboratory amplifier might have the following characteristics:
@@ -82,9 +82,9 @@ Commercial laboratory amplifiers are readily available, but a general-purpose am
 
 Two basic op-amp circuit configurations, the non-inverting amplifier and the inverting amplifier, are shown in Figures @fig:non-invert and @fig:invert, respectively. Both circuits use ***negative feedback***, which means that a portion of the output signal is sent back to the negative input of the op-amp through the feedback resistor RF. The op-amp itself has very high gain, but relatively poor gain stability and linearity. When negative feedback is used, the circuit gain is greatly reduced, but it becomes very stable. Also, linearity is improved, and the output impedance decreases.
 
-![Non-inverting amplifier](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/non-invert.png){#fig:non-invert width="10cm"}
+![Non-inverting amplifier](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/non-invert.png){#fig:non-invert width="10cm"}
 
-![Inverting amplifier](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/invert.png){#fig:invert width="10cm"}
+![Inverting amplifier](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/invert.png){#fig:invert width="10cm"}
 
 Both configurations are widely used because they have different advantages. Besides the fact that the second circuit inverts the signal, the main differences are that the first circuit has much higher input impedance, while the second has lower distortion because both inputs remain very close to ground. In this lab, we will be focusing on the first-type, non-inverting.
 
@@ -192,9 +192,9 @@ The first step in using a new component is to look up its basic characteristics.
 
 All op-amp circuits start out by making the basic power connections. Op-amps are active components, which means they need external power to function, unlike passive components such as resistors and capacitors.
 
-![LF356 schematic and pin-out.](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/lf356.png){#fig:lf356 width="10cm"}
+![LF356 schematic and pin-out.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/lf356.png){#fig:lf356 width="10cm"}
 
-![Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/pb-example.png){#fig:pb width="10cm"}
+![Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/pb-example.png){#fig:pb width="10cm"}
 
 ## Op-amp setup
 
@@ -225,13 +225,13 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 2.  If you find you have a bad chip, throw it in the trash and grab another. (In case you are wondering, the LF356 costs about 50 cents.)
 
-![Schematic of a voltage follower with the input grounded](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/voltage-follower-gnd.png){#fig:voltage-follower-gnd width="10cm"}
+![Schematic of a voltage follower with the input grounded](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/voltage-follower-gnd.png){#fig:voltage-follower-gnd width="10cm"}
 
 # Voltage Follower
 
 A voltage follower is the simplest version of a non-inverting amplifier. The voltage follower has no voltage gain (G~0~=1), but it lets you convert a signal with high impedance (i.e. very little current) to a much lower impedance output for driving loads. The voltage follower is also often called a unity gain buffer.
 
-![Voltage follower](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/voltage-follower.png){#fig:voltage-follower width="10cm"}
+![Voltage follower](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/voltage-follower.png){#fig:voltage-follower width="10cm"}
 
 ## Low frequency gain and frequency dependence of the gain
 
@@ -243,11 +243,11 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 4.  If you observed ideal behavior, youre lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
 
-![Test and measurement setup for op-amp circuits](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/op-amp-test.png){#fig:op-amp-test width="10cm"}
+![Test and measurement setup for op-amp circuits](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/op-amp-test.png){#fig:op-amp-test width="10cm"}
 
 # Non-Inverting Amplifier
 
-![Non-inverting amplifier](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab4fig/non-inv-amp.png){#fig:non-inv-amp width="10cm"}
+![Non-inverting amplifier](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4fig/non-inv-amp.png){#fig:non-inv-amp width="10cm"}
 
 ## Frequency dependent gain
 

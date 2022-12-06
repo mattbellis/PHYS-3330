@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3.pdf).
 
 -->
 
@@ -129,11 +129,11 @@ $$Z_{0} = \omega_{0}L = \frac{1}{\omega_{0}C} = \frac{\sqrt{L}}{\sqrt{C}}$$
 
 Answer the following questions using Mathematica. Save the complete notebook as a pdf and turn it in to Canvas by midnight the day before your lab section meets. **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
 
-![Low-pass filter](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/low-pass-1.png){#fig:low-pass-1 width="10cm"}
+![Low-pass filter](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/low-pass-1.png){#fig:low-pass-1 width="10cm"}
 
-![High-pass filter](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/high-pass-1.png){#fig:high-pass-1 width="10cm"}
+![High-pass filter](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/high-pass-1.png){#fig:high-pass-1 width="10cm"}
 
-![Band-pass filter](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/band-pass-1.png){#fig:band-pass-1 width="10cm"}
+![Band-pass filter](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/band-pass-1.png){#fig:band-pass-1 width="10cm"}
 
 ## Low- and high-pass filters
 
@@ -159,13 +159,13 @@ Answer the following questions using Mathematica. Save the complete notebook as 
 
 # Building the Circuits and Predicting Their Behavior
 
-![Resistive divider](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/r-divider.png){#fig:r-divider width="10cm"} 
+![Resistive divider](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/r-divider.png){#fig:r-divider width="10cm"} 
 
-![Low-pass filter](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/low-pass-2.png){#fig:low-pass-2 width="10cm"}
+![Low-pass filter](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/low-pass-2.png){#fig:low-pass-2 width="10cm"}
 
-![High-pass filter](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/high-pass-2.png){#fig:high-pass-2 width="10cm"}
+![High-pass filter](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/high-pass-2.png){#fig:high-pass-2 width="10cm"}
 
-![Band-pass filter](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/band-pass-2.png){#fig:band-pass-2 width="10cm"}
+![Band-pass filter](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/band-pass-2.png){#fig:band-pass-2 width="10cm"}
 
 ## Building the Circuits
 
@@ -195,7 +195,7 @@ Plot your mathematical models of all three filter circuits (three independent pl
 
 *HINT: You should have already made these plots in your lab prep notebook. Just enter the measured values of your components.*
 
-![Test and Measurement Set-up. Channel 1 will "pick off" the function generator signal on its way to the circuit board. You can do this using a BNC "T" connector mounted directly on the oscilloscope input. When you connect the oscilloscope like this, you need to make sure the channel impedance is set to high impedance (not $50 \Omega$).](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab3fig/equip-setup.png){#fig:setup width="10cm"}
+![Test and Measurement Set-up. Channel 1 will "pick off" the function generator signal on its way to the circuit board. You can do this using a BNC "T" connector mounted directly on the oscilloscope input. When you connect the oscilloscope like this, you need to make sure the channel impedance is set to high impedance (not $50 \Omega$).](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab3fig/equip-setup.png){#fig:setup width="10cm"}
 
 # Setting Up Test and Measurement Equipment and Testing Your Circuits
 

@@ -19,7 +19,7 @@ code-block-font-size: \scriptsize
 
 <!---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab5.pdf).
+A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5.pdf).
 
 -->
 
@@ -63,7 +63,7 @@ Applications:
 
 # Inverting Amplifier Theory
 
-![Inverting amplifier](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab5fig/invamp.png){#fig:invamp width="10cm"}
+![Inverting amplifier](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/invamp.png){#fig:invamp width="10cm"}
 
 The basic inverting amplifier is shown in Figure @fig:invamp. We can use the Golden Rules to determine the low-frequency gain. Since the positive input is grounded, the op-amp will do everything it can to keep the negative input at ground as well. In the limit of infinite open loop gain the inverting input of the op-amp is a [virtual ground]{.underline}, a circuit node that will stay at ground as long as the circuit is working, even though it is not directly connected to ground. When ***A is infinite,*** the gain of an inverting amplifier is
 
@@ -109,7 +109,7 @@ This is the same (except for the sign) as the non-inverting result when the clos
 
 # Summing Amplifier Theory
 
-![Summing amplifier](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab5fig/sumamp.png){#fig:sumamp width="10cm"}
+![Summing amplifier](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/sumamp.png){#fig:sumamp width="10cm"}
 
 The Summing Amplifier, shown in Figure @fig:sumamp, is a very flexible circuit based upon the standard inverting op-amp configuration that can be used for combining multiple inputs. The standard inverting amplifier, shown in Figure @fig:invamp, has a single input voltage, $V_{in}$, applied to the inverting input terminal. If we add more input resistors to the input, the circuit can become a voltage adder with different gain for each input. There are many applications for summing amplifiers including audio mixers and digital to analog converters. Using the Golden Rules we can determine the transfer function listed below.
 
@@ -119,7 +119,7 @@ This circuit has many applications including working as an adder in any basis-se
 
 # Integrator Theory
 
-![Integrator](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab5fig/integrator.png){#fig:integrator width="10cm"}
+![Integrator](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/integrator.png){#fig:integrator width="10cm"}
 
 The basic op-amp integrator is shown in Figure @fig:integrator. As compared to the inverting amplifier in Figure @fig:invamp, the only change is a replacement of the feedback resistor $R_F$ with a capacitor $C$. An integrator is the same circuit as a low-pass filter. If you are interested in what frequencies get passed, you call it a low-pass filter. If you are interested in integrating the input signal, you call it an integrator. We can understand how the integrator works by applying the Golden Rules and remembering the defining equation for capacitors. Just as in the integrating amplifier, the Golden Rules tells us that $V_-\approx V_+ = 0$ and that the current across both components is the same because no current flows into the op-amp. We label $I_R$ as the current through the resistor, which is $V_{in}/R$ since $V_-$ is at ground. We label $I_C$ as the current across the capacitor. The defining equation for capacitors is $Q=CV$. The current through a capacitor is $I=dQ/dt = d(CV)/dt = CdV/dt$. Therefore, the equation $I_R=I_C$ becomes:
 
@@ -184,9 +184,9 @@ So far you have been looking at the output versus frequency (Bode plots). Now yo
 
 All op-amp circuits start out by making the basic power connections. Op-amps are active components, which means they need external power to function unlike passive components such as resistors.
 
-![LF356 schematic and pin-out](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab5fig/lf356.png){#fig:lf356 width="10cm"}
+![LF356 schematic and pin-out](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/lf356.png){#fig:lf356 width="10cm"}
 
-![Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](https://raw.githubusercontent.com/kwbunker/PHYS-3330-Scratch/main/lab5fig/pb-example.png){#fig:pb width="10cm"}
+![Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5fig/pb-example.png){#fig:pb width="10cm"}
 
 # General Op-Amp Tips
 
