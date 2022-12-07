@@ -11,17 +11,11 @@ header-left: "\\thetitle"
 header-center: "Operational Amplifiers (OP-Amps) II"
 header-right: "PHYS 3330"
 footer-left: "\\thedate"
-footer-center: "\\theauthor"
+footer-center: "\\copyright \\theauthor"
 footer-right: "Page \\thepage"
 listings-no-page-break: true
 code-block-font-size: \scriptsize
 ---
-
-<!---
-
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab5.pdf).
-
--->
 
 # Goals
 

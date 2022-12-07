@@ -2,7 +2,7 @@
 title: "Lab 10"
 subtitle: "Digital Electronics: ARDUINO"
 author: [Department of Physics | University of Colorado Boulder]
-date: '2022-12-01'
+date: '2022-12-07'
 caption-justification: centering
 toc: true
 toc-own-page: true
@@ -11,17 +11,11 @@ header-left: "\\thetitle"
 header-center: "Bipolar Junction Transistors"
 header-right: "PHYS 3330"
 footer-left: "\\thedate"
-footer-center: "\\theauthor"
+footer-center: "\\copyright \\theauthor"
 footer-right: "Page \\thepage"
 listings-no-page-break: true
 code-block-font-size: \scriptsize
 ---
-
-<!---
-
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab10.pdf).
-
--->
 
 # Goals
 

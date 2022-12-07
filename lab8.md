@@ -2,7 +2,7 @@
 title: "Lab 8"
 subtitle: "Field-Effect Transistors: MOSFETS"
 author: [Department of Physics | University of Colorado Boulder]
-date: '2022-12-01'
+date: '2022-12-07'
 caption-justification: centering
 toc: true
 toc-own-page: true
@@ -11,17 +11,11 @@ header-left: "\\thetitle"
 header-center: "Bipolar Junction Transistors"
 header-right: "PHYS 3330"
 footer-left: "\\thedate"
-footer-center: "\\theauthor"
+footer-center: "\\copyright \\theauthor"
 footer-right: "Page \\thepage"
 listings-no-page-break: true
 code-block-font-size: \scriptsize
 ---
-
-<!---
-
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8.pdf).
-
--->
 
 As discussed in the last lab, transistors are the basic devices providing control of large currents with small signals. There are two general types of transistors, bipolar and field-effect. The difference between these two types is that for bipolar devices an *input current* controls the large current flow through the device, while for field-effect transistors an *input voltage* provides the current control. In the last experiment, you used the transistor as a voltage amplifier. In the present experiment, you explore using the FET type transistors as a current controller to create an electromagnet.
 

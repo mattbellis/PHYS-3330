@@ -2,7 +2,7 @@
 title: "Lab 4"
 subtitle: "Operational Amplifiers (OP-Amps) I"
 author: [Department of Physics | University of Colorado Boulder]
-date: '2022-12-01'
+date: '2022-12-07'
 caption-justification: centering
 toc: true
 toc-own-page: true
@@ -11,17 +11,11 @@ header-left: "\\thetitle"
 header-center: "Operational Amplifiers (OP-Amps) I"
 header-right: "PHYS 3330"
 footer-left: "\\thedate"
-footer-center: "\\theauthor"
+footer-center: "\\copyright \\theauthor"
 footer-right: "Page \\thepage"
 listings-no-page-break: true
 code-block-font-size: \scriptsize
 ---
-
-<!---
-
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab4.pdf).
-
--->
 
 # Goals
 
