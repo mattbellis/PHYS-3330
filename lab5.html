@@ -47,17 +47,11 @@ href="#inverting-amplifier-application---frequency-dependent-gain"
 id="toc-inverting-amplifier-application---frequency-dependent-gain"><span
 class="toc-section-number">10</span> Inverting Amplifier Application -
 Frequency Dependent Gain</a></li>
-<li><a href="#summing-amplifier-application"
-id="toc-summing-amplifier-application"><span
-class="toc-section-number">11</span> Summing Amplifier Application</a>
-<ul>
-<li><a href="#first-tests" id="toc-first-tests"><span
-class="toc-section-number">11.1</span> First tests</a></li>
-<li><a href="#digital-to-analog-conversion"
-id="toc-digital-to-analog-conversion"><span
-class="toc-section-number">11.2</span> Digital-to-analog
-conversion</a></li>
-</ul></li>
+<li><a
+href="#summing-amplifier-application---digital-to-analog-conversion"
+id="toc-summing-amplifier-application---digital-to-analog-conversion"><span
+class="toc-section-number">11</span> Summing Amplifier Application -
+Digital to Analog Conversion</a></li>
 <li><a href="#integrator-application"
 id="toc-integrator-application"><span
 class="toc-section-number">12</span> Integrator Application</a></li>
@@ -509,12 +503,13 @@ class="math inline">\(G_0\)</span> by measuring <span
 class="math inline">\(V_{in}\)</span> and <span
 class="math inline">\(V_{out}\)</span> using the scope (as you did in
 Lab 4). Do your measurements agree with your predictions?</p></li>
-<li><p>Predict the 3 dB frequency for your circuit. Include your
-calculations in your lab book. Now, determine the 3 dB frequency
-experimentally. Describe the procedure you followed to determine <span
-class="math inline">\(f_B\)</span>. Does your measurement agree with
-your prediction? Explicitly record what criteria you used to determine
-whether or not the model and measurements agree.</p></li>
+<li><p>Update your prediction of the 3 dB frequency for your circuit.
+Include your calculations in your lab book. Now, determine the 3 dB
+frequency experimentally. Describe the procedure you followed to
+determine <span class="math inline">\(f_B\)</span>. Does your
+measurement agree with your prediction? Explicitly record what criteria
+you used to determine whether or not the model and measurements
+agree.</p></li>
 <li><p>Using the gain-bandwidth relation and your measurements of <span
 class="math inline">\(G_0\)</span> and <span
 class="math inline">\(f_B\)</span> to determine <span
@@ -530,11 +525,10 @@ valid? Can you suggest possible model refinements and/or physical system
 refinements to get better agreement between the model predictions and
 measurements.</p></li>
 </ol>
-<h1 data-number="11" id="summing-amplifier-application"><span
-class="header-section-number">11</span> Summing Amplifier
-Application</h1>
-<h2 data-number="11.1" id="first-tests"><span
-class="header-section-number">11.1</span> First tests</h2>
+<h1 data-number="11"
+id="summing-amplifier-application---digital-to-analog-conversion"><span
+class="header-section-number">11</span> Summing Amplifier Application -
+Digital to Analog Conversion</h1>
 <ol type="1">
 <li><p>Modify your basic inverting op-amp circuit to make it a summing
 amplifier as shown in Figure <a href="#fig:sumamp">2</a>. Use the
@@ -548,25 +542,19 @@ What is <span class="math inline">\(V_{out}\)</span> in terms of <span
 class="math inline">\(V_1\)</span>, <span
 class="math inline">\(V_2\)</span>, and <span
 class="math inline">\(V_3\)</span>?</p></li>
-<li><p>Confirm your summing amplifier is working according to your model
-by measuring <span class="math inline">\(V_{out}\)</span> for different
-input voltages. Predict the output voltage for your set of test input
-voltages and measure <span class="math inline">\(V_{out}\)</span>. What
-is the best available measurement device to make these measurements? Why
-did you choose that device? Do your measurements agree with your
-predictions?</p></li>
+<li><p>Confirm your summing amplifier is working by testing a couple of
+input voltages to compare to your predicted <span
+class="math inline">\(V_{out}\)</span> from you prelab. What is the best
+available measurement device to make these measurements? Why did you
+choose that device? Do these initial measurements agree with your
+predictions? Create a table listing all possible input voltages, of 0V
+or 1V, to the 3 input voltages (binary counting from 0V-7V output) and
+measure the output of your circuit. This is a digital-to-analog
+converter mode. How accurately were you able to make integer values of
+output voltage? What criteria did you use to determine the accuracy?
+Describe a way to refine the physical system to more accurately create
+exact integer voltages at the output.</p></li>
 </ol>
-<h2 data-number="11.2" id="digital-to-analog-conversion"><span
-class="header-section-number">11.2</span> Digital-to-analog
-conversion</h2>
-<p>Use your summing amplifier in “digital to analog conversion mode” to
-create integer output voltages from 0 to -7 V from two input voltages (0
-V and 1 V). Predict what set of input voltages is required to get each
-desired output voltage (<em>Hint: You did this in your prelab</em>). Do
-your measurements agree with your predictions for all eight voltages?
-How accurately were you able to make integer values of voltage? Describe
-a way to refine the physical system to more accurately create exact
-integer voltages.</p>
 <h1 data-number="12" id="integrator-application"><span
 class="header-section-number">12</span> Integrator Application</h1>
 <p>By now, you should be somewhat comfortable with experimental design

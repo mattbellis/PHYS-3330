@@ -17,8 +17,6 @@ listings-no-page-break: true
 code-block-font-size: \scriptsize
 ---
 
-A PDF version of this page can be downloaded [here](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6.pdf).
-
 # Goals
 
 In this lab, you will design and build a photometer (optical detector) based on a silicon photodiode and a current-to-voltage amplifier whose output is proportional to the intensity of incident light. First, you will use it to measure the room light intensity. Then you will set up and investigate an optical communication link in which the transmitter is a light emitting diode (LED) and the receiver is your photodiode detector.
@@ -151,7 +149,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 1.  Build the circuit in Figure @fig:diode-cir using the silicon diode 1N4002.
 
-2.  Measure the current $I$ and the voltage across the diode ($V_{out}$) for different values of $V_{in}$ from --3 V to +3 V. You need to use the DMM to measure the voltage across the diode. To maximize accuracy, you would use another DMM to measure current. But reading the current directly from the power supply is fine. Be sure to take many data points (at least 10) to map out the characteristic curve of the diode, with a few extra points around $V_{in}$ of 0.6--0.9 V. How does the result compare with your predictions from section @sec:simp-diodes\.1? How does it compare with Figure @fig:diode-char?
+2.  Measure the current $I$ and the voltage across the diode ($V_{out}$) for different values of $V_{in}$ from --3 V to +3 V. You need to use the DMM to measure the voltage across the diode. To maximize accuracy, you would use another DMM to measure current. But reading the current directly from the power supply is fine. Be sure to take many data points (at least 10) to map out the characteristic curve of the diode, with a few extra points around $V_{in}$ of 0.6--0.9 V. How does the result compare with your predictions from section @sec:simp-diodes\.1? How does your plotted data compare with Figure @fig:diode-char?
 
 3.  Specifically consider the points at $V_{in}$ = +0.5 V, +0.8 V, and +2.0 V. What is the power dissipated in the diode and in the resistor for these values? Remember $P = IV$ and $I$ is the same for both components, but $V$ is not.
 

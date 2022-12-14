@@ -211,25 +211,20 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below?) Consider the gain-bandwidth product and how it relates to your circuit. What is the predicted gain for the frequency you chose? Measure the low frequency gain $G_0$ by measuring $V_{in}$ and $V_{out}$ using the scope (as you did in Lab 4). Do your measurements agree with your predictions?
 
-3.  Predict the 3 dB frequency for your circuit. Include your calculations in your lab book. Now, determine the 3 dB frequency experimentally. Describe the procedure you followed to determine $f_B$. Does your measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
+3.  Update your prediction of the 3 dB frequency for your circuit. Include your calculations in your lab book. Now, determine the 3 dB frequency experimentally. Describe the procedure you followed to determine $f_B$. Does your measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
 
 4.  Using the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your op-amp. Does your measured value of $f_T$ agree with the one from the datasheet?
 
 5.  Measure the frequency dependence of your circuit. Measure the gain at every decade in frequency from 10 Hz to 10 MHz. Should you use a 10X probe or coax cable to make your measurements? Explain your reasoning. Plot your measurements and predicted gain curve on the same plot. Where, if at all, is the simple model of the op-amp circuit not valid? Can you suggest possible model refinements and/or physical system refinements to get better agreement between the model predictions and measurements.
 
-# Summing Amplifier Application
-
-## First tests
+# Summing Amplifier Application - Digital to Analog Conversion
 
 1.  Modify your basic inverting op-amp circuit to make it a summing amplifier as shown in Figure @fig:sumamp. Use the component values you determined in your prelab for the resistors (you may want to check with your instructor to be sure they make sense). Draw the schematic in your lab notebook and label all components. Measure the resistors before inserting them into your circuit and record the values.
 
 2.  Determine the transfer function for your exact component values. What is $V_{out}$ in terms of $V_1$, $V_2$, and $V_3$?
 
-3.  Confirm your summing amplifier is working according to your model by measuring $V_{out}$ for different input voltages. Predict the output voltage for your set of test input voltages and measure $V_{out}$. What is the best available measurement device to make these measurements? Why did you choose that device? Do your measurements agree with your predictions?
+3.  Confirm your summing amplifier is working by testing a couple of input voltages to compare to your predicted $V_{out}$ from you prelab. What is the best available measurement device to make these measurements? Why did you choose that device? Do these initial measurements agree with your predictions? Create a table listing all possible input voltages, of 0V or 1V, to the 3 input voltages (binary counting from 0V-7V output) and measure the output of your circuit. This is a digital-to-analog converter mode. How accurately were you able to make integer values of output voltage? What criteria did you use to determine the accuracy? Describe a way to refine the physical system to more accurately create exact integer voltages at the output.
 
-## Digital-to-analog conversion
-
-Use your summing amplifier in "digital to analog conversion mode" to create integer output voltages from 0 to -7 V from two input voltages (0 V and 1 V). Predict what set of input voltages is required to get each desired output voltage (*Hint: You did this in your prelab*). Do your measurements agree with your predictions for all eight voltages? How accurately were you able to make integer values of voltage? Describe a way to refine the physical system to more accurately create exact integer voltages.
 
 # Integrator Application
 
