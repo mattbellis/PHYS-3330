@@ -168,10 +168,6 @@ Answer the following questions using Mathematica or by hand.
 
 ![JK flip-flop test setup](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab9fig/jkfftest.png){#fig:jkfftest}
 
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.
-
 # Appendix: Boolean Algebra
 
 ## Fundamental laws

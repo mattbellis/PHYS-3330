@@ -56,8 +56,8 @@ Start Mathematica and create a new notebook. **Keep all of your work in this Lab
 
 1. Evaluate the following math expressions in Mathematica:
    1. $3\pi^2+4.1$
-   2. $2+\frac{\sqrt{3}}{2}i$
-   3. $e^{1.6\pi i}$
+   2. $2+\frac{\sqrt{3}}{2}j$
+   3. $e^{1.6\pi j}$
 2. Assign the following variables and evaluate:
    1. $c=2\pi$
    2. $d=5\pi$
@@ -65,7 +65,7 @@ Start Mathematica and create a new notebook. **Keep all of your work in this Lab
 3. Evaluate the following expressions:
    1. $sin^2(\frac{\pi}{4})$
    2. $log(2+\sqrt{3})$
-   3. $|3+4i|^2$
+   3. $|3+4j|^2$
 4. Evaluate the following expressions:
    1. $(sin(2\pi +3)+cos(3\pi))^{1/2}$
    2. The vector $\vec{v} = (3,4,5)$

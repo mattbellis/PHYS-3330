@@ -245,7 +245,3 @@ By now, you should be somewhat comfortable with experimental design and reportin
 -   How would you refine your model or physical system to get better agreement?
 
 If you have an issue where the output seems to be at the rail voltage of the op-amp, you likely have a DC signal on the input (in addition to the AC signal). You should review the integrator theory section for ways to alleviate this.
-
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.

@@ -120,7 +120,3 @@ Answer the following questions using Mathematica for the plots. You can use eith
    - Check the effect of your coil on a compass and compare to the known magnetic field of the Earth. 
    - Get a power supply that can supply more current and pick up objects, test how the number or weight of objects you can pick up depends on the current. 
    - Wrap your coil around an iron core and test how the magnetic field changes, refine your model to include the iron
-
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.

@@ -177,10 +177,6 @@ that the lab notebook should be a complete record which someone else could use
 without difficulty to reproduce what you did. If you are having trouble deciding on a
 project, there are some suggestions in the appendix.
 
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.
-
 # Appendix: A Few Project Ideas
 
 - Adjust your current 10-LED setup so that it counts up in binary.

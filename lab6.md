@@ -191,10 +191,6 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 4.  Measure the output of the transimpedance amplifier (in Volts) of the transmitted light versus distance from a few cm to about 0.5 meter. How does the background light from the room affect the signal? Explain how you made this measurement. Estimate the the photodiode sensitivity $S_{\lambda}$ at the wavelength 625 nm of light emitted by the LED. Plot the power in Watts hitting the photodiode as a function of distance.
 
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.
-
 # Appendix A: Some Related Concepts About Measuring Light {#appendix-a-some-related-concepts-about-measuring-light .unnumbered}
 
 The sun has a power output (radiant flux) of $P = 3.85~x~10^{26}$ watts. Assuming a transparent atmosphere and a 1 m by 2 m solar panel perpendicular to the sun that absorbs 100% of the light, how much power is received? Consider that the entire $3.85~x~10^{26}$ W is distributed evenly on a hypothetical sphere with radius $1.50~x~10^{11}$ m (distance from sun to Earth). Since we know the area of a sphere is $4\pi r^2$, we can calculate the irradiance or intensity (power per area) as $N = P/4\pi r^2 = 1360 W/m2$. Since the solar panel has an area of 2 $m^2$, the power delivered to the solar panel is 2720 W.
