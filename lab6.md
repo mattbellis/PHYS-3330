@@ -55,7 +55,7 @@ The HLMP-C625 light emitting diode used in this lab acts electrically like any o
 
 ## Photodiode
 
-![Diagram and schematic symbol for a PIN silicon photodiode.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/photodiode.png){#fig:photodiode}
+![Diagram and schematic symbol for a PIN silicon photodiode.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab6fig/photodiode.png){#fig:photodiode width="15cm"}
 
 The PD204 photodiode used in this experiment is a p-intrinsic-n (PIN) silicon diode operated in reverse bias. A sketch of the photodiode structure is shown in Figure @fig:photodiode. The very thin p-type conducting layer acts as a window to admit light into the crystal. The reverse bias voltage maintains a strong electric field throughout the intrinsic region forming an extended depletion layer. The depletion layer should be thicker than the absorption length for photons in silicon in order to maximize the efficiency. An incident photon whose energy exceeds the bandgap energy can be absorbed to produce an electron-hole pair by photoelectric excitation of a valence electron into the conduction band. The charge carriers are swept out of the crystal by the internal electric field to appear as a photocurrent at the terminals. The photocurrent is proportional to light intensity over a range of more than 6 orders of magnitude.
 

@@ -45,7 +45,7 @@ JFETs add very little intrinsic noise to a circuit, and a JFET input op-amp is o
 
 MOSFETs can operate in three distinct regions. The first region is where the gate-to-source voltage, $V_{GS}$, is less than the threshold voltage, $V_{th}$. In this region, the MOSFET is turned off and no current can flow. The second region is when $V_{GS} > V_{th}$ and $V_{DS} < (V_{GS} ~–~ V_{th})$. In this linear region, the transistor is turned on, and a channel has been created that allows current to flow between the drain and the source. In this region, the MOSFET operates like a resistor, controlled by the gate voltage relative to both the source and drain voltages. In the third region, $V_{GS} > V_{th}$ and $V_{DS} \ge (V_{GS} - V_{th})$. This is called the saturation region. Here the current is controlled by the gate voltage and is nearly independent of $V_{DS}$. We will work in the saturation region for this lab. The linear and saturation regions are separated by the dotted line in Figure @figmosfetchar. In the saturation region, the dependence of current on $V_{GS}$ is modeled by $I_D = k(V_{GS} ~–~V_{th})^2$, where $k$ is a constant that depends on the device.
 
-![Typical output characteristics of a MOSFET. These vary greatly between different types of MOSFETs. Always check the data sheet for your exact part. This is not the diagram for the MOSFET you will be using!](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/mosfetchar.png){#fig:mosfetchar}
+![Typical output characteristics of a MOSFET. These vary greatly between different types of MOSFETs. Always check the data sheet for your exact part. This is not the diagram for the MOSFET you will be using!](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/mosfetchar.png){#fig:mosfetchar width="15cm"}
 
 # Useful Readings
 
@@ -77,7 +77,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 # IRF710PBF Pin-Out and Schematic
 
-![MOSFET schematic symbol and pin out configuration.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/mosfetpo.png){#fig:mosfetpo}
+![MOSFET schematic symbol and pin out configuration.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/mosfetpo.png){#fig:mosfetpo width="15cm"}
 
 **CAUTION!**
 
@@ -87,7 +87,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 # Device Characterization
 
-![Test circuit to determine the MOSFET I-V curves.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/testcir.png){#fig:testcir}
+![Test circuit to determine the MOSFET I-V curves.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/testcir.png){#fig:testcir width="15cm"}
 
 ## Characterizing the MOSFET {#sec:fetchar}
 
@@ -98,7 +98,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 # Voltage Controlled Electromagnet
 
-![Circuit diagram for a voltage-controlled electromagnet.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/magcircuit.png){#fig:magcircuit}
+![Circuit diagram for a voltage-controlled electromagnet.](https://raw.githubusercontent.com/UCBoulder/PHYS-3330/main/lab8fig/magcircuit.png){#fig:magcircuit width="15cm"}
 
 ## Electromagnetic coil
 
