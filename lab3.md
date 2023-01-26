@@ -219,10 +219,6 @@ Plot your mathematical models of all three filter circuits (three independent pl
 
 6.  Measure the gain ($|V_{out}/V_{in}|$) as function of frequency. Use your model prediction to decide what values of frequency to take data. Plot your measurements on the same graph as your model. Does your data match your model prediction? Note, your transfer function did not include the refined value of $Q$.
 
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.
-
 # Appendix A: Refined LCR Band-Pass Filter Model {#appendix-a-refined-lcr-band-pass-filter-model .unnumbered}
 
 Inductors often have considerable resistance as they are just wires wrapped around a ferrite core. One can include this resistance as a resistor in series with the inductor. The refined model of the Q of this system is

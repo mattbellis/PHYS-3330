@@ -263,6 +263,3 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 2.  Predict the output impedance of your circuit, $R_o{’}$, at a frequency of 1 kHz. (HINT: See 6.2.5) Predict the output voltage based on your input voltage when your circuit is used to drive a load of 200 $\Omega$ and 8 $\Omega$. (Model as a voltage divider with the op-amp output impedance as one resistor and your load resistor as the other resistor.) Measure the output voltage $V_{out}$ for all three configurations (no load, 200 $\Omega$ load, 8 $\Omega$ load). Do the measured values agree with your model prediction? If not, can you make modifications to your model to understand the discrepancy? Hint: Consider the maximum output current of the op-amp.
 
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.

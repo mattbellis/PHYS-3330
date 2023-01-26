@@ -233,10 +233,6 @@ In the previous section, you measured resistances using the ohmmeter in the DMM.
 
 3.  Do your two measurements confirm your scientific argument made in part 2? Defend your assertion using your data.
 
-# Summary and Conclusions
-
-Write a two-paragraph summary in your lab notebook of what you learned and any important takeaways.
-
 # Appendix A: Tektronix TBS 2000 Series Oscilloscope Controls {#appendix-a-tektronix-tbs-2000-series-oscilloscope-controls .unnumbered}
 
 **To change the horizontal (time base) scale:**
