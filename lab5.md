@@ -97,7 +97,7 @@ The output impedance is the same for both the inverting and non-inverting amplif
 
 The gain-bandwidth product for inverting amplifier is slightly modified compared to non-inverting amps.
 
-$$A_{0}f_{0} = \frac{{{- G}_{0}f}_{B}}{1 - B} = f_{T}$$
+$$A_0 f_0 = \frac{-G_0 f_B}{1 - B} = f_T$$
 
 This is the same (except for the sign) as the non-inverting result when the closed loop gain is large ($B \ll 1, |G0| \gg 1$), but at unity closed loop gain ($B = 1/2, G_0 = -1$) the inverting amplifier has only half as much bandwidth as a non-inverting amplifier.
 
