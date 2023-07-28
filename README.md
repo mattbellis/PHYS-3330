@@ -1,4 +1,4 @@
-# Advanced Lab Website for CU Boulder Physics
+# Electronics Lab Website for CU Boulder Physics
 
 
 
