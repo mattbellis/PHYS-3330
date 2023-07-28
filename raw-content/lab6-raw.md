@@ -191,8 +191,10 @@ The dimensionless quantity $y(\lambda)$ is the photopic standard luminosity func
 
 # Appendix B: Light Output in Lumens for Various Light Sources {#appendix-b-light-output-in-lumens-for-various-light-sources .unnumbered}
 
+<center>
+
 | Light Output (lm) | Tungsten Filament (W) | Halogen (W) | CFL (W) | LED (W) |
-| ----------------- | --------------------- | ----------- | ------- | ------- |
+| :-----------------: | :---------------------: | :-----------: | :-------: | :-------: |
 | 200               | 25                    |             | 4       | 3       |
 | 450               | 40                    | 29          | 10      | 6       |
 | 800               | 60                    |             | 14      | 9       |
@@ -202,3 +204,6 @@ The dimensionless quantity $y(\lambda)$ is the photopic standard luminosity func
 | 3100              | 200                   |             | 60      | 32      |
 
 Table: Electrical power consumption of select light sources as a function of light output. {#tbl:1}
+</center>
+
+<br>

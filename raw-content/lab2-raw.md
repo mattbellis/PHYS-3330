@@ -29,7 +29,7 @@ Modeling measurement systems:
 
 -   Refine the voltage divider models to include the effect of the measurement probes
 
-Applications
+Applications:
 
 -   Build a dimmer switch for a light bulb
 
@@ -89,16 +89,17 @@ Before breadboards (aka prototyping or proto boards), creating circuits required
 
 ## Test your protoboard
 
-1.  Your instructor will give your team a prototyping board to use. Write your team members names on it. Your team will use the same board all semester. An incomplete experiment can be left on the board and finished later. Store the board on the shelf labeled for your section.
+1.  Your instructor will give your team a prototyping board to use. Using the label printer in the lab, make a label with your group member's names and attach it to the bottom of your prototyping board . Your team will use the same board all semester. An incomplete experiment can be left on the board and finished later. Store the board on the shelfs labeled for your section.
 
-2. On the front panel, you will find:
+2. On the interface panel, you will find:
 
-   -   BNC cable jacks that carry electric signals between your circuit on the board and the function generator and oscilloscope
-   -   Colored banana jacks to bring in DC power for transistors or chips from an external power supply
-   -   A precision 10 k$\Omega$ ten‑turn potentiometer
-   -   Several switches
+   -   BNC cable jacks that carry electric signals between your circuit on the board and the function generator and oscilloscope.
+   -   Colored banana jacks to bring in DC power for transistors or chips from an external power supply.
+   -   A precision 10 k$\Omega$ ten‑turn potentiometer with a fuse on the wiper (the fuse is a 125 mA Type 2AG measuring 5 mm x 15 mm if you need a replacement).
+   -   Several switches.
+   -   Screw terminals which will be used with jumper wires to bring power/signals from the interface panel to your breadboard.
 
-   A wire or component on the board might be broken, or might break during the semester. Dont worry -you will be able to repair the board as you go.
+   <br>The components on the interface panel are pre-soldered to the screw terminals and a wiring diagram is printed on the panel. If you think there are any issues with your interface panel, please notify the [technical staff](/PHYS-3330/report-lab-issue).
 
 3.  The breadboard contains arrays of holes, interconnected by buried conductors, into which components are plugged to build your circuit. In general, you can never be sure that any two contacts are really connected, or any wire is really continuous, unless you test it yourself, so get into the habit of testing things.
 
@@ -110,13 +111,13 @@ Before breadboards (aka prototyping or proto boards), creating circuits required
 
 1.  For essentially all circuits, you will need power connections (+15 V, -15V, ground). Connect the power supply to the panel using banana cables.
 
-2.  **USE A COLOR CODE FOR THE POWER CONNECTIONS!** Typically we use **black = ground**, <span style="color: red;">**red = +15 V**</span>, and <span style="color: blue;">**blue = -15 V**</span>. Using a consistent color code will allow you and others to debug your circuits quickly. You are also less likely to plug something in incorrectly and burn up a component. Write down your color code in your lab notebook.
+2.  **USE A COLOR CODE FOR THE POWER CONNECTIONS!** The convention used in this course is **black = ground**, <span style="color: red;">**red = +15 V**</span>, and <span style="color: blue;">**blue = -15 V**</span>. Using a consistent color code will allow you and others to debug your circuits quickly. You are also less likely to plug something in incorrectly and burn up a component. You should also have a white colored banana jack on your interface panel. You may find that this is useful during your final project phase if you require another voltage. Remember to write down your color code in your lab notebook. 
 
-3.  Once you have power connected to the front panel, use the wires soldered on the back of the connectors to make connections to the board (+15, -15, and ground). The long rails that run the length of the board are best for distributing power to all of your components. Use these for only power or ground.
+3.  Once you have power connected to the interface panel, use jumper wires from the appropriate screw terminal to make connections to the breadboard (+15, -15, and ground). The long rails that run the length of the board are best for distributing power to all of your components. Use these for only power or ground.
 
 4.  Good electrical contact is essential when you plug in components or wires. Use only 22- or 24-gauge solid wire, not stranded wire. The 22- or 24-gauge wire should make a good connection with the conductors inside the board without slipping out easily. Push in each wire until you feel the contacts grip. **Dont force larger wires into the protoboard. You can damage the connectors.**
 
-5.  Reliable ground connections (0 V), readily accessible from any point on the board, are essential to the good functioning of most circuits. The front panel is the ground for your circuit board since the outside of the BNC connector connects the front panel of your circuit board to the ground of other instruments in your experiment.
+5.  Reliable ground connections (0 V), readily accessible from any point on the breadboard, are essential to the good functioning of most circuits. The interface panel is wired such that outer conductor on the BNC connectors are connected to the **black** banana jack, which forces a common chassis ground. This is indicated on the wiring diagram printed on the interface panel.
 
 ## Supplying power to your protoboard
 
@@ -140,7 +141,7 @@ Components (resistors, capacitors, transistors, etc.) are available from the com
 
 5.  Compare the voltages you predicted to the voltages you measured. Does your model of the voltage divider agree with each of your measurements? Explicitly record what criteria you used to determine whether or not the model and measurements agreed.
 
-6.  *Complete this step only if your model and measurements did not agree.* If your model and measurements did not agree, you will have to either refine your model or your experiment. Lets start by refining your model. Consider the input resistance of your measurement device. Draw a circuit diagram that includes that resistance. *HINT: See Figure @fig:modified-vd* Derive an expression for the output voltage now including the unknown measurement device resistance. Use this new model to determine the input resistance of measurement device. (that is, rearrange your equation to solve for R~3~). You may have this from your prelab.
+6.  *Complete this step only if your model and measurements did not agree.* If your model and measurements did not agree, you will have to either refine your model or your experiment. Lets start by refining your model. Consider the input resistance of your measurement device. Draw a circuit diagram that includes that resistance. *HINT: See Figure @fig:modified-vd*. Derive an expression for the output voltage now including the unknown measurement device resistance. Use this new model to determine the input resistance of measurement device. (that is, rearrange your equation to solve for R~3~). You may have this from your prelab.
 
 ## Fixed-value voltage dividers of 1M$\boldsymbol{\Omega}$ and 10M$\boldsymbol{\Omega}$
 
@@ -190,7 +191,7 @@ You will now use your skills with building and testing voltage dividers to build
 
 4.  If the dial reads something other than 000 in this position, do the following procedure:
 
-    1.  Use a tiny Allen key to loosen the small set-screw on the side of the knob.
+    1.  Use a 0.050" Allen key to loosen the small set-screw on the side of the knob.
 
     2.  Pull the entire dial off the panel.
 
@@ -198,6 +199,8 @@ You will now use your skills with building and testing voltage dividers to build
 
     4.  Turn the now-detached knob until the dial reads 000.
 
-    5.  Push the dial back onto the inner knob, rotating the outside of the dial (not the knob!) counterclockwise until it snaps in place against the panel and wont rotate. The dial should still read 000. If it doesnt, repeat the last three steps.
+    5.  Lock the dial by depressing the black switch on knob (and verify that the dial still reads 000).
 
-    6.  Use the Allen key to tighten the set screw. Check the calibration again: the knob should stop at 000 and 1000.
+    6.  Push the dial back onto the inner knob, rotating the outside of the dial **counterclockwise** until it snaps in place against the panel and wont rotate. The dial should still read 000. If it doesnt, repeat the last three steps.
+    
+    7.  Use the Allen key to tighten the set screw. Check the calibration again: the knob should stop at 000 and 1000.

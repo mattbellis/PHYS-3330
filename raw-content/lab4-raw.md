@@ -223,11 +223,11 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 4.  If you observed ideal behavior, youre lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
 
-![Test and measurement setup for op-amp circuits](../resources/lab4fig/op-amp-test.png){#fig:op-amp-test width="10cm"}
+![Test and measurement setup for op-amp circuits](../resources/lab4fig/op-amp-test.png){#fig:op-amp-test width="15cm"}
 
 # Non-Inverting Amplifier
 
-![Non-inverting amplifier](../resources/lab4fig/non-inv-amp.png){#fig:non-inv-amp width="10cm"}
+![Non-inverting amplifier](../resources/lab4fig/non-inv-amp.png){#fig:non-inv-amp width="15cm"}
 
 ## Frequency dependent gain
 

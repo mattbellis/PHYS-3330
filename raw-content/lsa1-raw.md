@@ -88,7 +88,7 @@ Table: Wavelength dependence of the index of refraction of BK7 glass. BK7 glass 
 Regardless of how you input the data, it is always represented as a Mathematica list. Lists are like arrays. The following data from Table 1 has been directly entered as a list. The downside is it requires many curly brackets, and we lose the row-column format of the original data which may make you more prone to mistakes as you enter the data.
 
 ````
-
+{% raw %}data = {{0.3,1.553},{0.4,1.531},{0.5,1.521},{0.6,1.516},{0.7,1.513},{0.8,1.511}}{% endraw %}
 ````
 
 ***Option 2: Entering data as a nicely formatted table***
@@ -102,7 +102,7 @@ There is an [optional screencast](http://www.wolfram.com/broadcast/video.php?sx=
 
 # Plotting Data
 
-Plotting data is another skill that is essential in the lab. By the end of this section you should be able to use the `ListPlot` function for plotting data. When using `ListPlot` you need to be sure the data in the correct form. The most common form data is a list of pairs of numbers. For example, **replace**.
+Plotting data is another skill that is essential in the lab. By the end of this section you should be able to use the `ListPlot` function for plotting data. When using `ListPlot` you need to be sure the data in the correct form. The most common form data is a list of pairs of numbers. For example, `{% raw %}{{x1,y1},{x2,y2},…}{% endraw %}`.
 
 Watch the screencast on [plotting data in Mathematica.](https://tinyurl.com/yr5c297e)
 

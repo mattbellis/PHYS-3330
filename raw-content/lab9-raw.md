@@ -44,7 +44,7 @@ The function of each gate is defined by a truth table, which specifies the outpu
 
 ![Simple logic gates](../resources/lab9fig/simpgates.png){#fig:simpgates}
 
-![Compound logic gates](../resources/lab9fig/compgates.png){#fig:compgates}
+![Compound logic gates](../resources/lab9fig/compgates.png){#fig:compgates width="15cm"}
 
 # Memory Elements and Flip-Flops
 
@@ -80,7 +80,7 @@ See [Steck](https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/elec
 
 Each chip has a dot or notch to indicate the end where pins 1 and 14 are located. The pin numbers increase sequentially as you go counterclockwise around the chip viewed from above. In 74xx family logic chips, pin 7 is always grounded (0 V) and pin 14 is always connected to the +5 V supply. You connect these to the breadboard the same way as the op-amp (across the groove in the middle of the breadboard).
 
-![Some descriptive text](../resources/lab9fig/logicchips.png){#fig:logicchips}
+![Some logic chip pin-outs.](../resources/lab9fig/logicchips.png){#fig:logicchips width="20cm"}
 
 # Useful Readings
 
@@ -152,7 +152,7 @@ Answer the following questions using Mathematica or by hand.
 2. Set CLR = 1 and J = K = 1. Now drive the clock input of the flip-flop with 4 kHz pulses from your clock circuit. Use the oscilloscope to measure the clock input and the output, $Q$, of the flip-flop. You may find Figure @fig:jkfftest helpful to setup this part. Record your measurements and compare with your prediction from section @sec:jkffpre. Include a screen shot showing the results.
 3. Do the same test with J = K = 0 and record what happens.
 
-![JK flip-flop test setup](../resources/lab9fig/jkfftest.png){#fig:jkfftest}
+![JK flip-flop test setup](../resources/lab9fig/jkfftest.png){#fig:jkfftest width="20cm"}
 
 # Appendix: Boolean Algebra
 
@@ -229,7 +229,7 @@ Boolean algebra can be used to simplify logical expressions and reduce the numbe
 
 ![Logic](../resources/lab9fig/logic.png){#fig:logic}
 
-**Simplified circuit**
+
 
 
 

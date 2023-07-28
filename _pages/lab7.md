@@ -1,5 +1,5 @@
 ---
-title: "PHYS 3330 - Bipolar Junction Transistors"
+title: "PHYS 3330 - Field-Effect Transistors: MOSFETS"
 layout: lab-guide
 permalink: /lab-guides/lab7
 ---

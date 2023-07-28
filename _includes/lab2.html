@@ -138,7 +138,7 @@ Voltage Dividers</h1>
          <li><p>Refine the voltage divider models to include the effect
          of the measurement probes</p></li>
          </ul>
-         <p>Applications</p>
+         <p>Applications:</p>
          <ul>
          <li>Build a dimmer switch for a light bulb</li>
          </ul>
@@ -261,24 +261,34 @@ Voltage Dividers</h1>
          protoboard</h2>
          <ol type="1">
          <li><p>Your instructor will give your team a prototyping board
-         to use. Write your team members names on it. Your team will use
-         the same board all semester. An incomplete experiment can be
-         left on the board and finished later. Store the board on the
-         shelf labeled for your section.</p></li>
-         <li><p>On the front panel, you will find:</p>
+         to use. Using the label printer in the lab, make a label with
+         your group member’s names and attach it to the bottom of your
+         prototyping board . Your team will use the same board all
+         semester. An incomplete experiment can be left on the board and
+         finished later. Store the board on the shelfs labeled for your
+         section.</p></li>
+         <li><p>On the interface panel, you will find:</p>
          <ul>
          <li>BNC cable jacks that carry electric signals between your
          circuit on the board and the function generator and
-         oscilloscope</li>
+         oscilloscope.</li>
          <li>Colored banana jacks to bring in DC power for transistors
-         or chips from an external power supply</li>
+         or chips from an external power supply.</li>
          <li>A precision 10 k<span class="math inline">\(\Omega\)</span>
-         ten‑turn potentiometer</li>
-         <li>Several switches</li>
+         ten‑turn potentiometer with a fuse on the wiper (the fuse is a
+         125 mA Type 2AG measuring 5 mm x 15 mm if you need a
+         replacement).</li>
+         <li>Several switches.</li>
+         <li>Screw terminals which will be used with jumper wires to
+         bring power/signals from the interface panel to your
+         breadboard.</li>
          </ul>
-         <p>A wire or component on the board might be broken, or might
-         break during the semester. Dont worry -you will be able to
-         repair the board as you go.</p></li>
+         <p><br>The components on the interface panel are pre-soldered
+         to the screw terminals and a wiring diagram is printed on the
+         panel. If you think there are any issues with your interface
+         panel, please notify the <a
+         href="/PHYS-3330/report-lab-issue">technical
+         staff</a>.</p></li>
          <li><p>The breadboard contains arrays of holes, interconnected
          by buried conductors, into which components are plugged to
          build your circuit. In general, you can never be sure that any
@@ -307,20 +317,24 @@ Voltage Dividers</h1>
          connections (+15 V, -15V, ground). Connect the power supply to
          the panel using banana cables.</p></li>
          <li><p><strong>USE A COLOR CODE FOR THE POWER
-         CONNECTIONS!</strong> Typically we use <strong>black =
-         ground</strong>, <span style="color: red;"><strong>red = +15
-         V</strong></span>, and <span style="color: blue;"><strong>blue
-         = -15 V</strong></span>. Using a consistent color code will
-         allow you and others to debug your circuits quickly. You are
-         also less likely to plug something in incorrectly and burn up a
-         component. Write down your color code in your lab
+         CONNECTIONS!</strong> The convention used in this course is
+         <strong>black = ground</strong>, <span
+         style="color: red;"><strong>red = +15 V</strong></span>, and
+         <span style="color: blue;"><strong>blue = -15
+         V</strong></span>. Using a consistent color code will allow you
+         and others to debug your circuits quickly. You are also less
+         likely to plug something in incorrectly and burn up a
+         component. You should also have a white colored banana jack on
+         your interface panel. You may find that this is useful during
+         your final project phase if you require another voltage.
+         Remember to write down your color code in your lab
          notebook.</p></li>
-         <li><p>Once you have power connected to the front panel, use
-         the wires soldered on the back of the connectors to make
-         connections to the board (+15, -15, and ground). The long rails
-         that run the length of the board are best for distributing
-         power to all of your components. Use these for only power or
-         ground.</p></li>
+         <li><p>Once you have power connected to the interface panel,
+         use jumper wires from the appropriate screw terminal to make
+         connections to the breadboard (+15, -15, and ground). The long
+         rails that run the length of the board are best for
+         distributing power to all of your components. Use these for
+         only power or ground.</p></li>
          <li><p>Good electrical contact is essential when you plug in
          components or wires. Use only 22- or 24-gauge solid wire, not
          stranded wire. The 22- or 24-gauge wire should make a good
@@ -329,11 +343,12 @@ Voltage Dividers</h1>
          contacts grip. <strong>Dont force larger wires into the
          protoboard. You can damage the connectors.</strong></p></li>
          <li><p>Reliable ground connections (0 V), readily accessible
-         from any point on the board, are essential to the good
-         functioning of most circuits. The front panel is the ground for
-         your circuit board since the outside of the BNC connector
-         connects the front panel of your circuit board to the ground of
-         other instruments in your experiment.</p></li>
+         from any point on the breadboard, are essential to the good
+         functioning of most circuits. The interface panel is wired such
+         that outer conductor on the BNC connectors are connected to the
+         <strong>black</strong> banana jack, which forces a common
+         chassis ground. This is indicated on the wiring diagram printed
+         on the interface panel.</p></li>
          </ol>
          <h2 data-number="5.3"
          id="supplying-power-to-your-protoboard"><span
@@ -394,8 +409,8 @@ Voltage Dividers</h1>
          your experiment. Lets start by refining your model. Consider
          the input resistance of your measurement device. Draw a circuit
          diagram that includes that resistance. <em>HINT: See Figure <a
-         href="#fig:modified-vd">2</a></em> Derive an expression for the
-         output voltage now including the unknown measurement device
+         href="#fig:modified-vd">2</a></em>. Derive an expression for
+         the output voltage now including the unknown measurement device
          resistance. Use this new model to determine the input
          resistance of measurement device. (that is, rearrange your
          equation to solve for R<sub>3</sub>). You may have this from
@@ -517,15 +532,17 @@ Voltage Dividers</h1>
          <li><p>If the dial reads something other than 000 in this
          position, do the following procedure:</p>
          <ol type="1">
-         <li><p>Use a tiny Allen key to loosen the small set-screw on
+         <li><p>Use a 0.050” Allen key to loosen the small set-screw on
          the side of the knob.</p></li>
          <li><p>Pull the entire dial off the panel.</p></li>
          <li><p>Turn the inner knob that remains on your panel
          counterclockwise until it stops.</p></li>
          <li><p>Turn the now-detached knob until the dial reads
          000.</p></li>
+         <li><p>Lock the dial by depressing the black switch on knob
+         (and verify that the dial still reads 000).</p></li>
          <li><p>Push the dial back onto the inner knob, rotating the
-         outside of the dial (not the knob!) counterclockwise until it
+         outside of the dial <strong>counterclockwise</strong> until it
          snaps in place against the panel and wont rotate. The dial
          should still read 000. If it doesnt, repeat the last three
          steps.</p></li>

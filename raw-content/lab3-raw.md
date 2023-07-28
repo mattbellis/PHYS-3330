@@ -107,7 +107,7 @@ $$Z_{0} = \omega_{0}L = \frac{1}{\omega_{0}C} = \frac{\sqrt{L}}{\sqrt{C}}$$
 
 # Prelab
 
-Answer the following questions using Mathematica. Save the complete notebook as a pdf and turn it in to Canvas by midnight the day before your lab section meets. **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
+Answer the following questions using Mathematica. Save the complete notebook as a pdf and turn it in to Canvas before you lab section (check Canvas for the due date). **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
 
 ![Low-pass filter](../resources/lab3fig/low-pass-1.png){#fig:low-pass-1 width="10cm"}
 

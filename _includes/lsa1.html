@@ -219,7 +219,7 @@ Introduction</h1>
          list. The downside is it requires many curly brackets, and we
          lose the row-column format of the original data which may make
          you more prone to mistakes as you enter the data.</p>
-         <pre><code></code></pre>
+         <pre><code>{% raw %}data = {{0.3,1.553},{0.4,1.531},{0.5,1.521},{0.6,1.516},{0.7,1.513},{0.8,1.511}}{% endraw %}</code></pre>
          <p><strong><em>Option 2: Entering data as a nicely formatted
          table</em></strong></p>
          <p>In Mathematica you can directly enter data in the form of a
@@ -240,7 +240,8 @@ Introduction</h1>
          <code>ListPlot</code> function for plotting data. When using
          <code>ListPlot</code> you need to be sure the data in the
          correct form. The most common form data is a list of pairs of
-         numbers. For example, <strong>replace</strong>.</p>
+         numbers. For example,
+         <code>{% raw %}{{x1,y1},{x2,y2},…}{% endraw %}</code>.</p>
          <p>Watch the screencast on <a
          href="https://tinyurl.com/yr5c297e">plotting data in
          Mathematica.</a></p>
