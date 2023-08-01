@@ -5,6 +5,7 @@ sitemap: false
 permalink: /lab-guides
 ---
 
+# Lab Guides
 
 [Lab 1 - Electronic Measurements](/PHYS-3330/lab-guides/lab1)
 
@@ -26,10 +27,3 @@ permalink: /lab-guides
 
 [Lab 10 - Digital Electronics: ARDUINO](/PHYS-3330/lab-guides/lab10)
 
-[Lab Skill Activity 1 - Mathematica Introduction](/PHYS-3330/lab-guides/lsa1)
-
-[Lab Skill Activity 2 - Analyzing Data in Mathematica](/PHYS-3330/lab-guides/lsa2)
-
-
-
-[Lab Guide Example](/PHYS-3330/lab-guides/lab-guide-example)
