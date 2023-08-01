@@ -1,0 +1,1085 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 8.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     42867,       1076]
+NotebookOptionsPosition[     40780,       1000]
+NotebookOutlinePosition[     41122,       1015]
+CellTagsIndexPosition[     41079,       1012]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[TextData[{
+ "Entering data in real time into ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 8"
+}], "Title",
+ CellChangeTimes->{{3.50643581088465*^9, 3.506435826181525*^9}, {
+  3.5064382997190037`*^9, 3.5064382998920135`*^9}}],
+
+Cell[TextData[{
+ "This may work exactly the same in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " 7, but I did not test it."
+}], "Subsubtitle",
+ CellChangeTimes->{{3.5064383049803047`*^9, 3.5064383333319263`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Insert Table/Matrix approach (probably the best way)\
+\>", "Section",
+ CellChangeTimes->{{3.506435997268311*^9, 3.5064360189545517`*^9}, {
+  3.506437669596963*^9, 3.506437677643423*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Creating a table for data entry using the Insert Table/Matrix command\
+\>", "Subsection",
+ CellChangeTimes->{{3.506436561420579*^9, 3.50643656721391*^9}, {
+  3.506436654842922*^9, 3.5064366637084293`*^9}, {3.506437118692453*^9, 
+  3.506437141963784*^9}}],
+
+Cell["\<\
+You can insert a empty grid or matrix from the Insert->Table/Matrix->New \
+command in the menu.
+You are given an option of Table or Matrix view.  I would choose Table for \
+data entry, though it doesn\[CloseCurlyQuote]t matter.  Matrix view shows big \
+matrix brackets on the outside of the table, which is nice for matrices, but \
+would be unusual for a list of data.
+You can also pick the number of rows and columns and also the appearance of \
+gird lines separating the entries.
+Give it a try.\
+\>", "Text",
+ CellChangeTimes->{{3.5064371460430174`*^9, 3.506437187390382*^9}, {
+  3.5064372272196603`*^9, 3.5064372917563515`*^9}, {3.506437349413649*^9, 
+  3.506437466996375*^9}}],
+
+Cell["\<\
+I selected a Table with 2 columns and 4 rows\
+\>", "Text",
+ CellChangeTimes->{{3.5064356059949317`*^9, 3.5064356067499747`*^9}, {
+  3.5064356417669773`*^9, 3.5064357280619135`*^9}, {3.5064358759083695`*^9, 
+  3.506435906105097*^9}, {3.506436581599733*^9, 3.506436633143681*^9}, {
+  3.5064372059994464`*^9, 3.5064372199452443`*^9}, {3.5064373206600046`*^9, 
+  3.5064373456034317`*^9}, {3.5064374699955463`*^9, 3.506437476443915*^9}}],
+
+Cell[BoxData[GridBox[{
+   {"\[Placeholder]", "\[Placeholder]"},
+   {"\[Placeholder]", "\[Placeholder]"},
+   {"\[Placeholder]", "\[Placeholder]"},
+   {"\[Placeholder]", "\[Placeholder]"}
+  },
+  GridBoxDividers->{
+   "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+    "RowsIndexed" -> {}}]], "Input",
+ CellChangeTimes->{3.506437316838786*^9}],
+
+Cell["\<\
+Give the table a name.  I set \[OpenCurlyDoubleQuote]data3\
+\[CloseCurlyDoubleQuote] equal to this table and started entering in numbers. \
+ It is easy to add rows and columns with keyboard shortcuts. 
+Adding a row  < CTRL+ENTER >
+Adding a column < CTRL+, >  (control+comma)
+Deleting a row - highlight the row and press < Delete >
+Deleting a column - highlight the column and press < Delete >\
+\>", "Text",
+ CellChangeTimes->{{3.506437479344081*^9, 3.506437555705448*^9}, {
+  3.5064382093808365`*^9, 3.506438272758462*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data3", "=", GridBox[{
+    {"2", "3.1"},
+    {"3", "2.3"},
+    {"4", "2.8"},
+    {"5", "3.7"}
+   },
+   GridBoxDividers->{
+    "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+     "RowsIndexed" -> {}}]}]], "Input",
+ CellChangeTimes->{{3.5064356059949317`*^9, 3.5064356067499747`*^9}, {
+  3.5064356417669773`*^9, 3.5064357280619135`*^9}, {3.5064358759083695`*^9, 
+  3.506435906105097*^9}, {3.506436682207487*^9, 3.5064367094000425`*^9}, {
+  3.5064375402735662`*^9, 3.5064375509201746`*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2", ",", "3.1`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "2.3`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"4", ",", "2.8`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "3.7`"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5064357124730215`*^9, 3.5064367114321585`*^9, 
+  3.5064375759646072`*^9}]
+}, Open  ]],
+
+Cell["\<\
+The data is already in the format of an array and is ready to be plotted or \
+analyzed.\
+\>", "Text",
+ CellChangeTimes->{{3.5064376017930846`*^9, 3.5064376090044975`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "data3", "]"}]], "Input",
+ CellChangeTimes->{{3.5064375630738697`*^9, 3.5064375915584993`*^9}, {
+  3.506437647918723*^9, 3.5064376560611887`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[
+  {Hue[0.67, 0.6, 0.6], 
+   PointBox[{{2., 3.1}, {3., 2.3}, {4., 2.8}, {5., 3.7}}]},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  PlotRange->Automatic,
+  PlotRangeClipping->True]], "Output",
+ CellChangeTimes->{{3.5064375710603266`*^9, 3.506437577827714*^9}, 
+   3.506437657779287*^9}]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Example for entry and plotting in real time\
+\>", "Subsection",
+ CellChangeTimes->{{3.5064379339180813`*^9, 3.5064379480118876`*^9}, {
+  3.506438114372402*^9, 3.5064381154444637`*^9}}],
+
+Cell["\<\
+Nothing is new here other than the data entry and plot are combined on the \
+same input section. Execute the input using  
+< SHIFT + ENTER > whenever you want to produce the plot.\
+\>", "Text",
+ CellChangeTimes->{{3.5064379882781906`*^9, 3.506438083853657*^9}, {
+  3.5064381241499615`*^9, 3.506438129156248*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"data3", "=", GridBox[{
+     {"2", "3.1"},
+     {"3", "2.3"},
+     {"4", "2.8"},
+     {"5", "3.7"},
+     {"6", "4.9"},
+     {"\[Placeholder]", "\[Placeholder]"}
+    },
+    GridBoxDividers->{
+     "Columns" -> {{True}}, "ColumnsIndexed" -> {}, "Rows" -> {{True}}, 
+      "RowsIndexed" -> {}}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{"ListPlot", "[", "data3", "]"}]}], "Input",
+ CellChangeTimes->{{3.506437959648553*^9, 3.5064379829448853`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {Hue[0.67, 0.6, 0.6], 
+    PointBox[{{2., 3.1}, {3., 2.3}, {4., 2.8}, {5., 3.7}, {6., 4.9}}]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{2., 2.5},
+  PlotRange->{{2., 6.}, {2.3, 4.9}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{{3.5064379562483587`*^9, 3.5064379857820473`*^9}, 
+   3.50643809038103*^9}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+TableView - An undocumented function (it looks cool but is a little more \
+cumbersome and may be buggy)\
+\>", "Section",
+ CellChangeTimes->{{3.5064358354990587`*^9, 3.506435862838622*^9}, {
+  3.5064376850848484`*^9, 3.5064377006447387`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Creating a spreadsheet-like table for entering data\
+\>", "Subsection",
+ CellChangeTimes->{{3.5064364998760586`*^9, 3.5064365354200916`*^9}}],
+
+Cell[TextData[{
+ "First create a table by typing the command TableView[{nRows, nCols}].  This \
+function is undocumented in ",
+ StyleBox["Mathematica",
+  FontSlant->"Italic"],
+ " versions 7 and 8.\n\nThe table can be right clicked on to create and \
+delete columns and rows and other operations."
+}], "Text",
+ CellChangeTimes->{{3.506436032381319*^9, 3.506436118742259*^9}, {
+  3.506436490748536*^9, 3.50643649377971*^9}, {3.506436537677221*^9, 
+  3.506436552086045*^9}, {3.506438295028735*^9, 3.5064382959077854`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"TableView", "[", 
+  RowBox[{"{", 
+   RowBox[{"5", ",", "2"}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.5064353632090445`*^9, 3.5064353673982844`*^9}, {
+  3.5064354523831453`*^9, 3.5064354528221703`*^9}, {3.5064357437268095`*^9, 
+  3.5064357763426747`*^9}, {3.5064361233115206`*^9, 3.506436126966729*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   TagBox[
+    PanelBox[
+     PaneBox[
+      TagBox[
+       TagBox[GridBox[{
+          {
+           ItemBox[
+            ActionMenuBox[
+             
+             DynamicBox[FEPrivate`FrontEndResource[
+              "FEBitmaps", "CirclePlusIcon"],
+              ImageSizeCache->{10., {3., 7.}}], {"\<\"Hide/show types\"\>":>
+             TableView`ToggleTypes["TV3506411040-9311980", 
+              ButtonNotebook[]], "\<\"Change type of selected item\"\>":>
+             TableView`ConvertType["TV3506411040-9311980", 
+              ButtonNotebook[]], "\<\"Use headings as data\"\>":>
+             TableView`HeadingsToData["TV3506411040-9311980", 
+              ButtonNotebook[]], Delimiter, "\<\"Paste data\"\>":>
+             TableView`PasteData["TV3506411040-9311980", 
+              ButtonNotebook[]]},
+             Appearance->None,
+             FieldSize->{
+               DirectedInfinity[1], {0, 1}}],
+            Alignment->Center,
+            Background->None,
+            Frame->{{False, True}, {True, False}},
+            ItemSize->Full], 
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["1", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "column", 1, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "column", 1, "Reverse sort"], 
+             Delimiter, "\<\"New column before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "column", 1], "\<\"New column after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "column", 1 + 1], "\<\"Delete column\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "column", 1], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "column", 1]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False], 
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["2", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "column", 2, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "column", 2, "Reverse sort"], 
+             Delimiter, "\<\"New column before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "column", 2], "\<\"New column after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "column", 2 + 1], "\<\"Delete column\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "column", 2], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "column", 2]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False]},
+          {
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["1", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 1, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 1, "Reverse sort"], 
+             Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 1], "\<\"New row after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 1 + 1], "\<\"Delete row\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 1], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 1]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {1, 1},
+            BaseStyle->"TableViewItem"], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {1, 2},
+            BaseStyle->"TableViewItem"]},
+          {
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["2", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 2, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 2, "Reverse sort"], 
+             Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 2], "\<\"New row after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 2 + 1], "\<\"Delete row\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 2], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 2]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {2, 1},
+            BaseStyle->"TableViewItem"], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {2, 2},
+            BaseStyle->"TableViewItem"]},
+          {
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["3", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 3, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 3, "Reverse sort"], 
+             Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 3], "\<\"New row after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 3 + 1], "\<\"Delete row\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 3], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 3]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {3, 1},
+            BaseStyle->"TableViewItem"], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {3, 2},
+            BaseStyle->"TableViewItem"]},
+          {
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["4", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 4, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 4, "Reverse sort"], 
+             Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 4], "\<\"New row after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 4 + 1], "\<\"Delete row\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 4], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 4]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {4, 1},
+            BaseStyle->"TableViewItem"], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {4, 2},
+            BaseStyle->"TableViewItem"]},
+          {
+           ItemBox[
+            ActionMenuBox[
+             StyleBox["5", "TableViewLabel",
+              StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 5, "Sort"], "\<\"Reverse sort\"\>":>
+             TableView`SortData["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 5, "Reverse sort"], 
+             Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 5], "\<\"New row after\"\>":>
+             TableView`NewRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 5 + 1], "\<\"Delete row\"\>":>
+             TableView`DeleteRowColumn["TV3506411040-9311980", 
+              ButtonNotebook[], "row", 5], 
+             Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+             "TV3506411040-9311980", 
+              ButtonNotebook[], "row", 5]},
+             Appearance->None,
+             BaseStyle->"DialogStyle",
+             BaselinePosition->Baseline],
+            Background->None,
+            ItemSize->Full,
+            StripOnInput->False], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {5, 1},
+            BaseStyle->"TableViewItem"], 
+           ItemBox[
+            TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+             "TableViewItem"],
+            BoxID -> {5, 2},
+            BaseStyle->"TableViewItem"]}
+         },
+         AutoDelete->False,
+         DefaultBaseStyle->{"TableViewGrid", Deployed -> False},
+         FrameStyle->GrayLevel[0.85],
+         GridBoxAlignment->{"Columns" -> {{Left}}},
+         GridBoxBackground->{"Columns" -> {{
+              GrayLevel[1]}}},
+         GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+         GridBoxItemSize->{"Columns" -> {{10}}, "Rows" -> {{1.2}}},
+         GridDefaultElement->TemplateBox[{"\[Placeholder]"}, "TableViewItem"]],
+        "Grid"],
+       Identity,
+       DefaultBaseStyle->{Deployed -> False}],
+      ImageSize->Automatic,
+      ImageSizeAction->"Scrollable",
+      Scrollbars->False]],
+    EventHandlerTag[{{"MenuCommand", "NewRow"} :> 
+      TableView`NewRowColumnEvent["TV3506411040-9311980", 
+        ButtonNotebook[], "row"], {"MenuCommand", "NewColumn"} :> 
+      TableView`NewRowColumnEvent["TV3506411040-9311980", 
+        ButtonNotebook[], "column"], {"MenuCommand", "Copy"} :> 
+      TableView`CopyEvent["TV3506411040-9311980", 
+        ButtonNotebook[]], PassEventsDown -> Automatic, PassEventsUp -> 
+      True}]],
+   Deploy,
+   DefaultBaseStyle->{Deployed -> True}],
+  TableView`TableViewTag[],
+  BoxID -> "TV3506411040-9311980",
+  DefaultBaseStyle->"TableView"]], "Output",
+ CellChangeTimes->{3.5064362401452026`*^9}]
+}, Open  ]],
+
+Cell["\<\
+Copy the newly created table to a new input line.
+I called my data set \[OpenCurlyDoubleQuote]data1\[CloseCurlyDoubleQuote] and \
+set it equal to the empty table. Then I started entering in the values.\
+\>", "Text",
+ CellChangeTimes->{{3.5064361868851566`*^9, 3.5064361940695677`*^9}, {
+  3.506436303614833*^9, 3.5064363942290163`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"data1", "=", 
+   TagBox[
+    TagBox[
+     TagBox[
+      PanelBox[
+       PaneBox[
+        TagBox[
+         TagBox[GridBox[{
+            {
+             ItemBox[
+              ActionMenuBox[
+               
+               DynamicBox[FEPrivate`FrontEndResource[
+                "FEBitmaps", "CirclePlusIcon"],
+                ImageSizeCache->{10., {3., 7.}}], {"\<\"Hide/show types\"\>":>
+               TableView`ToggleTypes["TV3506410928-9311980", 
+                ButtonNotebook[]], "\<\"Change type of selected item\"\>":>
+               TableView`ConvertType["TV3506410928-9311980", 
+                ButtonNotebook[]], "\<\"Use headings as data\"\>":>
+               TableView`HeadingsToData["TV3506410928-9311980", 
+                ButtonNotebook[]], Delimiter, "\<\"Paste data\"\>":>
+               TableView`PasteData["TV3506410928-9311980", 
+                ButtonNotebook[]]},
+               Appearance->None,
+               FieldSize->{
+                 DirectedInfinity[1], {0, 1}}],
+              Alignment->Center,
+              Background->None,
+              Frame->{{False, True}, {True, False}},
+              ItemSize->Full], 
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["1", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 1, 
+                "Sort"], "\<\"Reverse sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 1, "Reverse sort"], 
+               Delimiter, "\<\"New column before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 1], "\<\"New column after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "column", 1 + 1], "\<\"Delete column\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "column", 1], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 1]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["2", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 2, 
+                "Sort"], "\<\"Reverse sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 2, "Reverse sort"], 
+               Delimiter, "\<\"New column before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 2], "\<\"New column after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "column", 2 + 1], "\<\"Delete column\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "column", 2], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "column", 2]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["1", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 1, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 1, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 1], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 1 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 1], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 1]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox[
+              TemplateBox[{"2.3"},
+               "TableViewItem"],
+              BoxID -> {1, 1},
+              BaseStyle->"TableViewItem"], 
+             ItemBox[
+              TemplateBox[{"123.4"},
+               "TableViewItem"],
+              BoxID -> {1, 2},
+              BaseStyle->"TableViewItem"]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["2", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 2, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 2, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 2], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 2 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 2], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 2]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox[
+              TemplateBox[{"3"},
+               "TableViewItem"],
+              BoxID -> {2, 1},
+              BaseStyle->"TableViewItem"], 
+             ItemBox[
+              TemplateBox[{"203"},
+               "TableViewItem"],
+              BoxID -> {2, 2},
+              BaseStyle->"TableViewItem"]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["3", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 3, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 3, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 3], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 3 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 3], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 3]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox["5",
+              BaseStyle->"TableViewItem"], 
+             ItemBox[
+              TemplateBox[{"293"},
+               "TableViewItem"],
+              BoxID -> {3, 2},
+              BaseStyle->"TableViewItem"]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["4", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 4, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 4, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 4], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 4 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 4], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 4]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox["7",
+              BaseStyle->"TableViewItem"], 
+             ItemBox[
+              TemplateBox[{"283"},
+               "TableViewItem"],
+              BoxID -> {4, 2},
+              BaseStyle->"TableViewItem"]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["5", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 5, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 5, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 5], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 5 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 5], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 5]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox["9.2",
+              BaseStyle->"TableViewItem"], 
+             ItemBox["150",
+              BaseStyle->"TableViewItem"]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["6", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 6, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 6, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 6], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 6 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 6], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 6]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox[
+              TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+               "TableViewItem"],
+              BoxID -> {6, 1},
+              BaseStyle->"TableViewItem"], 
+             ItemBox[
+              TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+               "TableViewItem"],
+              BoxID -> {6, 2},
+              BaseStyle->"TableViewItem"]},
+            {
+             ItemBox[
+              ActionMenuBox[
+               StyleBox["7", "TableViewLabel",
+                StripOnInput->False], {"\<\"Sort\"\>":>TableView`SortData[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 7, "Sort"], "\<\"Reverse sort\"\>":>
+               TableView`SortData["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 7, "Reverse sort"], 
+               Delimiter, "\<\"New row before\"\>":>TableView`NewRowColumn[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 7], "\<\"New row after\"\>":>
+               TableView`NewRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 7 + 1], "\<\"Delete row\"\>":>
+               TableView`DeleteRowColumn["TV3506410928-9311980", 
+                ButtonNotebook[], "row", 7], 
+               Delimiter, "\<\"Use as headings\"\>":>TableView`DataToHeadings[
+               "TV3506410928-9311980", 
+                ButtonNotebook[], "row", 7]},
+               Appearance->None,
+               BaseStyle->"DialogStyle",
+               BaselinePosition->Baseline],
+              Background->None,
+              ItemSize->Full,
+              StripOnInput->False], 
+             ItemBox[
+              TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+               "TableViewItem"],
+              BoxID -> {7, 1},
+              BaseStyle->"TableViewItem"], 
+             ItemBox[
+              TemplateBox[{TagBox["\[EmptySquare]", "TableViewPlaceholder"]},
+               "TableViewItem"],
+              BoxID -> {7, 2},
+              BaseStyle->"TableViewItem"]}
+           },
+           AutoDelete->False,
+           DefaultBaseStyle->{"TableViewGrid", Deployed -> False},
+           FrameStyle->GrayLevel[0.85],
+           GridBoxAlignment->{"Columns" -> {{Left}}},
+           GridBoxBackground->{"Columns" -> {{
+                GrayLevel[1]}}},
+           GridBoxFrame->{"Columns" -> {{True}}, "Rows" -> {{True}}},
+           GridBoxItemSize->{"Columns" -> {{10}}, "Rows" -> {{1.2}}},
+           
+           GridDefaultElement->
+            TemplateBox[{"\[Placeholder]"}, "TableViewItem"]],
+          "Grid"],
+         Identity,
+         DefaultBaseStyle->{Deployed -> False}],
+        ImageSize->Automatic,
+        ImageSizeAction->"Scrollable",
+        Scrollbars->False]],
+      EventHandlerTag[{{"MenuCommand", "NewRow"} :> 
+        TableView`NewRowColumnEvent["TV3506410928-9311980", 
+          ButtonNotebook[], "row"], {"MenuCommand", "NewColumn"} :> 
+        TableView`NewRowColumnEvent["TV3506410928-9311980", 
+          ButtonNotebook[], "column"], {"MenuCommand", "Copy"} :> 
+        TableView`CopyEvent["TV3506410928-9311980", 
+          ButtonNotebook[]], PassEventsDown -> Automatic, PassEventsUp -> 
+        True}]],
+     Deploy,
+     DefaultBaseStyle->{Deployed -> True}],
+    TableView`TableViewTag[
+    TableHeadings -> {Automatic, Automatic}, 
+     TableHeadings -> {Automatic, Automatic}, BoxID -> "TV3506410928-9311980"],
+    BoxID -> "TV3506410928-9311980",
+    DefaultBaseStyle->"TableView"]}], ";"}]], "Input",
+ CellChangeTimes->{{3.506436135513218*^9, 3.5064362136196856`*^9}, {
+  3.5064362814675665`*^9, 3.5064362908711042`*^9}, {3.50643774052302*^9, 
+  3.506437765022421*^9}}],
+
+Cell["\<\
+Columns and rows can be added or removed by right clicking on the table.  
+I have not found keyboard short commands for adding a row (which would be \
+very useful for entering long data sets)\
+\>", "Text",
+ CellChangeTimes->{{3.506436406597723*^9, 3.506436475883686*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Accessing the data from TableView[]", "Subsection",
+ CellChangeTimes->{{3.506436482715077*^9, 3.5064364846781893`*^9}, {
+  3.506436718422559*^9, 3.506436736906616*^9}}],
+
+Cell["\<\
+You will want the data in a Mathematica Array, but initially the data is \
+stored as a more complicated TableView data type.  To just access the data \
+you need to get just the first part of data1 by typing data1[[1]].   This \
+gives you a Mathematica array of the data you just entered. \
+\>", "Text",
+ CellChangeTimes->{{3.506436741326869*^9, 3.5064367439660196`*^9}, {
+  3.5064367750057955`*^9, 3.506436786750467*^9}, {3.506436827286785*^9, 
+  3.5064370031888466`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data1", "[", 
+  RowBox[{"[", "0", "]"}], "]"}]], "Input",
+ CellChangeTimes->{{3.506435505950209*^9, 3.506435509234397*^9}, {
+  3.5064367467751803`*^9, 3.506436798815157*^9}}],
+
+Cell[BoxData["TableView"], "Output",
+ CellChangeTimes->{3.506435509791429*^9, 3.506436771535597*^9, 
+  3.5064377694956765`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"data2", " ", "=", " ", 
+  RowBox[{"data1", "[", 
+   RowBox[{"[", "1", "]"}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.506435511143506*^9, 3.5064355127145963`*^9}, {
+  3.5064368015993156`*^9, 3.506436810382818*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"2.3`", ",", "123.4`"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"3", ",", "203"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"5", ",", "293"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"7", ",", "283"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"9.2`", ",", "150"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Null", ",", "Null"}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"Null", ",", "Null"}], "}"}]}], "}"}]], "Output",
+ CellChangeTimes->{3.5064355129016066`*^9, 3.5064368124249353`*^9, 
+  3.5064377712327757`*^9}]
+}, Open  ]],
+
+Cell["\<\
+The \"Null\" entries in the matrix are because I left some of the elements in \
+the array blank.\
+\>", "Text",
+ CellChangeTimes->{{3.506437012788396*^9, 3.5064370405279818`*^9}}],
+
+Cell["Now the data can be plotted or analyzed.", "Text",
+ CellChangeTimes->{{3.506437710053277*^9, 3.506437722857009*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ListPlot", "[", "data2", "]"}]], "Input",
+ CellChangeTimes->{{3.506437727021247*^9, 3.5064377317025146`*^9}}],
+
+Cell[BoxData[
+ GraphicsBox[{{}, 
+   {Hue[0.67, 0.6, 0.6], 
+    PointBox[{{2.3, 123.4}, {3., 203.}, {5., 293.}, {7., 283.}, {9.2, 
+     150.}}]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->True,
+  AxesOrigin->{3., 150.},
+  PlotRange->{{2.3, 9.2}, {123.4, 293.}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02]}]], "Output",
+ CellChangeTimes->{3.506437732472559*^9, 3.506437774717975*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.50643791378993*^9, 3.5064379178861637`*^9}}]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{741, 817},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+FrontEndVersion->"8.0 for Microsoft Windows (64-bit) (November 7, 2010)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 238, 7, 137, "Title"],
+Cell[820, 31, 222, 6, 29, "Subsubtitle"],
+Cell[CellGroupData[{
+Cell[1067, 41, 196, 4, 71, "Section"],
+Cell[CellGroupData[{
+Cell[1288, 49, 264, 5, 36, "Subsection"],
+Cell[1555, 56, 690, 13, 101, "Text"],
+Cell[2248, 71, 442, 7, 29, "Text"],
+Cell[2693, 80, 361, 9, 82, "Input"],
+Cell[3057, 91, 533, 10, 119, "Text"],
+Cell[CellGroupData[{
+Cell[3615, 105, 532, 13, 82, "Input"],
+Cell[4150, 120, 396, 12, 30, "Output"]
+}, Open  ]],
+Cell[4561, 135, 181, 4, 29, "Text"],
+Cell[CellGroupData[{
+Cell[4767, 143, 186, 3, 31, "Input"],
+Cell[4956, 148, 344, 9, 232, "Output"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5349, 163, 194, 4, 36, "Subsection"],
+Cell[5546, 169, 322, 6, 47, "Text"],
+Cell[CellGroupData[{
+Cell[5893, 179, 481, 14, 145, "Input"],
+Cell[6377, 195, 466, 13, 232, "Output"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6904, 215, 251, 5, 97, "Section"],
+Cell[CellGroupData[{
+Cell[7180, 224, 151, 3, 36, "Subsection"],
+Cell[7334, 229, 519, 10, 83, "Text"],
+Cell[CellGroupData[{
+Cell[7878, 243, 333, 6, 31, "Input"],
+Cell[8214, 251, 12742, 282, 175, "Output"]
+}, Open  ]],
+Cell[20971, 536, 346, 6, 47, "Text"],
+Cell[21320, 544, 16165, 350, 219, "Input"],
+Cell[37488, 896, 281, 5, 47, "Text"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[37806, 906, 174, 2, 36, "Subsection"],
+Cell[37983, 910, 482, 8, 65, "Text"],
+Cell[CellGroupData[{
+Cell[38490, 922, 198, 4, 31, "Input"],
+Cell[38691, 928, 127, 2, 30, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[38855, 935, 238, 5, 31, "Input"],
+Cell[39096, 942, 592, 18, 30, "Output"]
+}, Open  ]],
+Cell[39703, 963, 188, 4, 29, "Text"],
+Cell[39894, 969, 122, 1, 29, "Text"],
+Cell[CellGroupData[{
+Cell[40041, 974, 133, 2, 31, "Input"],
+Cell[40177, 978, 455, 13, 238, "Output"]
+}, Open  ]],
+Cell[40647, 994, 93, 1, 31, "Input"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

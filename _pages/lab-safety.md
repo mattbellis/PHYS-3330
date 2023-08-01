@@ -5,7 +5,7 @@ sitemap: false
 permalink: /lab-safety
 ---
 
-# Intro
+# Lab Safety
 
 The first thing you should be concerned about in the lab is the safety of yourself and your fellow students. There are a number of potentially serious hazards in this lab, but if you are aware of the dangers and use sensible precautions, you will be quite safe.
 
