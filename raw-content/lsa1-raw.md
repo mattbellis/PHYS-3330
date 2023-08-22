@@ -72,6 +72,9 @@ Watch a [screencast on plotting functions with Mathematica.](https://tinyurl.com
 Entering data efficiently into Mathematica will be useful anytime you take data by hand. You may have to
 enter data from your lab notebook into Mathematica, or you may enter it directly into Mathematica. Even in the case of computerized data acquisition you will often have to record the filename and location and other settings which are not saved in the data file.
 
+<center>
+
+
 | $\lambda (m)$ |  $n$  |
 | :-----------: | :---: |
 |      0.3      | 1.553 |
@@ -82,6 +85,10 @@ enter data from your lab notebook into Mathematica, or you may enter it directly
 |      0.8      | 1.511 |
 
 Table: Wavelength dependence of the index of refraction of BK7 glass. BK7 glass is on of the most common glasses for lenses for visible wavelengths. {#tbl:1}
+
+</center>
+
+<br>
 
 ***Option 1: Entering data as a Mathematica list***
 
