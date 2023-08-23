@@ -75,14 +75,14 @@ enter data from your lab notebook into Mathematica, or you may enter it directly
 <center>
 
 
-| $\lambda (m)$ |  $n$  |
-| :-----------: | :---: |
-|      0.3      | 1.553 |
-|      0.4      | 1.531 |
-|      0.5      | 1.521 |
-|      0.6      | 1.516 |
-|      0.7      | 1.513 |
-|      0.8      | 1.511 |
+|      |      | $\lambda (m)$ |  $n$  |      |      |
+| ---- | ---- | :-----------: | :---: | ---- | ---- |
+|      |      |      0.3      | 1.553 |      |      |
+|      |      |      0.4      | 1.531 |      |      |
+|      |      |      0.5      | 1.521 |      |      |
+|      |      |      0.6      | 1.516 |      |      |
+|      |      |      0.7      | 1.513 |      |      |
+|      |      |      0.8      | 1.511 |      |      |
 
 Table: Wavelength dependence of the index of refraction of BK7 glass. BK7 glass is on of the most common glasses for lenses for visible wavelengths. {#tbl:1}
 

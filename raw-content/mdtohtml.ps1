@@ -1,8 +1,5 @@
 # List of lab guides to generate
 
-# Example Page
-pandoc lab-guide-example-raw.md -o ../_includes/lab-guide-example.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html
-
 # Lab Guides
 pandoc lab1-raw.md -o ../_includes/lab1.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
 pandoc lab2-raw.md -o ../_includes/lab2.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
