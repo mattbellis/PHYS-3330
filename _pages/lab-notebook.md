@@ -33,17 +33,42 @@ There are a variety of different types of information that researcher’s use a 
 
 # Course Specific Information and Recommendations
 
-Your lab notebook should tell a story of what you did and what you were thinking as you did it. It is kind of like a scientific diary, complete with sentences, diagrams, graphs, calculations, and raw data. You should write in it while you work in the lab, and then add more later as you carry out your analysis. The most important test of a good lab notebook is, “Years from now, could someone else replicate what I did using only my current equipment and my notebook and as a guide?” You should write in your notebook with this test in mind.
+The lab guides contain step-by-step instructions on how to set up your circuits, what data to take, and questions you are supposed to answer.
 
-The recommended method for keeping a lab notebook and plotting data is Microsoft OneNote and Mathematica. If you prefer another method of writing up or plotting this is acceptable, as long as it produces a clear, legible final PDF or PDF scan that conforms to the ideas below. If you use a paper notebook, please acquire a spiral-bound quad-ruled notebook. You will be uploading a PDF of your lab notebook (either exported to PDF if using a digital notebook or scanned and saved to PDF if using a paper notebook) to Canvas each week and these will be reviewed and graded by your instructor. Your score on each lab will depend, in part, on how closely your notebook matches these guidelines and how easy it is to follow the “story” of your lab work.
+Tips on how to organize your lab notebook and lab report:
 
-- The lab notebook entry for each lab should begin with the prelab (including your Mathematica code/models). You will turn this in before the lab, but it should also be included as part of the lab notebook submission.
-- While working on the lab, you will then document what you do, the data you obtain, how the data compare to your model (from the prelab), and reconcile any differences. You should also document who your lab partner is and what workstation you are working at that day.
-- Enter the date in your notebook when you start to work each day.
-- You MUST record your notes as you are doing the lab. It is easy to get caught up in building and testing the circuit and then fail to write down what you are doing. This is a mistake, as you will quickly forget what you did. Take the time to write down everything you are doing and what you find.
-- In an electronic notebook, it is tempting to delete things that you later find are wrong. **Don't do it.** You should treat this like ink in a paper notebook. If you make a mistake, simply make a note of it (and if this happens later, simply add the date that the note was added). You can even draw a line through the mistaken part if you like.
-- To draw circuit schematics, you can do this in an online drawing software or draw the diagram by hand and import them in to your lab notebook.
-- At the end of each lab, you will be asked to provide a short summary paragraph indicating what you learned in the lab. This is a chance to look at the bigger picture and think about what the circuits you have created do.
+1. Each of the two lab partners should keep a separate lab notebook of their work in the lab, and each should submit their own lab report each week.
+
+2. We typically recommend that students submit a separate report that includes a scanned copy of their lab notebook as an appendix to the report. In this case we will be grading the report, and just verifying that the notebook exists and is generally consistent with what is in the report.
+
+3. The separate report and notebook is most important for students that choose to use a handwritten notebook (see the following section). For students that elect to utilize a fully electronic notebook that can be edited at will, it is typically not necessary to submit a separate report and notebook as they can act as one.
+
+4. Spiral notebooks are available in the lab for you to use for your lab notebook, though many students prefer to use an electronic format of their own choosing, such as OneNote, Word, Mathematica, etc. The lab report also might be written by hand or done electronically, though all graphing should be done electronically. If written out by hand then you will make pdf scans and upload those to Canvas. While either is fine, please note that if your hand-writing is not very clear it will make it more challenging for us to read your lab notebooks, and if we have any doubts of the content it will affect your grade. For those using an electronic format it is also easier to upgrade discussions of earlier portions of the lab, as you continue to learn the material.
+
+5. At the start of your lab report (or notebook if you end up only submitting your notebook) write a 2-3 sentence summary explaining what the main point of the lab is, i.e. what the goal is and summarize what steps will be taken to reach this goal.
+
+6. For each step, write down the section number from the lab guide, draw the circuit diagram, and if any changes have been made to the circuit compared to the prior step. It’s better to overdo it than underdo it here. It should be possible to replicate your circuit based only on what you have in your notebook (i.e. without looking at the lab guide). Points will be deducted if one has to look at the lab manual to figure what you did including the circuit diagrams.
+
+7. Then do the measurements and record your results, usually in the form of a table, including comments about any aspects that concerned you, for example excess noise or related.
+
+8. Make plots of your data as needed using Mathematica (preferably) or another program of your choice, including a comparison to the theoretical expectations from your prelab, as you are doing the lab. Ideally, we suggest including plots into the lab notebook, not just into the report. We strongly advise against putting off making plots for later, because these plots will tell you if the data you took were OK or may be there was something wrong with the measurement. For example, if you are measuring a voltage response as a function of frequency, you may wish to take extra data points around a special frequency, or you may notice that the noise at very high or low frequencies was hiding the expected behavior. The only way to see that often is if you make a plot and compare it in detail to the expected theoretical behavior (which you can also update based upon the new understanding you gained from doing the lab).
+
+9. All plots in the submitted report or notebook must be made so that the axes are labeled, correct units should be included on the labels, and the ranges (mins and maxes) of the axes should be close to the mins and maxes of the data. Log plots will be necessary for many of the datasets, so you should select log vs. linear axes as needed. Fonts should be large enough to be legible without having to zoom in. Each plot should also have a brief caption describing what is in the plot. (e.g. Current vs. voltage measured across the resistor 5 in circuit diagram #4).
+
+10. Don’t forget to answer any questions asked in the lab manual using complete sentences so that it is not necessary to look at the manual to find out what question you are answering. 
+
+    ​	i.e.
+
+    ​	Wrong – 5 Amps
+
+    ​	Right – Current through resistor 5 in circuit diagram #6 is 5 Amps.
+
+
+11. If you later realize that your DATA are wrong for whatever reason (e.g. you made a mistake in the circuit) you can redo this part of the lab later and just state which item # you are redoing and just follow the above instructions. No points will be taken off for the original incorrect entries.
+
+12. All labs will be worth 40 points. A grade of 36 will correspond to doing everything properly, with no obvious mistakes. Grades above 36 will be reserved for submissions that go "above and beyond", i.e. especially high accuracy data, clear arguments, or discussions. There might for example be subtleties in some of the questions or results that might be explained better by some students than others, so we will reserve the highest grade for the most accurate data and discussions, even if others aren’t necessarily “wrong”.
+
+**You are encouraged to ask your instructor for help with the notebooks and reports. We will be happy to point out how to improve before the report is turned in.**
 
 # Examples
 
