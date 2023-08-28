@@ -31,45 +31,6 @@ There are a variety of different types of information that researcher’s use a 
 
 **Time investment:** The process of keeping lab records is a fine balance between writing enough detail so that your records will be useful in the future and doing so in a time efficient way that does not slow the progress of your experiment. Record keeping is a time intensive part of the experimental process – many researchers express that they feel they should be taking more time to write additional information in the lab records that they keep. Very few of them feel that they spend too much time adding detail to these records. **Do not look at record keeping as an afterthought to the actual experimental process, but rather as an integral part that will require substantial amounts of your lab time to get right.**
 
-# Course Specific Information and Recommendations
-
-The lab guides contain step-by-step instructions on how to set up your circuits, what data to take, and questions you are supposed to answer.
-
-Tips on how to organize your lab notebook and lab report:
-
-1. Each of the two lab partners should keep a separate lab notebook of their work in the lab, and each should submit their own lab report each week.
-
-2. We typically recommend that students submit a separate report that includes a scanned copy of their lab notebook as an appendix to the report. In this case we will be grading the report, and just verifying that the notebook exists and is generally consistent with what is in the report.
-
-3. The separate report and notebook is most important for students that choose to use a handwritten notebook (see the following section). For students that elect to utilize a fully electronic notebook that can be edited at will, it is typically not necessary to submit a separate report and notebook as they can act as one.
-
-4. Spiral notebooks are available in the lab for you to use for your lab notebook, though many students prefer to use an electronic format of their own choosing, such as OneNote, Word, Mathematica, etc. The lab report also might be written by hand or done electronically, though all graphing should be done electronically. If written out by hand then you will make pdf scans and upload those to Canvas. While either is fine, please note that if your hand-writing is not very clear it will make it more challenging for us to read your lab notebooks, and if we have any doubts of the content it will affect your grade. For those using an electronic format it is also easier to upgrade discussions of earlier portions of the lab, as you continue to learn the material.
-
-5. At the start of your lab report (or notebook if you end up only submitting your notebook) write a 2-3 sentence summary explaining what the main point of the lab is, i.e. what the goal is and summarize what steps will be taken to reach this goal.
-
-6. For each step, write down the section number from the lab guide, draw the circuit diagram, and if any changes have been made to the circuit compared to the prior step. It’s better to overdo it than underdo it here. It should be possible to replicate your circuit based only on what you have in your notebook (i.e. without looking at the lab guide). Points will be deducted if one has to look at the lab manual to figure what you did including the circuit diagrams.
-
-7. Then do the measurements and record your results, usually in the form of a table, including comments about any aspects that concerned you, for example excess noise or related.
-
-8. Make plots of your data as needed using Mathematica (preferably) or another program of your choice, including a comparison to the theoretical expectations from your prelab, as you are doing the lab. Ideally, we suggest including plots into the lab notebook, not just into the report. We strongly advise against putting off making plots for later, because these plots will tell you if the data you took were OK or may be there was something wrong with the measurement. For example, if you are measuring a voltage response as a function of frequency, you may wish to take extra data points around a special frequency, or you may notice that the noise at very high or low frequencies was hiding the expected behavior. The only way to see that often is if you make a plot and compare it in detail to the expected theoretical behavior (which you can also update based upon the new understanding you gained from doing the lab).
-
-9. All plots in the submitted report or notebook must be made so that the axes are labeled, correct units should be included on the labels, and the ranges (mins and maxes) of the axes should be close to the mins and maxes of the data. Log plots will be necessary for many of the datasets, so you should select log vs. linear axes as needed. Fonts should be large enough to be legible without having to zoom in. Each plot should also have a brief caption describing what is in the plot. (e.g. Current vs. voltage measured across the resistor 5 in circuit diagram #4).
-
-10. Don’t forget to answer any questions asked in the lab manual using complete sentences so that it is not necessary to look at the manual to find out what question you are answering. 
-
-    ​	i.e.
-
-    ​	Wrong – 5 Amps
-
-    ​	Right – Current through resistor 5 in circuit diagram #6 is 5 Amps.
-
-
-11. If you later realize that your DATA are wrong for whatever reason (e.g. you made a mistake in the circuit) you can redo this part of the lab later and just state which item # you are redoing and just follow the above instructions. No points will be taken off for the original incorrect entries.
-
-12. All labs will be worth 40 points. A grade of 36 will correspond to doing everything properly, with no obvious mistakes. Grades above 36 will be reserved for submissions that go "above and beyond", i.e. especially high accuracy data, clear arguments, or discussions. There might for example be subtleties in some of the questions or results that might be explained better by some students than others, so we will reserve the highest grade for the most accurate data and discussions, even if others aren’t necessarily “wrong”.
-
-**You are encouraged to ask your instructor for help with the notebooks and reports. We will be happy to point out how to improve before the report is turned in.**
-
 # Examples
 
 [Here](resources/lab-notebook/Lab-Notebook-Examples.pdf) we present some examples of notebook records taken from a physics research lab here at CU Boulder. The various entries are recorded by several different researchers who are working collaboratively on the project. You will notice that each researcher has a different style and format to their entry, but much of the same information and thought process can be seen in each entry. These excerpts are meant as examples of authentic scientific record keeping and **do not represent a definitive illustration** for how you should maintain your records.
