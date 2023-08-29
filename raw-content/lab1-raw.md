@@ -127,7 +127,7 @@ There are a few precautions to observe when operating the oscilloscope:
 
 -   Avoid serious or fatal injury from electrical shock. Do not remove the cover to expose the 120 V mains.
 
-Otherwise, the instruments are robust and cannot be damaged by wrong settings. So, try whatever youre curious about and measure and document what happens.
+Otherwise, the instruments are robust and cannot be damaged by wrong settings. So, try whatever you're curious about and measure and document what happens.
 
 ## Measuring a DC voltage on a scope
 
@@ -147,7 +147,7 @@ The Tektronix TBS 2000 Series has four independent channels so that four separat
 
 ## Triggering an AC waveform on the scope
 
-Most scopes produce about 0-5 V square wave on the \"PROBE COMP\" pins to use for testing. We will use this to get familiar with triggering the scope. The trigger level controls the voltage at which the trace starts. Stability is lost when the trigger level lies outside range of the displayed voltage.
+Most scopes produce about 0-5 V square wave on the \"PROBE COMP\" pins to use for testing. We will use this to get familiar with triggering the scope. The trigger level controls the voltage at which the trace starts. Stability is lost when the trigger level lies outside the range of the displayed voltage.
 
 1.  Connect the Probe Comp output to the scope using mini grabbers (see Figure @fig:grabber).
 
@@ -177,7 +177,7 @@ The Keysight EDU33212A function generator can produce sine, square, triangle, pu
 
 To measure various quantities with the DMM, you must set the dial to the correct setting and verify that the two leads are connected to the correct input ports.
 
-1.  Connect the leads and set the dial to measure resistance. Get five 5k (5%) resistors form the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
+1.  Connect the leads and set the dial to measure resistance. Get five ~5k (5%) resistors form the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
 
 2.  Connect the leads and set the dial to measure voltage. Measure the voltage of both sides of the DC power supply again. Does the measured value from the DMM agree with the value indicated on the power supply?
 
