@@ -181,9 +181,10 @@ To measure various quantities with the DMM, you must set the dial to the correct
 
 2.  Connect the leads and set the dial to measure voltage. Measure the voltage of both sides of the DC power supply again. Does the measured value from the DMM agree with the value indicated on the power supply?
 
-3.  Connect the leads and set the dial to measure current. Measure the current produced by the power supply. **Make sure the power supply current is limited to a value below the fuse of the DMM.** How do you experimentally set the current limit? If you blow the fuse, just replace it. Does the measured current from the DMM agree with the value indicated on the power supply? Using the current and voltage readings, what is the impedance of the ammeter? *HINT: The DMM leads must be in different places to measure current vs. voltage. Also, it is recommended to use the high current input, if your DMM has one, until you are certain that the current is low enough to be read by the low current input. This avoids blowing the fuse.*
+3.  Now we will use the DMM to measure the current. This is different from measuring the voltage. To measure current, the DMM must be *part of* the circuit so that the current flows *through* the DMM. Also, the DMM has three ports at the bottom. You used two to measure voltage and you need to change one of them to measure current. Connect the leads or cables to the proper ports and set the dial to measure current. Measure the current produced by the power supply. How do you experimentally set the current limit? Does the measured current agree with the LED
+    display? Can you use the current and voltage readings to find the impedance (resistance) of the ammeter?
 
-4.  The DMM also has an AC voltage setting. Over what frequency range is the reading accurate to 2%? You will need to use the function generator to produce an AC waveform. Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS.
+4.  The DMM also has an AC voltage setting. Over what frequency range is the reading accurate to 2%? You will need to use the function generator to produce an AC waveform. Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how “Amplitude” and “Peak-to-Peak” are related.
 
 5.  Remember in the future that this is the usable frequency range for the AC setting of the multimeter. Record this frequency in your lab notebook for future reference.
 
@@ -193,7 +194,7 @@ In the previous section, you measured resistances using the ohmmeter in the DMM.
 
 ##  Measure a small resistance using a DMM ohmmeter
 
-1.  Use a \~ 2 m length of magnet wire (26 or 28 gauge) as your small resistor. Magnet wire has a very thin amber-colored insulating coating. Make sure you remove the insulation from the ends of the wire to make a good electrical connection and measurement of the diameter of the wire. You can burn off the insulation with a flame or carefully scrape it off with a razor blade.
+1.  Use a \~ 2 m length of magnet wire (26 or 28 gauge) as your small resistor. Magnet wire has a very thin amber-colored insulating coating. Make sure you remove the insulation from the ends of the wire to make a good electrical connection and measurement of the diameter of the wire. You can burn off the insulation with a flame or use sand paper to scratch it off.
 
 2.  What is the resistance based on the diameter, length, and resistivity (the resistivity, $\rho$, of copper at room temperature is 1.68 $\mu\Omega$-cm)? Remember that $R = \rho l/a$, where $l$ is length and $a$ is area. It is hard to measure the diameter of the wire with the insulating coating on and the stripping process usually deforms the copper. However, you can just look up the diameter of your particular gauge of wire online.
 
