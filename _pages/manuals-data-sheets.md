@@ -25,7 +25,13 @@ permalink: /manuals-data-sheets
 
 [Tektronix TBS2000 Series Oscilloscope Data Sheet](resources/manuals-and-data-sheets/ds-TBS2000-Tektronix-Oscilloscope.pdf)
 
-[Fluke 77 Digital Multimeter](resources/manuals-and-data-sheets/man-Fluke77-DMM.pdf)
+[Fluke 177 Digital Multimeter User Manual](resources/manuals-and-data-sheets/man-177-Fluke-DMM.pdf)
+
+[Fluke 177 Digital Multimeter Data Sheet](resources/manuals-and-data-sheets/ds-177-Fluke-DMM.pdf)
+
+[Fluke 115 Digital Multimeter User Manual](resources/manuals-and-data-sheets/man-115-Fluke-DMM.pdf)
+
+[Fluke 115 Digital Multimeter Data Sheet](resources/manuals-and-data-sheets/ds-115-Fluke-DMM.pdf)
 
 [F.W. Bell 5100 Gaussmeter Instruction Manual](resources/manuals-and-data-sheets/man-5100-FW-Bell-Gaussmeter.pdf)
 

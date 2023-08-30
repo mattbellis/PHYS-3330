@@ -53,7 +53,7 @@ Answer the following questions in your lab notebook. Scan the relevant pages and
 
 An ideal voltage source (no internal resistance) drives current around the loop of resistors shown in Figure @fig:ideal-vd .
 
-1.  Derive a formula for the current, I, and the output voltage, $V_{out}$.
+1.  Derive a formula for the current, $I$, and the output voltage, $V_{out}$.
 
 2.  What is $V_{out}$ if $V = 10~V$, $R_{1} = 2~k\Omega$, and $R_{2} = 1~k\Omega$?
 
@@ -61,13 +61,13 @@ An ideal voltage source (no internal resistance) drives current around the loop 
 
 ## Resistive voltage dividers (non-ideal power supply)
 
-A non-ideal voltage source has an output impedance (resistance). First consider a supply with an output impedance 500 $\Omega$.
+A non-ideal voltage source has an output impedance (resistance). First consider a supply with an output impedance $500 ~\Omega$.
 
 1.  Draw a modified circuit diagram of Figure @fig:ideal-vd to model the non-ideal voltage source as an ideal source with a series resistor.
 
 2.  Derive a formula for the current, $I$, and the output voltage, $V_{out}$, of the circuit you just drew.
 
-3.  What is $V_{out}$  if $V = 10~V$, $R_1 = 2~ k\Omega$, and $R_2 = 1 ~k\Omega$ ?
+3.  What is $V_{out}$  if $V = 10~V$, $R_1 = 2~ k\Omega$, and $R_2 = 1 ~k\Omega$?
 
 4.  An additional load is connected between $V_{out}$ and ground in the form of the resistor $R_3$ as shown in Figure @fig:modified-vd . Calculate the voltage $V_{out}$ for this circuit (with the non­‐ideal power supply) and with $R_3 = 10 ~k\Omega$.
 
@@ -89,13 +89,13 @@ Before breadboards (aka prototyping or proto boards), creating circuits required
 
 ## Test your protoboard
 
-1.  Your instructor will give your team a prototyping board to use. Using the label printer in the lab, make a label with your group member's names and attach it to the bottom of your prototyping board . Your team will use the same board all semester. An incomplete experiment can be left on the board and finished later. Store the board on the shelfs labeled for your section.
+1.  Get a protoboard from the shelf labeled with your section number. Using the label printer in the lab (and 12mm label tape), make a label for each of your group member's names and place on the metal plate that the breadboards are attached to. Your team will use the same board all semester. It's good practice to note the bin number in your lab notebook and continue to use that bin for the semester. At the end of the lab, you will store your protoboard in this bin (the protoboards may not be removed from the lab).
 
-2. On the interface panel, you will find:
+2. On the protoboard interface panel, you will find:
 
    -   BNC cable jacks that carry electric signals between your circuit on the board and the function generator and oscilloscope.
    -   Colored banana jacks to bring in DC power for transistors or chips from an external power supply.
-   -   A precision 10 k$\Omega$ ten‑turn potentiometer with a fuse on the wiper (the fuse is a 125 mA Type 2AG measuring 5 mm x 15 mm if you need a replacement).
+   -   A precision 10 k$\Omega$ ten‑turn potentiometer with a fuse on the wiper (the fuse is a 125 mA Type 2AG measuring 5 mm x 20 mm if you need a replacement).
    -   Several switches.
    -   Screw terminals which will be used with jumper wires to bring power/signals from the interface panel to your breadboard.
 
@@ -103,13 +103,13 @@ Before breadboards (aka prototyping or proto boards), creating circuits required
 
 3.  The breadboard contains arrays of holes, interconnected by buried conductors, into which components are plugged to build your circuit. In general, you can never be sure that any two contacts are really connected, or any wire is really continuous, unless you test it yourself, so get into the habit of testing things.
 
-4.  Determine which holes on your protoboard are connected by using the DMM (you may also find wires and alligator clips useful). Draw a diagram in your lab notebook of the connections. You can refer back to this diagram throughout the semester as you build new circuits.
+4.  Determine which holes on your protoboard are connected by using the DMM (you may also find wires and alligator clips or mini-grabbers useful). Draw a diagram in your lab notebook of the connections. You can refer back to this diagram throughout the semester as you build new circuits.
 
 5.  Find a 1k resistor and measure the resistor directly with the DMM. Now insert the resistor into two holes on the breadboard that you know are not connected and remeasure the resistance. Now insert the resistor into two holes on the breadboard that you know **are** connected and remeasure the resistance. Explain your results. What does this tell you about when you should measure resistors?
 
 ## Making power connections to your protoboard
 
-1.  For essentially all circuits, you will need power connections (+15 V, -15V, ground). Connect the power supply to the panel using banana cables.
+1.  For essentially all circuits, you will need power connections (+15 V, -15V, ground). Connect the power supply to the interface panel using banana cables.
 
 2.  **USE A COLOR CODE FOR THE POWER CONNECTIONS!** The convention used in this course is **black = ground**, <span style="color: red;">**red = +15 V**</span>, and <span style="color: blue;">**blue = -15 V**</span>. Using a consistent color code will allow you and others to debug your circuits quickly. You are also less likely to plug something in incorrectly and burn up a component. You should also have a white colored banana jack on your interface panel. You may find that this is useful during your final project phase if you require another voltage. Remember to write down your color code in your lab notebook. 
 
@@ -127,7 +127,7 @@ Before breadboards (aka prototyping or proto boards), creating circuits required
 
 # Building and Testing Voltage Dividers
 
-Components (resistors, capacitors, transistors, etc.) are available from the community stock. Take what components you need for your experiments.
+Components (resistors, capacitors, transistors, etc.) are available from the community stock. Take what components you need for your experiments. If you notice the inventory getting low, please let the [technical staff](/PHYS-3330/report-lab-issue) know.
 
 ## Fixed-value voltage divider - 1k$\boldsymbol{\Omega}$
 
@@ -147,9 +147,9 @@ Components (resistors, capacitors, transistors, etc.) are available from the com
 
 1.  Complete the steps in the previous section for two additional voltage dividers, one using resistors 1M$\Omega$ and one with resistors 10M$\Omega$.
 
-2.  Using your refined model, you have determined the input resistance of both the DMM and scope. Specification (spec) sheets or data sheets can also be used to refine your model.
+2.  Using your refined model, you have determined the input resistance of both the DMM and scope. [Specification (spec) sheets or data sheets](/PHYS-3330/manuals-data-sheets) can also be used to refine your model.
 
-3.  Look up the input resistance of your DMM using the spec sheets on Canvas. Does the measured input resistance agree with the instrument specs? Explicitly record what criteria you used to determine whether or not the resistances agree.
+3.  Look up the input resistance of your DMM using the spec sheet at the link above. Does the measured input resistance agree with the instrument specs? Explicitly record what criteria you used to determine whether or not the resistances agree.
 
 4.  There is an easy way to determine the specified input impedance of the scope. Where can you find that information? Does the measured input resistance agree with the instrument specs? Explicitly record what criteria you used to determine whether or not the resistances agree.
 
@@ -177,7 +177,7 @@ You will now use your skills with building and testing voltage dividers to build
 
 5.  Test your model by making measurements on the scope. Make sure to include the limits of the voltage source. Do your measurements agree with your predictions? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
 
-6.  Now connect a low voltage light bulb to the output. You may need to increase the current limit on the power supply to see visible light. Do not exceed 500 mA or your pot may burn out. Describe qualitatively the brightness of the bulb as the pot knob is adjusted. What is the minimum voltage needed to see the light bulb turn on?
+6.  Now connect a low voltage light bulb to the output. You may need to increase the current limit on the power supply to see visible light. Do not exceed a current limit of 120 mA or the fuse on your potentiometer will blow out (it is a 125 mA fuse). Describe qualitatively the brightness of the bulb as the pot knob is adjusted. What is the minimum voltage needed to see the light bulb turn on?
 
 7.  **Bonus question:** A good voltage source has very little (a few ohms) output resistance and thus very little power is dissipated in the supply. What is the output resistance of the circuit (including your power supply and external components) if it produces 10V? Would this circuit be good for creating a variable voltage source in the range of 5-10 V? HINT: Consider the power dissipated in the source. Explain using your diagram, model, and values of resistance.
 
