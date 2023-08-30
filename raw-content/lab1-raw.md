@@ -175,16 +175,15 @@ The Keysight EDU33212A function generator can produce sine, square, triangle, pu
 
 **The multimeter is a useful device to measure constant voltages, currents, and resistances.**
 
-To measure various quantities with the DMM, you must set the dial to the correct setting and verify that the two leads are connected to the correct input ports.
+To measure various quantities with the DMM, you must set the dial on the DMM to the correct setting that you want to measure. The Fluke 115 DMM that is in your toolbox at your workbench has three banana jack input ports at the bottom. Based on the quantity that you want to measure (voltage, current, resistance, etc.), you need to be sure that you've installed the leads into the appropriate input ports (NOTE: one of the leads will always be connected to the **COM** port).
 
-1.  Connect the leads and set the dial to measure resistance. Get five ~5k (5%) resistors form the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
+1.  Connect the leads and set the dial to measure resistance. Get five ~5k (5%) resistors from the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
 
 2.  Connect the leads and set the dial to measure voltage. Measure the voltage of both sides of the DC power supply again. Does the measured value from the DMM agree with the value indicated on the power supply?
 
-3.  Now we will use the DMM to measure the current. This is different from measuring the voltage. To measure current, the DMM must be *part of* the circuit so that the current flows *through* the DMM. Also, the DMM has three ports at the bottom. You used two to measure voltage and you need to change one of them to measure current. Connect the leads or cables to the proper ports and set the dial to measure current. Measure the current produced by the power supply. How do you experimentally set the current limit? Does the measured current agree with the LED
-    display? Can you use the current and voltage readings to find the impedance (resistance) of the ammeter?
+3.  Now we will use the DMM to measure the current. This is different from measuring the voltage. To measure current, the DMM must be *part of* the circuit so that the current flows *through* the DMM. Remember, your DMM has three input ports at the bottom and you need to make sure that the leads are set up measure current. Connect the leads or cables to the proper ports and set the dial to measure current. Measure the current produced by the power supply. How do you experimentally set the current limit? Does the current measured with the DMM agree with the current indicated on the power supply? 
 
-4.  The DMM also has an AC voltage setting. Over what frequency range is the reading accurate to 2%? You will need to use the function generator to produce an AC waveform. Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how “Amplitude” and “Peak-to-Peak” are related.
+4.  The DMM also has an AC voltage setting. You will need to use the function generator to produce an AC (sine) waveform. Over what frequency range is the reading accurate to 2%?  Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how “Amplitude” and “Peak-to-Peak” are related.
 
 5.  Remember in the future that this is the usable frequency range for the AC setting of the multimeter. Record this frequency in your lab notebook for future reference.
 
@@ -194,9 +193,9 @@ In the previous section, you measured resistances using the ohmmeter in the DMM.
 
 ##  Measure a small resistance using a DMM ohmmeter
 
-1.  Use a \~ 2 m length of magnet wire (26 or 28 gauge) as your small resistor. Magnet wire has a very thin amber-colored insulating coating. Make sure you remove the insulation from the ends of the wire to make a good electrical connection and measurement of the diameter of the wire. You can burn off the insulation with a flame or use sand paper to scratch it off.
+1.  Use a ~2 m length of magnet wire as your small resistor (this can be found on the wire spool rack on top of the blue tool cabinet next to the entrance of the lab). Magnet wire has a very thin amber-colored insulating coating (about 0.001" in thickness). Make sure you remove the insulation from the ends of the wire to make a good electrical connection and measurement of the diameter of the wire. You can burn off the insulation with a flame or use sand paper to scratch it off.
 
-2.  What is the resistance based on the diameter, length, and resistivity (the resistivity, $\rho$, of copper at room temperature is 1.68 $\mu\Omega$-cm)? Remember that $R = \rho l/a$, where $l$ is length and $a$ is area. It is hard to measure the diameter of the wire with the insulating coating on and the stripping process usually deforms the copper. However, you can just look up the diameter of your particular gauge of wire online.
+2.  What is the resistance based on the diameter, length, and resistivity (the resistivity, $\rho$, of copper at room temperature is 1.68 $\mu\Omega$-cm)? Remember that $R = \rho l/a$, where $l$ is length and $a$ is area. You'll find dial calipers and a micrometer in the "Measuring Tools" drawer of the blue tool cabinet. The spool of magnet wire should be 24-gauge. Look up a copper magnet wire gauge chart online and confirm that your diameter measurement agrees with what you find.
 
 3.  Use the ohmmeter in the DMM to measure the resistance of the wire. **Document your setup, measurements, and calculations in your lab notebook.**
 
@@ -210,7 +209,7 @@ In the previous section, you measured resistances using the ohmmeter in the DMM.
 
 4.  Consider how the amount of current flowing through your resistor affects the sensitivity of your measurement.
 
-5.  Calculate the resistance of the wire from your measurements using Ohms Law.
+5.  Calculate the resistance of the wire from your measurements using Ohm's Law.
 
 ## Compare the two measurement techniques
 
