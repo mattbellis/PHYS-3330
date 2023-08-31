@@ -91,13 +91,14 @@ The lab notebook will be an important part of your grade because learning to kee
 
 # Setting up the DC Power Supply
 
-Your DC power supply will provide all of your circuits with the required power. Setting up the power supply will always be the first thing you do when you begin working with a circuit. The Keysight EDU36311A DC Power Supply has three outputs that can be independently controlled. Pages 43-45 of the User Guide (which can be found on Canvas) discuss this in detail.
+Your DC power supply will provide all of your circuits with the required power. Setting up the power supply will always be the first thing you do when you begin working with a circuit. The Keysight EDU36311A DC Power Supply has three outputs that can be independently controlled. Pages 43-45 of the User Guide (which can be found the [Data Sheets and Instrument Manuals page](/PHYS-3330/manuals-data-sheets)) discuss this in detail.
 
 ## Set up the DC voltage bias
 
-1.  We want two of the power supply channels to be set up such that the potential difference set on one of the channels is positive with respect to ground and the other is negative with respect to ground. Each channel has outputs labeled (+) and (-) and you will find that the single output connector to the left of Channel 1 is connected to chassis ground. The voltage indicated on the power supply display shows only the potential difference between the (+) and (-) output. You must connect the (-) to ground to get a positive voltage with respect to ground, and the (+) to ground to get a negative voltage with respect to ground (it's best to use jumper wires here as opposed to banana cables - you can unscrew the input jacks on the power supply to expose a small hole where the jumper wires can be inserted). Since Channels 2 and 3 on the Keysight EDU36311A Power Supply have the equivalent output voltage and current specifications, it makes the most sense to use these two channels (see Figure @fig:ps).
+We want two of the power supply channels to be set up such that the potential difference set on one of the channels is positive with respect to ground and the other is negative with respect to ground. Each channel has outputs labeled (+) and (-) and you will find that the single output connector to the left of Channel 1 is connected to ground. The voltage indicated on the power supply display shows only the potential difference between the (+) and (-) output for a given channel. You must connect a channel's (-) output to ground to get a positive voltage with respect to ground, and a channel's (+) output to ground to get a negative voltage with respect to ground. Since Channels 2 and 3 on the Keysight EDU36311A Power Supply have the equivalent output voltage and current specifications, it makes the most sense to use these two channels. 
 
-2.  Confirm the sign and magnitude of the voltages displayed on the power supply using the DMM. In your lab notebook, document the setup, the output voltage from the power supply, and the measured output on your DMM. ***Note:** Hooking up the power supply to your circuit with reversed polarity or to too high a voltage can cause your components to be destroyed.*
+1.  Get some wire from the wire spool rack on the top of the blue tool cabinet to make these connections. You can unscrew the input jacks on the power supply to expose a small hole where the jumper wires can be inserted (see Figure @fig:ps).
+2.  Set up your DMM (found in the grey toolbox in our lab bench) to measure a DC voltage. Confirm the sign and magnitude of the voltages displayed on the power supply using the DMM (you may need to set the voltage limits on the power supply to get a non-zero value). In your lab notebook, document the setup, the output voltage from the power supply, and the measured output on your DMM. 
 
 ## Investigate operating modes
 
@@ -177,7 +178,7 @@ The Keysight EDU33212A function generator can produce sine, square, triangle, pu
 
 To measure various quantities with the DMM, you must set the dial on the DMM to the correct setting that you want to measure. The Fluke 115 DMM that is in your toolbox at your workbench has three banana jack input ports at the bottom. Based on the quantity that you want to measure (voltage, current, resistance, etc.), you need to be sure that you've installed the leads into the appropriate input ports (NOTE: one of the leads will always be connected to the **COM** port).
 
-1.  Connect the leads and set the dial to measure resistance. Get five ~5k (5%) resistors from the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
+1.  Connect the leads and set the dial to measure resistance. Get five ~5 $k \Omega$ (5%) resistors from the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
 
 2.  Connect the leads and set the dial to measure voltage. Measure the voltage of both sides of the DC power supply again. Does the measured value from the DMM agree with the value indicated on the power supply?
 

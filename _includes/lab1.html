@@ -227,36 +227,39 @@ Colorado Boulder">
          the first thing you do when you begin working with a circuit.
          The Keysight EDU36311A DC Power Supply has three outputs that
          can be independently controlled. Pages 43-45 of the User Guide
-         (which can be found on Canvas) discuss this in detail.</p>
+         (which can be found the <a
+         href="/PHYS-3330/manuals-data-sheets">Data Sheets and
+         Instrument Manuals page</a>) discuss this in detail.</p>
          <h2 data-number="5.1" id="set-up-the-dc-voltage-bias"><span
          class="header-section-number">5.1</span> Set up the DC voltage
          bias</h2>
+         <p>We want two of the power supply channels to be set up such
+         that the potential difference set on one of the channels is
+         positive with respect to ground and the other is negative with
+         respect to ground. Each channel has outputs labeled (+) and (-)
+         and you will find that the single output connector to the left
+         of Channel 1 is connected to ground. The voltage indicated on
+         the power supply display shows only the potential difference
+         between the (+) and (-) output for a given channel. You must
+         connect a channel’s (-) output to ground to get a positive
+         voltage with respect to ground, and a channel’s (+) output to
+         ground to get a negative voltage with respect to ground. Since
+         Channels 2 and 3 on the Keysight EDU36311A Power Supply have
+         the equivalent output voltage and current specifications, it
+         makes the most sense to use these two channels.</p>
          <ol type="1">
-         <li><p>We want two of the power supply channels to be set up
-         such that the potential difference set on one of the channels
-         is positive with respect to ground and the other is negative
-         with respect to ground. Each channel has outputs labeled (+)
-         and (-) and you will find that the single output connector to
-         the left of Channel 1 is connected to chassis ground. The
-         voltage indicated on the power supply display shows only the
-         potential difference between the (+) and (-) output. You must
-         connect the (-) to ground to get a positive voltage with
-         respect to ground, and the (+) to ground to get a negative
-         voltage with respect to ground (it’s best to use jumper wires
-         here as opposed to banana cables - you can unscrew the input
-         jacks on the power supply to expose a small hole where the
-         jumper wires can be inserted). Since Channels 2 and 3 on the
-         Keysight EDU36311A Power Supply have the equivalent output
-         voltage and current specifications, it makes the most sense to
-         use these two channels (see Figure <a
-         href="#fig:ps">1</a>).</p></li>
-         <li><p>Confirm the sign and magnitude of the voltages displayed
-         on the power supply using the DMM. In your lab notebook,
-         document the setup, the output voltage from the power supply,
-         and the measured output on your DMM. <em><strong>Note:</strong>
-         Hooking up the power supply to your circuit with reversed
-         polarity or to too high a voltage can cause your components to
-         be destroyed.</em></p></li>
+         <li>Get some wire from the wire spool rack on the top of the
+         blue tool cabinet to make these connections. You can unscrew
+         the input jacks on the power supply to expose a small hole
+         where the jumper wires can be inserted (see Figure <a
+         href="#fig:ps">1</a>).</li>
+         <li>Set up your DMM (found in the grey toolbox in our lab
+         bench) to measure a DC voltage. Confirm the sign and magnitude
+         of the voltages displayed on the power supply using the DMM
+         (you may need to set the voltage limits on the power supply to
+         get a non-zero value). In your lab notebook, document the
+         setup, the output voltage from the power supply, and the
+         measured output on your DMM.</li>
          </ol>
          <h2 data-number="5.2" id="investigate-operating-modes"><span
          class="header-section-number">5.2</span> Investigate operating
@@ -443,9 +446,10 @@ Colorado Boulder">
          <strong>COM</strong> port).</p>
          <ol type="1">
          <li><p>Connect the leads and set the dial to measure
-         resistance. Get five ~5k (5%) resistors from the stock drawers.
-         Measure the resistance of each resistor. Do all the resistors
-         meet the 5% specification?</p></li>
+         resistance. Get five ~5 <span class="math inline">\(k
+         \Omega\)</span> (5%) resistors from the stock drawers. Measure
+         the resistance of each resistor. Do all the resistors meet the
+         5% specification?</p></li>
          <li><p>Connect the leads and set the dial to measure voltage.
          Measure the voltage of both sides of the DC power supply again.
          Does the measured value from the DMM agree with the value
