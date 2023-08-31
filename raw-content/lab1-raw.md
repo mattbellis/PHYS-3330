@@ -184,7 +184,7 @@ To measure various quantities with the DMM, you must set the dial on the DMM to 
 
 3.  Now we will use the DMM to measure the current. This is different from measuring the voltage. To measure current, the DMM must be *part of* the circuit so that the current flows *through* the DMM. Remember, your DMM has three input ports at the bottom and you need to make sure that the leads are set up measure current. Connect the leads or cables to the proper ports and set the dial to measure current. Measure the current produced by the power supply. How do you experimentally set the current limit? Does the current measured with the DMM agree with the current indicated on the power supply? 
 
-4.  The DMM also has an AC voltage setting. You will need to use the function generator to produce an AC (sine) waveform. Over what frequency range is the reading accurate to 2%?  Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how “Amplitude” and “Peak-to-Peak” are related.
+4.  The DMM also has an AC voltage setting. You will need to use the function generator to produce an AC (sine) waveform. Over what frequency range is the reading accurate to 2%?  Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how [“Amplitude” and “Peak-to-Peak”](https://en.wikipedia.org/wiki/Amplitude) are related.
 
 5.  Remember in the future that this is the usable frequency range for the AC setting of the multimeter. Record this frequency in your lab notebook for future reference.
 
