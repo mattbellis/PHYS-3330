@@ -194,7 +194,7 @@ In the previous section, you measured resistances using the ohmmeter in the DMM.
 
 ##  Measure a small resistance using a DMM ohmmeter
 
-1.  Use a ~2 m length of magnet wire as your small resistor (this can be found on the wire spool rack on top of the blue tool cabinet next to the entrance of the lab). Magnet wire has a very thin amber-colored insulating coating (about 0.001" in thickness). Make sure you remove the insulation from the ends of the wire to make a good electrical connection and measurement of the diameter of the wire. You can burn off the insulation with a flame or use sand paper to scratch it off.
+1.  Use a ~2 m length of magnet wire as your small resistor (this can be found on the wire spool rack on top of the blue tool cabinet next to the entrance of the lab - there should also be a 2m stick near the tool cabinet). Magnet wire has a very thin amber-colored insulating coating (about 0.001" in thickness). Make sure you remove the insulation from the ends of the wire to make a good electrical connection and measurement of the diameter of the wire. You can burn off the insulation with a flame or use sand paper to scratch it off.
 
 2.  What is the resistance based on the diameter, length, and resistivity (the resistivity, $\rho$, of copper at room temperature is 1.68 $\mu\Omega$-cm)? Remember that $R = \rho l/a$, where $l$ is length and $a$ is area. You'll find dial calipers and a micrometer in the "Measuring Tools" drawer of the blue tool cabinet. The spool of magnet wire should be 24-gauge. Look up a copper magnet wire gauge chart online and confirm that your diameter measurement agrees with what you find.
 
