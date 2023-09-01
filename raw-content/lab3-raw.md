@@ -63,9 +63,9 @@ Whenever we discuss frequency in the lab, measured in Hz, we mean $f$, and this 
 
 The response of RC low-pass and high-pass filters to sine waves is discussed in Steck 2.3.5 & 2.3.7, H&H 1.18\--1.19, and Fischer-Cripps 3.9\--3.10. For these circuits, the magnitudes of the transfer functions are:
 
-$$\left| T(f) \right| = \frac{1}{\sqrt{1 + (2\pi fRC)^{2}}}~ \mbox{(low-pass)}$$
+$$\left| T(f) \right| = \frac{1}{\sqrt{1 + (2\pi fRC)^{2}}}~ \mbox{(low-pass)}$${#eq:1}
 
-$$\left| T(f) \right| = \frac{2\pi fRC}{\sqrt{1 + (2\pi fRC)^{2}}} ~\mbox{(high-pass)}$$
+$$\left| T(f) \right| = \frac{2\pi fRC}{\sqrt{1 + (2\pi fRC)^{2}}} ~\mbox{(high-pass)}$${#eq:2}
 
 For both filters: $f_{C} = 1/{2\pi RC}\ $, where $f_{C}$ is the frequency at which the power drops by 3 dB (which means it is half of the maximum). In this lab, we are finding how efficiently signals of different frequencies are passed. This is called the frequency domain. Later, we will look at the time domain, where we see how the output changes as a function of time. In that context, low-pass and high-pass filters are called integrators and differentiators.
 
@@ -73,29 +73,29 @@ For both filters: $f_{C} = 1/{2\pi RC}\ $, where $f_{C}$ is the frequency at whi
 
 The LCR circuit is described in Fischer-Cripps 3.12, H&H 1.22, and Steck 2.6 (note that the Steck example is for a *serial* LCR circuit so the concepts are the same but the details are different). As this is another generalized voltage divider,
 
-$$V_{out} = V_{in} = IZ_{2} = V_{in}\frac{Z_{2}}{Z_{1} + Z_{2}}$$ 
+$$V_{out} = V_{in} = IZ_{2} = V_{in}\frac{Z_{2}}{Z_{1} + Z_{2}}$$ {#eq:3}
 
-$$Z_{1} = R$$
+$$Z_{1} = R$${#eq:4}
 
-$$Z_{2} = \frac{j\omega L}{1 - \omega^{2}LC}$$
+$$Z_{2} = \frac{j\omega L}{1 - \omega^{2}LC}$${#eq:5}
 
 The magnitude of the transfer function can then be calculated as:
 
-$$\left| T(\omega) \right| = \sqrt{\frac{V_{out}V_{out}^{*}}{V_{in}V_{in}^{*}}}$$
+$$\left| T(\omega) \right| = \sqrt{\frac{V_{out}V_{out}^{*}}{V_{in}V_{in}^{*}}}$${#eq:6}
 
 where $*$ indicates the complex conjugate. The algebra is left for you as a prelab exercise.
 
 The resonant frequency, $f_0$, and quality factor, or $Q$ factor, are given by:
 
-$$f_{0} = \frac{1}{2\pi\sqrt{LC}}$$
+$$f_{0} = \frac{1}{2\pi\sqrt{LC}}$${#eq:7}
 
- $$Q = \omega_{0}RC = \frac{R\sqrt{C}}{\sqrt{L}} = \frac{f_{0}}{\Delta f}$$
+ $$Q = \omega_{0}RC = \frac{R\sqrt{C}}{\sqrt{L}} = \frac{f_{0}}{\Delta f}$${#eq:8}
 
 The resonant frequency, $f_{0}$, is the center frequency of the pass band, and $Q$ is equal to the ratio of the center frequency to the bandwidth $\Delta f$. (These definitions are exactly true only for $Q\gg1$).
 
 For a resonant LCR circuit the characteristic impedance, $Z_0$, is the magnitude of the impedance of the inductor or the capacitor at the resonant frequency:
 
-$$Z_{0} = \omega_{0}L = \frac{1}{\omega_{0}C} = \frac{\sqrt{L}}{\sqrt{C}}$$
+$$Z_{0} = \omega_{0}L = \frac{1}{\omega_{0}C} = \frac{\sqrt{L}}{\sqrt{C}}$${#eq:9}
 
 # Useful Readings
 
@@ -107,7 +107,7 @@ $$Z_{0} = \omega_{0}L = \frac{1}{\omega_{0}C} = \frac{\sqrt{L}}{\sqrt{C}}$$
 
 # Prelab
 
-Answer the following questions using Mathematica. Save the complete notebook as a pdf and turn it in to Canvas before you lab section (check Canvas for the due date). **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
+Answer the following questions using Mathematica. Save the complete notebook as a pdf and turn it in to Canvas before your lab section (check Canvas for the due date). **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
 
 ![Low-pass filter](../resources/lab3fig/low-pass-1.png){#fig:low-pass-1 width="10cm"}
 
@@ -121,7 +121,7 @@ Answer the following questions using Mathematica. Save the complete notebook as 
 
 2.  Create two Bode plots (one for each filter) of the frequency response of the low-pass and high-pass filters in Figures @fig:low-pass-1 and @fig:high-pass-1. A Bode plot is a log-log plot of the gain ($V_{out}/V_{in}$) versus frequency, similar to what is on pages 61 & 62 of Steck (although the Steck plots have the x-axis in units of $2\pi RC$ and you should use units of Hz). Make sure to include a large enough range in frequency to see both the pass and attenuation bands. Make sure to label your axes! Details about making plots nice are included in Lab Skills Activity 2.
 
-3.  During the lab section, you will enter your measurements into your Mathematica notebook and plot them with your model predictions. To prepare for this, create a list of "fake data" and plot it on your Bode plots. This will allow you to compare your model and measurements in real time avoiding lost time taking lots of data when something is wrong with your circuit. The point of this part is just to have you create working code to enter a list of data and plot it along with the function. The numerical values of the fake date are unimportant. There is a helpful guide on Canvas about plotting data and theory together in Mathematica in the Mathematica Resources page.
+3.  During the lab section, you will enter your measurements into your Mathematica notebook and plot them with your model predictions. To prepare for this, create a list of "fake data" and plot it on your Bode plots. This will allow you to compare your model and measurements in real time avoiding lost time taking lots of data when something is wrong with your circuit. The point of this part is just to have you create working code to enter a list of data and plot it along with the function. The numerical values of the fake date are unimportant. There is a helpful guide about plotting data and theory together in Mathematica on the [Mathematica Resources page](PHYS-3330/mathematica-resources).
 
 ## Band-pass filters
 
@@ -209,6 +209,6 @@ Plot your mathematical models of all three filter circuits (three independent pl
 
 Inductors often have considerable resistance as they are just wires wrapped around a ferrite core. One can include this resistance as a resistor in series with the inductor. The refined model of the Q of this system is
 
-$$Q_{refined} = \frac{\frac{R}{R_{L}}}{R\sqrt{\frac{C}{L}} + \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}$$
+$$Q_{refined} = \frac{\frac{R}{R_{L}}}{R\sqrt{\frac{C}{L}} + \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}$${#eq:10}
 
 where $R_L$ is the equivalent series resistance of the inductor. This is non-trivial to derive.

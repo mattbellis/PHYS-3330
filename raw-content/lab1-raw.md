@@ -100,6 +100,8 @@ We want two of the power supply channels to be set up such that the potential di
 1.  Get some wire from the wire spool rack on the top of the blue tool cabinet to make these connections. Connect a channel's (-) output to ground to get a positive voltage with respect to ground, and a channel's (+) output to ground to get a negative voltage with respect to ground (the single output connector to the left of Channel 1 is the ground connector). You can unscrew the input jacks on the power supply to expose a small hole where the jumper wires can be inserted (see Figure @fig:ps).
 2.  Set up your DMM (found in the grey toolbox on your lab bench) to measure a DC voltage. Confirm that the sign and magnitude of the voltages displayed on the power supply using the DMM are what you expect (you may need to set the voltage limits on the power supply to get a non-zero value). In your lab notebook, document the setup, the output voltage from the power supply, and the measured output on your DMM. 
 
+![Keysight EDU36311A DC power supply connections](../resources/lab1fig/EDU36311A.png){#fig:ps width="20cm"}
+
 ## Investigate operating modes
 
 A voltage source maintains a constant potential difference while the current output varies dependent on the load resistance (this is the Constant Voltage (CV) mode indicated at the top right corner of each channel). A current source maintains a constant current while the voltage output varies dependent on the load resistance (this is the Constant Current (CC) mode). The power supply will indicate the operational mode of each channel in the upper right corner of the respective channel window (in addition to CV and CC modes, the other mode is OFF).
@@ -111,9 +113,6 @@ A voltage source maintains a constant potential difference while the current out
 3.  Now short the (+) rail of Channel 2 to ground. You can use a banana cable from the rack to do this.
 
 4.  Vary the value of the voltage and current. Describe the behavior of the voltage and current readings and the mode (CV/CC) of the power supply. What happens when you short the output to ground (have too small a load)? What is the maximum output of current and voltage your supply can produce?
-
-
-![Keysight EDU36311A DC power supply connections](../resources/lab1fig/EDU36311A.png){#fig:ps width="20cm"}
 
 
 # Measuring Voltage with the Oscilloscope

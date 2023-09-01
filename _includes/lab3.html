@@ -7,6 +7,13 @@
 Colorado Boulder">
       
       <title>PHYS 3330</title>
+            
+            <!-- pandoc-eqnos: equation style -->
+            <style>
+              .eqnos { display: inline-block; position: relative; width: 100%; }
+              .eqnos br { display: none; }
+              .eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+            </style>
          </head>
    <body>
             <div>
@@ -232,12 +239,14 @@ Colorado Boulder">
          waves is discussed in Steck 2.3.5 &amp; 2.3.7, H&amp;H
          1.18--1.19, and Fischer-Cripps 3.9--3.10. For these circuits,
          the magnitudes of the transfer functions are:</p>
-         <p><span class="math display">\[\left| T(f) \right| =
-         \frac{1}{\sqrt{1 + (2\pi fRC)^{2}}}~
-         \mbox{(low-pass)}\]</span></p>
-         <p><span class="math display">\[\left| T(f) \right| =
-         \frac{2\pi fRC}{\sqrt{1 + (2\pi fRC)^{2}}}
-         ~\mbox{(high-pass)}\]</span></p>
+         <p><span id="eq:1" class="eqnos"><span
+         class="math display">\[\left| T(f) \right| = \frac{1}{\sqrt{1 +
+         (2\pi fRC)^{2}}}~
+         \mbox{(low-pass)}\]</span><span class="eqnos-number">(1)</span></span></p>
+         <p><span id="eq:2" class="eqnos"><span
+         class="math display">\[\left| T(f) \right| = \frac{2\pi
+         fRC}{\sqrt{1 + (2\pi fRC)^{2}}}
+         ~\mbox{(high-pass)}\]</span><span class="eqnos-number">(2)</span></span></p>
          <p>For both filters: <span class="math inline">\(f_{C} =
          1/{2\pi RC}\ \)</span>, where <span
          class="math inline">\(f_{C}\)</span> is the frequency at which
@@ -256,15 +265,22 @@ Colorado Boulder">
          <em>serial</em> LCR circuit so the concepts are the same but
          the details are different). As this is another generalized
          voltage divider,</p>
-         <p><span class="math display">\[V_{out} = V_{in} = IZ_{2} =
-         V_{in}\frac{Z_{2}}{Z_{1} + Z_{2}}\]</span></p>
-         <p><span class="math display">\[Z_{1} = R\]</span></p>
-         <p><span class="math display">\[Z_{2} = \frac{j\omega L}{1 -
-         \omega^{2}LC}\]</span></p>
+         <p><span id="eq:3" class="eqnos"><span
+         class="math display">\[V_{out} = V_{in} = IZ_{2} =
+         V_{in}\frac{Z_{2}}{Z_{1} +
+         Z_{2}}\]</span><span class="eqnos-number">(3)</span></span>
+         </p>
+         <p><span id="eq:4" class="eqnos"><span
+         class="math display">\[Z_{1} =
+         R\]</span><span class="eqnos-number">(4)</span></span></p>
+         <p><span id="eq:5" class="eqnos"><span
+         class="math display">\[Z_{2} = \frac{j\omega L}{1 -
+         \omega^{2}LC}\]</span><span class="eqnos-number">(5)</span></span></p>
          <p>The magnitude of the transfer function can then be
          calculated as:</p>
-         <p><span class="math display">\[\left| T(\omega) \right| =
-         \sqrt{\frac{V_{out}V_{out}^{*}}{V_{in}V_{in}^{*}}}\]</span></p>
+         <p><span id="eq:6" class="eqnos"><span
+         class="math display">\[\left| T(\omega) \right| =
+         \sqrt{\frac{V_{out}V_{out}^{*}}{V_{in}V_{in}^{*}}}\]</span><span class="eqnos-number">(6)</span></span></p>
          <p>where <span class="math inline">\(*\)</span> indicates the
          complex conjugate. The algebra is left for you as a prelab
          exercise.</p>
@@ -272,11 +288,13 @@ Colorado Boulder">
          class="math inline">\(f_0\)</span>, and quality factor, or
          <span class="math inline">\(Q\)</span> factor, are given
          by:</p>
-         <p><span class="math display">\[f_{0} =
-         \frac{1}{2\pi\sqrt{LC}}\]</span></p>
-         <p><span class="math display">\[Q = \omega_{0}RC =
-         \frac{R\sqrt{C}}{\sqrt{L}} = \frac{f_{0}}{\Delta
-         f}\]</span></p>
+         <p><span id="eq:7" class="eqnos"><span
+         class="math display">\[f_{0} =
+         \frac{1}{2\pi\sqrt{LC}}\]</span><span class="eqnos-number">(7)</span></span></p>
+         <p><span id="eq:8" class="eqnos"><span class="math display">\[Q
+         = \omega_{0}RC = \frac{R\sqrt{C}}{\sqrt{L}} =
+         \frac{f_{0}}{\Delta
+         f}\]</span><span class="eqnos-number">(8)</span></span></p>
          <p>The resonant frequency, <span
          class="math inline">\(f_{0}\)</span>, is the center frequency
          of the pass band, and <span class="math inline">\(Q\)</span> is
@@ -288,8 +306,10 @@ Colorado Boulder">
          <span class="math inline">\(Z_0\)</span>, is the magnitude of
          the impedance of the inductor or the capacitor at the resonant
          frequency:</p>
-         <p><span class="math display">\[Z_{0} = \omega_{0}L =
-         \frac{1}{\omega_{0}C} = \frac{\sqrt{L}}{\sqrt{C}}\]</span></p>
+         <p><span id="eq:9" class="eqnos"><span
+         class="math display">\[Z_{0} = \omega_{0}L =
+         \frac{1}{\omega_{0}C} =
+         \frac{\sqrt{L}}{\sqrt{C}}\]</span><span class="eqnos-number">(9)</span></span></p>
          <h1 data-number="5" id="useful-readings"><span
          class="header-section-number">5</span> Useful Readings</h1>
          <ol type="1">
@@ -303,7 +323,7 @@ Colorado Boulder">
          <h1 data-number="6" id="prelab"><span
          class="header-section-number">6</span> Prelab</h1>
          <p>Answer the following questions using Mathematica. Save the
-         complete notebook as a pdf and turn it in to Canvas before you
+         complete notebook as a pdf and turn it in to Canvas before your
          lab section (check Canvas for the due date). <strong>Bring an
          electronic copy of your notebook to lab, preferably on your own
          laptop. You will use it to plot your data during the lab
@@ -367,9 +387,10 @@ Colorado Boulder">
          The point of this part is just to have you create working code
          to enter a list of data and plot it along with the function.
          The numerical values of the fake date are unimportant. There is
-         a helpful guide on Canvas about plotting data and theory
-         together in Mathematica in the Mathematica Resources
-         page.</p></li>
+         a helpful guide about plotting data and theory together in
+         Mathematica on the <a
+         href="PHYS-3330/mathematica-resources">Mathematica Resources
+         page</a>.</p></li>
          </ol>
          <h2 data-number="6.2" id="band-pass-filters"><span
          class="header-section-number">6.2</span> Band-pass filters</h2>
@@ -631,9 +652,10 @@ Colorado Boulder">
          just wires wrapped around a ferrite core. One can include this
          resistance as a resistor in series with the inductor. The
          refined model of the Q of this system is</p>
-         <p><span class="math display">\[Q_{refined} =
+         <p><span id="eq:10" class="eqnos"><span
+         class="math display">\[Q_{refined} =
          \frac{\frac{R}{R_{L}}}{R\sqrt{\frac{C}{L}} +
-         \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}\]</span></p>
+         \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}\]</span><span class="eqnos-number">(10)</span></span></p>
          <p>where <span class="math inline">\(R_L\)</span> is the
          equivalent series resistance of the inductor. This is
          non-trivial to derive.</p>
