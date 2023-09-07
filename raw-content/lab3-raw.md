@@ -151,7 +151,7 @@ Answer the following questions using Mathematica. Save the complete notebook as 
 
 1.  Gather all the components to be able to build the four circuits shown in Figures @fig:r-divider, @fig:low-pass-2, @fig:high-pass-2, and @fig:band-pass-2. If you cannot find components in stock with the specified values, take the nearest in value that you can find.
 
-    -   Resistive divider: $R_1 = 10~k\Omega , R_2 = 6.8~k\Omega $
+    -   Resistive divider: $R_1 = 10~k\Omega, R_2 = 6.8~k\Omega$
 
     -   Low-pass filter: $R = 10~k\Omega$, $C = 1000~pF$
 
