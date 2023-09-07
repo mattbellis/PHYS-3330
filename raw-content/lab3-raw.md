@@ -149,31 +149,33 @@ Answer the following questions using Mathematica. Save the complete notebook as 
 
 ## Building the Circuits
 
-1.  Gather all the components to be able to build the three filters circuits shown in Figures @fig:low-pass-2, @fig:high-pass-2, and @fig:band-pass-2. If you cannot find components in stock with the specified values, take the nearest in value that you can find.
+1.  Gather all the components to be able to build the four circuits shown in Figures @fig:r-divider, @fig:low-pass-2, @fig:high-pass-2, and @fig:band-pass-2. If you cannot find components in stock with the specified values, take the nearest in value that you can find.
+
+    -   Resistive divider: $R_1 = 10~k\Omega , R_2 = 6.8~k\Omega $
 
     -   Low-pass filter: $R = 10~k\Omega$, $C = 1000~pF$
 
     -   High-pass filter: $R = 10~k\Omega$, $C = 1000~pF$
 
     -   Band-pass filter: $R = 10~k\Omega$, $C = .01~\mu F$, $L = 10~mH$
-
 2.  Measure all components before placing them into the circuit. Record the values in your lab notebook. Draw diagrams of all the circuits. Make sure to use the same labels on the diagrams and for the values of the components.
+3.  Build all four circuits on your breadboard (make sure they are all separate). Don't connect anything to power or ground yet. **The leads on the inductors are too thick to be inserted into the breadboards directly.** There should already be jumper wires soldered onto the ends of the inductor leads (please talk to your instructor or TA if that is not the case). 
 
-3.  Build all three circuits on your breadboard (make sure they are all separate). Don't connect anything to power or ground yet. Note that the inductor leads are a bit thick. It is probably OK to give it a little force but you can also use wires with alligator clips (with regular wires on the other ends) to make the connections.
+## Use the Mathematica models to predict the behavior of the circuits
 
-## Use the Mathematica models to predict the behavior of the filters
+1.  Calculate the expected attenuation of the resistive divider.
 
-1.  Calculate the expected values of the cut-off frequencies for the high- and low-pass filters using the actual component values.
+2.  Calculate the expected values of the cut-off frequencies for the high- and low-pass filters using the actual component values.
 
-2.  Calculate the expected resonant frequency $f_0$ and quality factor $Q$ for the band-pass filter using the actual component values.
+3.  Calculate the expected resonant frequency $f_0$ and quality factor $Q$ for the band-pass filter using the actual component values.
 
-*HINT: You should have already done these calculations in your lab prep notebook. Just enter the measured values of your components.*
+*HINT: You should have already done these calculations in your prelab. Just enter the measured values of your components.*
 
 ## Use the Mathematica models to plot the expected the behavior of the filters
 
 Plot your mathematical models of all three filter circuits (three independent plots) using your actual component values. The frequency range should cover at least $10^{–3}  f_c$ to $10^3 f_c$ (or $f_0$) to show the full behavior.
 
-*HINT: You should have already made these plots in your lab prep notebook. Just enter the measured values of your components.*
+*HINT: You should have already made these plots in your prelab. Just enter the measured values of your components.*
 
 ![Test and Measurement Set-up. Channel 1 will "pick off" the function generator signal on its way to the circuit board. You can do this using a BNC "T" connector mounted directly on the oscilloscope input. When you connect the oscilloscope like this, you need to make sure the channel impedance is set to high impedance (not $50 \Omega$).](../resources/lab3fig/equip-setup.png){#fig:setup width="10cm"}
 
@@ -183,9 +185,22 @@ Plot your mathematical models of all three filter circuits (three independent pl
 
 1.  Connect the circuit board to the function generator and the oscilloscope as shown in Figure @fig:setup. It is always helpful to display both the input voltage as well as the output voltage on the scope at the same time.
 
-2.  Test your setup by creating a 1 kHz sine wave at 1 V p-p using the function generator and confirm the waveform frequency and amplitude by measuring the signal on the scope.
+2.  Test your setup by creating a 1 kHz sine wave at 1 V p-p using the function generator and confirm the waveform frequency and amplitude by measuring the signal on the scope. Trigger the scope off of the Sync output of the function generator.
+
+## Measure the frequency dependence of the voltage divider {#sec:vd-freq}
+
+1. Connect the signal from the function generator to the input of the voltage divider.  Measure the transfer function (attenuation) $=V_{out}/V_{in}$ over a large range in frequency (1 kHz to 15 MHz in approximately decade (X10) steps). Record your measurements in your lab notebook. 
+2. At low frequencies (1 kHz), compare your measured value of the attenuation to what your model predicted using your actual component values. Does your measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
+
+## Refining the measurement system of the voltage divider
+
+1. If there is a high frequency cut off (3 dB frequency), measure its value (where the voltage is reduced to 0.7 of the low frequency value). Record the cut-off frequency.
+2. A voltage divider containing only resistors should not have any frequency dependence. However, a coax cable has a capacitance of ~25 pF/foot. You could refine your model to include this capacitance. However, in this case, refine your physical system instead by using a scope probe (see definitions) in place of the coax cable to reduce the capacitance of the measurement probe.  Repeat the measurements (and record them in your lab notebook) from @sec:vd-freq\.1 using the 10x probe to measure the output of the circuit. Note that the oscilloscope should know when the 10X probe is attached and should automatically adjust the scale to give the correct value, but it's a good idea to verify this.
+3. Does you original model of just two resistors now predict the behavior of the circuit when you use a 10X probe? 
 
 ## Measure the frequency dependence of the low- and high-pass filters
+
+**In the previous section, you have shown with data that the 10X probe perturbs your measurements less than the coax cable. Use the probe for the rest of your measurements.** 
 
 1.  Connect the signal from the function generator to the input of the low-pass filter. Measure the transfer function ($|V_{out}/V_{in}|$) over a large range in frequency (100 Hz to 1 MHz) in at least one step per decade, with several extra steps within the decade around your expected cutoff frequency. Record your measurements in your lab notebook. Determine and record the cut-off frequency for the low-pass filter. Compare your measured half power point ($|V_{out}/V_{in}|=0.707$) with the cut-off frequency computed from the actual component values used. Include your comparison in your lab notebook. Then do the same for the high-pass filter.
 

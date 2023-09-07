@@ -60,7 +60,7 @@ Commercial laboratory amplifiers are readily available, but a general-purpose am
 
 # OP-Amp Basics
 
-Two basic op-amp circuit configurations, the non-inverting amplifier and the inverting amplifier, are shown in Figures @fig:non-invert and @fig:invert, respectively. Both circuits use ***negative feedback***, which means that a portion of the output signal is sent back to the negative input of the op-amp through the feedback resistor RF. The op-amp itself has very high gain, but relatively poor gain stability and linearity. When negative feedback is used, the circuit gain is greatly reduced, but it becomes very stable. Also, linearity is improved, and the output impedance decreases.
+Two basic op-amp circuit configurations, the non-inverting amplifier and the inverting amplifier, are shown in Figures @fig:non-invert and @fig:invert, respectively. Both circuits use ***negative feedback***, which means that a portion of the output signal is sent back to the negative input of the op-amp through the feedback resistor $R_F$. The op-amp itself has very high gain, but relatively poor gain stability and linearity. When negative feedback is used, the circuit gain is greatly reduced, but it becomes very stable. Also, linearity is improved, and the output impedance decreases.
 
 ![Non-inverting amplifier](../resources/lab4fig/non-invert.png){#fig:non-invert width="10cm"}
 
