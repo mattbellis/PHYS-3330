@@ -161,7 +161,7 @@ Answer the following questions using Mathematica. Save the complete notebook as 
 2.  Measure all components before placing them into the circuit. Record the values in your lab notebook. Draw diagrams of all the circuits. Make sure to use the same labels on the diagrams and for the values of the components.
 3.  Build all four circuits on your breadboard (make sure they are all separate). Don't connect anything to power or ground yet. **The leads on the inductors are too thick to be inserted into the breadboards directly.** There should already be jumper wires soldered onto the ends of the inductor leads (please talk to your instructor or TA if that is not the case). 
 
-## Use the Mathematica models to predict the behavior of the circuits
+## Use the models to predict the behavior of the circuits
 
 1.  Calculate the expected attenuation of the resistive divider.
 
@@ -171,7 +171,7 @@ Answer the following questions using Mathematica. Save the complete notebook as 
 
 *HINT: You should have already done these calculations in your prelab. Just enter the measured values of your components.*
 
-## Use the Mathematica models to plot the expected the behavior of the filters
+## Use the models to plot the expected the behavior of the filters
 
 Plot your mathematical models of all three filter circuits (three independent plots) using your actual component values. The frequency range should cover at least $10^{–3}  f_c$ to $10^3 f_c$ (or $f_0$) to show the full behavior.
 
