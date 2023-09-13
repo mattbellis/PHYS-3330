@@ -126,11 +126,11 @@ In words, this very important formula says that the gain-bandwidth product, $G_0
 
 # Prelab
 
-Answer the following questions using Mathematica for the plots. You can use either Mathematica for the rest of the questions as well or do them by hand. **Make sure to have the Mathematica notebook for your lab section as well.**
+Answer the following questions using Mathematica (or similar math software) for the plots. You can use either Mathematica for the rest of the questions as well or do them by hand. **Make sure to have the Mathematica notebook for your lab section as well.**
 
 ## Properties of an op-amp
 
-The first step in using a new component is to look up its basic characteristics. Find the following specs using the data sheet for the op-amp you will use in the lab for the rest of the semester. Data for the LF356 op-amp (same as LF156) are given at the National Semiconductor web site and found in Canvas in the Datasheets section.
+The first step in using a new component is to look up its basic characteristics. Find the following specs using the data sheet for the op-amp you will use in the lab for the rest of the semester and record in your lab notebook. Data sheets for the LF356 op-amp (same as LF156) can be found on the [Data Sheets and Instrument Manuals page](PHYS-3330/manuals-data-sheets).
 
 1.  Unity gain frequency, $f_T$ (same as GBW in tables)
 
@@ -174,11 +174,11 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 ![LF356 schematic and pin-out.](../resources/lab4fig/lf356.png){#fig:lf356 width="10cm"}
 
-![Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](../resources/lab4fig/pb-example.png){#fig:pb width="10cm"}
+## General Op-amp Tips
 
-## Op-amp setup
+Here are some basic steps you should always follow when working with op-amps. Read through them all (likely more than once) before you begin to build your circuit (which is covered in the next section). You can then refer back to this section at any point to remind yourself of these tips.
 
-1.  This experiment will use both +15 V and --15 V to power the LF356 op-amp. <span style="color: red;">Make sure you **unplug** the DC supplies while wiring your op-amp (you may find it useful to plug them into their own power strip). Everyone makes mistakes in wiring-up circuits. You should always check your circuit over before applying power.</span> Figure @fig:lf356 shows a pin-out for the LF356 chip. Familiarize yourself with the layout. The following procedure will help you wire up a circuit accurately:
+1.  This experiment will use both +15 V and -15 V to power the LF356 op-amp. <span style="color: red;">Make sure you **unplug** the DC supplies while wiring your op-amp (you may find it useful to plug them into their own power strip). Everyone makes mistakes in wiring-up circuits. You should always check your circuit over before applying power.</span> Figure @fig:lf356 shows a pin-out for the LF356 chip. Familiarize yourself with the layout. The following procedure will help you wire up a circuit accurately:
 
     1.  Draw a complete schematic in your lab notebook, including all ground and power connections, and all IC pin numbers. Try to layout your prototype so the parts are arranged in the same way as on the schematic, as far as possible.
 
@@ -193,23 +193,25 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
         -    <span style="color: blue;">-15V Blue</span>
         
 
-2.  The op-amp chip sits across a groove in the prototyping board (see Figure @fig:pb). Before inserting a chip, ensure the pins are straight (using a needle-nose pliers or something similar). After insertion, check visually that no pin is broken or bent under the chip. To remove the chip, use a small screwdriver in the groove to pry it out.
+2.  The op-amp chip sits across a groove in the prototyping board (see Figure @fig:pb). Before inserting a chip, ensure the pins are straight (using a needle-nose pliers or something similar). After insertion, check visually that no pin is broken or bent under the chip. To remove the chip, use a small screwdriver in the groove to pry it out or use IC pliers (which can be found on the long workbench next to the LCR meter and digital microscope).
 
 3.  You will have less trouble with spontaneous oscillations if the circuit layout is neat and compact, in particular the feedback path should be as short as possible to reduce unwanted capacitive coupling (see Figure @fig:pb). Also, wire around the chip rather than over it.
 
 4.  To help prevent spontaneous oscillations due to unintended coupling via the power supplies, use bypass capacitors to filter the power supply lines. A bypass capacitor between each power supply lead and ground will provide a miniature current "reservoir" that can quickly supply current when needed. This capacitor is normally in the range 1-10 µF. <span style="color: red;">Compact capacitors in this range are usually ***polarized***, meaning that one terminal must always be positive relative to the other. If you put a polarized capacitor in backwards, it will burn out.</span> You will probably hear a pop and smell something foul. Please don't do this. The negative side should have an arrow on the capacitor. Also, the positive side should have a longer lead but this is not a good identification method as the leads can (and should) be cut. Bypass capacitors should be placed close to the op-amp pins. If you are connecting the +15 V supply to ground, the negative capacitor lead is connected to ground and the positive lead is connected to +15 V. If you are connecting the -15 V supply to ground, the negative capacitor lead is connected to -15 V and the positive lead is connected to ground.
 
-## Testing the op-amp
+![An example circuit (not the one you will build in this lab) showing good placement of the op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](../resources/lab4fig/pb-example.png){#fig:pb width="10cm"}
 
-1.  You can save yourself some frustration by testing your op-amp chips to make sure they are not burned out. Connect the op-amp as a grounded-input ***voltage follower*** with the (positive) input grounded (see Figure @fig:voltage-follower-gnd). What is the predicted voltage on pins 2, 3, 4, 6 and 7 using the Golden Rule model? Measure and record the measured voltages on these pins. If your predictions do not match your measurements check your connections to the chip to find the problem. Make sure your predictions match your measurements before going on. It will be helpful to leave the voltage follower built on your board to quickly check an op-amp in future weeks. Move the chip out and build the other circuits elsewhere on your protoboard.
+## Building an op-amp test circuit
 
-2.  If you find you have a bad chip, throw it in the trash and grab another. (In case you are wondering, the LF356 costs about 50 cents.)
+1.  You can save yourself some frustration by testing your op-amp chips to make sure they are not burned out. You will now build a test circuit on your protoboard to quickly check that your op-amp is functioning as expected. It will be helpful to leave this test circuit built on your protoboard to quickly check an op-amp in future weeks so keep this in mind when building it (that is, keep it compact and leave plenty of space on your protoboard for future work). Connect the op-amp as a grounded-input ***voltage follower*** with the (positive) input grounded (see Figure @fig:voltage-follower-gnd). What is the predicted voltage on pins 2, 3, 4, 6 and 7 using the Golden Rule model? Measure and record the measured voltages on these pins. If your predictions do not match your measurements check your connections to the chip to find the problem. Make sure your predictions match your measurements before going on. Once you've confirmed you have a good op-amp, you can then move the chip out of the test circuit and build the upcoming circuits elsewhere on your protoboard.
+
+2.  If you find you have a bad chip, throw it in the trash and grab another. (In case you are wondering, the LF356 costs less than $1.)
 
 ![Schematic of a voltage follower with the input grounded](../resources/lab4fig/voltage-follower-gnd.png){#fig:voltage-follower-gnd width="10cm"}
 
 # Voltage Follower
 
-A voltage follower is the simplest version of a non-inverting amplifier. The voltage follower has no voltage gain (G~0~=1), but it lets you convert a signal with high impedance (i.e. very little current) to a much lower impedance output for driving loads. The voltage follower is also often called a unity gain buffer.
+A voltage follower is the simplest version of a non-inverting amplifier. The voltage follower has no voltage gain ($G_0=1$), but it lets you convert a signal with high impedance (i.e. very little current) to a much lower impedance output for driving loads. The voltage follower is also often called a unity gain buffer.
 
 ![Voltage follower](../resources/lab4fig/voltage-follower.png){#fig:voltage-follower width="10cm"}
 
@@ -219,9 +221,9 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below)? Consider the gain-bandwidth product for a unity gain amplifier. What is the gain-bandwidth product for this circuit? How did you find the value? What is the predicted gain for the frequency you chose? Measure the low frequency gain $G_0$ by measuring $V_{in}$ and $V_{out}$ using the scope. Do your measurements agree with your predictions?
 
-3.  Now vary the frequency and look for deviation from the performance of an ideal follower model. The measurement at high frequency will depend on many details of your setup and you are unlikely to find a simple RC filter type falloff. Using the 10X scope-probe, measure the gain at every decade in frequency from 10 MHz down to 10 Hz, with (as usual) a few extra points anywhere things are starting to change. Do you find any deviation from unity gain? HINT: Be sure that the output amplitude is below the level affected by the slew rate For help, see H&H p. 192. Plot the low and high frequency data and predicted behavior on your Bode plot from your lab prep. Do you find a simple fall-off as suggested by the theory for the ideal follower ($f_T=f_B$)? If so, find the 3 dB frequency. How does your measured 3 dB frequency compare to what is expected from the op-amp datasheet?
+3.  Now vary the frequency and look for deviation from the performance of an ideal follower model. The measurement at high frequency will depend on many details of your setup and you are unlikely to find a simple RC filter type falloff. Using the 10X scope-probe, measure the gain at every decade in frequency from 10 MHz down to 10 Hz, with (as usual) a few extra points anywhere things are starting to change. Do you find any deviation from unity gain? HINT: Be sure that the output amplitude is below the level affected by the slew rate. For help, see H&H p. 192. Plot the low and high frequency data and predicted behavior on your Bode plot from your prelab. Do you find a simple fall-off as suggested by the theory for the ideal follower ($f_T=f_B$)? If so, find the 3 dB frequency. How does your measured 3 dB frequency compare to what is expected from the op-amp datasheet?
 
-4.  If you observed ideal behavior, youre lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
+4.  If you observed ideal behavior, you're lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
 
 ![Test and measurement setup for op-amp circuits](../resources/lab4fig/op-amp-test.png){#fig:op-amp-test width="15cm"}
 
@@ -231,7 +233,7 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 ## Frequency dependent gain
 
-1.  Change the negative feedback loop in your circuit to the one shown in Figure @fig:non-inv-amp, with $R_F = 10 ~k\Omega$ and $R = 100 ~\Omega$. Measure $R$ and $R_F$ with the DMM before inserting them into the circuit board. Predict $G_0$ and $f_B$ from these measured values and the op-amps value of $f_T$ from the data sheet. (You should be able to review your lab-prep work here too!)
+1.  Change the negative feedback loop in your circuit to the one shown in Figure @fig:non-inv-amp, with $R_F = 10 ~k\Omega$ and $R = 100 ~\Omega$. Measure $R$ and $R_F$ with the DMM before inserting them into the circuit board. Predict $G_0$ and $f_B$ from these measured values and the op-amps value of $f_T$ from the data sheet. (You should be able to review your prelab work here too!)
 
 2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below)? What is the gain-bandwidth product for this circuit? How did you find the value? What is the predicted gain for the frequency you chose? Measure the low frequency gain $G_0$ by measuring $V_{in}$ and $V_{out}$ using the scope. Do your measurements agree with your predictions?
 

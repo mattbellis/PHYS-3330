@@ -59,12 +59,14 @@ I</h1>
             class="toc-section-number">7</span> Setting Up a Basic
             OP-Amp Circuit</a>
             <ul>
-            <li><a href="#op-amp-setup" id="toc-op-amp-setup"><span
-            class="toc-section-number">7.1</span> Op-amp setup</a></li>
-            <li><a href="#testing-the-op-amp"
-            id="toc-testing-the-op-amp"><span
-            class="toc-section-number">7.2</span> Testing the
-            op-amp</a></li>
+            <li><a href="#general-op-amp-tips"
+            id="toc-general-op-amp-tips"><span
+            class="toc-section-number">7.1</span> General Op-amp
+            Tips</a></li>
+            <li><a href="#building-an-op-amp-test-circuit"
+            id="toc-building-an-op-amp-test-circuit"><span
+            class="toc-section-number">7.2</span> Building an op-amp
+            test circuit</a></li>
             </ul></li>
             <li><a href="#voltage-follower"
             id="toc-voltage-follower"><span
@@ -346,20 +348,21 @@ I</h1>
          </ol>
          <h1 data-number="6" id="prelab"><span
          class="header-section-number">6</span> Prelab</h1>
-         <p>Answer the following questions using Mathematica for the
-         plots. You can use either Mathematica for the rest of the
-         questions as well or do them by hand. <strong>Make sure to have
-         the Mathematica notebook for your lab section as
-         well.</strong></p>
+         <p>Answer the following questions using Mathematica (or similar
+         math software) for the plots. You can use either Mathematica
+         for the rest of the questions as well or do them by hand.
+         <strong>Make sure to have the Mathematica notebook for your lab
+         section as well.</strong></p>
          <h2 data-number="6.1" id="properties-of-an-op-amp"><span
          class="header-section-number">6.1</span> Properties of an
          op-amp</h2>
          <p>The first step in using a new component is to look up its
          basic characteristics. Find the following specs using the data
          sheet for the op-amp you will use in the lab for the rest of
-         the semester. Data for the LF356 op-amp (same as LF156) are
-         given at the National Semiconductor web site and found in
-         Canvas in the Datasheets section.</p>
+         the semester and record in your lab notebook. Data sheets for
+         the LF356 op-amp (same as LF156) can be found on the <a
+         href="PHYS-3330/manuals-data-sheets">Data Sheets and Instrument
+         Manuals page</a>.</p>
          <ol type="1">
          <li><p>Unity gain frequency, <span
          class="math inline">\(f_T\)</span> (same as GBW in
@@ -451,20 +454,16 @@ I</h1>
          schematic and pin-out.</figcaption>
          </figure>
          </div>
-         <div id="fig:pb" class="fignos">
-         <figure>
-         <img src="../resources/lab4fig/pb-example.png"
-         style="width:10cm"
-         alt="Figure 5: Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections." />
-         <figcaption aria-hidden="true"><span>Figure 5:</span> Good
-         placement of op-amp and bypass capacitors on a protoboard. Note
-         that short wires are used for all connections.</figcaption>
-         </figure>
-         </div>
-         <h2 data-number="7.1" id="op-amp-setup"><span
-         class="header-section-number">7.1</span> Op-amp setup</h2>
+         <h2 data-number="7.1" id="general-op-amp-tips"><span
+         class="header-section-number">7.1</span> General Op-amp
+         Tips</h2>
+         <p>Here are some basic steps you should always follow when
+         working with op-amps. Read through them all (likely more than
+         once) before you begin to build your circuit (which is covered
+         in the next section). You can then refer back to this section
+         at any point to remind yourself of these tips.</p>
          <ol type="1">
-         <li><p>This experiment will use both +15 V and –15 V to power
+         <li><p>This experiment will use both +15 V and -15 V to power
          the LF356 op-amp. <span style="color: red;">Make sure you
          <strong>unplug</strong> the DC supplies while wiring your
          op-amp (you may find it useful to plug them into their own
@@ -500,7 +499,9 @@ I</h1>
          chip, ensure the pins are straight (using a needle-nose pliers
          or something similar). After insertion, check visually that no
          pin is broken or bent under the chip. To remove the chip, use a
-         small screwdriver in the groove to pry it out.</p></li>
+         small screwdriver in the groove to pry it out or use IC pliers
+         (which can be found on the long workbench next to the LCR meter
+         and digital microscope).</p></li>
          <li><p>You will have less trouble with spontaneous oscillations
          if the circuit layout is neat and compact, in particular the
          feedback path should be as short as possible to reduce unwanted
@@ -528,27 +529,45 @@ I</h1>
          lead is connected to -15 V and the positive lead is connected
          to ground.</p></li>
          </ol>
-         <h2 data-number="7.2" id="testing-the-op-amp"><span
-         class="header-section-number">7.2</span> Testing the
-         op-amp</h2>
+         <div id="fig:pb" class="fignos">
+         <figure>
+         <img src="../resources/lab4fig/pb-example.png"
+         style="width:10cm"
+         alt="Figure 5: An example circuit (not the one you will build in this lab) showing good placement of the op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections." />
+         <figcaption aria-hidden="true"><span>Figure 5:</span> An
+         example circuit (not the one you will build in this lab)
+         showing good placement of the op-amp and bypass capacitors on a
+         protoboard. Note that short wires are used for all
+         connections.</figcaption>
+         </figure>
+         </div>
+         <h2 data-number="7.2"
+         id="building-an-op-amp-test-circuit"><span
+         class="header-section-number">7.2</span> Building an op-amp
+         test circuit</h2>
          <ol type="1">
          <li><p>You can save yourself some frustration by testing your
-         op-amp chips to make sure they are not burned out. Connect the
-         op-amp as a grounded-input <strong><em>voltage
-         follower</em></strong> with the (positive) input grounded (see
-         Figure <a href="#fig:voltage-follower-gnd">6</a>). What is the
-         predicted voltage on pins 2, 3, 4, 6 and 7 using the Golden
-         Rule model? Measure and record the measured voltages on these
-         pins. If your predictions do not match your measurements check
-         your connections to the chip to find the problem. Make sure
-         your predictions match your measurements before going on. It
-         will be helpful to leave the voltage follower built on your
-         board to quickly check an op-amp in future weeks. Move the chip
-         out and build the other circuits elsewhere on your
-         protoboard.</p></li>
+         op-amp chips to make sure they are not burned out. You will now
+         build a test circuit on your protoboard to quickly check that
+         your op-amp is functioning as expected. It will be helpful to
+         leave this test circuit built on your protoboard to quickly
+         check an op-amp in future weeks so keep this in mind when
+         building it (that is, keep it compact and leave plenty of space
+         on your protoboard for future work). Connect the op-amp as a
+         grounded-input <strong><em>voltage follower</em></strong> with
+         the (positive) input grounded (see Figure <a
+         href="#fig:voltage-follower-gnd">6</a>). What is the predicted
+         voltage on pins 2, 3, 4, 6 and 7 using the Golden Rule model?
+         Measure and record the measured voltages on these pins. If your
+         predictions do not match your measurements check your
+         connections to the chip to find the problem. Make sure your
+         predictions match your measurements before going on. Once
+         you’ve confirmed you have a good op-amp, you can then move the
+         chip out of the test circuit and build the upcoming circuits
+         elsewhere on your protoboard.</p></li>
          <li><p>If you find you have a bad chip, throw it in the trash
          and grab another. (In case you are wondering, the LF356 costs
-         about 50 cents.)</p></li>
+         less than $1.)</p></li>
          </ol>
          <div id="fig:voltage-follower-gnd" class="fignos">
          <figure>
@@ -563,10 +582,11 @@ I</h1>
          class="header-section-number">8</span> Voltage Follower</h1>
          <p>A voltage follower is the simplest version of a
          non-inverting amplifier. The voltage follower has no voltage
-         gain (G<sub>0</sub>=1), but it lets you convert a signal with
-         high impedance (i.e. very little current) to a much lower
-         impedance output for driving loads. The voltage follower is
-         also often called a unity gain buffer.</p>
+         gain (<span class="math inline">\(G_0=1\)</span>), but it lets
+         you convert a signal with high impedance (i.e. very little
+         current) to a much lower impedance output for driving loads.
+         The voltage follower is also often called a unity gain
+         buffer.</p>
          <div id="fig:voltage-follower" class="fignos">
          <figure>
          <img src="../resources/lab4fig/voltage-follower.png"
@@ -604,15 +624,15 @@ I</h1>
          10 MHz down to 10 Hz, with (as usual) a few extra points
          anywhere things are starting to change. Do you find any
          deviation from unity gain? HINT: Be sure that the output
-         amplitude is below the level affected by the slew rate For
+         amplitude is below the level affected by the slew rate. For
          help, see H&amp;H p. 192. Plot the low and high frequency data
-         and predicted behavior on your Bode plot from your lab prep. Do
+         and predicted behavior on your Bode plot from your prelab. Do
          you find a simple fall-off as suggested by the theory for the
          ideal follower (<span class="math inline">\(f_T=f_B\)</span>)?
          If so, find the 3 dB frequency. How does your measured 3 dB
          frequency compare to what is expected from the op-amp
          datasheet?</p></li>
-         <li><p>If you observed ideal behavior, youre lucky! At
+         <li><p>If you observed ideal behavior, you’re lucky! At
          frequencies above a few MHz, the simple model of the frequency
          response of the op-amp is not accurate. Once you are in this
          frequency range, many physical details of your circuit and
@@ -661,7 +681,7 @@ I</h1>
          class="math inline">\(f_B\)</span> from these measured values
          and the op-amps value of <span
          class="math inline">\(f_T\)</span> from the data sheet. (You
-         should be able to review your lab-prep work here too!)</p></li>
+         should be able to review your prelab work here too!)</p></li>
          <li><p>Use the function generator to measure the low frequency
          gain. What frequency should you use to test the low frequency
          gain (i.e., what frequency should the signal be below)? What is
