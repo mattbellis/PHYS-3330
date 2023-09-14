@@ -130,7 +130,7 @@ Answer the following questions using Mathematica (or similar math software) for 
 
 ## Properties of an op-amp
 
-The first step in using a new component is to look up its basic characteristics. Find the following specs using the data sheet for the op-amp you will use in the lab for the rest of the semester and record in your lab notebook. Data sheets for the LF356 op-amp (same as LF156) can be found on the [Data Sheets and Instrument Manuals page](PHYS-3330/manuals-data-sheets).
+The first step in using a new component is to look up its basic characteristics. Find the following specs using the data sheet for the op-amp you will use in the lab for the rest of the semester and record in your lab notebook. Data sheets for the LF356 op-amp (same as LF156) can be found on the [Data Sheets and Instrument Manuals page](/PHYS-3330/manuals-data-sheets).
 
 1.  Unity gain frequency, $f_T$ (same as GBW in tables)
 
