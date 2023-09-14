@@ -217,7 +217,7 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 ## Low frequency gain and frequency dependence of the gain
 
-1.  The voltage follower circuit is nearly the same as the test circuit, except that now a signal enters the positive input (Figure @fig:voltage-follower). The basic test and measurement setup is shown in Figure @fig:op-amp-test.
+1.  The voltage follower circuit is nearly the same as the test circuit, except that now a signal enters the positive input (Figure @fig:voltage-follower). Build this now. The basic test and measurement setup is shown in Figure @fig:op-amp-test.
 
 2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below)? Consider the gain-bandwidth product for a unity gain amplifier. What is the gain-bandwidth product for this circuit? How did you find the value? What is the predicted gain for the frequency you chose? Measure the low frequency gain $G_0$ by measuring $V_{in}$ and $V_{out}$ using the scope. Do your measurements agree with your predictions?
 
@@ -233,7 +233,7 @@ A voltage follower is the simplest version of a non-inverting amplifier. The vol
 
 ## Frequency dependent gain
 
-1.  Change the negative feedback loop in your circuit to the one shown in Figure @fig:non-inv-amp, with $R_F = 10 ~k\Omega$ and $R = 100 ~\Omega$. Measure $R$ and $R_F$ with the DMM before inserting them into the circuit board. Predict $G_0$ and $f_B$ from these measured values and the op-amps value of $f_T$ from the data sheet. (You should be able to review your prelab work here too!)
+1.  Change the negative feedback loop in your circuit to the one shown in Figure @fig:non-inv-amp, with $R_F = 10 ~k\Omega$ and $R = 100 ~\Omega$ (or build new one elsewhere on your protoboard). Measure $R$ and $R_F$ with the DMM before inserting them into the circuit board. Predict $G_0$ and $f_B$ from these measured values and the op-amps value of $f_T$ from the data sheet. (You should be able to review your prelab work here too!)
 
 2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below)? What is the gain-bandwidth product for this circuit? How did you find the value? What is the predicted gain for the frequency you chose? Measure the low frequency gain $G_0$ by measuring $V_{in}$ and $V_{out}$ using the scope. Do your measurements agree with your predictions?
 

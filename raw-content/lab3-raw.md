@@ -185,7 +185,7 @@ Plot your mathematical models of all three filter circuits (three independent pl
 
 1.  Connect the circuit board to the function generator and the oscilloscope as shown in Figure @fig:setup. It is always helpful to display both the input voltage as well as the output voltage on the scope at the same time.
 
-2.  Test your setup by creating a 1 kHz sine wave at 1 V p-p using the function generator and confirm the waveform frequency and amplitude by measuring the signal on the scope. Trigger the scope off of the Sync output of the function generator. Remember from Lab 1 that the output termination on the function generator can be set to either 50 $\Omega$ or HIGH Z. Consider which setting should be used here and [set appropriately](PHYS-3330/lab-guides/lab1#appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a). 
+2.  Test your setup by creating a 1 kHz sine wave at 1 V p-p using the function generator and confirm the waveform frequency and amplitude by measuring the signal on the scope. Trigger the scope off of the Sync output of the function generator. Remember from Lab 1 that the output termination on the function generator can be set to either 50 $\Omega$ or HIGH Z. Consider which setting should be used here and [set appropriately](/PHYS-3330/lab-guides/lab1#appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a). 
 
 ## Measure the frequency dependence of the voltage divider {#sec:vd-freq}
 
