@@ -61,7 +61,7 @@ The above formulas are still correct when $A$ and/or $B$ depend on frequency. $B
 
 $$A(f)=\frac{A_0}{1+j\frac{f}{f_0}}$$
 
-The 3 B frequency, $f_0$, is usually very low, around 10 Hz. Data sheets do not usually give $f_0$ directly; instead they give the DC gain, $A_0$, and the unity gain frequency, $f_T$, which is the frequency where the magnitude of the open loop gain $A$ is equal to one. The relation between $A_0$, $f_0$, and $f_T$ is
+The 3 dB frequency, $f_0$, is usually very low, around 10 Hz. Data sheets do not usually give $f_0$ directly; instead they give the DC gain, $A_0$, and the unity gain frequency, $f_T$, which is the frequency where the magnitude of the open loop gain, $A$, is equal to one. The relation between $A_0$, $f_0$, and $f_T$ is:
 
 $$f_{T} = A_{0}f_{0}$$
 
@@ -117,8 +117,7 @@ This is why it is called an integrator. Choosing values for the resistor and cap
 
 -   Avoiding effect of stray capacitance: there are many sources of capacitance, such as cables, which can unintentionally couple to your circuit. For this reason, it is advisable to avoid very small capacitors as the stray capacitances may end up dominating. A few hundred pF should be sufficient.
 
--   Dealing with DC signal: A DC signal in the input results in the capacitor eventually charging up to the\
-    maximum output voltage of the op-amp. This DC signal can result from the op-amp. One way to mitigate this is to add another resistor in parallel with the capacitor such that at low frequencies (large impedance in capacitor) the circuit acts like an inverting amplifier. As the impedance of a resistor is proportional to $R$ while the impedance of a capacitor is inversely proportional to $C$, to ensure that the signal mainly goes through the capacitor, one would like large resistor and/or large capacitor values. Of course, the resistor chosen here in combination to the main resistor in the circuit leads to a DC gain as calculated for the inverting amplifier so this should be considered in making your choice. You can alternatively try placing the high impedance resistor between $V_{out}$ and ground instead of in parallel with the capacitor.
+-   Dealing with DC signal: A DC signal in the input results in the capacitor eventually charging up to the maximum output voltage of the op-amp. This DC signal can result from the op-amp. One way to mitigate this is to add another resistor in parallel with the capacitor such that at low frequencies (large impedance in capacitor) the circuit acts like an inverting amplifier. As the impedance of a resistor is proportional to $R$ while the impedance of a capacitor is inversely proportional to $C$, to ensure that the signal mainly goes through the capacitor, one would like large resistor and/or large capacitor values. Of course, the resistor chosen here in combination to the main resistor in the circuit leads to a DC gain as calculated for the inverting amplifier so this should be considered in making your choice. You can alternatively try placing the high impedance resistor between $V_{out}$ and ground instead of in parallel with the capacitor.
 
 # Useful Readings
 
@@ -130,7 +129,7 @@ This is why it is called an integrator. Choosing values for the resistor and cap
 
 # Prelab
 
-Answer the following questions using Mathematica for the plots. You can use either Mathematica for the rest the questions as well or do them by hand in your lab book. **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
+Answer the following questions using Mathematica for the plots. You can use either Mathematica for the rest the questions as well or do them by hand in your lab notebook. **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
 
 ## Inverting amplifier
 
@@ -172,7 +171,7 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 **These are reminders of the basics steps you should always follow when working with op-amps.**
 
-1.  This experiment will use both +15 V and --15 V to power the LF356 op-amp. <span style="color: red;">Make sure you **unplug** the DC supplies while wiring your op-amp (you may find it useful to plug them into their own power strip). Everyone makes mistakes in wiring-up circuits. You should always check your circuit over before applying power.</span> Figure @fig:lf356 shows a pin-out for the LF356 chip. Familiarize yourself with the layout. The following procedure will help you wire up a circuit accurately:
+1.  This experiment will use both +15 V and -15 V to power the LF356 op-amp. <span style="color: red;">Make sure  the **DC power supply channel outputs are turned off** while wiring your op-amp. Everyone makes mistakes in wiring-up circuits. You should always check your circuit over before applying power.</span> Figure @fig:lf356 shows a pin-out for the LF356 chip. Familiarize yourself with the layout. The following procedure will help you wire up a circuit accurately:
 
     1.  Draw a complete schematic in your lab notebook, including all ground and power connections, and all IC pin numbers. Try to layout your prototype so the parts are arranged in the same way as on the schematic, as far as possible.
 
@@ -195,28 +194,27 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 1.  Build the inverting amplifier shown in Figure @fig:invamp, with $R_F = 100 ~k\Omega$ and $R = 10 ~k\Omega$. Measure $R$ and $R_F$ with the DMM before inserting them into the circuit board. Predict $G_0$ and $f_B$ from these measured values and the op-amps value of $f_T$ from the data sheet. (You should be able to review your prelab work here!)
 
-2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below?) Consider the gain-bandwidth product and how it relates to your circuit. What is the predicted gain for the frequency you chose? Measure the low frequency gain $G_0$ by measuring $V_{in}$ and $V_{out}$ using the scope (as you did in Lab 4). Do your measurements agree with your predictions?
+2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below?) Consider the gain-bandwidth product and how it relates to your circuit. What is the predicted gain for the frequency you chose? Measure the low frequency gain, $G_0$, by measuring $V_{in}$ and $V_{out}$ using the scope (as you did in Lab 4). Do your measurements agree with your predictions?
 
-3.  Update your prediction of the 3 dB frequency for your circuit. Include your calculations in your lab book. Now, determine the 3 dB frequency experimentally. Describe the procedure you followed to determine $f_B$. Does your measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
+3.  Update your prediction of the 3 dB frequency for your circuit. Include your calculations in your lab notebook. Now, determine the 3 dB frequency experimentally. Describe the procedure you followed to determine $f_B$. Does your measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
 
 4.  Using the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your op-amp. Does your measured value of $f_T$ agree with the one from the datasheet?
 
-5.  Measure the frequency dependence of your circuit. Measure the gain at every decade in frequency from 10 Hz to 10 MHz. Should you use a 10X probe or coax cable to make your measurements? Explain your reasoning. Plot your measurements and predicted gain curve on the same plot. Where, if at all, is the simple model of the op-amp circuit not valid? Can you suggest possible model refinements and/or physical system refinements to get better agreement between the model predictions and measurements.
+5.  Measure the frequency dependence of your circuit. Measure the gain at every decade in frequency from 10 Hz to 10 MHz. Should you use a 10X probe or coax cable to make your measurements? Explain your reasoning. Plot your measurements and predicted gain curve on the same plot. Where, if at all, is the simple model of the op-amp circuit not valid? Suggest possible model refinements and/or physical system refinements to get better agreement between the model predictions and measurements.
 
 # Summing Amplifier Application - Digital to Analog Conversion
 
 1.  Modify your basic inverting op-amp circuit to make it a summing amplifier as shown in Figure @fig:sumamp. Use the component values you determined in your prelab for the resistors (you may want to check with your instructor to be sure they make sense). Draw the schematic in your lab notebook and label all components. Measure the resistors before inserting them into your circuit and record the values.
-
 2.  Determine the transfer function for your exact component values. What is $V_{out}$ in terms of $V_1$, $V_2$, and $V_3$?
-
-3.  Confirm your summing amplifier is working by testing a couple of input voltages to compare to your predicted $V_{out}$ from you prelab. What is the best available measurement device to make these measurements? Why did you choose that device? Do these initial measurements agree with your predictions? Create a table listing all possible input voltages, of 0V or 1V, to the 3 input voltages (binary counting from 0V-7V output) and measure the output of your circuit. This is a digital-to-analog converter mode. How accurately were you able to make integer values of output voltage? What criteria did you use to determine the accuracy? Describe a way to refine the physical system to more accurately create exact integer voltages at the output.
+3.  Confirm your summing amplifier is working by testing a couple of input voltages to compare to your predicted $V_{out}$ from you prelab. What is the best available measurement device to make these measurements? Why did you choose that device? Do these initial measurements agree with your predictions? 
+4.  Use your summing amplifier in "digital to analog conversion mode" to create integer output voltages from 0V to 7V from two input voltages (0V or 1V). Predict what set of input voltages is required to get each desired output voltage (*HINT: You did this in your prelab.)* Do your measurements agree with your predictions for all eight voltages? How accurately were you able to make integer values of output voltage? Describe a way to refine the physical system to more accurately create exact integer output voltages.
 
 
 # Integrator Application
 
 By now, you should be somewhat comfortable with experimental design and reporting of outcomes, especially with op-amps and voltage dividers. In this last section, you will design and characterize an integrator. Your starting point should be the integrator circuit you designed in the prelab. Items you likely wish to include in your lab notebook:
 
--   Describe the circuit you are building and testing. It is suggested that you use R = 10 k$\Omega$ and the necessary capacitor to obtain a time constant of 1 ms.
+-   Describe the circuit you are building and testing. It is suggested that you use $R = 10 k\Omega$ and the necessary capacitor to obtain a time constant of 1 ms.
 
 -   Draw the schematic of the circuit with component values labeled.
 
