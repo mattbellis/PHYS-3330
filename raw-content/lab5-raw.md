@@ -133,7 +133,7 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 ## Inverting amplifier
 
-1.  Calculate the values of low frequency gain, $G_0$, and the bandwidth, $f_B$, for the inverting amplifier in Figure @fig:invamp for the following circuit you will build in lab with the following resistors: $R_F = 10 ~k\Omega$ and $R = 10 ~\Omega$ .
+1.  Calculate the values of low frequency gain, $G_0$, and the bandwidth, $f_B$, for the inverting amplifier in Figure @fig:invamp for the following circuit you will build in lab with the following resistors: $R_F = 100 ~k\Omega$ and $R = 10 ~k\Omega$ .
 
 2.  Graph a Bode plot for the open loop gain and the closed loop gain for the circuit from above on the same graph using Mathematica (making sure to label axes and curves).
 
