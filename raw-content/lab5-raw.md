@@ -200,7 +200,7 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 4.  Using the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your op-amp. Does your measured value of $f_T$ agree with the one from the datasheet?
 
-5.  Measure the frequency dependence of your circuit. Measure the gain at every decade in frequency from 10 Hz to 10 MHz. Should you use a 10X probe or coax cable to make your measurements? Explain your reasoning. Plot your measurements and predicted gain curve on the same plot. Where, if at all, is the simple model of the op-amp circuit not valid? Suggest possible model refinements and/or physical system refinements to get better agreement between the model predictions and measurements.
+5.  Measure the frequency dependence of your circuit. Measure the gain at every decade in frequency from 100 Hz to 1 MHz, with extra data points around the cutoff frequency. Should you use a 10X probe or coax cable to make your measurements? Explain your reasoning. Plot your measurements and predicted gain curve on the same plot. Where, if at all, is the simple model of the op-amp circuit not valid? Suggest possible model refinements and/or physical system refinements to get better agreement between the model predictions and measurements.
 
 # Summing Amplifier Application - Digital to Analog Conversion
 
