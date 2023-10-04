@@ -74,17 +74,16 @@ MOSFETS</h1>
             </ul>
         </nav>
         <hr/>
-         <p>As discussed in the last lab, transistors are the basic
-         devices providing control of large currents with small signals.
-         There are two general types of transistors, bipolar and
-         field-effect. The difference between these two types is that
-         for bipolar devices an <em>input current</em> controls the
-         large current flow through the device, while for field-effect
-         transistors an <em>input voltage</em> provides the current
-         control. In the last experiment, you used the transistor as a
-         voltage amplifier. In the present experiment, you explore using
-         the FET type transistors as a current controller to create an
-         electromagnet.</p>
+         <p>Transistors are the basic devices providing control of large
+         currents with small signals. There are two general types of
+         transistors: bipolar and field-effect. The difference between
+         these two types is that for bipolar devices an <em>input
+         current</em> controls the large current flow through the
+         device, while for field-effect transistors an <em>input
+         voltage</em> provides the current control. In this lab, you
+         explore using the FET type transistors as a current controller
+         to create an electromagnet. In the next week’s lab, you will
+         use the transistor as a voltage amplifier.</p>
          <h1 data-number="1" id="goals"><span
          class="header-section-number">1</span> Goals</h1>
          <p>Proficiency with new equipment: MOSFETS and magnetic
@@ -101,16 +100,13 @@ MOSFETS</h1>
          <h1 data-number="3" id="fet-basics"><span
          class="header-section-number">3</span> FET Basics</h1>
          <p>The input to a FET is called the gate (see Figure <a
-         href="#fig:mosfetpo">2</a>), analogous to the base of a bipolar
-         transistor. But unlike the situation with bipolar transistors,
-         almost no current flows into the gate, and FETs are nearly
-         ideal voltage amplifiers with very high input impedance. In
-         junction FETs (JFETs) the gate is connected to the rest of the
-         device through a reverse-biased pn junction, while in
-         metal-oxide-semiconductor FETs (MOSFETs) the gate is connected
-         via a thin insulating oxide layer. Bipolar transistors come in
-         two polarities called npn and pnp, and similarly FETs come in
-         two polarities called n-channel and p-channel.</p>
+         href="#fig:mosfetpo">2</a>). Almost no current flows into the
+         gate, and FETs are nearly ideal voltage amplifiers with very
+         high input impedance. In junction FETs (JFETs), the gate is
+         connected to the rest of the device through a reverse-biased pn
+         junction, while in metal-oxide-semiconductor FETs (MOSFETs) the
+         gate is connected via a thin insulating oxide layer. FETs come
+         in two polarities called n-channel and p-channel.</p>
          <p>In integrated circuit form, small MOSFETs are ubiquitous in
          digital electronics, used in everything from simple logic
          circuits to the 2.5-billion transistor Intel 10-core Xeon
@@ -137,22 +133,23 @@ MOSFETS</h1>
          In this region, the MOSFET is turned off and no current can
          flow. The second region is when <span
          class="math inline">\(V_{GS} &gt; V_{th}\)</span> and <span
-         class="math inline">\(V_{DS} &lt; (V_{GS} ~–~ V_{th})\)</span>.
-         In this linear region, the transistor is turned on, and a
-         channel has been created that allows current to flow between
-         the drain and the source. In this region, the MOSFET operates
-         like a resistor, controlled by the gate voltage relative to
-         both the source and drain voltages. In the third region, <span
-         class="math inline">\(V_{GS} &gt; V_{th}\)</span> and <span
-         class="math inline">\(V_{DS} \ge (V_{GS} - V_{th})\)</span>.
-         This is called the saturation region. Here the current is
-         controlled by the gate voltage and is nearly independent of
-         <span class="math inline">\(V_{DS}\)</span>. We will work in
-         the saturation region for this lab. The linear and saturation
-         regions are separated by the dotted line in Figure <span
-         class="citation"
-         data-cites="figmosfetchar">@figmosfetchar</span>. In the
-         saturation region, the dependence of current on <span
+         class="math inline">\(V_{DS} &lt; (V_{GS} ~–~ V_{th})\)</span>,
+         where <span class="math inline">\(V_{DS}\)</span> is the
+         drain-to-source voltage. In this linear region, the transistor
+         is turned on, and a channel has been created that allows
+         current to flow between the drain and the source. In this
+         region, the MOSFET operates like a resistor, controlled by the
+         gate voltage relative to both the source and drain voltages. In
+         the third region, <span class="math inline">\(V_{GS} &gt;
+         V_{th}\)</span> and <span class="math inline">\(V_{DS} \ge
+         (V_{GS} - V_{th})\)</span>. This is called the saturation
+         region. Here the current is controlled by the gate voltage and
+         is nearly independent of <span
+         class="math inline">\(V_{DS}\)</span>. We will work in the
+         saturation region for this lab. The linear and saturation
+         regions are separated by the dotted line in Figure <a
+         href="#fig:mosfetchar">1</a>. In the saturation region, the
+         dependence of current on <span
          class="math inline">\(V_{GS}\)</span> is modeled by <span
          class="math inline">\(I_D = k(V_{GS} ~–~V_{th})^2\)</span>,
          where <span class="math inline">\(k\)</span> is a constant that
@@ -193,18 +190,20 @@ MOSFETS</h1>
          MOSFET</h2>
          <ol type="1">
          <li>What is the range of the Gate-Source threshold voltage for
-         the IRF710PBF transistor? The data sheet is on the Canvas.</li>
+         the IRF710PBF transistor? The data sheet is on the <a
+         href="/PHYS-3330/manuals-data-sheets">Data Sheets and
+         Instrument Manuals page</a>.</li>
          <li>Plot <span class="math inline">\(I_D\)</span> vs. <span
          class="math inline">\(V_{DS}\)</span> for a value of <span
          class="math inline">\(V_{GS}\)</span> that will give you about
          0.5 A in the saturation regime. You can do this by plotting a
-         bunch of points obtained from Figure 1 of the data sheet. This
+         bunch of points obtained from Figure 1 on the data sheet. This
          can give you an idea about where in the saturation region we
          can operate.</li>
          <li>Plot <span class="math inline">\(I_D\)</span> vs. <span
          class="math inline">\(V_{GS}\)</span> for <span
          class="math inline">\(V_{DS} = 10 ~V\)</span> using the data
-         available in Figure 1 of the data sheet. Just plot the points
+         available in Figure 1 on the data sheet. Just plot the points
          in the saturation region. In this region, the drain current
          dependence on <span class="math inline">\(V_{GS}\)</span> can
          be modeled as <span class="math inline">\(I_D = k(V_{GS} ~–~
@@ -212,11 +211,12 @@ MOSFETS</h1>
          obtain values for the constant, <span
          class="math inline">\(k\)</span>, and the threshold voltage,
          <span class="math inline">\(V_{th}\)</span>, along with their
-         associated uncertainties. You can refer to your work in Lab
-         Skills Activity 2 for an example of fitting data to a function.
-         Be sure to enter your best estimate of the uncertainties on the
-         input data points. Also, be sure to include the resulting
-         uncertainties when reporting the fitted values of <span
+         associated uncertainties. You can refer to your work in <a
+         href="/PHYS-3330/lab-guides/lsa2">Lab Skills Activity 2</a> for
+         an example of fitting data to a function. Be sure to enter your
+         best estimate of the uncertainties on the input data points.
+         Also, be sure to include the resulting uncertainties when
+         reporting the fitted values of <span
          class="math inline">\(k\)</span> and <span
          class="math inline">\(V_{th}\)</span>.</li>
          </ol>
@@ -284,8 +284,8 @@ MOSFETS</h1>
          <li>Build the test circuit for the MOSFET shown in Figure <a
          href="#fig:testcir">3</a>. Make sure to attach a heat sink fin
          to the FET. (See notes of caution above.) You can use the
-         10-turn pot on the front panel of your board. The 10-turn pot
-         allows finer control of the <span
+         10-turn pot on the interface panel of your protoboard. The
+         10-turn pot allows more intuitive control of the <span
          class="math inline">\(V_{GS}\)</span> than the knobs on the DC
          power supply. You can measure the resistance between pairs of
          the three leads to make sure you have it wired correctly.</li>
@@ -313,7 +313,7 @@ MOSFETS</h1>
          class="math inline">\(V_{DS}\)</span> to use. Plot <span
          class="math inline">\(I_D\)</span> vs. <span
          class="math inline">\(V_{GS}\)</span> on the same graph as your
-         lab prep predictions. Do your measurements agree qualitatively
+         prelab predictions. Do your measurements agree qualitatively
          with the predictions from the data sheet? If there is a
          difference, what could account for the discrepancy? Fit your
          data to obtain values for <span
@@ -347,10 +347,9 @@ MOSFETS</h1>
          <li>Measure the resistance of the coil using the 4-terminal
          measurement as you did in Lab 1 (run a large current through
          the wire and measure the voltage across it). Describe your
-         procedure and measurements. HINT: The banana to alligator clips
-         make easy connections to the coil.</li>
+         procedure and measurements.</li>
          <li>Modify your model of the magnetic field you developed in
-         the lab prep to include the actual number of turns and diameter
+         the prelab to include the actual number of turns and diameter
          of your coil.</li>
          </ol>
          <h2 data-number="9.2" id="electromagnet"><span
@@ -397,7 +396,7 @@ MOSFETS</h1>
          up depends on the current.</li>
          <li>Wrap your coil around an iron core and test how the
          magnetic field changes, refine your model to include the
-         iron</li>
+         iron.</li>
          </ul></li>
          </ol>
                </div>
