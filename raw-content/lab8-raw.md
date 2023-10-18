@@ -5,7 +5,7 @@ author: [Department of Physics | University of Colorado Boulder]
 
 # Goals
 
-In this lab, you will begin learning how transistors work by creating a dual-stage amplifier out of a common emitter amplifier plus an emitter follower and use this as an audio amplifier.
+In this lab, you will continue learning how transistors work by creating a dual-stage amplifier out of a common emitter amplifier plus an emitter follower and use this as an audio amplifier.
 
 Proficiency with new equipment:
 
