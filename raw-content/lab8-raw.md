@@ -55,7 +55,7 @@ The constant of proportionality ('current gain') is called $h_{fe}$ because it i
 
 If you want to know the emitter current, rather than the collector current, you can find it by current conservation:
 
-$$I_E = I_B+I_C = I_C\left(\frac{1}{h_{fe}+1}\right)$$
+$$I_E = I_B+I_C = I_C\left(\frac{1}{h_{fe}}+1\right)$$
 
 The difference between $I_C$ and $I_E$ is almost never important since $h_{fe}$ is normally in the range of 100--1000, so you can generally assume that $I_E$ = $I_C$. Another way to say this is that the base current is very small compared to the collector and emitter currents.
 
@@ -202,7 +202,7 @@ which shows that the common emitter gain is not infinite when the external emitt
 
 ## Check limits with AC signal
 
-1. Add the input coupling capacitor $C_{in}$ and the input AC source $V_{in}$ (and use the sync output to trigger the scope). The capacitor allows one to transmit an AC signal while maintaining the DC voltages established by the bias network. When you switch on the power, you may see high frequency spontaneous oscillations. These must be suppressed before you can proceed. An additional bypass capacitor (~100nF) between +15 V and ground close to the transistor may help. Also, reducing the length of your circuit wires can help. Do not add $C_{out}$ yet.
+1. Add the input coupling capacitor $C_{in}$ and the input AC source $V_{in}$ (and use the sync output to trigger the scope). The capacitor allows one to transmit an AC signal while maintaining the DC voltages established by the bias network. When you switch on the power, you may see high frequency spontaneous oscillations. These must be suppressed before you can proceed. Also, reducing the length of your circuit wires can help. Do not add $C_{out}$ yet.
 2. Assemble a test setup to observe the input (before $C_{in}$) and output of the amplifier with 10 kHz sine waves. Check that your setup works, and you can measure both the input and output.
 3. Vary the input amplitude to determine the output amplitude at which clipping begins. Compare your results to section @sec:cea\.3? and @sec:cea\.4. You will want to stay below half of the clipping voltage to ensure the amplifier is not distorting the output waveform.
 4. For the scope channel connected to the output, switch the coupling between DC and AC coupling and adjust the scope to see the signal in both cases. Explain the different behavior and say why you may want one or the other.

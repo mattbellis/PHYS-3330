@@ -240,7 +240,7 @@ Colorado Boulder">
          <p>If you want to know the emitter current, rather than the
          collector current, you can find it by current conservation:</p>
          <p><span class="math display">\[I_E = I_B+I_C =
-         I_C\left(\frac{1}{h_{fe}+1}\right)\]</span></p>
+         I_C\left(\frac{1}{h_{fe}}+1\right)\]</span></p>
          <p>The difference between <span
          class="math inline">\(I_C\)</span> and <span
          class="math inline">\(I_E\)</span> is almost never important
@@ -663,10 +663,8 @@ Colorado Boulder">
          transmit an AC signal while maintaining the DC voltages
          established by the bias network. When you switch on the power,
          you may see high frequency spontaneous oscillations. These must
-         be suppressed before you can proceed. An additional bypass
-         capacitor (~100nF) between +15 V and ground close to the
-         transistor may help. Also, reducing the length of your circuit
-         wires can help. Do not add <span
+         be suppressed before you can proceed. Also, reducing the length
+         of your circuit wires can help. Do not add <span
          class="math inline">\(C_{out}\)</span> yet.</li>
          <li>Assemble a test setup to observe the input (before <span
          class="math inline">\(C_{in}\)</span>) and output of the
