@@ -210,22 +210,24 @@ Colorado Boulder">
          <h1 data-number="6" id="useful-readings"><span
          class="header-section-number">6</span> Useful Readings</h1>
          <ol type="1">
-         <li><p>http://arduino.cc/</p>
-         <ul>
-         <li><p>The Foundations page is helpful: <a
-         href="http://www.arduino.cc/en/Tutorial/Foundations">https://w</a>ww.ardui<a
-         href="http://www.arduino.cc/en/Tutorial/Foundations">no.cc/en/Tutorial/Foundations</a></p></li>
-         <li><p>The Language Reference page is particularly good to know
-         about: http://arduino.cc/en/Reference/HomePage</p></li>
-         </ul></li>
-         <li><p>The multitude of internet resources on Arduino
-         projects:</p>
-         <ul>
-         <li><p>http://arduino.cc/en/Tutorial/HomePage</p></li>
-         <li><p>http://playground.arduino.cc/Projects/Ideas</p></li>
-         <li><p>http://www.instructables.com/id/Arduino-Projects/</p></li>
-         <li><p>…and many more…just Google it!</p></li>
-         </ul></li>
+         <li><a href="https://www.arduino.cc/">Arduino Website</a>
+         <ol type="1">
+         <li><a href="https://docs.arduino.cc/">The documentation
+         page</a> is helpful.</li>
+         <li><a href="https://www.arduino.cc/reference/en/">The Language
+         Reference page</a> is particularly good to know about.</li>
+         </ol></li>
+         <li>The multitude of internet resources on Arduino projects:
+         <ol type="1">
+         <li><a href="https://docs.arduino.cc/tutorials/">Arduino
+         tutorials.</a></li>
+         <li><a href="https://projecthub.arduino.cc/">Official Arduino
+         projects.</a></li>
+         <li><a
+         href="https://www.instructables.com/Arduino-Projects/">Instructables
+         Arduino projects.</a></li>
+         <li>Your search engine of choice…</li>
+         </ol></li>
          </ol>
          <h1 data-number="7" id="prelab"><span
          class="header-section-number">7</span> Prelab</h1>
@@ -235,18 +237,23 @@ Colorado Boulder">
          software</h2>
          <ol type="1">
          <li>On a laptop with a USB port (which you and/or your lab
-         partner should bring to lab), go to</li>
-         <li></li>
-         <li></li>
-         <li></li>
+         partner should bring to lab), go to the Arduino <a
+         href="https://www.arduino.cc/">website</a>.</li>
+         <li>Click on the “Software” tab then scroll to the “Downloads”
+         section.</li>
+         <li>Download the installer for the Arduino Desktop IDE that is
+         appropriate for your computer (Windows, Mac, Linux).</li>
+         <li>Install the software on your computer. We will be using the
+         Desktop IDE for this lab (not the Web IDE).</li>
          </ol>
          <h2 data-number="7.2" id="download-sample-code"><span
          class="header-section-number">7.2</span> Download sample
          code</h2>
          <ol type="1">
-         <li>Download the starter sketch file labeled
-         “arduino_starter_sketch.ino” from Canvas.</li>
-         <li>Open it in the Arduino IDE</li>
+         <li>Download <a
+         href="../resources/lab10fig/ardunio_starter_sketch.ino">this</a>
+         starter sketch file.</li>
+         <li>Open it in the Arduino IDE.</li>
          <li>Read through it and understand what is does. See the
          “Language Reference” section of the Arduino website NEED LINK
          VERIFICATION. Describe these three commands:
@@ -261,16 +268,18 @@ Colorado Boulder">
          &amp; lab</h2>
          <ol type="1">
          <li>Calculate the resistor you should put in series with the
-         LED in Step 1 to limit the current to 20mA (from a 5 V output
-         and assuming a 2 V drop across the LED).</li>
+         LED in the “Flashing LED” section below to limit the current to
+         20mA (from a 5 V output and assuming a 2 V drop across the
+         LED).</li>
          <li>Draw the schematic of the circuit diagram for the
-         potentiometer in Step 2 and how it acts as a voltage divider
-         for input to the Arduino.</li>
-         <li>Decide on two simple projects that you can do for Step 4 of
-         this lab (see below). You’ll only need one in the end, but it
-         will be good to have two options in case one doesn’t work out.
-         You can use internet resources such as those listed under item
-         2 of “Useful Readings” or look at the appendix.</li>
+         potentiometer in the “Potentiometer input” section below and
+         how it acts as a voltage divider for input to the Arduino.</li>
+         <li>Decide on two simple projects that you can do for the
+         “Choose your own project” section of this lab (see below).
+         You’ll only need one in the end, but it will be good to have
+         two options in case one doesn’t work out. You can use internet
+         resources such as those listed under “Useful Readings” or look
+         at the appendix.</li>
          </ol>
          <h2 data-number="7.4" id="lab-activities"><span
          class="header-section-number">7.4</span> Lab activities</h2>
@@ -286,11 +295,12 @@ Colorado Boulder">
          <h2 data-number="8.1" id="flashing-led"><span
          class="header-section-number">8.1</span> Flashing LED</h2>
          <ol type="1">
-         <li>Follow the instructions here: When you finish, you should
-         see a yellow light on the Arduino board that blinks at 1
-         Hz.</li>
-         <li>Open up the starter sketch that you downloaded from Canvas
-         for Question 1 of the prelab in the Arduino IDE.</li>
+         <li>Follow the instructions <a
+         href="https://docs.arduino.cc/built-in-examples/basics/Blink">here</a>.
+         When you finish, you should see a yellow light on the Arduino
+         board that blinks at 1 Hz.</li>
+         <li>Open up the starter sketch that you downloaded (in the
+         prelab) in the Arduino IDE.</li>
          <li>The Arduino Uno has 14 digital pins that can be used for
          either input or output (though Pin 0 and Pin 1 are reserved for
          specific purposes). Determine which pin the sketch expects an
@@ -299,17 +309,17 @@ Colorado Boulder">
          breadboard such that they are in series and one end is
          connected to ground. The resistor is added to limit the current
          in the LED to 20 mA. You should have calculated the resistor
-         value in prelab question 3a.</li>
-         <li>Connect the Arduino digital pin found in step c and the
-         ground pin to the breadboard such that you have a complete
-         circuit with the LED and resistor.</li>
+         value in the prelab.</li>
+         <li>Connect the Arduino digital pin found above and the ground
+         pin to the breadboard such that you have a complete circuit
+         with the LED and resistor.</li>
          <li>Run the starter sketch and describe what happens.</li>
          <li>Modify the sketch to make the LED flash at a frequency of 4
          Hz. (Hint: Check out the “delay” command and/or look at the
-         Blink sketch you should have used in a.) Document your changes
-         in your lab book.</li>
+         Blink sketch you should have used above.) Document your changes
+         in your lab notebook.</li>
          <li>Modify the sketch to make the LED flash at a frequency of 4
-         Hz but to be on for ¾ of the time and off for ¼ of the
+         Hz but to be on for 3/4 of the time and off for 1/4 of the
          time.</li>
          </ol>
          <h2 data-number="8.2" id="potentiometer-input"><span
@@ -351,16 +361,16 @@ Colorado Boulder">
          communication with the microcontroller chip.)</li>
          <li>Connect the other end of the LEDs together (use one of the
          columns). Then connect that common connection to ground with a
-         single resistor (of the value calculated in prelab question 3a.
-         This way you don’t need 10 resistors.</li>
+         single resistor (of the value calculated in the prelab). This
+         way you don’t need 10 resistors.</li>
          <li>Modify your code to make all the LEDs flash together.
          (Hint: Instead of controlling each one with its own line of
          code, use for loops to do the same thing to all of them in
          turn. You’ll need to set the pinMode of each output to OUTPUT
          in the setup routine. Document your changes in your lab
-         book.)</li>
+         notebook.)</li>
          <li>Now, further modify your code to make each LED flash in
-         sequence. Document your changes in your lab book.</li>
+         sequence. Document your changes in your lab notebook.</li>
          <li>Include the final version of your sketch in your lab
          notebook.</li>
          </ol>
@@ -395,7 +405,7 @@ Colorado Boulder">
          <li>Connect your speaker to one of the digital outputs. Use the
          “tone” function to play frequencies. You can control the
          frequencies with the potentiometer. Or, you can use the
-         photometer circuit from Lab 7 to provide the voltage so that
+         photometer circuit from Lab 6 to provide the voltage so that
          the sound frequency is dependent on the light level. Or you can
          use the “random” function to play random frequencies.</li>
          <li>Generate a periodic square wave with the 555 Timer circuit

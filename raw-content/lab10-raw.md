@@ -41,21 +41,14 @@ Nearly every pin of the ATMEL ATmega328P microcontroller chip can be programmed 
 
 # Useful Readings
 
-1. http://arduino.cc/
-
-   - The Foundations page is helpful: [https://w](http://www.arduino.cc/en/Tutorial/Foundations)ww.ardui[no.cc/en/Tutorial/Foundations](http://www.arduino.cc/en/Tutorial/Foundations)
-
-   - The Language Reference page is particularly good to know about: http://arduino.cc/en/Reference/HomePage
-
+1. [Arduino Website](https://www.arduino.cc/)
+   1. [The documentation page](https://docs.arduino.cc/) is helpful.
+   2. [The Language Reference page](https://www.arduino.cc/reference/en/) is particularly good to know about.
 2. The multitude of internet resources on Arduino projects:
-
-   - http://arduino.cc/en/Tutorial/HomePage
-
-   - http://playground.arduino.cc/Projects/Ideas
-
-   - http://www.instructables.com/id/Arduino-Projects/
-
-   - …and many more...just Google it!
+   1. [Arduino tutorials.](https://docs.arduino.cc/tutorials/)
+   2. [Official Arduino projects.](https://projecthub.arduino.cc/)
+   3. [Instructables Arduino projects.](https://www.instructables.com/Arduino-Projects/)
+   4. Your search engine of choice...
 
 # Prelab
 
@@ -63,33 +56,27 @@ Answer the following questions.
 
 ## Set up the Arduino software
 
-1. On a laptop with a USB port (which you and/or your lab partner should bring to lab), go
-   to
-2.  
-3.  
-4.  
+1. On a laptop with a USB port (which you and/or your lab partner should bring to lab), go to the Arduino [website](https://www.arduino.cc/).
+2. Click on the “Software” tab then scroll to the "Downloads" section.
+3. Download the installer for the Arduino Desktop IDE that is appropriate for your computer (Windows, Mac, Linux).
+4. Install the software on your computer. We will be using the Desktop IDE for this lab (not
+   the Web IDE).
 
 ## Download sample code
 
-1. Download the starter sketch file labeled “arduino_starter_sketch.ino” from Canvas.
-2. Open it in the Arduino IDE
+1. Download [this](../resources/lab10fig/ardunio_starter_sketch.ino) starter sketch file.
+2. Open it in the Arduino IDE.
 3. Read through it and understand what is does. See the "Language Reference" section of the Arduino website NEED LINK VERIFICATION. Describe these three commands:
    1. pinModel()
    2. loop()
    3. digitalWrite()
 
-
-
 ## Prepare to explore & lab
 
-1. Calculate the resistor you should put in series with the LED in Step 1 to limit the current
-   to 20mA (from a 5 V output and assuming a 2 V drop across the LED).
-2. Draw the schematic of the circuit diagram for the potentiometer in Step 2 and how it
-   acts as a voltage divider for input to the Arduino.
-3. Decide on two simple projects that you can do for Step 4 of this lab (see below). You’ll
-   only need one in the end, but it will be good to have two options in case one doesn’t
-   work out. You can use internet resources such as those listed under item 2 of “Useful
-   Readings” or look at the appendix.
+1. Calculate the resistor you should put in series with the LED in the "Flashing LED" section below to limit the current to 20mA (from a 5 V output and assuming a 2 V drop across the LED).
+2. Draw the schematic of the circuit diagram for the potentiometer in the "Potentiometer input" section below and how it acts as a voltage divider for input to the Arduino.
+3. Decide on two simple projects that you can do for the "Choose your own project" section of this lab (see below). You’ll only need one in the end, but it will be good to have two options in case one doesn’t
+   work out. You can use internet resources such as those listed under  “Useful Readings” or look at the appendix.
 
 ## Lab activities
 
@@ -100,73 +87,42 @@ Answer the following questions.
 
 ## Flashing LED
 
-1. Follow the instructions here: When you finish, you should see a yellow light on the Arduino board that blinks at 1 Hz.
-2. Open up the starter sketch that you downloaded from Canvas for Question 1 of the
-   prelab in the Arduino IDE.
-3. The Arduino Uno has 14 digital pins that can be used for either input or output (though
-   Pin 0 and Pin 1 are reserved for specific purposes). Determine which pin the sketch
-   expects an LED to be connected to.
-4. Configure a single LED (HLMP-C625) and resistor on the breadboard such that they are
-   in series and one end is connected to ground. The resistor is added to limit the current in the LED to 20 mA. You should have calculated the resistor value in prelab question 3a.
-5. Connect the Arduino digital pin found in step c and the ground pin to the breadboard
-   such that you have a complete circuit with the LED and resistor.
+1. Follow the instructions [here](https://docs.arduino.cc/built-in-examples/basics/Blink). When you finish, you should see a yellow light on the Arduino board that blinks at 1 Hz.
+2. Open up the starter sketch that you downloaded (in the prelab) in the Arduino IDE.
+3. The Arduino Uno has 14 digital pins that can be used for either input or output (though Pin 0 and Pin 1 are reserved for specific purposes). Determine which pin the sketch expects an LED to be connected to.
+4. Configure a single LED (HLMP-C625) and resistor on the breadboard such that they are in series and one end is connected to ground. The resistor is added to limit the current in the LED to 20 mA. You should have calculated the resistor value in the prelab.
+5. Connect the Arduino digital pin found above and the ground pin to the breadboard such that you have a complete circuit with the LED and resistor.
 6. Run the starter sketch and describe what happens.
-7. Modify the sketch to make the LED flash at a frequency of 4 Hz. (Hint: Check out the
-   “delay” command and/or look at the Blink sketch you should have used in a.)
-   Document your changes in your lab book.
-8. Modify the sketch to make the LED flash at a frequency of 4 Hz but to be on for ¾ of the
-   time and off for ¼ of the time.
+7. Modify the sketch to make the LED flash at a frequency of 4 Hz. (Hint: Check out the “delay” command and/or look at the Blink sketch you should have used above.) Document your changes in your lab notebook.
+8. Modify the sketch to make the LED flash at a frequency of 4 Hz but to be on for 3/4 of the
+   time and off for 1/4 of the time.
 
 ## Potentiometer input
 
-1. The Arduino Uno has 6 analog input pins, which convert an analog input (between 0–5 V
-   by default) into a digital value with 10 bits of resolution. Connect your potentiometer so
-   that you can control the voltage to one of the analog input pins. (Hint: use the +5 V pin
-   on the Arduino as well as the ground pin.) Be sure to include your circuit diagram in
-   your notebook.
-2. Add code to the sketch to read the value on the input pin and store it as an integer.
-   (Hint: check out the “analogRead” command)
-3. Output the stored value of the voltage drop across the potentiometer to the computer
-   over the Serial connection. (Hint: Check out the “Serial.begin” and “Serial.println”
-   commands.) 9600 bits per second is a standard rate for serial communication.
+1. The Arduino Uno has 6 analog input pins, which convert an analog input (between 0–5 V by default) into a digital value with 10 bits of resolution. Connect your potentiometer so that you can control the voltage to one of the analog input pins. (Hint: use the +5 V pin on the Arduino as well as the ground pin.) Be sure to include your circuit diagram in your notebook.
+2. Add code to the sketch to read the value on the input pin and store it as an integer. (Hint: check out the “analogRead” command)
+3. Output the stored value of the voltage drop across the potentiometer to the computer over the Serial connection. (Hint: Check out the “Serial.begin” and “Serial.println” commands.) 9600 bits per second is a standard rate for serial communication.
 4. Load the sketch and determine the range of values achievable with the potentiometer.
-5. Modify the sketch to make the frequency of the flashing LED change based on the
-   setting of the potentiometer. Use a frequency range that covers the range in which you
-   would describe the LED as "flashing" (that is, not too fast and not too slow). Document
-   your changes in your lab book.
+5. Modify the sketch to make the frequency of the flashing LED change based on the setting of the potentiometer. Use a frequency range that covers the range in which you would describe the LED as "flashing" (that is, not too fast and not too slow). Document your changes in your lab book.
 
 # Control Structures
 
 ## 10-LED bank
 
 1. Place the 10-LED bank (MV57164) across the center of your breadboard.
-2. Connect each LED to a digital output of the Arduino (HINT: Avoid pins 0 and 1, as these
-   are reserved for direct communication with the microcontroller chip.)
-3. Connect the other end of the LEDs together (use one of the columns). Then connect
-   that common connection to ground with a single resistor (of the value calculated in
-   prelab question 3a. This way you don’t need 10 resistors.
-4. Modify your code to make all the LEDs flash together. (Hint: Instead of controlling each
-   one with its own line of code, use for loops to do the same thing to all of them in turn.
-   You’ll need to set the pinMode of each output to OUTPUT in the setup routine.
-   Document your changes in your lab book.)
-5. Now, further modify your code to make each LED flash in sequence. Document your
-   changes in your lab book.
+2. Connect each LED to a digital output of the Arduino (HINT: Avoid pins 0 and 1, as these are reserved for direct communication with the microcontroller chip.)
+3. Connect the other end of the LEDs together (use one of the columns). Then connect that common connection to ground with a single resistor (of the value calculated in the prelab). This way you don’t need 10 resistors.
+4. Modify your code to make all the LEDs flash together. (Hint: Instead of controlling each one with its own line of code, use for loops to do the same thing to all of them in turn. You’ll need to set the pinMode of each output to OUTPUT in the setup routine. Document your changes in your lab notebook.)
+5. Now, further modify your code to make each LED flash in sequence. Document your changes in your lab notebook.
 6. Include the final version of your sketch in your lab notebook.
 
 # Explore - Choose Your Own Project
 
-Now that you have a taste of what Arduinos can do, pick a simple project and do it! It
-can be an extension of the flashing LEDs you just made, or something completely
-different. Feel free to use any of the components we’ve used in previous labs.
-Document your goals, approach, progress, and results in your lab notebook. Remember
-that the lab notebook should be a complete record which someone else could use
-without difficulty to reproduce what you did. If you are having trouble deciding on a
-project, there are some suggestions in the appendix.
+Now that you have a taste of what Arduinos can do, pick a simple project and do it! It can be an extension of the flashing LEDs you just made, or something completely different. Feel free to use any of the components we’ve used in previous labs. Document your goals, approach, progress, and results in your lab notebook. Remember that the lab notebook should be a complete record which someone else could use without difficulty to reproduce what you did. If you are having trouble deciding on a project, there are some suggestions in the appendix.
 
 # Appendix: A Few Project Ideas
 
 - Adjust your current 10-LED setup so that it counts up in binary.
-- Use the potentiometer to control the brightness of the LEDs using the concept of Pulse Width
-  Modulation (PWM). As long as the LED is flashing faster than about 60 Hz, it will simply appear solid. You can flash with a varying duty cycle to make it brighter or dimmer. You can do this yourself or with the “analogWrite” function. You could replace the potentiometer with the input from the 3.5mm headphone jack plugged into a device that is playing music so that the LED brightness depends on the volume of the music.
-- Connect your speaker to one of the digital outputs. Use the “tone” function to play frequencies. You can control the frequencies with the potentiometer. Or, you can use the photometer circuit from Lab 7 to provide the voltage so that the sound frequency is dependent on the light level. Or you can use the “random” function to play random frequencies.
+- Use the potentiometer to control the brightness of the LEDs using the concept of Pulse Width Modulation (PWM). As long as the LED is flashing faster than about 60 Hz, it will simply appear solid. You can flash with a varying duty cycle to make it brighter or dimmer. You can do this yourself or with the “analogWrite” function. You could replace the potentiometer with the input from the 3.5mm headphone jack plugged into a device that is playing music so that the LED brightness depends on the volume of the music.
+- Connect your speaker to one of the digital outputs. Use the “tone” function to play frequencies. You can control the frequencies with the potentiometer. Or, you can use the photometer circuit from Lab 6 to provide the voltage so that the sound frequency is dependent on the light level. Or you can use the “random” function to play random frequencies.
 - Generate a periodic square wave with the 555 Timer circuit from the last lab but configure it to use a potentiometer and a resistor to allow for a range of frequencies. You should power the 555 Timer with the +5 V from the Arduino. Feed the output of the 555 Timer circuit into the Arduino and measure the length of time that the pulse is high and low (see the “pulseIn” function). From that, calculate the period, frequency, and duty cycle. Print out the information and see what happens when you vary the potentiometer.
