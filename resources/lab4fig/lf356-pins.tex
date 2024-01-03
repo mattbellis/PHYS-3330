@@ -1,0 +1,34 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+ \begin{circuitikz}[american voltages]
+    \draw (0, 0) node[op amp] (opamp) {};
+    \draw (opamp.-) node[above right]{2} node[anchor = east]{$V_-$} to [short,-o] ++(0,0);
+    \draw (opamp.+) node[above right]{3} node[anchor = east]{$V_+$} to [short,-o] ++(0,0);
+    \draw (opamp.out) node [above left]{6} node[anchor = west]{$V_\text{out}$} to [short,-o] ++(0,0);
+    \draw (opamp.up) node[above right]{7} to ++(0,0.5)
+    
+    node[anchor = south]{$V^+$} to [short,-o] ++(0,0);
+    
+    \draw (opamp.down) node[below right]{4} to ++(0,-0.5) node[anchor = north]{$V^-$} to [short,-o] ++(0,0);
+
+    \path (2.5,0.75) node[dipchip, anchor=pin 1, num pins=8]{LF356};
+ \end{circuitikz}
+
+
+
+\end{document}
+
+
+ 
