@@ -1,0 +1,34 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+\begin{circuitikz}[american voltages]
+    \draw [line width=2pt] (0,-3.5) node to (0,3.5) node to (6.5, 0) node to (0,-3.5);
+
+    \draw (-.5, 1.5) node[anchor = east]{inverting input $V_-$} to [short,-o] ++(0,0) to ++(1.2,0) node to [R=$R_i$] ++(0,-3) to [short,-o] ++(-1.2,0) to ++(0,0) node[anchor=east]{non-inverting input $V_+$};
+
+    \draw (.5, 2) node {\LARGE $-$};
+    \draw (.5, -2) node {\LARGE $+$};
+
+    \draw (4, -.8) node {$V_\text{out}^\text{(internal)}$};
+    
+    \draw (5.25,2.5) node {$V_\text{out}^\text{(internal)}=A(V_+-V_-)$};
+
+    \draw (2.75,0) to [V] ++(0,-1.75) to ++(0, -.5) node[ground];
+
+    \draw (2.75,0) node to node ++(0.75,0) to [R=$R_o$] ++(2.5,0) to [short,-o] (7,0) to node[anchor=west] {$V_\text{out}$} ++(0,0);
+\end{circuitikz}
+
+
+
+\end{document}

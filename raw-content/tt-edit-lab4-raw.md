@@ -40,11 +40,13 @@ In this lab, you will use op-amps to build a voltage buffer and a non-inverting 
 
 ## Open Loop Gain
 
-![Op-amp "black-box" schematic](../resources/lab4fig/op-amp-theory.png){#fig:opamp-schem width="15cm"}
+![Op-amp "black-box" schematic. We can imagine someone inside the op-amp looking at the the voltage difference between the inputs and using this to set $V_\text{out}^\text{(internal)}.$](../resources/lab4fig/op-amp-man.png){#fig:opamp-man width="15cm"}
 
-The op-amp has two inputs (inverting and non-inverting) and one output. It can be thought of as a "black-box" (as seen in Figure @fig:opamp-schem) which has an internal voltage source that is controlled by the potential difference between the non-inverting input and the inverting input. The op-amp's output is the difference between the inputs times **the open-loop gain** $A$.
+The op-amp has two inputs (inverting and non-inverting) and one output. It can be thought of as a "black-box" (as seen in Figure @fig:opamp-man) which has an internal voltage source that is controlled by the potential difference between the non-inverting input and the inverting input. The op-amp's output is the difference between the inputs times **the open-loop gain** $A$.
 
 $$V_\text{out} = A (V_+-V_-)$$
+
+Note that this is true when there is no voltage drop across $R_o$. Op-amps have very small output impedance, and for an ideal op-amp, $R_o=0$.
 
 **Definition 1: Open-loop gain, $A$** - the gain of the op-amp when there is no feedback.
 
@@ -70,7 +72,7 @@ What is the open-loop DC gain, $A_\text{VOL}$? Report it in a unitless number.
 
 ## Input and output impedance
 
-Op-amps are designed to have very large input impedance ($R_i$ in Figure @fig:opamp-schem) and very small output impedances ($R_o$ in Figure @fig:opamp-schem). The very small output impedance allows it drive loads without voltage dividing much of its output over its output impedance (consider taking $R_1$ to zero in the voltage divider transfer function where $R_1$ is the output impedance and $R_2$ is a load). Even though op-amps have this advantage, they have a limit of how much current they are able to output. The maximum output current is an important consideration when it comes to the ability of an op-amp to drive a load. This maximum output current acts very much like a current limit would on the power supply.
+Op-amps are designed to have very large input impedance ($R_i$ in Figure @fig:opamp-man) and very small output impedances ($R_o$ in Figure @fig:opamp-man). The very small output impedance allows it drive loads without voltage dividing much of its output over its output impedance (consider taking $R_1$ to zero in the voltage divider transfer function where $R_1$ is the output impedance and $R_2$ is a load). Even though op-amps have this advantage, they have a limit of how much current they are able to output. The maximum output current is an important consideration when it comes to the ability of an op-amp to drive a load. This maximum output current acts very much like a current limit would on the power supply.
 
 The very large input impedance means that very little current flows into (or out of) the inputs. The second ***GOLDEN RULE*** assumes that the input impedance is infinitely large and ***no*** current flows in or out of the inputs.
 

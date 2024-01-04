@@ -250,18 +250,21 @@ I</h1>
          analysis.</p>
          <h2 data-number="2.2" id="open-loop-gain"><span
          class="header-section-number">2.2</span> Open Loop Gain</h2>
-         <div id="fig:opamp-schem" class="fignos">
+         <div id="fig:opamp-man" class="fignos">
          <figure>
-         <img src="../resources/lab4fig/op-amp-theory.png"
+         <img src="../resources/lab4fig/op-amp-man.png"
          style="width:15cm"
-         alt="Figure 2: Op-amp “black-box” schematic" />
+         alt="Figure 2: Op-amp “black-box” schematic. We can imagine someone inside the op-amp looking at the the voltage difference between the inputs and using this to set V_\text{out}^\text{(internal)}." />
          <figcaption aria-hidden="true"><span>Figure 2:</span> Op-amp
-         “black-box” schematic</figcaption>
+         “black-box” schematic. We can imagine someone inside the op-amp
+         looking at the the voltage difference between the inputs and
+         using this to set <span
+         class="math inline">\(V_\text{out}^\text{(internal)}.\)</span></figcaption>
          </figure>
          </div>
          <p>The op-amp has two inputs (inverting and non-inverting) and
          one output. It can be thought of as a “black-box” (as seen in
-         Figure <a href="#fig:opamp-schem">2</a>) which has an internal
+         Figure <a href="#fig:opamp-man">2</a>) which has an internal
          voltage source that is controlled by the potential difference
          between the non-inverting input and the inverting input. The
          op-amp’s output is the difference between the inputs times
@@ -269,6 +272,10 @@ I</h1>
          class="math inline">\(A\)</span>.</p>
          <p><span class="math display">\[V_\text{out} = A
          (V_+-V_-)\]</span></p>
+         <p>Note that this is true when there is no voltage drop across
+         <span class="math inline">\(R_o\)</span>. Op-amps have very
+         small output impedance, and for an ideal op-amp, <span
+         class="math inline">\(R_o=0\)</span>.</p>
          <p><strong>Definition 1: Open-loop gain, <span
          class="math inline">\(A\)</span></strong> - the gain of the
          op-amp when there is no feedback.</p>
@@ -332,9 +339,9 @@ I</h1>
          impedance</h2>
          <p>Op-amps are designed to have very large input impedance
          (<span class="math inline">\(R_i\)</span> in Figure <a
-         href="#fig:opamp-schem">2</a>) and very small output impedances
+         href="#fig:opamp-man">2</a>) and very small output impedances
          (<span class="math inline">\(R_o\)</span> in Figure <a
-         href="#fig:opamp-schem">2</a>). The very small output impedance
+         href="#fig:opamp-man">2</a>). The very small output impedance
          allows it drive loads without voltage dividing much of its
          output over its output impedance (consider taking <span
          class="math inline">\(R_1\)</span> to zero in the voltage
