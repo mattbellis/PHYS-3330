@@ -7,7 +7,7 @@ author: [Department of Physics | University of Colorado Boulder]
 
 In this lab you will get your first exposure with op-amps and use them to build two of the simpler circuits that can be made with them: the voltage buffer (aka voltage follower), and the non-inverting amplifier. These two circuits are closely related and are both very useful in many applications.
 
-Op-amps serve many purposes, but one of the main uses is to amplify a small signal by increasing the voltage level while preserving as accurately as possible the original waveform. In real physics experiments, transducers are used to convert basic physical quantities into electric signals, as shown in Figure @fig:lab-measurement. An amplifier is usually needed to raise the small transducer voltage (μV to mV) to a useful level (mV to V) for signal to be measured reliably.
+Op-amps serve many purposes, but one of the main uses is to amplify a small signal by increasing the voltage level while preserving as accurately as possible the original waveform. In real physics experiments, transducers are used to convert basic physical quantities into electric signals, as shown in Figure @fig:lab-measurement. An amplifier is usually needed to raise the small transducer voltage (μV to mV) to a useful level (mV to V) for the signal to be measured reliably.
 
 ![Typical laboratory measurement system](../resources/lab4fig/lab-measurement.png){#fig:lab-measurement}
 
@@ -15,7 +15,6 @@ Even though there are commercial amplifiers available for purchase, they are oft
 
 To prepare for this lab, you will learn to apply new analysis techniques (the op-amp golden rules) to predict the behavior and inform the design of op-amp circuits.
 
-## Overview
 -   Explore obstacles due to the function generator's output impedance.
 
 -   Learn how to easily test an op-amp to see if it's working.
@@ -24,7 +23,7 @@ To prepare for this lab, you will learn to apply new analysis techniques (the op
     -   provide a voltage with low output impedance,
     -   test the maximum output current of the LF356 op-amp.
 
--   Build a non-inverting amplifer to amplify small signals and test
+-   Build a non-inverting amplifier to amplify small signals and test
     -   the gain,
     -   the frequency dependence,
     -   the maximum output voltages,
@@ -43,7 +42,7 @@ In this lab, you will use op-amps to build a voltage buffer and a non-inverting 
 
 ![Op-amp "black-box" schematic](../resources/lab4fig/op-amp-theory.png){#fig:opamp-schem width="15cm"}
 
-The op-amp has two inputs (inverting and non-inverting) and one output. It can be thought of as a *black box* (as seen in Figure @fig:opamp-schem) which has an internal voltage source that is controlled by the potential difference between the non-inverting input and the inverting input. The op-amp's output is the difference between the inputs times **the open-loop gain** $A$.
+The op-amp has two inputs (inverting and non-inverting) and one output. It can be thought of as a "black-box" (as seen in Figure @fig:opamp-schem) which has an internal voltage source that is controlled by the potential difference between the non-inverting input and the inverting input. The op-amp's output is the difference between the inputs times **the open-loop gain** $A$.
 
 $$V_\text{out} = A (V_+-V_-)$$
 
@@ -57,7 +56,7 @@ where $A_\text{VOL}$ is the **open-loop DC gain** and $f_0$ is the **open-loop 3
 
 **Definition 2: Open-loop DC gain, $A_\text{VOL}$** - The open-loop gain at low frequencies before the frequency dependence starts to take over and the open-loop gain starts to decrease. This is cited in any op-amp datasheet (sometimes as $A_\text{OL}$ or $A_\text{VO}$).
 
-**Definition 3: Open-loop 3 dB point, $f_0$** - The frequency that the open-loop gain falls -3 dB from $A_\text{VOL}$. Beyond this frequency, $A$ typically continues to fall with a constant dB per log-scale (quoted in dB/octave (log2) or dB/decade (log10)). This value is usually ***not*** quoted in datasheets. It can be calculated from other values, and people often aren't concerned of the value of $f_0$.
+**Definition 3: Open-loop 3 dB point, $f_0$** - The frequency that the open-loop gain falls -3 dB from $A_\text{VOL}$. Beyond this frequency, $A$ typically continues to fall with a constant dB per log-scale (quoted in dB/octave (log2) or dB/decade (log10)). This value is usually ***not*** quoted in datasheets. It can be calculated from other values, and people often aren't concerned with the value of $f_0$.
 
 An ideal op-amp has an **open-loop gain** of infinity and does *not* depend on frequency. Treating the gain as infinite is usually a really good approximation because real op-amps have open-loop gain values of $10^5-10^8$. This approximation is known as the first ***GOLDEN RULE*** of op-amps.
 
@@ -83,11 +82,11 @@ According to the datasheet, what is the input impedance (resistance) $R_i$?
 
 ### Prelab Question {#2.2}
 
-What is the maximum output positive current at $0\text{ V}$ for a supply voltage of $\pm 15 \text{ V}$ at $25 ^{\circ} \text{C}$ (look for a graph on page 5).
+What is the maximum output positive current at $0\text{ V}$ for a supply voltage of $\pm 15 \text{ V}$ at $25 ^{\circ} \text{C}$ (look for a graph on page 5)?
 
 ## Intro to negative feedback
 
-Negative feedback is at the heart of nearly every op-amp circuit. The op-amp itself doesn't have negative feedback; it has to be externally applied by feeding back part of (or all of) the output voltage back into the inverting input $V_-$. Negative feedback results in a circuit with a **closed-loop gain**, $G<A$, which depends on the amount of $V_\text{out}$ that is fed back into $V_-$. The feedback also improves the linearity and stability of the output and greatly increases the bandwidth: the **3 dB point** $f_b > f_0$. In fact, the bandwidth times the DC gain is a constant value called the **gain bandwidth product** ($\text{GBW}$), so the smaller the gain, the wider the bandwidth. When the gain is 1, the 3 dB point is equal to the $\text{GBW}$ and is referred to as the **unity gain frequency**, $f_T$ (unity means 1). Often **unity gain frequncy** and **gain bandwidth product** are used interchangeably since they are mathematically the same value. All these values can be related to each other with the following equations:
+Negative feedback is at the heart of nearly every op-amp circuit. The op-amp itself doesn't have negative feedback; it has to be externally applied by feeding back part of (or all of) the output voltage back into the inverting input $V_-$. Negative feedback results in a circuit with a **closed-loop gain**, $G<A$, which depends on the amount of $V_\text{out}$ that is fed back into $V_-$. The feedback also improves the linearity and stability of the output and greatly increases the bandwidth: the **3 dB point** $f_b > f_0$. In fact, the bandwidth times the DC gain is a constant value called the **gain bandwidth product** ($\text{GBW}$), so the smaller the gain, the wider the bandwidth. When the gain is 1, the 3 dB point is equal to the $\text{GBW}$ and is referred to as the **unity gain frequency**, $f_T$ (unity means 1). Often **unity gain frequency** and **gain bandwidth product** are used interchangeably since they are mathematically the same value. All these values can be related to each other with the following equations:
 
 $$\text{GBW} = G_0 f_B = 1\cdot f_T = A_\text{VOL}f_0$$
 
@@ -107,13 +106,16 @@ $$G(f)=\frac{G_0}{1+j\frac{f}{f_B}}$$
 
 ### Prelab question {#3.1}
 
-Find the gain bandwidth product in the data sheet. Report this property, and calculate $f_0$ using the open-loop DC gain found earlier in the data sheet.
+Find the gain bandwidth product in the datasheet. Report this property, and calculate $f_0$ using the open-loop DC gain found earlier in the datasheet.
 
 ### Prelab question {#3.2}
 
-Create a Bode plot (log-log plot of a property vs frequency) for the magnitude of various gain values shown above; i.e. On the same log-log plot, plot $|G(f)|$ for $G_0=1$, $100$, $1000$, and $A_\text{VOL}$ (as found in the datasheet). Make the range of the x-axis from  $1\text{ Hz}-10^8\text{ Hz}$.
+Create a Bode plot (which is a log-log plot of a property vs frequency) for the magnitude of various gain values shown above.
 
-*Hint:* $G(f)$ is complex, so to find it's magnitude you have to calculate $\sqrt{GG*}$ where $G*$ is the complex conjugate.
+- On the same log-log plot, plot $|G(f)|$ for $G_0=1$, $100$, $1000$, and $A_\text{VOL}$ (as found in the datasheet)
+- Make the range of the x-axis from  $1\text{ Hz}-10^8\text{ Hz}$
+
+*Hint:* $G(f)$ is complex, so to find it's magnitude you have to calculate $\sqrt{GG^*}$ where $G^*$ is the complex conjugate.
 
 *Python Hint:* use `np.logspace()` instead of `np.linspace()` to generate the array of frequencies.
 
@@ -155,7 +157,7 @@ $$G_0 = \frac{1}{B} = 1 + \frac{R_F}{R}$$
 
 *Hint 1:* First use the second golden rule and Kirchhoff's current law to argue that the current flowing through $R_F$ is the same as the current flowing through $R$.
 
-*Hint 2:* Use Kirkhoff's voltage rule tracing from $V_\text{out}$ to ground and from $V_\text{in}$ to make two equations. You can use these to find $V_\text{out}/V_\text{in}$.
+*Hint 2:* Use Kirkhoff's voltage rule tracing from $V_\text{out}$ to ground and from $V_\text{in}$ to ground to make two equations. You can use these to find $V_\text{out}/V_\text{in}$.
 
 ### Prelab question {#5.2}
 
@@ -205,13 +207,13 @@ Thus far, we've ignored the fact that the op-amp requires external power to oper
 
 ![Pin diagram for LF356 (left). The numbers correspond to the corresponding pin on the DIP chip (right)](../resources/lab4fig/lf356-pins.png){#fig:pin-diagram width="10cm"}
 
-Here we can see the pin diagram for the LF356. Don't confuse $V_+$ and $V^+$. The subscripts $V_+$ and $V_-$ refer to the non-inverting and inverting input and $V^+$ and $V^-$ refer to the power pins. Pins 2 and 3 are the inputs and 4 and 7 are for power.
+Here we can see the pin diagram for the LF356. Don't confuse $V_+$ and $V^+$. The subscripts $V_+$ and $V_-$ refer to the non-inverting and inverting inputs and $V^+$ and $V^-$ refer to the power pins. Pins 2 and 3 are the inputs and 4 and 7 are for power.
 
 We always want to apply decoupling capacitors to the the power: plugging one end as close to the power pin as possible and the other end into ground. [Here's a nice explanation why](https://forum.allaboutcircuits.com/threads/decoupling-or-bypass-capacitors-why.45583/).
 
 **Definition 9: capacitive coupling** - capacitive coupling is the process of sending a signal or energy through a capacitor (remember that the impedance of a capacitor is inversely proportional to the frequency). Capacitive coupling is a way of sending AC while blocking DC. Parasitic capacitance often leads to this happening by mistake.
 
-**Definition 10: decoupling capacitor** - decoupling is coupling to ground. Decoupling capacitors charge up and provide a resevior of energy that can be supplied to the circuit as the circuit's current draw changes over time. Power supplies and transmission lines have inherent inductance which impedes changes in current, $dI/dt$, so the decoupling capacitors compensate  with the energy stored and provide the current necessary to maintain constant voltage.
+**Definition 10: decoupling capacitor** - decoupling is coupling to ground. Decoupling capacitors charge up and provide a reservoir of energy that can be supplied to the circuit as the circuit's current draw changes over time. Power supplies and transmission lines have inherent inductance which impedes changes in current, $dI/dt$, so the decoupling capacitors compensate  with the energy stored and provide the current necessary to maintain constant voltage.
 
 ![Decoupling capacitors near the power pins are necessary for proper op-amp performance. Polarized capacitors are typically used because they can have large capacitances in a small form factor.](../resources/lab4fig/powering-opamp.png){#fig:powering-with-decouple width="8cm"}
 
@@ -237,13 +239,58 @@ Read through all of the lab steps and identify the step that you think will be t
 List at least one question you have about the lab activity.
 
 
+# Op-amp TLDR
+
+This section summarizes information covered in the prelab (you may find this useful for a quick reference in the future).
+
+The op-amp is a differential amplifier that outputs an amplified difference between the inputs:
+
+$$V_\text{out}=A(V_+-V_-)$$
+
+Feeding the output back into the inverting input drives the system into a very stable state which no longer depends on many of the details or imperfections of the internal workings. *Closed-loop* refers to the state of an op-amp with feedback, and *open-loop* refers to the state of an op-amp with no feedback.
+
+## Golden Rules
+
+The golden rules are approximations that make op-amp analysis relatively simple and straight forward.
+
+1.  The open-loop gain is infinitely large: 
+$$A\rightarrow\infty$$
+2.  The input impedance is infinitely large, so no current flows in or out of the inputs:
+$$I_+=I_-=0$$
+3.  When negative feedback is applied, the output drives the inverting input to be the same voltage as the non-inverting input:
+$$V_+=V_-$$
+
+## Definitions
+
+Here are all the terms we defined in the prelab:
+
+**Open-loop gain, $A$** - the gain of the op-amp when there is no feedback.
+
+**Open-loop DC gain, $A_\text{VOL}$** - the open-loop gain at low frequencies before the frequency dependence starts to take over and the open-loop gain starts to decrease. This is cited in any op-amp datasheet (sometimes as $A_\text{OL}$ or $A_\text{VO}$).
+
+**Open-loop 3 dB point, $f_0$** - the frequency that the open-loop gain falls -3 dB from $A_\text{VOL}$. Beyond this frequency, $A$ typically continues to fall with a constant dB per log-scale (quoted in dB/octave (log2) or dB/decade (log10)). This value is usually ***not*** quoted in datasheets. It can be calculated from other values, and people often aren't concerned with the value of $f_0$.
+
+**Closed-loop gain, $G$** - when a fraction of the output is fed back into the inverting input $V_-$, the op-amp's gain is greatly reduced from $A$ to some value $G$. Just like the open-loop gain, this value is frequency dependent and starts to fall from $G_0$ near the 3 dB point, $f_B$.
+
+**Closed-loop DC gain, $G_0$** - the closed-loop gain at frequencies well below the 3 dB point. Except in active filter design, the point of an op-amp is to operate at a frequency such that $G(f)=G_0$, so almost always, the closed-loop DC gain is referred to simply as ***THE* gain**.
+
+**3 dB point, $f_B$** - the frequency where $G$ drops -3 dB from $G_0$. This is also often referred to as the bandwidth or operating bandwidth, as typical operation should be done below this frequency.
+
+**Gain bandwidth product, $\text{GBW}$** - the product of the DC gain and the 3 dB point is a constant value. This should be cited in datasheets as it's a foundational property of each op-amp's internal design. Just like resistor values, however, the precise $\text{GBW}$ varies from op-amp to op-amp of the same name.
+
+**Unity gain frequency, $f_T$** -  the 3 dB point when the gain is 1 (unity). Since this is mathematically equivalent to the $\text{GBW}$, these terms are often used interchangeably.
+
+**Capacitive coupling** \- capacitive coupling is the process of sending a signal or energy through a capacitor (remember that the impedance of a capacitor is inversely proportional to the frequency). Capacitive coupling is a way of sending AC while blocking DC. Parasitic capacitance often leads to this happening by mistake.
+
+**Decoupling capacitor** - decoupling is coupling to ground. Decoupling capacitors charge up and provide a reservoir of energy that can be supplied to the circuit as the circuit's current draw changes over time. Power supplies and transmission lines have inherent inductance which impedes changes in current, $dI/dt$, so the decoupling capacitors compensate  with the energy stored and provide the current necessary to maintain constant voltage.
+
 # Useful Readings
 
 You can find more on op-amps from these recommended sources:
 
 1.  [Steck](https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf) Sections 7.1, 7.2, 7.3.1, 7.3.3
 
-2.  Fischer-Cripps Sections 12.2 -- 12.15
+2.  Fischer-Cripps Sections 12.2 - 12.15
 
 3.  Horowitz and Hill 2<sup>nd</sup> Ed., 4.01. 4.02, 4.03, 4.05, 4.06
 
@@ -288,7 +335,7 @@ In this lab, we will use ICs (integrated circuits) for the first time. ICs come 
 
 Remember last week when we set the function generator to an output termination of *High Z*? We want to do this EVERY TIME we use the function generator in this class. This does not change the output impedance of the function generator: it's ALWAYS $50\ \Omega$, but by default, it *assumes* you are impedance matching everything with $50\ \Omega$ (this is important at high frequencies; feel free to ask an instructor if you're curious to hear more).
 
-When  the output goes through a $50\ \Omega$ load (i.e. $50\ \Omega$ termination), the voltage output will divide over the output impedance and the load, so only half the voltage will be applied to the load $\frac{50\ \Omega}{50\ \Omega+50\ \Omega} = \frac{1}{2}$. When the output termination **setting** is set to $50\ \Omega$, the device will assume half the voltage will drop across the output impedance, and display only half the voltage being applied (since this will be how much is expected to reach the load the $50\ \Omega$ termination). Since we won't be doing any $50\ \Omega$ impedance matching, we always want set the function generator to be in *High Z* mode and know that if the termination impedance is small, that this will voltage divide with the $50\ \Omega$ output impedance of the function generator. If you don't remember how to change this setting, refer to Appendix B in Lab 1.
+When  the output goes through a $50\ \Omega$ load (i.e. $50\ \Omega$ termination), the voltage output will divide over the output impedance and the load, so only half the voltage will be applied to the load $\frac{50\ \Omega}{50\ \Omega+50\ \Omega} = \frac{1}{2}$. When the output termination **setting** is set to $50\ \Omega$, the device will assume half the voltage will drop across the output impedance, and display only half the voltage being applied (since this will be how much is expected to reach the $50\ \Omega$ termination). Since we won't be doing any $50\ \Omega$ impedance matching, we always want set the function generator to be in *High Z* mode and know that if the termination impedance is small, that this will voltage divide with the $50\ \Omega$ output impedance of the function generator. If you don't remember how to change this setting, refer to Appendix B in Lab 1.
 
 In general, the voltage out from the function generator is
 
@@ -373,6 +420,8 @@ You will use the buffer to take the output of the function generator (with a $50
 
 There are op-amps which have higher max output currents. These are sometimes referred to as "power op-amps" and are in form factors designed to attach to heat sinks (since high currents produce a lot of heat).
 
+<!--
+
 ## Unity gain frequency
 
 1.  You found the gain bandwidth product in the prelab. What is the unity gain frequency?
@@ -389,7 +438,7 @@ At very high frequencies, circuit models typically become more complicated. For 
 
 6.  If you observed ideal behavior, you're lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
 
-
+-->
 
 ## Non-Inverting Amplifier
 
@@ -430,4 +479,6 @@ At very high frequencies, circuit models typically become more complicated. For 
 17. We can refer to the output when a load is attached as $V_\text{out}^{(L)}$ and $V_\text{out}$ as the output when no load attached. Use the ratio of $\frac{V_\text{out}^{(L)}}{V_\text{out}}$ to calculate the output impedance of the non-inverting amplifier.
 
 18. If you wanted all of the output to drop across the load instead of having a significant portion drop across the output impedance, what would you suggest doing?
+
+# Appendix A: Op-amp Golden Rules {#appendix-a .unnumbered}
 

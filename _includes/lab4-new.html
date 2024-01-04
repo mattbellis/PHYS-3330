@@ -21,11 +21,7 @@ I</h1>
         <nav id="TOC">
             <ul>
             <li><a href="#goals" id="toc-goals"><span
-            class="toc-section-number">1</span> Goals</a>
-            <ul>
-            <li><a href="#overview" id="toc-overview"><span
-            class="toc-section-number">1.1</span> Overview</a></li>
-            </ul></li>
+            class="toc-section-number">1</span> Goals</a></li>
             <li><a href="#prelab" id="toc-prelab"><span
             class="toc-section-number">2</span> Prelab</a>
             <ul>
@@ -125,36 +121,42 @@ I</h1>
             question</a></li>
             </ul></li>
             </ul></li>
+            <li><a href="#op-amp-tldr" id="toc-op-amp-tldr"><span
+            class="toc-section-number">3</span> Op-amp TLDR</a>
+            <ul>
+            <li><a href="#golden-rules" id="toc-golden-rules"><span
+            class="toc-section-number">3.1</span> Golden Rules</a></li>
+            <li><a href="#definitions" id="toc-definitions"><span
+            class="toc-section-number">3.2</span> Definitions</a></li>
+            </ul></li>
             <li><a href="#useful-readings"
             id="toc-useful-readings"><span
-            class="toc-section-number">3</span> Useful Readings</a></li>
+            class="toc-section-number">4</span> Useful Readings</a></li>
             <li><a href="#ic-tips" id="toc-ic-tips"><span
-            class="toc-section-number">4</span> IC Tips</a></li>
+            class="toc-section-number">5</span> IC Tips</a></li>
             <li><a href="#lab-activities-1"
             id="toc-lab-activities-1"><span
-            class="toc-section-number">5</span> Lab Activities</a>
+            class="toc-section-number">6</span> Lab Activities</a>
             <ul>
             <li><a
             href="#the-function-generator-and-its-output-impedance."
             id="toc-the-function-generator-and-its-output-impedance."><span
-            class="toc-section-number">5.1</span> The Function Generator
+            class="toc-section-number">6.1</span> The Function Generator
             and Its Output Impedance.</a></li>
             <li><a href="#building-an-op-amp-test-circuit"
             id="toc-building-an-op-amp-test-circuit"><span
-            class="toc-section-number">5.2</span> Building an op-amp
+            class="toc-section-number">6.2</span> Building an op-amp
             test circuit</a></li>
             <li><a href="#voltage-buffer" id="toc-voltage-buffer"><span
-            class="toc-section-number">5.3</span> Voltage
+            class="toc-section-number">6.3</span> Voltage
             Buffer</a></li>
-            <li><a href="#unity-gain-frequency"
-            id="toc-unity-gain-frequency"><span
-            class="toc-section-number">5.4</span> Unity gain
-            frequency</a></li>
             <li><a href="#non-inverting-amplifier-1"
             id="toc-non-inverting-amplifier-1"><span
-            class="toc-section-number">5.5</span> Non-Inverting
+            class="toc-section-number">6.4</span> Non-Inverting
             Amplifier</a></li>
             </ul></li>
+            <li><a href="#appendix-a" id="toc-appendix-a">Appendix A:
+            Op-amp Golden Rules</a></li>
             </ul>
         </nav>
         <hr/>
@@ -172,7 +174,8 @@ I</h1>
          physical quantities into electric signals, as shown in Figure
          <a href="#fig:lab-measurement">1</a>. An amplifier is usually
          needed to raise the small transducer voltage (μV to mV) to a
-         useful level (mV to V) for signal to be measured reliably.</p>
+         useful level (mV to V) for the signal to be measured
+         reliably.</p>
          <div id="fig:lab-measurement" class="fignos">
          <figure>
          <img src="../resources/lab4fig/lab-measurement.png"
@@ -189,8 +192,6 @@ I</h1>
          <p>To prepare for this lab, you will learn to apply new
          analysis techniques (the op-amp golden rules) to predict the
          behavior and inform the design of op-amp circuits.</p>
-         <h2 data-number="1.1" id="overview"><span
-         class="header-section-number">1.1</span> Overview</h2>
          <ul>
          <li><p>Explore obstacles due to the function generator’s output
          impedance.</p></li>
@@ -201,7 +202,7 @@ I</h1>
          <li>provide a voltage with low output impedance,</li>
          <li>test the maximum output current of the LF356 op-amp.</li>
          </ul></li>
-         <li><p>Build a non-inverting amplifer to amplify small signals
+         <li><p>Build a non-inverting amplifier to amplify small signals
          and test</p>
          <ul>
          <li>the gain,</li>
@@ -258,12 +259,12 @@ I</h1>
          </figure>
          </div>
          <p>The op-amp has two inputs (inverting and non-inverting) and
-         one output. It can be thought of as a <em>black box</em> (as
-         seen in Figure <a href="#fig:opamp-schem">2</a>) which has an
-         internal voltage source that is controlled by the potential
-         difference between the non-inverting input and the inverting
-         input. The op-amp’s output is the difference between the inputs
-         times <strong>the open-loop gain</strong> <span
+         one output. It can be thought of as a “black-box” (as seen in
+         Figure <a href="#fig:opamp-schem">2</a>) which has an internal
+         voltage source that is controlled by the potential difference
+         between the non-inverting input and the inverting input. The
+         op-amp’s output is the difference between the inputs times
+         <strong>the open-loop gain</strong> <span
          class="math inline">\(A\)</span>.</p>
          <p><span class="math display">\[V_\text{out} = A
          (V_+-V_-)\]</span></p>
@@ -301,7 +302,7 @@ I</h1>
          dB/octave (log2) or dB/decade (log10)). This value is usually
          <strong><em>not</em></strong> quoted in datasheets. It can be
          calculated from other values, and people often aren’t concerned
-         of the value of <span class="math inline">\(f_0\)</span>.</p>
+         with the value of <span class="math inline">\(f_0\)</span>.</p>
          <p>An ideal op-amp has an <strong>open-loop gain</strong> of
          infinity and does <em>not</em> depend on frequency. Treating
          the gain as infinite is usually a really good approximation
@@ -363,7 +364,7 @@ I</h1>
          class="math inline">\(0\text{ V}\)</span> for a supply voltage
          of <span class="math inline">\(\pm 15 \text{ V}\)</span> at
          <span class="math inline">\(25 ^{\circ} \text{C}\)</span> (look
-         for a graph on page 5).</p>
+         for a graph on page 5)?</p>
          <h2 data-number="2.4" id="intro-to-negative-feedback"><span
          class="header-section-number">2.4</span> Intro to negative
          feedback</h2>
@@ -388,10 +389,10 @@ I</h1>
          class="math inline">\(\text{GBW}\)</span> and is referred to as
          the <strong>unity gain frequency</strong>, <span
          class="math inline">\(f_T\)</span> (unity means 1). Often
-         <strong>unity gain frequncy</strong> and <strong>gain bandwidth
-         product</strong> are used interchangeably since they are
-         mathematically the same value. All these values can be related
-         to each other with the following equations:</p>
+         <strong>unity gain frequency</strong> and <strong>gain
+         bandwidth product</strong> are used interchangeably since they
+         are mathematically the same value. All these values can be
+         related to each other with the following equations:</p>
          <p><span class="math display">\[\text{GBW} = G_0 f_B = 1\cdot
          f_T = A_\text{VOL}f_0\]</span></p>
          <p>The frequency dependence of <span
@@ -440,26 +441,31 @@ I</h1>
          often used interchangeably.</p>
          <h3 data-number="2.4.1" id="3.1"><span
          class="header-section-number">2.4.1</span> Prelab question</h3>
-         <p>Find the gain bandwidth product in the data sheet. Report
+         <p>Find the gain bandwidth product in the datasheet. Report
          this property, and calculate <span
          class="math inline">\(f_0\)</span> using the open-loop DC gain
-         found earlier in the data sheet.</p>
+         found earlier in the datasheet.</p>
          <h3 data-number="2.4.2" id="3.2"><span
          class="header-section-number">2.4.2</span> Prelab question</h3>
-         <p>Create a Bode plot (log-log plot of a property vs frequency)
-         for the magnitude of various gain values shown above; i.e. On
-         the same log-log plot, plot <span
+         <p>Create a Bode plot (which is a log-log plot of a property vs
+         frequency) for the magnitude of various gain values shown
+         above.</p>
+         <ul>
+         <li>On the same log-log plot, plot <span
          class="math inline">\(|G(f)|\)</span> for <span
          class="math inline">\(G_0=1\)</span>, <span
          class="math inline">\(100\)</span>, <span
          class="math inline">\(1000\)</span>, and <span
          class="math inline">\(A_\text{VOL}\)</span> (as found in the
-         datasheet). Make the range of the x-axis from <span
-         class="math inline">\(1\text{ Hz}-10^8\text{ Hz}\)</span>.</p>
+         datasheet)</li>
+         <li>Make the range of the x-axis from <span
+         class="math inline">\(1\text{ Hz}-10^8\text{ Hz}\)</span></li>
+         </ul>
          <p><em>Hint:</em> <span class="math inline">\(G(f)\)</span> is
          complex, so to find it’s magnitude you have to calculate <span
-         class="math inline">\(\sqrt{GG*}\)</span> where <span
-         class="math inline">\(G*\)</span> is the complex conjugate.</p>
+         class="math inline">\(\sqrt{GG^*}\)</span> where <span
+         class="math inline">\(G^*\)</span> is the complex
+         conjugate.</p>
          <p><em>Python Hint:</em> use <code>np.logspace()</code> instead
          of <code>np.linspace()</code> to generate the array of
          frequencies.</p>
@@ -563,8 +569,8 @@ I</h1>
          class="math inline">\(R\)</span>.</p>
          <p><em>Hint 2:</em> Use Kirkhoff’s voltage rule tracing from
          <span class="math inline">\(V_\text{out}\)</span> to ground and
-         from <span class="math inline">\(V_\text{in}\)</span> to make
-         two equations. You can use these to find <span
+         from <span class="math inline">\(V_\text{in}\)</span> to ground
+         to make two equations. You can use these to find <span
          class="math inline">\(V_\text{out}/V_\text{in}\)</span>.</p>
          <h3 data-number="2.6.2" id="5.2"><span
          class="header-section-number">2.6.2</span> Prelab question</h3>
@@ -698,7 +704,7 @@ I</h1>
          class="math inline">\(V^+\)</span>. The subscripts <span
          class="math inline">\(V_+\)</span> and <span
          class="math inline">\(V_-\)</span> refer to the non-inverting
-         and inverting input and <span
+         and inverting inputs and <span
          class="math inline">\(V^+\)</span> and <span
          class="math inline">\(V^-\)</span> refer to the power pins.
          Pins 2 and 3 are the inputs and 4 and 7 are for power.</p>
@@ -716,10 +722,10 @@ I</h1>
          mistake.</p>
          <p><strong>Definition 10: decoupling capacitor</strong> -
          decoupling is coupling to ground. Decoupling capacitors charge
-         up and provide a resevior of energy that can be supplied to the
-         circuit as the circuit’s current draw changes over time. Power
-         supplies and transmission lines have inherent inductance which
-         impedes changes in current, <span
+         up and provide a reservoir of energy that can be supplied to
+         the circuit as the circuit’s current draw changes over time.
+         Power supplies and transmission lines have inherent inductance
+         which impedes changes in current, <span
          class="math inline">\(dI/dt\)</span>, so the decoupling
          capacitors compensate with the energy stored and provide the
          current necessary to maintain constant voltage.</p>
@@ -770,22 +776,127 @@ I</h1>
          class="header-section-number">2.9.2</span> Prelab question</h3>
          <p>List at least one question you have about the lab
          activity.</p>
-         <h1 data-number="3" id="useful-readings"><span
-         class="header-section-number">3</span> Useful Readings</h1>
+         <h1 data-number="3" id="op-amp-tldr"><span
+         class="header-section-number">3</span> Op-amp TLDR</h1>
+         <p>This section summarizes information covered in the prelab
+         (you may find this useful for a quick reference in the
+         future).</p>
+         <p>The op-amp is a differential amplifier that outputs an
+         amplified difference between the inputs:</p>
+         <p><span
+         class="math display">\[V_\text{out}=A(V_+-V_-)\]</span></p>
+         <p>Feeding the output back into the inverting input drives the
+         system into a very stable state which no longer depends on many
+         of the details or imperfections of the internal workings.
+         <em>Closed-loop</em> refers to the state of an op-amp with
+         feedback, and <em>open-loop</em> refers to the state of an
+         op-amp with no feedback.</p>
+         <h2 data-number="3.1" id="golden-rules"><span
+         class="header-section-number">3.1</span> Golden Rules</h2>
+         <p>The golden rules are approximations that make op-amp
+         analysis relatively simple and straight forward.</p>
+         <ol type="1">
+         <li>The open-loop gain is infinitely large: <span
+         class="math display">\[A\rightarrow\infty\]</span></li>
+         <li>The input impedance is infinitely large, so no current
+         flows in or out of the inputs: <span
+         class="math display">\[I_+=I_-=0\]</span></li>
+         <li>When negative feedback is applied, the output drives the
+         inverting input to be the same voltage as the non-inverting
+         input: <span class="math display">\[V_+=V_-\]</span></li>
+         </ol>
+         <h2 data-number="3.2" id="definitions"><span
+         class="header-section-number">3.2</span> Definitions</h2>
+         <p>Here are all the terms we defined in the prelab:</p>
+         <p><strong>Open-loop gain, <span
+         class="math inline">\(A\)</span></strong> - the gain of the
+         op-amp when there is no feedback.</p>
+         <p><strong>Open-loop DC gain, <span
+         class="math inline">\(A_\text{VOL}\)</span></strong> - the
+         open-loop gain at low frequencies before the frequency
+         dependence starts to take over and the open-loop gain starts to
+         decrease. This is cited in any op-amp datasheet (sometimes as
+         <span class="math inline">\(A_\text{OL}\)</span> or <span
+         class="math inline">\(A_\text{VO}\)</span>).</p>
+         <p><strong>Open-loop 3 dB point, <span
+         class="math inline">\(f_0\)</span></strong> - the frequency
+         that the open-loop gain falls -3 dB from <span
+         class="math inline">\(A_\text{VOL}\)</span>. Beyond this
+         frequency, <span class="math inline">\(A\)</span> typically
+         continues to fall with a constant dB per log-scale (quoted in
+         dB/octave (log2) or dB/decade (log10)). This value is usually
+         <strong><em>not</em></strong> quoted in datasheets. It can be
+         calculated from other values, and people often aren’t concerned
+         with the value of <span class="math inline">\(f_0\)</span>.</p>
+         <p><strong>Closed-loop gain, <span
+         class="math inline">\(G\)</span></strong> - when a fraction of
+         the output is fed back into the inverting input <span
+         class="math inline">\(V_-\)</span>, the op-amp’s gain is
+         greatly reduced from <span class="math inline">\(A\)</span> to
+         some value <span class="math inline">\(G\)</span>. Just like
+         the open-loop gain, this value is frequency dependent and
+         starts to fall from <span class="math inline">\(G_0\)</span>
+         near the 3 dB point, <span
+         class="math inline">\(f_B\)</span>.</p>
+         <p><strong>Closed-loop DC gain, <span
+         class="math inline">\(G_0\)</span></strong> - the closed-loop
+         gain at frequencies well below the 3 dB point. Except in active
+         filter design, the point of an op-amp is to operate at a
+         frequency such that <span
+         class="math inline">\(G(f)=G_0\)</span>, so almost always, the
+         closed-loop DC gain is referred to simply as
+         <strong><em>THE</em> gain</strong>.</p>
+         <p><strong>3 dB point, <span
+         class="math inline">\(f_B\)</span></strong> - the frequency
+         where <span class="math inline">\(G\)</span> drops -3 dB from
+         <span class="math inline">\(G_0\)</span>. This is also often
+         referred to as the bandwidth or operating bandwidth, as typical
+         operation should be done below this frequency.</p>
+         <p><strong>Gain bandwidth product, <span
+         class="math inline">\(\text{GBW}\)</span></strong> - the
+         product of the DC gain and the 3 dB point is a constant value.
+         This should be cited in datasheets as it’s a foundational
+         property of each op-amp’s internal design. Just like resistor
+         values, however, the precise <span
+         class="math inline">\(\text{GBW}\)</span> varies from op-amp to
+         op-amp of the same name.</p>
+         <p><strong>Unity gain frequency, <span
+         class="math inline">\(f_T\)</span></strong> - the 3 dB point
+         when the gain is 1 (unity). Since this is mathematically
+         equivalent to the <span
+         class="math inline">\(\text{GBW}\)</span>, these terms are
+         often used interchangeably.</p>
+         <p><strong>Capacitive coupling</strong> - capacitive coupling
+         is the process of sending a signal or energy through a
+         capacitor (remember that the impedance of a capacitor is
+         inversely proportional to the frequency). Capacitive coupling
+         is a way of sending AC while blocking DC. Parasitic capacitance
+         often leads to this happening by mistake.</p>
+         <p><strong>Decoupling capacitor</strong> - decoupling is
+         coupling to ground. Decoupling capacitors charge up and provide
+         a reservoir of energy that can be supplied to the circuit as
+         the circuit’s current draw changes over time. Power supplies
+         and transmission lines have inherent inductance which impedes
+         changes in current, <span class="math inline">\(dI/dt\)</span>,
+         so the decoupling capacitors compensate with the energy stored
+         and provide the current necessary to maintain constant
+         voltage.</p>
+         <h1 data-number="4" id="useful-readings"><span
+         class="header-section-number">4</span> Useful Readings</h1>
          <p>You can find more on op-amps from these recommended
          sources:</p>
          <ol type="1">
          <li><p><a
          href="https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf">Steck</a>
          Sections 7.1, 7.2, 7.3.1, 7.3.3</p></li>
-         <li><p>Fischer-Cripps Sections 12.2 – 12.15</p></li>
+         <li><p>Fischer-Cripps Sections 12.2 - 12.15</p></li>
          <li><p>Horowitz and Hill 2<sup>nd</sup> Ed., 4.01. 4.02, 4.03,
          4.05, 4.06</p></li>
          <li><p>Horowitz and Hill 3<sup>rd</sup> Ed., 4.1, 4.2.2,
          4.2.3</p></li>
          </ol>
-         <h1 data-number="4" id="ic-tips"><span
-         class="header-section-number">4</span> IC Tips</h1>
+         <h1 data-number="5" id="ic-tips"><span
+         class="header-section-number">5</span> IC Tips</h1>
          <p>In this lab, we will use ICs (integrated circuits) for the
          first time. ICs come in many forms; we will be using DIP chips
          because these are designed for using in breadboards. DIP is a
@@ -876,11 +987,11 @@ I</h1>
          connecting the power supply (especially polarized capacitor
          orientations).</li>
          </ol>
-         <h1 data-number="5" id="lab-activities-1"><span
-         class="header-section-number">5</span> Lab Activities</h1>
-         <h2 data-number="5.1"
+         <h1 data-number="6" id="lab-activities-1"><span
+         class="header-section-number">6</span> Lab Activities</h1>
+         <h2 data-number="6.1"
          id="the-function-generator-and-its-output-impedance."><span
-         class="header-section-number">5.1</span> The Function Generator
+         class="header-section-number">6.1</span> The Function Generator
          and Its Output Impedance.</h2>
          <p>Remember last week when we set the function generator to an
          output termination of <em>High Z</em>? We want to do this EVERY
@@ -902,7 +1013,7 @@ I</h1>
          class="math inline">\(50\ \Omega\)</span>, the device will
          assume half the voltage will drop across the output impedance,
          and display only half the voltage being applied (since this
-         will be how much is expected to reach the load the <span
+         will be how much is expected to reach the <span
          class="math inline">\(50\ \Omega\)</span> termination). Since
          we won’t be doing any <span class="math inline">\(50\
          \Omega\)</span> impedance matching, we always want set the
@@ -978,9 +1089,9 @@ I</h1>
          order to get the full voltage to the speaker, you will have to
          decrease the output impedance. This can be done with a voltage
          buffer.</p>
-         <h2 data-number="5.2"
+         <h2 data-number="6.2"
          id="building-an-op-amp-test-circuit"><span
-         class="header-section-number">5.2</span> Building an op-amp
+         class="header-section-number">6.2</span> Building an op-amp
          test circuit</h2>
          <p>Before you solve the problem above with a voltage buffer,
          let’s build a simple means to test if an op-amp chip is
@@ -1019,8 +1130,8 @@ I</h1>
          chip, throw it in the trash and grab another (In case you are
          wondering, the LF356 costs less than $1). If you’re not sure,
          grab an instructor and have them take a look with you.</p>
-         <h2 data-number="5.3" id="voltage-buffer"><span
-         class="header-section-number">5.3</span> Voltage Buffer</h2>
+         <h2 data-number="6.3" id="voltage-buffer"><span
+         class="header-section-number">6.3</span> Voltage Buffer</h2>
          <div id="fig:voltage-follower" class="fignos">
          <figure>
          <img src="../resources/lab4fig/voltage-follower.png"
@@ -1098,64 +1209,27 @@ I</h1>
          These are sometimes referred to as “power op-amps” and are in
          form factors designed to attach to heat sinks (since high
          currents produce a lot of heat).</p>
-         <h2 data-number="5.4" id="unity-gain-frequency"><span
-         class="header-section-number">5.4</span> Unity gain
-         frequency</h2>
-         <ol type="1">
-         <li><p>You found the gain bandwidth product in the prelab. What
-         is the unity gain frequency?</p></li>
-         <li><p>We will be going up to high frequencies, so it will be
-         ideal to use a scope-probe on Channel 2 to measure <span
-         class="math inline">\(V_\text{out}\)</span>. What setting on
-         the oscilliscope do you need to change when you do
-         this?</p></li>
-         <li><p>Set the function generator to the unity gain frequency
-         that you found. Are you seeing a -3 dB reduction in the output
-         at this frequency?</p></li>
-         <li><p>Pick 3 frequencies between the unity gain frequency and
-         the highest frequency the function generator can put out;
-         record the gain and describe anything else interesting you
-         see.</p></li>
-         </ol>
-         <p>At very high frequencies, circuit models typically become
-         more complicated. For example, parasitic capacitance and
-         inductance due to the exact physical configuration start to
-         play more substantial roles in behavior. The details of the
-         physical layout of a PCB start to become crucial, and often
-         people think less about voltages and currents and consider the
-         circuit as a waveguide for EM waves. Additionally, op-amps
-         themselves no longer acts ideally at high frequencies.</p>
-         <ol start="5" type="1">
-         <li><p>You are unlikely to find a simple RC filter type
-         falloff. Using the 10X scope-probe, measure the gain at every
-         decade in frequency from 10 MHz down to 10 Hz, with (as usual)
-         a few extra points anywhere things are starting to change. Do
-         you find any deviation from unity gain? HINT: Be sure that the
-         output amplitude is below the level affected by the slew rate.
-         For more on slew rate, see Horowitz and Hill 2nd ed. section
-         4.11 p. 192 or 3rd ed. section 4.4 p 242. Plot the low and high
-         frequency data and predicted behavior on your Bode plot from
-         your prelab. Do you find a simple fall-off as suggested by the
-         theory for the ideal follower (<span
-         class="math inline">\(f_T=f_B\)</span>)? If so, find the 3 dB
-         frequency. How does your measured 3 dB frequency compare to
-         what is expected from the op-amp datasheet?</p></li>
-         <li><p>If you observed ideal behavior, you’re lucky! At
-         frequencies above a few MHz, the simple model of the frequency
-         response of the op-amp is not accurate. Once you are in this
-         frequency range, many physical details of your circuit and
-         breadboard can have large effects in the circuit (see notes in
-         7.1.4 above). You could model these effects, but a better
-         procedure to follow is to modify the physical setup. Building
-         reliable circuits at these frequencies typically requires
-         careful attention to grounding and minimization of capacitive
-         and inductive coupling between circuit elements and to ground.
-         Printed circuit boards are much better for high-frequency
-         applications. At lower frequencies, our model of the circuit
-         will work much better.</p></li>
-         </ol>
-         <h2 data-number="5.5" id="non-inverting-amplifier-1"><span
-         class="header-section-number">5.5</span> Non-Inverting
+         <!--
+
+         ## Unity gain frequency
+
+         1.  You found the gain bandwidth product in the prelab. What is the unity gain frequency?
+
+         2.  We will be going up to high frequencies, so it will be ideal to use a scope-probe on Channel 2 to measure $V_\text{out}$. What setting on the oscilliscope do you need to change when you do this?
+
+         3.  Set the function generator to the unity gain frequency that you found. Are you seeing a -3 dB reduction in the output at this frequency?
+
+         4.  Pick 3 frequencies between the unity gain frequency and the highest frequency the function generator can put out; record the gain and describe anything else interesting you see. 
+
+         At very high frequencies, circuit models typically become more complicated. For example, parasitic capacitance and inductance due to the exact physical configuration start to play more substantial roles in behavior. The details of the physical layout of a PCB start to become crucial, and often people think less about voltages and currents and consider the circuit as a waveguide for EM waves. Additionally, op-amps themselves no longer acts ideally at high frequencies. 
+
+         5.  You are unlikely to find a simple RC filter type falloff. Using the 10X scope-probe, measure the gain at every decade in frequency from 10 MHz down to 10 Hz, with (as usual) a few extra points anywhere things are starting to change. Do you find any deviation from unity gain? HINT: Be sure that the output amplitude is below the level affected by the slew rate. For more on slew rate, see Horowitz and Hill 2nd ed. section 4.11 p. 192 or 3rd ed. section 4.4 p 242. Plot the low and high frequency data and predicted behavior on your Bode plot from your prelab. Do you find a simple fall-off as suggested by the theory for the ideal follower ($f_T=f_B$)? If so, find the 3 dB frequency. How does your measured 3 dB frequency compare to what is expected from the op-amp datasheet?
+
+         6.  If you observed ideal behavior, you're lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
+
+         -->
+         <h2 data-number="6.4" id="non-inverting-amplifier-1"><span
+         class="header-section-number">6.4</span> Non-Inverting
          Amplifier</h2>
          <div id="fig:non-inv-amp" class="fignos">
          <figure>
@@ -1270,6 +1344,8 @@ I</h1>
          instead of having a significant portion drop across the output
          impedance, what would you suggest doing?</p></li>
          </ol>
+         <h1 class="unnumbered" id="appendix-a">Appendix A: Op-amp
+         Golden Rules</h1>
                </div>
             <!-- Mathjax -->
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
