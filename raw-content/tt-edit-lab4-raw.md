@@ -481,6 +481,3 @@ At very high frequencies, circuit models typically become more complicated. For 
 17. We can refer to the output when a load is attached as $V_\text{out}^{(L)}$ and $V_\text{out}$ as the output when no load attached. Use the ratio of $\frac{V_\text{out}^{(L)}}{V_\text{out}}$ to calculate the output impedance of the non-inverting amplifier.
 
 18. If you wanted all of the output to drop across the load instead of having a significant portion drop across the output impedance, what would you suggest doing?
-
-# Appendix A: Op-amp Golden Rules {#appendix-a .unnumbered}
-
