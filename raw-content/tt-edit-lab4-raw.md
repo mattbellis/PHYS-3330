@@ -13,7 +13,7 @@ Op-amps serve many purposes, but one of the main uses is to amplify a small sign
 
 Even though there are commercial amplifiers available for purchase, they are often very expensive (>$1000) and have many features that may not be needed. Meanwhile, you can design your own simple amplifier with an op-amp which could cost less than a dollar.
 
-To prepare for this lab, you will learn to apply new analysis techniques (the op-amp golden rules) to predict the behavior and inform the design of op-amp circuits.
+To prepare for this lab, you will learn to apply new analysis techniques (the op-amp golden rules) to predict the behavior and inform the design of op-amp circuits. In this lab, you will:
 
 -   Explore obstacles due to the function generator's output impedance.
 
