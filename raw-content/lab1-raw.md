@@ -47,7 +47,7 @@ Experimental design
 
 The lab notebook will play an essential role in this course. You will use your notebook for keeping records of many things including:
 
--   Answering lab-prep questions from the lab guide
+-   Answering prelab questions from the lab guide
 
 -   Answering in-lab questions
 
@@ -61,7 +61,7 @@ The lab notebook will play an essential role in this course. You will use your n
 
 -   Procedures of experiments that you design
 
-The lab notebook will be an important part of your grade because learning to keep a good lab notebook is an important part of your professional development. You may find it helpful to write up many of your notes on the computer, for example, within Mathematica or another program. This is fine. However, before your notebook is turned in, the notes, plots, and analysis should be transferred to the lab notebook by printing and taping the pages or keeping them in a three-ring binder. This is standard practice in research labs. Your lab notebook is the main mechanism for communicating your process and results of the lab experiments. Each week, you will be responsible for turning in both your pre-laboratory work and your lab notebook / analysis via Canvas in scanned format. See the syllabus for more information.
+See the [Lab Notebook page](/PHYS-3330/lab-notebook) and the course syllabus in Canvas for more information.
 
 # Definitions
 

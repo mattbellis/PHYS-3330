@@ -1,5 +1,5 @@
 ---
-title: "Lab Skill Activity 1 - Mathematica Introduction"
+title: "Lab Skill Activity - Mathematica Introduction"
 author: [Department of Physics | University of Colorado Boulder]
 ---
 

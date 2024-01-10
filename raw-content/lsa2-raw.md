@@ -1,5 +1,5 @@
 ---
-title: "Lab Skill Activity 2 - Analyzing Data in Mathematica"
+title: "Lab Skill Activity - Analyzing Data in Mathematica"
 author: [Department of Physics | University of Colorado Boulder]
 ---
 
