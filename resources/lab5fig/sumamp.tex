@@ -7,19 +7,39 @@
 
 \documentclass[border=0.2cm]{standalone}
 \usepackage{circuitikz}
+\usepackage{amsmath}
 
 \standaloneenv{circuitikz}
 \begin{document}
 
  \begin{circuitikz}[american voltages]
     \draw (0,0) node[op amp, anchor=-](OA){\texttt{}} 
+    
     (OA.+) -- ++((0,0) to ++(0,-.5) node[ground]{}
+    
     (OA.-) -- ++(0,0) to [short, *-] ++(0,1.5) to [R, l=$R_F$] ++(2.5,0) to [short,-*] ++(0,-2)
-    (OA.-) to [short, -*] ++(-.5,0) coordinate(FC) to [R, l_=$R_2$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{2}$}
-    (FC) -- ++(0,1) to [R, l_=$R_1$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{1}$}
-    (FC) -- ++(0,-1) to [R, l_=$R_3$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{3}$}
-    (OA.out) to [short, -o] ++(.75,0) node[anchor = west]{$V_{out}$}
-    ;
+    
+    (OA.-) to [short, -*] ++(-.5,0) coordinate(FC) to [R, l_=$R_3$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{3}$}
+    
+    (FC) -- ++(0,1) to [R, l_=$R_2$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{2}$}
+
+    (FC) -- ++(0,1) to [short, *-] ++(0,0) to ++(0,1) to [R, l_=$R_1$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{1}$}
+    
+    (OA.out) to [short, -o] ++(.75,0) node[anchor = west]{$V_\text{out}$};
+
+    \draw[dotted] (FC) -- ++(0,-1) coordinate(FD);
+    
+    \draw (FD) -- ++(0,-.5) to [R, l_=$R_n$] ++(-2,0) to [short, -o] ++(0,0) node[anchor = east]{$V_{n}$};
+
+    \draw (-1.5,-0.4) node {.};
+    \draw (-1.5,-0.5) node {.};
+    \draw (-1.5,-0.6) node {.};
+
+    \draw (-2.8,-0.6) node {.};
+    \draw (-2.8,-0.7) node {.};
+    \draw (-2.8,-0.8) node {.};
+    
+    
  \end{circuitikz}
 
 

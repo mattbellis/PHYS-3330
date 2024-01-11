@@ -1,0 +1,34 @@
+\documentclass[border=20pt]{standalone}
+\usepackage[american]{circuitikz}
+\usepackage{amsmath}%To allow \cfrac macro
+\usepackage{bm}%Bold math
+\usetikzlibrary{arrows.meta,decorations.markings}
+
+
+
+
+
+
+\begin{document}
+
+        
+\begin{circuitikz}[american voltages]
+
+    \draw (0,0) node[op amp, anchor=-](OA){\texttt{}} 
+    
+    (OA.+) -- ++(-.5,0) node[ground]{}
+    
+    (OA.out) -- ++(.5,0) coordinate(FC) to [short, -o] ++(1,0) node[anchor = west]{$V_\text{out}$}
+    
+    (OA.-) -- ++(-.5,0) to ++(0,1.5) to [short, *-] [R, n=res] ++(3,0) to [short,-*] ++(0,-2)
+    
+    (OA.-) -- ++(-.5,0) node[anchor=east] {$\frac{-V_\text{out}}{A}$} to ++(0,1.5) to [R, l=$R$] ++(-2,0) to [short, -o] ++(0,0) node[anchor=east]{$V_\text{in}$}
+
+    (res.s) node[below]{$R_F$}
+    ;
+    \draw[thick,->] (2,2) -- (-2,2);
+    
+    \draw (0, 2.35) node {$I$};
+    
+\end{circuitikz}
+\end{document}

@@ -1,0 +1,37 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+
+ \begin{circuitikz}[american voltages]
+    \draw (0,0) node {} to [short,-o] (0,0) to ++(0.5,0) to [R=$R_{s,1}$] ++(1.5,0) to [C,l_=$C$] ++(2.5,0) to [R=$R_{s,2}$] ++(1.5,0) to ++(0.5,0) to [short,-o] ++(0,0);
+
+    \draw (2.25,0) node {} to [short,-*] ++(0,0) to ++(0, 1) to [R=$R_p$] ++(2,0) to ++(0,-1) to [short,-*] ++(0,0);
+
+    \draw (3.25,-1) [thick,->] node {} to (1.5,-2);
+    \draw (3.25,-1) [thick,->] node {} to (5,-2);
+
+    \draw (0.6,-1.5) node {Series measurement};
+    \draw (6.1,-1.5) node {Parallel measurement};
+
+    \draw (-1,-3) node {} to [short,-o] ++(0,0) to ++(0.25,0) to [R=$R_s$] ++(1.5,0) to [C=$C$] ++(1,0) to [short,-o] ++(0.25,0);
+
+    \draw (5,-3) node {} to [short,-o] ++(0,0) to [short,-*] ++(0.5,0) to ++(0,.5) to [R=$R_p$] ++(2,0) to [short,-*] ++(0,-.5) to [short,-o] ++(0.5,0);
+    \draw (5,-3) node {} to [short,-o] ++(0,0) to [short,-*] ++(0.5,0) to ++(0,-.5) to [C,l_=$C$] ++(2,0) to [short,-*] ++(0,.5) to [short,-o] ++(0.5,0);
+ \end{circuitikz}
+
+
+\end{document}
+
+
+ 
