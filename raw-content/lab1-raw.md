@@ -87,7 +87,7 @@ See the [Lab Notebook page](/PHYS-3330/lab-notebook) and the course syllabus in 
 
     -   Tektronix TBS2000 Series Oscilloscope User Manual
 
-    -   Math review on complex numbers
+    -   [Math review on complex numbers](/PHYS-3330/resources/complex)
 
 # Setting up the DC Power Supply
 
@@ -98,7 +98,7 @@ Your DC power supply will provide all of your circuits with the required power. 
 We want two of the power supply channels to be set up such that the potential difference set on one of the channels is positive with respect to ground and the other is negative with respect to ground. This is not the default configuration (i.e. when nothing is connected to the power supply output terminals). The voltage indicated on the power supply display shows only the potential difference between the (+) and (-) output for a given channel. Since Channels 2 and 3 on the Keysight EDU36311A Power Supply have the equivalent output voltage and current specifications, it makes the most sense to use these two channels for this purpose. 
 
 1.  Get some wire from the wire spool rack on the top of the blue tool cabinet to make these connections. Connect a channel's (-) output to ground to get a positive voltage with respect to ground, and a channel's (+) output to ground to get a negative voltage with respect to ground (the single output connector to the left of Channel 1 is the ground connector). You can unscrew the input jacks on the power supply to expose a small hole where the jumper wires can be inserted (see Figure @fig:ps).
-2.  Set up your DMM (found in the grey toolbox on your lab bench) to measure a DC voltage. Confirm that the sign and magnitude of the voltages displayed on the power supply using the DMM are what you expect (you may need to set the voltage limits on the power supply to get a non-zero value). In your lab notebook, document the setup, the output voltage from the power supply, and the measured output on your DMM. 
+2.  Set up your DMM (found in the tool tray on your lab bench) to measure a DC voltage. Confirm that the sign and magnitude of the voltages displayed on the power supply using the DMM are what you expect (you may need to set the voltage limits on the power supply to get a non-zero value). In your lab notebook, document the setup, the output voltage from the power supply, and the measured output on your DMM. 
 
 ![Keysight EDU36311A DC power supply connections](../resources/lab1fig/EDU36311A.png){#fig:ps width="20cm"}
 

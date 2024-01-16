@@ -19,3 +19,7 @@ pandoc lsa1-raw.md -o ../_includes/lsa1.html --toc --filter pandoc-xnos --mathja
 pandoc lsa2-raw.md -o ../_includes/lsa2.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
 pandoc ltspice-raw.md -o ../_includes/ltspice.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
 
+# Other
+pandoc complex-raw.md -o ../_includes/complex.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
+
+
