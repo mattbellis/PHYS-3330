@@ -298,6 +298,8 @@ You can find more on op-amps from these recommended sources:
 
 4.  Horowitz and Hill 3<sup>rd</sup> Ed., 4.1, 4.2.2, 4.2.3
 
+5.  Open Circuits - 40, 52, 76
+
 
 # IC Tips
 

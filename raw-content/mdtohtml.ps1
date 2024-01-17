@@ -21,5 +21,7 @@ pandoc ltspice-raw.md -o ../_includes/ltspice.html --toc --filter pandoc-xnos --
 
 # Other
 pandoc complex-raw.md -o ../_includes/complex.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
+pandoc prelab-raw.md -o ../_includes/prelab.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
+
 
 

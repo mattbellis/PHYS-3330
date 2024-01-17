@@ -1,0 +1,125 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="generator" content="pandoc">
+      <meta name="author" content="Department of Physics | University of
+Colorado Boulder">
+      
+      <title>PHYS 3330</title>
+         </head>
+   <body>
+            <div>
+         <style>
+            .eqnos { display: inline-block; position: relative; width: 100%; }
+            .eqnos br { display: none; }
+            .eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+         </style>
+         <h1 class="title">Prelab Expectations and Recommendations</h1>
+                  <h1 class="title">Contents</h1>
+        <nav id="TOC">
+            <ul>
+            <li><a href="#modularize-your-work"
+            id="toc-modularize-your-work"><span
+            class="toc-section-number">1</span> Modularize your work</a>
+            <ul>
+            <li><a href="#recycling-functions"
+            id="toc-recycling-functions"><span
+            class="toc-section-number">1.1</span> Recycling
+            functions</a></li>
+            </ul></li>
+            <li><a href="#including-imagesscans"
+            id="toc-including-imagesscans"><span
+            class="toc-section-number">2</span> Including
+            images/scans</a></li>
+            <li><a href="#exporting-to-pdf"
+            id="toc-exporting-to-pdf"><span
+            class="toc-section-number">3</span> Exporting to PDF</a>
+            <ul>
+            <li><a href="#html-alternative"
+            id="toc-html-alternative"><span
+            class="toc-section-number">3.1</span> HTML
+            alternative</a></li>
+            </ul></li>
+            </ul>
+        </nav>
+        <hr/>
+         <p>Prelabs are essential activities designed to prepare you for
+         the lab activities. They are due before the lab (see Canvas for
+         the due dates), and are graded on completion. However,
+         correctness is essential for being able to complete the labs
+         correctly. It is recommended to corroborate with peers and/or
+         come to office hours to ensure your prelabs are done correctly
+         and you are properly prepared for lab.</p>
+         <h1 data-number="1" id="modularize-your-work"><span
+         class="header-section-number">1</span> Modularize your
+         work</h1>
+         <p>You will be asked to perform calculations in the prelab
+         using predetermined or given values. For example, you may be
+         asked to calculate the parallel resistance of 2 resistors</p>
+         <p><span class="math display">\[\frac{1}{R_\text{total}} =
+         \frac{1}{R_1}+\frac{1}{R_2}\]</span></p>
+         <p>using <span class="math inline">\(50\ \Omega\)</span> and
+         <span class="math inline">\(100\ \Omega\)</span>. When you get
+         to lab and grab those resistors, you will measure them and they
+         could be something like <span class="math inline">\(50.5\
+         \Omega\)</span> and <span class="math inline">\(98.4\
+         \Omega\)</span>. It will save you time to write your
+         calculations as functions (in Python, Mathematica, etc.) so
+         that you can re-call the function with updated input
+         values.</p>
+         <p>For example (in Python) instead of</p>
+         <div class="sourceCode" id="cb1"><pre
+         class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>r <span class="op">=</span> <span class="fl">1.</span> <span class="op">/</span> (<span class="fl">1.</span> <span class="op">/</span> <span class="fl">50.</span> <span class="op">+</span> <span class="fl">1.</span> <span class="op">/</span> <span class="fl">100.</span>)</span></code></pre></div>
+         <p>You should</p>
+         <div class="sourceCode" id="cb2"><pre
+         class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> parallel_r(r1, r2):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="fl">1.</span> <span class="op">/</span> (<span class="fl">1.</span> <span class="op">/</span> r1 <span class="op">+</span> <span class="fl">1.</span> <span class="op">/</span> r2)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(parallel_r(<span class="fl">50.</span>, <span class="fl">100.</span>))</span></code></pre></div>
+         <p>This way you can re-call the function later in the lab with
+         the updated values without copy-pasting a bunch of code and
+         editing it (this is very bad practice).</p>
+         <h2 data-number="1.1" id="recycling-functions"><span
+         class="header-section-number">1.1</span> Recycling
+         functions</h2>
+         <p>Many of the functions you build could be used several times
+         throughout the course. The <code>parallel_r()</code> function
+         above is a great example of one you may use repeatedly.</p>
+         <p>A decent way to make it easy to access all your functions is
+         to make a <code>.py</code> script in the directory you will be
+         working in. You can call it whatever you want, but for sake of
+         example, here we will call it <code>jlab.py</code>.</p>
+         <p>In <code>jlab.py</code> you can write all your scripts, and
+         then in your Jupyter notebooks, you can import and access your
+         functions like this</p>
+         <div class="sourceCode" id="cb3"><pre
+         class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jlab <span class="im">as</span> jl</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(jl.parallel_r(<span class="fl">50.5</span>, <span class="fl">98.4</span>))</span></code></pre></div>
+         <h1 data-number="2" id="including-imagesscans"><span
+         class="header-section-number">2</span> Including
+         images/scans</h1>
+         <p>If you make a directory called “images” in your working
+         directory, and place all your images in there, you can call</p>
+         <p><code>![](images/filename.png)</code></p>
+         <h1 data-number="3" id="exporting-to-pdf"><span
+         class="header-section-number">3</span> Exporting to PDF</h1>
+         <p><img src="header.PNG" /> You can export to PDF directly
+         through VS Code. <a
+         href="https://code.visualstudio.com/docs/datascience/jupyter-notebooks">Here’s
+         some more info on setting up</a>.</p>
+         <h2 data-number="3.1" id="html-alternative"><span
+         class="header-section-number">3.1</span> HTML alternative</h2>
+         <p>If you’re having trouble exporting to PDF (I did), you can
+         export to HTML and then convert the HTML to PDF with an online
+         tool like <a href="https://cloudconvert.com/html-to-pdf">Cloud
+         Convert</a>.</p>
+               </div>
+            <!-- Mathjax -->
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+
+      </script>
+   </body>
+</html>
