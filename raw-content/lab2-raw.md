@@ -153,7 +153,7 @@ Components (resistors, capacitors, transistors, etc.) are available from the com
 
 4.  There is an easy way to determine the specified input impedance of the scope. Where can you find that information? Does the measured input resistance agree with the instrument specs? Explicitly record what criteria you used to determine whether or not the resistances agree.
 
-# Build a Controllable Voltage Source (Dimmer Switch)
+# Build a Controllable Voltage Source
 
 You will now use your skills with building and testing voltage dividers to build a controllable voltage source using a potentiometer.
 
@@ -165,21 +165,21 @@ You will now use your skills with building and testing voltage dividers to build
 
 3.  Draw a diagram of the pot including a model of the internal components and external connections using the resistance observations.
 
-## Build a variable voltage source / Using a pot to build a light bulb dimmer
+## Build a variable voltage source
 
-1.  Draw a circuit diagram that uses one pot to create a variable voltage divider.
+1. Draw a circuit diagram that uses one pot to create a variable voltage divider.
 
-2.  Derive an expression for the output voltage based on the input voltage and the two resistances. Are both resistances independently variable or a function of the other?
+2. Derive an expression for the output voltage based on the input voltage and the two resistances. Are both resistances independently variable or a function of the other?
 
-3.  Construct your voltage divider and use a scope to measure the output voltage. Do you need to include the scope input resistance in your model? Explain why or why not.
+3. Construct your voltage divider and use a scope to measure the output voltage. Do you need to include the scope input resistance in your model? Explain why or why not.
 
-4.  Predict the maximum and minimum output voltage (when the wiper is at one end and then the other).
+4. Predict the maximum and minimum output voltage (when the wiper is at one end and then the other).
 
-5.  Test your model by making measurements on the scope. Make sure to include the limits of the voltage source. Do your measurements agree with your predictions? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
+5. Test your model by making measurements on the scope. Make sure to include the limits of the voltage source. Do your measurements agree with your predictions? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
 
-6.  Now connect a low voltage light bulb to the output. Do not exceed a current limit of 120 mA or the fuse on your potentiometer will blow out (it is a 125 mA fuse). Describe qualitatively the brightness of the bulb as the pot knob is adjusted. What is the minimum voltage needed to see the light bulb turn on?
+   <!--Now connect a low voltage light bulb to the output. Do not exceed a current limit of 120 mA or the fuse on your potentiometer will blow out (it is a 125 mA fuse). Describe qualitatively the brightness of the bulb as the pot knob is adjusted. What is the minimum voltage needed to see the light bulb turn on?-->
 
-7.  **Bonus question:** A good voltage source has very little (a few ohms) output resistance and thus very little power is dissipated in the supply. What is the output resistance of the circuit (including your power supply and external components) if it produces 10V? Would this circuit be good for creating a variable voltage source in the range of 5-10 V? HINT: Consider the power dissipated in the source. Explain using your diagram, model, and values of resistance.
+6. **Bonus question:** A good voltage source has very little (a few ohms) output resistance and thus very little power is dissipated in the supply. What is the output resistance of the circuit (including your power supply and external components) if it produces 10V? Would this circuit be good for creating a variable voltage source in the range of 5-10 V? HINT: Consider the power dissipated in the source. Explain using your diagram, model, and values of resistance.
 
 # Appendix A: Calibrating the 10-turn Potentiometer (If Needed) {#appendix-a-calibrating-the-10-turn-potentiometer-if-needed .unnumbered}
 
