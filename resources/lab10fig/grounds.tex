@@ -1,0 +1,34 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+
+\begin{circuitikz}[american voltages]
+\ctikzset{bipoles/diode/height=.3, bipoles/diode/width=.3,}
+    
+    \draw (0,0) node[sground] {} to [short,-o] ++(0,0) node[anchor=south] {Common Ground};
+
+    \draw (3,0) node[ground] {} to [short,-o] ++(0,0) node[anchor=south] {Earth Ground};
+    
+    
+    
+\end{circuitikz}
+
+
+
+\end{document}
+
+
+ 

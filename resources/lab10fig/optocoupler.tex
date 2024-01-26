@@ -1,0 +1,47 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+
+\begin{circuitikz}[american voltages]
+\ctikzset{bipoles/diode/height=.3, bipoles/diode/width=.3,}
+    
+    \draw (0,0) node[npn](optonpn) {} coordinate(okay)
+    
+    (optonpn.emitter) to [short,-o] ++(1,0) to ++(0,0) node[anchor=west] {emitter}
+
+    (optonpn.collector) to [short,-o] ++(1,0) to ++(0,0) node[anchor=west] {collector};
+    
+    \fill[white] (okay) ++(-1,-0.25) rectangle ++(.566, .5);
+
+    \draw (okay) ++(-3, .75) node[anchor=east] {Arduino GPIO} to [short,-o] ++(0,0) to ++(2,0) to [empty led]  ++(0,-1.5) to ++(-0.75,0) to [R,l_=$R_{cl}$] ++(-2.5,0) to ++(0,0) node[sground]{}
+    ;
+    \draw (okay) ++(-3.5, -1.75) node {Arduino common ground};
+
+    \draw[thick] (okay) ++(-1.5, 1) node {} to ++(1.8,0) to ++(0,-2) to ++(-1.8,0) to ++(0,2);
+
+    \draw (okay) ++(-.55,1.25) node {optocoupler};
+
+    
+    
+    
+\end{circuitikz}
+
+
+
+\end{document}
+
+
+ 

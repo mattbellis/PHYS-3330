@@ -2,230 +2,547 @@
 title: "Lab 5 - Operational Amplifiers (OP-Amps) II"
 author: [Department of Physics | University of Colorado Boulder]
 ---
-
 # Goals
 
-In this lab, you will characterize the gain and frequency dependence of inverting op-amp circuits. You will work with a few applications of negative feedback including a circuit to sum voltages.
+In the last lab you used op-amps for the first time and applied negative feedback to the op-amp in order to make useful and stable circuits. You built:
 
-Proficiency with new equipment:
+-   a *voltage buffer* in order to apply a voltage with a very low output impedance
+-   a *non-inverting amplifier* to boost a small signal
 
--   Inverting op-amps: basic, summing, differentiator, and integrator
+Now, you will build more op-amp circuits with negative feedback.
 
-Experimental Design:
+In this lab, you will build:
 
--   Designing, building, and characterizing your own op-amp circuit
+-   an inverting amplifier and explore one of its major limitations (its input impedance)
 
-Modeling the physical system:
+-   a summing amplifier designed to act as a digital-to-analog converter (DAC)
 
--   Frequency dependence of op-amp circuits
+-   a signal integrator to integrate a signal over time
 
--   Input and output impedances of op-amp circuits
+These three circuits have many applications. The inverting amplifier is like the non-inverting amplifier but with one advantage and one disadvantage. You will use the summing amplifier to build a DAC, but there are many applications of summing amplifiers in mixing signals. Finally the integrator has many uses and is commonly used to convert different wave-shapes in audio applications, and it is also used in control systems.
 
-Applications:
+In this lab you will:
 
--   Build a digital to analog converter
+-   refine your ability to design and analyze op-amp circuits with negative feedback
 
-# Definitions
+-   develop more independence in designing, modeling, building, and characterizing circuits
 
-**Closed-loop gain, $G$** - gain of the *op-amp circuit* at all frequencies with feedback applied
+# Op-amp Review
 
-**Low frequency gain, $G_{0}$** - gain of the *op-amp circuit* at DC ($f$ = 0 Hz)
+This section summarizes information covered in lab 4 (you may find this useful for a quick reference in the future).
 
-**Open-loop gain, $A$** - gain of the *op-amp itself* at all frequencies with no feedback applied
+The op-amp is a differential amplifier that outputs an amplified difference between the inputs:
 
-**DC gain, $A_{0}$** - gain of the *op-amp itself* at DC ($f$ = 0 Hz) with no feedback applied
+$$V_\text{out}=A(V_+-V_-)$$
 
-**f*~0~*** - 3 dB frequency for an *op-amp itself* with no feedback
+Feeding the output back into the inverting input drives the system into a very stable state which no longer depends on many of the details or imperfections of the internal workings. *Closed-loop* refers to the state of an op-amp with feedback, and *open-loop* refers to the state of an op-amp with no feedback.
 
-**f*~B~*** - 3 dB frequency for an *op-amp circuit* with feedback applied
+## Golden Rules
 
-**f*~T~*** - unity gain frequency, frequency where the open loop gain A is equal to one
+The golden rules are approximations that make op-amp analysis relatively simple and straight forward.
 
-# Inverting Amplifier Theory
+1.  The open-loop gain is infinitely large: 
+$$A\rightarrow\infty$$
+2.  The input impedance is infinitely large, so no current flows in or out of the inputs:
+$$I_+=I_-=0$$
+3.  When negative feedback is applied, the output drives the inverting input to be the same voltage as the non-inverting input:
+$$V_+=V_-$$
+
+## Definitions
+
+Here are all the terms we defined in the prelab from lab 4:
+
+**Open-loop gain, $A$** - the gain of the op-amp when there is no feedback.
+
+**Open-loop DC gain, $A_\text{VOL}$** - the open-loop gain at low frequencies before the frequency dependence starts to take over and the open-loop gain starts to decrease. This is cited in any op-amp datasheet (sometimes as $A_\text{OL}$ or $A_\text{VO}$).
+
+**Open-loop 3 dB point, $f_0$** - the frequency that the open-loop gain falls -3 dB from $A_\text{VOL}$. Beyond this frequency, $A$ typically continues to fall with a constant dB per log-scale (quoted in dB/octave (log2) or dB/decade (log10)). This value is usually ***not*** quoted in datasheets. It can be calculated from other values, and people often aren't concerned with the value of $f_0$.
+
+**Closed-loop gain, $G$** - when a fraction of the output is fed back into the inverting input $V_-$, the op-amp's gain is greatly reduced from $A$ to some value $G$. Just like the open-loop gain, this value is frequency dependent and starts to fall from $G_0$ near the 3 dB point, $f_B$.
+
+**Closed-loop DC gain, $G_0$** - the closed-loop gain at frequencies well below the 3 dB point. Except in active filter design, the point of an op-amp is to operate at a frequency such that $G(f)=G_0$, so almost always, the closed-loop DC gain is referred to simply as ***THE* gain**.
+
+**3 dB point, $f_B$** - the frequency where $G$ drops -3 dB from $G_0$. This is also often referred to as the bandwidth or operating bandwidth, as typical operation should be done below this frequency.
+
+**Gain bandwidth product, $\text{GBW}$** - the product of the DC gain and the 3 dB point is a constant value. This should be cited in datasheets as it's a foundational property of each op-amp's internal design. Just like resistor values, however, the precise $\text{GBW}$ varies from op-amp to op-amp of the same name.
+
+**Unity gain frequency, $f_T$** -  the 3 dB point when the gain is 1 (unity). Since this is mathematically equivalent to the $\text{GBW}$, these terms are often used interchangeably.
+
+**Capacitive coupling** \- capacitive coupling is the process of sending a signal or energy through a capacitor (remember that the impedance of a capacitor is inversely proportional to the frequency). Capacitive coupling is a way of sending AC while blocking DC. Parasitic capacitance often leads to this happening by mistake.
+
+**Decoupling capacitor** - decoupling is coupling to ground. Decoupling capacitors charge up and provide a reservoir of energy that can be supplied to the circuit as the circuit's current draw changes over time. Power supplies and transmission lines have inherent inductance which impedes changes in current, $dI/dt$, so the decoupling capacitors compensate  with the energy stored and provide the current necessary to maintain constant voltage.
+
+
+# Prelab
+
+
+## Inverting Amplifier
 
 ![Inverting amplifier](../resources/lab5fig/invamp.png){#fig:invamp width="10cm"}
 
-The basic inverting amplifier is shown in Figure @fig:invamp. We can use the Golden Rules to determine the low-frequency gain. Since the positive input is grounded, the op-amp will do everything it can to keep the negative input at ground as well. In the limit of infinite open loop gain the inverting input of the op-amp is a [virtual ground]{.underline}, a circuit node that will stay at ground as long as the circuit is working, even though it is not directly connected to ground. When ***A is infinite,*** the gain of an inverting amplifier is
+The inverting amplifier is shown in Figure @fig:invamp. Notice that this is very similar to the non-inverting amplifier, except for the fact that the input and ground are swapped.
 
-$$G_0=\frac{V_{out}}{V_{in}}=-\frac{R_f}{R}$$
+There is still a voltage divider network feeding the output back to the inverting input with a transfer function $B$, such that
 
-This is the \"Golden Rule\" result. For the frequency dependence of the gain we need to consider what happens when $A$ is not infinite, as we did for the non-inverting case. We use the same definitions as for the non-inverting case. The op-amp open loop gain is $A$, and the divider ratio $B$ is the same as before:
+$$B=\frac{R}{R_F+R}$$
 
-$$B=\frac{R}{R+R_f}$$
+This simple swapping of the input and ground changes a few properties of the amplifier circuit
 
-When ***A is finite*** the gain for an inverting amplifier is given by
+-   the gain is now negative (the signal inverts i.e. flips upside down),
+-   the input impedance is greatly reduced.
 
-$$G_0=\frac{V_{out}}{V_{in}}=-\frac{A(1-B)}{1+AB}$$
+The reduced input impedance has potential issues; however, there is one advantage of the inverting amplifier. Because one of the inputs is held at a constant voltage (ground), the voltage at the inputs barely fluctuates which puts less strain on the op-amp resulting in better performance in reproducing the output waveform.
 
-The above formulas are still correct when $A$ and/or $B$ depend on frequency. $B$ will be frequency independent if we only have resistors (in other cases that use complex impedance it may not be), but $A$ always varies with frequency. For most op-amps, including the LF356, the open loop gain varies with frequency like an RC low-pass filter:
+### Prelab Question {#1.1}
 
-$$A(f)=\frac{A_0}{1+j\frac{f}{f_0}}$$
+Applying the voltage golden rule, it should be clear that the voltage at both inputs is $0\text{ V}$. Even though the voltage at $V_-$ is zero, it is called a **virtual ground**, instead of **ground**, because there is no actual path to *Earth ground*, so it does not serve the full function of ground.
 
-The 3 dB frequency, $f_0$, is usually very low, around 10 Hz. Data sheets do not usually give $f_0$ directly; instead they give the DC gain, $A_0$, and the unity gain frequency, $f_T$, which is the frequency where the magnitude of the open loop gain, $A$, is equal to one. The relation between $A_0$, $f_0$, and $f_T$ is:
+Since the path from $V_\text{in}$ to $V_-$ is like a path to ground, this path is like a load. With this knowledge, what do you think the input impedance of the inverting amplifier is?
 
-$$f_{T} = A_{0}f_{0}$$
 
-The frequency dependence of the closed loop gain $G$ is then given by
+## Deriving the Closed-Loop Gain of the Inverting Amplifier
+
+By only using the current golden rule, the *closed-loop gain* of the inverting amplifier can be derived even with a finite *open-loop gain* $A$.
+
+The current golden rule, says that no current flows into $V_-$, so all the current $I$ that flows through $R$ will also flow through $R_F$ (see @fig:invamp-finite).
+
+Second, plugging $V_+=0$ into the op-amp equation
+
+$$V_\text{out}=A(V_+-V_-)$$
+
+yeilds
+
+$$V_-=\frac{-V_\text{out}}{A}$$
+
+<!-- Note that $$\lim_{A\rightarrow\infty}V_-=0$$ which is what the voltage golden rule says should happen with negative feedback and infinite open-loop gain. **This is the virtual ground**.-->
+
+![Using the op-amp equation, the voltage at the inverting input can be found: $V_-=-V_\text{out}/A$. Since so little current flows through the input, it is reasonable to assume the current through both resistors is the same.](../resources/lab5fig/inverting-amp-with-finite-gain.png){#fig:invamp-finite width="15cm"}
+
+We can now right down two equations based on Kircchoff's voltage law:
+
+$$V_\text{out} = V_- + IR_F = \frac{-V_\text{out}}{A} + IR_F$$
+
+$$V_\text{in} = V_- - IR = \frac{-V_\text{out}}{A} - IR$$
+
+These equations can be manipulated to give
+
+$$G_0=\frac{V_\text{out}}{V_\text{in}}=\frac{-AR_F}{R_F+(1+A)R}=-\frac{A(1-B)}{1+AB}$$
+
+### Prelab Question {#2.1}
+
+Find the closed-loop gain in the limit as $A$ approaches infinity (open-loop gain golden rule); i.e.
+
+$$\lim_{A\rightarrow\infty}G_0$$
+
+*Hint:* L'Hôpital's rule may be helpful.
+
+### Prelab Question {#2.2}
+
+Instead, start with the assumption that the voltage golden rule applies. What is the voltage at $V_-$ then? Derive expressions for $V_\text{out}$ and $V_\text{in}$ using this value for $V_-$ and Kircchoff's voltage rule. Does this lead to the same result for $G_0$ you found in question @sec:2.1? (You may need to do a little rearranging to show they are the same)
+
+### Prelab Question {#2.3}
+
+Find $G_0$ (assume $A\rightarrow\infty$) for
+
+1.  $R=100\ \Omega$ and $R_F=1\text{ k}\Omega$
+
+2.  $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$
+
+
+## The Input and Output Impedance of the Inverting Amplifier
+
+Formulas for the input and output impedance for an inverting amplifier are derived in Horowitz and Hill 2<sup>nd</sup> ed. section 4.26 (copies can be found in the lab).
+
+$$R_{i}' = R\bigg(1 + \frac{1}{(1 + A)}\frac{R_{F}}{R}\bigg)$$
+
+$$R_{o}' = \frac{R_{o}}{(1 + AB)}$$
+
+*Note:* that the output impedance is the same equation as it was for the non-inverting amplifier.
+
+For the input impedance, as long as the magnitude of the closed-loop gain is significantly less than the open-loop gain, $R_i'=R$. Typically in practice, $R\lesssim 100\text{ k}\Omega$. This is far less than typical op-amp's bare input impedance (the LF356 has $10^{12}\ \Omega$.. that's a **teraohm**!).
+
+### Prelab Question {#3.1}
+
+Calculate $R_i'$ (using $A=2\cdot 10^{5}$) using
+
+1.  $R=100\ \Omega$ and $R_F=1\text{ k}\Omega$
+
+2.  $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$
+
+Is it reasonable to just say that $R_i'=R$?
+
+### Prelab Question {#3.2}
+
+![Both the output impedance of the function generator and the input impedance of the oscilliscope may impact the circuit in significant ways](../resources/lab5fig/invamp-meas-in.png){#fig:invamp-meas-in width="12cm"}
+
+If $V_\text{in}$ is coming from the function generator, there is a $50\ \Omega$ output impedance, and when you measure $V_\text{in}$ on the scope there is a $1\text{ M}\Omega$ measurement impedance (see Figure @fig:invamp-meas-in). In each of the following cases, decide whether the  $50\ \Omega$, the $1\text{ M}\Omega$, both, or neither impedances will significantly impact either the measurement of $V_\text{in}$ or $V_\text{out}$. In each case draw an updated diagram which simplifies the model appropriately.
+
+1.  $R=100\ \Omega$ and $R_F=1\text{ k}\Omega$
+
+2.  $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$
+
+*Hint 1:* The same voltage is across $R$ and the $1\text{ M}\Omega$ of the oscilliscope, so these resistors are in parallel.
+
+*Hint 2:* Consider the voltage division between the output impedance (of the function generator) and the input impedance (of the amplifier).
+
+### Prelab Quesiton {#3.3}
+
+Between the two options for resistor values, do you think it is it more reasonable to choose the lower resistances, or the higher resistances for the same gain? Why?
+
+## Frequency Dependance of the Inverting Amplifier
+
+The frequency dependances of the non-inverting amplifier and the inverting amplifier are the same
+
+$$A(f)=\frac{A_\text{VOL}}{1+j\frac{f}{f_0}}$$
 
 $$G=\frac{G_0}{1+j\frac{f}{f_B}}$$
 
-The frequency response of the amplifier with feedback is therefore also the same as for an RC low-pass filter.
+However, the relationship between the gain and the 3 dB frequency is different from the non-inverting amplifier (gain bandwidth product is a bit of a misnomer).
 
-## Input and output impedances of inverting amplifiers
+$$f_T = \frac{-G_0 f_B}{1 - B} = A_\text{VOL}f_0$$
 
-Formulas for the input and output impedance for an inverting amplifier are derived in H&H Section 4.26. When the open loop gain is large, the negative input of the op-amp is a virtual ground and so the input impedance is just equal to $R$. This is very different from the non-inverting case where the input impedance is proportional to $A$ for large $A$. In practice, the input impedance of an inverting amplifier is not usually greater than about 100 k$\Omega$, while the input impedance of a non-inverting amplifier can easily be as large as 10^12^ $\Omega$. When $A$ is not large the formulas for the input impedance and output impedance of the entire circuit are derived in H&H Section 4.26. The results are
+Note though, that the gain of the non-inverting amplifier was $1/B$. With some algebra, you can show that
 
-$$R_{i}^{'} = R + \frac{R_{f}}{1 + A}$$
+$$\frac{-G_0}{1 - B}=\frac{1}{B}$$
 
-$$R_{o}^{'} = \frac{R_{o}}{(1 + AB)}$$
+so for both inverting and non-inverting amplifiers
 
-The output impedance is the same for both the inverting and non-inverting amplifiers.
+$$\text{GBW}=f_T = \frac{f_B}{B}= A_\text{VOL}f_0$$
 
-The gain-bandwidth product for inverting amplifier is slightly modified compared to non-inverting amps.
+### Prelab Question {#4.1}
 
-$$A_0 f_0 = \frac{-G_0 f_B}{1 - B} = f_T$$
+What is $f_B$ when $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$?
 
-This is the same (except for the sign) as the non-inverting result when the closed loop gain is large ($B \ll 1, |G0| \gg 1$), but at unity closed loop gain ($B = 1/2, G_0 = -1$) the inverting amplifier has only half as much bandwidth as a non-inverting amplifier.
+## Summing Amplifier
 
-# Summing Amplifier Theory
+![Summing amplifier can sum 2 or more voltages](../resources/lab5fig/sumamp.png){#fig:sumamp width="10cm"}
 
-![Summing amplifier](../resources/lab5fig/sumamp.png){#fig:sumamp width="10cm"}
+The Summing Amplifier, shown in Figure @fig:sumamp, is a very flexible circuit. Notice that it is just like the inverting amplifier op-amp configuration, but it has multiple inputs coming together at the inverting input. Since $V_-$ is a *virtual ground*, each input $i$ with input voltage $V_i$ has an input impedance of $R_i$.
 
-The Summing Amplifier, shown in Figure @fig:sumamp, is a very flexible circuit based upon the standard inverting op-amp configuration that can be used for combining multiple inputs. The standard inverting amplifier, shown in Figure @fig:invamp, has a single input voltage, $V_{in}$, applied to the inverting input terminal. If we add more input resistors to the input, the circuit can become a voltage adder with different gain for each input. There are many applications for summing amplifiers including audio mixers and digital to analog converters. Using the Golden Rules we can determine the transfer function listed below.
+Each input has a current through it which can be determined with Kircchoff's voltage law
 
-$$V_{out}=-\left[V_1\left(\frac{R_F}{R_1}\right) + V_2\left(\frac{R_F}{R_2}\right) + V_3\left(\frac{R_F}{R_3}\right)\right]$$
+$$V_i - I_iR_i=0$$
 
-This circuit has many applications including working as an adder in any basis-set you specify. If you only restrict yourself to input voltages of 0 or 1 V (or on and off), you get to a binary adder and can convert binary signals to analog (e.g. base 2 to base 10). Digital-to-analog converters are found in every research lab (or computer, or phone, etc.) where you want to create any value of a signal from just 1's and 0's. If you want a refresher on binary or counting in binary, you can use [this Wikipedia entry](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary).
+$$I_i = \frac{V_i}{R_i}$$
 
-# Integrator Theory
+All of these current paths combine near the inverting input before going through $R_F$; by Kircchoff's current law, the current through $R_F$ is the sum of all of these input currents
+
+$$I_F = \sum_{i=1}^n I_i=\sum_{i=1}^n\frac{V_i}{R_i}$$
+
+Finally, the voltage rise from the *virtual ground* to $V_\text{out}$ can be calculated by Kircchoff's voltage law
+
+$$V_\text{out} = 0-R_FI_F =  -R_F\sum_{i=1}^n \frac{V_i}{R_i}$$
+
+*Note:* If you have the same input source, like the function generator, going into multiple inputs, it will have to supply current to all of these. Sources of current have current limits, and splitting the current into too many outputs can make it quickly reach its current limit.
+
+### Prelab Question {#5.1}
+
+In the lab, you will use a summing amplifier to build a digital-to-analog converter (DAC). This is one of the many incredibly useful applications of the summing amplifier. In order to design the circuit, you will need to have some understanding of binary numbers (in digital circuits, all numbers are in binary). In binary there are only two states: 0 and 1 (aka **false** and **true** or **off** and **on**). In digital circuits, the 1 state is usually $5\text{ V}$ (but $3.3\text{ V}$ is also common).
+
+You may or may not have experience with binary-decimal conversions, but it's pretty straight forward. A binary number like
+
+$$101101$$
+
+can be converted by knowing that each bit of a binary number represents $2^i$ where $i$ is represents a bit's place, so the number above is
+
+$$1\cdot2^5+0\cdot2^4+1\cdot2^3+1\cdot2^2+0\cdot2^1+1\cdot2^0$$
+
+The conversion in general can be formalized
+
+$$\sum_{i=0}a_i2^i$$
+
+where each $a_i$ is either 0 or 1 (this counts from right to left).
+
+You will build a 3-bit DAC; this means that it will be able to convert 3 digit binary numbers (in binary, digits are referred to as bits).
+
+**Make a table** with all 8 possible 3-bit binary numbers on the left and the corresponding decimal equivalents on the right. For example: 000 in binary is 0 in decimal. If you need more of a refresher on binary or counting in binary, [this Wikipedia entry](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary) will hopefully be useful.
+
+### Prelab Question {#5.2}
+
+It makes the most sense to make $0\text{ V}$ represent binary 0. However, the choice of voltage to represent binary 1 is mostly arbitrary, but $5\text{ V}$ is the most commonly used.
+
+With $R_F=27\text{ k}\Omega$, choose resistor values for the 3 input resistors such that $V_\text{out}$ corresponds to the analog voltage (decimal equivalent) corresponding to the digital 3-bit number input.
+
+Calling the inputs $i=0,\ 1,\ 2$ corresponding to the 0<sup>th</sup>, 1<sup>st</sup>, and 2<sup>nd</sup> place of the binary number makes things easier to track since these correspond to the relevant exponents $2^i$ . You need to convert the 8 possible combinations of $0\text{ V}$ and $5\text{ V}$ input to $0-7\text{ V}$
+
+*Hint:* Focusing on 001, 010, and 100 will make things easiest.
+
+## Integrator
 
 ![Integrator](../resources/lab5fig/integrator.png){#fig:integrator width="10cm"}
 
-The basic op-amp integrator is shown in Figure @fig:integrator. As compared to the inverting amplifier in Figure @fig:invamp, the only change is a replacement of the feedback resistor $R_F$ with a capacitor $C$. An integrator is the same circuit as a low-pass filter. If you are interested in what frequencies get passed, you call it a low-pass filter. If you are interested in integrating the input signal, you call it an integrator. We can understand how the integrator works by applying the Golden Rules and remembering the defining equation for capacitors. Just as in the integrating amplifier, the Golden Rules tells us that $V_-\approx V_+ = 0$ and that the current across both components is the same because no current flows into the op-amp. We label $I_R$ as the current through the resistor, which is $V_{in}/R$ since $V_-$ is at ground. We label $I_C$ as the current across the capacitor. The defining equation for capacitors is $Q=CV$. The current through a capacitor is $I=dQ/dt = d(CV)/dt = CdV/dt$. Therefore, the equation $I_R=I_C$ becomes:
+The integrator is shown in Figure @fig:integrator. This is like the inverting amplifier but with the feedback resistor replaced with a feedback capacitor.
 
-$$\frac{V_{in}}{R}=-C~\frac{dV_{out}}{dt}$$
+Due to the complex impedance of the capacitor, the transfer function $B$ also becomes complex
 
-Solving this equation for $V_{out}$ gives the following:
+$$B = \frac{R}{R+\frac{1}{j\omega C}}=\frac{j\omega R C}{1+j\omega R C}$$
 
-$$V_{out}=-\frac{1}{RC}\int V_{in} ~dt$$
+The voltage and current golden rules can be applied to solve for $V_\text{out}$. If we assume the positive current direction runs from $V_\text{out}$ to $V_\text{in}$, the virtual ground means that
 
-This is why it is called an integrator. Choosing values for the resistor and capacitor depends on several considerations. First, one needs to determine the value of the product $RC$. This will depend on the expected signal (size and shape), the expected integration time, and the desired output (remembering the op-amp limitations on maximum output voltage and slew rate). Once $RC$ is determined, some considerations for choosing $R$ and $C$ are:
+$$V_\text{in}+IR=0$$
 
--   Availability: resistors from 1 $\Omega$ to 10 M$\Omega$ and capacitors from 2 pF to 1 $\mu$F are readily available.
+Then we can consider the voltage across the capacitor and how that compares to the charge stored in it
 
--   Input impedance: generally a high input impedance (\> 1 k$\Omega$) is desired to avoid loading the input signal.
+$$Q=CV_\text{out}$$
 
--   Avoiding effect of stray capacitance: there are many sources of capacitance, such as cables, which can unintentionally couple to your circuit. For this reason, it is advisable to avoid very small capacitors as the stray capacitances may end up dominating. A few hundred pF should be sufficient.
+By definition, current is the time derivative of charge, so taking the derivative of both sides gives
 
--   Dealing with DC signal: A DC signal in the input results in the capacitor eventually charging up to the maximum output voltage of the op-amp. This DC signal can result from the op-amp. One way to mitigate this is to add another resistor in parallel with the capacitor such that at low frequencies (large impedance in capacitor) the circuit acts like an inverting amplifier. As the impedance of a resistor is proportional to $R$ while the impedance of a capacitor is inversely proportional to $C$, to ensure that the signal mainly goes through the capacitor, one would like large resistor and/or large capacitor values. Of course, the resistor chosen here in combination to the main resistor in the circuit leads to a DC gain as calculated for the inverting amplifier so this should be considered in making your choice. You can alternatively try placing the high impedance resistor between $V_{out}$ and ground instead of in parallel with the capacitor.
+$$I = C \frac{dV_\text{out}}{dt}$$
+
+Combining the two equations yields
+
+$$\frac{dV_\text{out}}{dt}=-\frac{V_\text{in}}{RC}$$
+
+To solve for $V_\text{out}$, integrate both sides
+
+$$V_\text{out}(t) = \frac{-1}{RC}\int_0^t V_\text{in}(t')\; dt'$$
+
+This relationship between $V_\text{in}$ and $V_\text{out}$ is why this circuit is called an integrator.
+
+<!--### Prelab Question {#6.1}
+
+The sine wave analysis is the easiest because the integral of a sine wave is a sine wave (remember that sine and cosine are the same thing with phase shifts). If $V_\text{in}$ has an amplitude $V_0$ and frequency $f$, then
+
+$$V_\text{out}(t) = \frac{-1}{RC}\int_0^{t} V_0 \sin{(2\pi f t')}\; dt'$$
+
+Evaluate the integral to determine
+
+1.  $V_\text{out}$ over the full period $T=1/f$. Does this result make sense for an oscillating output?
+
+2.  $V_\text{out}$ over the half the period.
+
+3.  Use your previous results to determine the amplitude of the output wave
+
+4.  Use the peak-to-peak amplitude of $V_\text{in}$ and $V_\text{out}$ to determine the gain of the circuit for a square wave input. Express this in terms of $f$ instead of $T$.
+
+### Prelab Question {#6.2}
+
+We just found that the gain not only depends on the RC time constant, but also the frequency of the input. What RC time constant would give a gain of 1 at $1\text{ kHz}$ for the square wave? -->
+
+### Prelab Question {#6.1}
+
+Sketch (or plot in Mathematica or Python) the predicted waveform for the output when the input is a
+
+1.  Sine wave
+2.  Square wave
+3.  Triangle Wave
+
+These are Voltage vs time plots/sketches (like what you would see on the oscilliscope). For the square and triangle waves, it will help to break them up into piecewise continuous functions with continuous derivatives.
+
+-   *Hint:* the square wave takes on a constant value in the regions where the function is continuous.
+
+-   *Calculus refresher:* the derivative is discontinuous where the function *isn't smooth*.
+
+## Complex Analysis of the Integrator's Gain
+
+Here, by complex, we mean "involving imaginary numbers." Remember that the impedance of a capacitor is
+
+$$Z_C = \frac{1}{j\omega C}$$
+
+so we can treat the capacitor in the circuit as an element with this impedance. In this case, using the same analysis that was done on the inverting amplifier, the equations found with Kircchoff's voltage law become
+
+$$V_\text{in}+IR=0$$
+
+$$V_\text{out}-\frac{I}{j\omega C}=0$$
+
+Remembering that $j=\exp(j\pi/2)$, the gain can be written
+
+$$G_0 = \frac{-e^{\frac{-j\pi}{2}}}{2\pi f RC}$$
+
+Note that this treatment for the gain works on individual sine wave components. To apply this gain to different waveforms, you would need to break them up into Fourier series and apply this gain to the individual sine wave terms of the series (this is not something we expect you to do).
+
+For a sine wave (or sine wave component of a Fourier series) the magnitude of the gain is
+
+$$|G_0| = \frac{1}{2 \pi f RC}$$
+
+The complex exponential in the gain has a phase of $\phi=-\frac{\pi}{2}$; this means that the gain will phase shift the output by this much. Note that $\sin(\omega t - \frac{\pi}{2})=-\cos(\omega t)$, so this phase shift is equivalent to integrating.
+
+Notice that the gain falls off as a function of frequency. This makes it act like a low-pass filter. Integrators are often used as low-pass filters, but there are better ways to make a proper low-pass filter with op-amps. If you're interested in reading more about the technical difference of a proper op-amp low-pass filter and an integrator, here's a
+[technical paper](https://ieeexplore.ieee.org/document/4313498) (that you can access as long as you're on the university network) and a [forum discussion](https://stackoverflow.com/questions/37067763/what-is-the-difference-between-an-integrator-and-a-low-pass-filter) on the topic.
+
+### Prelab Question {#7.1}
+
+Calculate an RC time constant that results in a gain of
+
+$$|G_0| = \frac{10}{2\pi}\approx 1.6$$
+
+for a $1\text{ kHz}$ sine wave.
+
+## Considerations for $R$ and $C$ selections for the integrator
+
+Choosing values for the resistor and capacitor depends on several considerations. First, one needs to determine the desired RC time constant. This will depend on the expected signal (size, shape, and frequency), and the desired output (remembering the op-amp limitations on maximum output voltage and slew rate). Once $RC$ is determined, some considerations for choosing $R$ and $C$ are:
+
+-   For this application, non-polarized capacitors should be selected because the applied voltage will oscillate around $0$.
+
+-   Availability: resistors from $1\ \Omega$ to $10\text{ M}\Omega$ and non-polarized capacitors from $2\text{ pF}$ to $1\ \text{μF}$ are readily available in the lab.
+
+-   Input impedance: generally a high input impedance is desired to avoid voltage dividing the input signal with the $50\ \Omega$ output impedance of the function generator. $1\text{ k}\Omega$ input impedance will have a transfer function of $0.952$ voltage dividing with $50\ \Omega$, and it is recommended to have at least this much input impedance (but more is better).
+
+-   Avoiding stray capacitance effects: there are many sources of capacitance, such as cables, which can unintentionally couple to or decouple your signal. For this reason, it is advisable to avoid very small capacitors as the stray capacitances may end up dominating. A few hundred picofarads should be sufficient.
+
+**Dealing with DC offsets:** A DC offset, however small, integrates to a linear growth over time (the capacitor builds up charge) which will cause the output to hit one of the op-amp's maximum output voltages. Op-amps usually have small DC offsets even if the input signal has no offset. One way to mitigate this is to add a resistor in parallel with the capacitor so that charge can leak out of the capacitor overtime.
+
+A real capacitor can be accurately modeled as an ideal capacitor with resistance in series and in parallel with it (see Figure @fig:cap-measure). Good capacitors have very small series resistance and very large parallel resistance. The parallel resistance often has to do with the dielectric material inside "leaking" charge through it. When the LCR meter is used to measure a capcitance, it is unable to apply the series+parallel resistance model with a single measurement; it can be set to either measure with a parallel resistance model *or* a series resistance model (see Figure @fig:LCR). For this application in particular, it is a good idea to measure the capacitor with a parallel resistance model so that you know how much resistance should be added in parallel to reach a specific parallel resistance to get the right amount of "leakage."
+
+![A real capacitor is accurately modeled with resistance in series and in parallel with the capacitance. When you measure a capacitor with the LCR meter, you can select whether it measures with a series resistance or parallel resistance  equivalent circuit model.](../resources/lab5fig/cap-measure.png){#fig:cap-measure width="15cm"}
+
+![When you measure your capacitor, make sure the PARAMETER is set to $C+R$ and the Equiv Circuit is set to PARALLEL](../resources/lab5fig/cap-parallel-resistance.png){#fig:LCR width="15cm"}
+
+
+### Prelab Question {#8.1}
+
+Design an integrator that would have
+
+-   an input impedance of $10\text{ k}\Omega$
+-   an $RC$ value that you calculated in Prelab Question @sec:7.1
+
+## Lab Activities
+
+### Prelab Question {#9.1}
+
+Read through all of the lab steps and identify the step (or sub-step) that you think will be the most challenging.
+
+### Prelab Question {#9.2}
+
+List at least one question you have about the lab activity.
 
 # Useful Readings
+
+You can find more on these circuits from these recommended sources:
 
 1.  [Steck](https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf) Sections 7.1, 7.2, 7.3.1, 7.3.2, 7.3.4, 2.2.1, 7.4.2
 
 2.  Fischer-Cripps Sections 12.2--12.15
 
-3.  Horowitz and Hill 2^nd^ Ed., Sections 4.04--4.08, 4.19--4.20 and Sections 1.13--1.15
+3.  Horowitz and Hill 2<sup>nd</sup> Ed., Sections 4.04--4.08, 4.19, 4.20 and Sections 1.13--1.15
 
-# Prelab
+# IC Tips
 
-Answer the following questions using Mathematica for the plots. You can use either Mathematica for the rest the questions as well or do them by hand in your lab notebook. **Bring an electronic copy of your notebook to lab, preferably on your own laptop. You will use it to plot your data during the lab session.**
+In this lab, we will use ICs (integrated circuits) for the second time. Here's a review of the tips from last lab. **Read through them all** again before you begin using any IC chips. You should refer back to this section in future labs to remind yourself of these useful tips.
+
+![The LF356 op-amp DIP chip powered with plus (red) and minus (blue) voltages with decoupling capacitors. Also notice the wire jumping ground to both sides of the chip.](../resources/lab4fig/power-example.jpg){#fig:power-example width="15cm"}
+
+1. Always unplug the power supply from your circuit while you're wiring it.
+
+2. Chips sit across the groove on the breadboard (see Figure @fig:power-example). Any other placement will cause legs to short together.
+
+    -   Before inserting a chip, ensure the pins are straight (using a needle-nose pliers or something similar).
+
+    -   After insertion, check visually that no pin is broken or bent under the chip. 
+
+    -   To remove the chip, use the dedicated IC pliers (found in the tool trays at your lab station). Removing ICs by hand often results in bent legs and/or a leg puncturing your finger.
+
+3. Use the long columns on your breadboard for your power and ground voltages (with power and ground next to each other) to take advantage of the parasitic decoupling capacitance of the long line.
+
+4. Color code your wires. We recommend:
+
+    -    <span style="color: black;">0V (ground) Black</span>
+
+    -    <span style="color: red;">+15V Red</span>
+
+    -    <span style="color: blue;">-15V Blue</span>
+
+    -    Use other colors for any other connections which aren't to $\pm$ power or ground
+
+5. Connect capacitors between the power pin(s) of the IC (as close to the pin as possible as in Figure @fig:power-example) to ground. These are called decoupling or bypass capacitors and are critical for maintaining constant voltage at the pin as the current needs change. Use nice, big polarized (electrolytic) capacitors ($>1\ \mu\text{F}$) so that they're able to collect enough charge to deliver the necessary current when needed.
+
+6. Measure all your passive elements (resistors, capacitors, inductors, diodes) before putting them in the circuits; trying to measure while they are plugged into the breadboard can lead to mistakes.
+
+7. Always have a diagram of your circuit with pin numbers labeled (like the left side of Figure @fig:pin-diagram).
+
+8. Make sure any polarized (electrolytic) capacitors are oriented such that the higher voltage is applied to the correct lead of the capacitor. Remember: **ground** is a ***HIGHER*** voltage than $-15\ \text{V}$. Getting this backward will cause the capacitor to explode: this is loud, smelly, and a bit embarrassing.
+
+9. Wires that your signal go through should be kept short and compact. This minimizes the parasitic inductance and capacitance and will better preserve the signal. Don't put your signals into the long columns running down the breadboard.
+
+10. Don't make any connections that cross over the top of the IC (like the feedback connection for an op-amp); instead, go around the IC.
+
+    1. This makes it so you can pull out the IC without disturbing the rest of the circuit.
+
+    2. This helps ensure magnetic fields generated by the current in the wire don't interact with the inner workings of the IC.
+
+11. Compare your physical circuit to the diagram before connecting the power supply (especially polarized capacitor orientations).
+
+
+
+# Lab activities
 
 ## Inverting amplifier
 
-1.  Calculate the values of low frequency gain, $G_0$, and the bandwidth, $f_B$, for the inverting amplifier in Figure @fig:invamp for the following circuit you will build in lab with the following resistors: $R_F = 100 ~k\Omega$ and $R = 10 ~k\Omega$ .
+1.  Use your test circuit from lab 4 to confirm that your op-amp is working.
 
-2.  Graph a Bode plot for the open loop gain and the closed loop gain for the circuit from above on the same graph using Mathematica (making sure to label axes and curves).
+1.  Find and measure resistors with the following values: $100\ \Omega$, $1\text{ k}\Omega$, $10\text{ k}\Omega$, and $100\text{ k}\Omega$.
 
-## Summing amplifier - digital to analog converter
+2.  Draw a circuit diagram that appropriately models the behavior of the inverting amplifier with $R=100\ \Omega$, $R_F=1\text{ k}\Omega$, considering the output impedance of the function generator and/or the input impedance of the oscilliscope (check in with an instructor if you're unsure your models are reasonable).
 
-1.  Design a three input summing amplifier (Figure @fig:sumamp) that can create an analog voltage of integers from 0 to -7 volts ($|V_{out}|= 0, 1, 2, 3, 4, 5, 6,~ and ~7 ~V$) using only two possible input states on each input ($V_{low}= 0 ~V$ and $V_{high} = 1~ V$). Draw a schematic of your circuit and label all the resistors. *Hint: Write down the binary numbers from 000 binary = 0 in decimal to 111 binary = 7 in decimal.* Think about the relative values of $R_1$, $R_2$, and $R_3$. We suggest you use $R_F = 40 k\Omega$.
+3.  Build an inverting amplifier with $R=100\ \Omega$ and $R_F=1\text{ k}\Omega$. (Don't forget to follow all the IC tips above). Below is the LF356 pin diagram for easy reference.
 
-2.  Draw a table that lists the input voltages and corresponding output voltages to create $|V_{out}|= 0, 1, 2, 3, 4, 5, 6,~ and ~7 ~V$.
+![Pin diagram for LF356 (left). The numbers correspond to the corresponding pin on the DIP chip (right)](../resources/lab4fig/lf356-pins.png){#fig:pin-diagram width="10cm"}
 
-## Integrator
+4.  Use the function generator and the oscilliscope to measure $G_0$ of the amplifier.
 
-So far you have been looking at the output versus frequency (Bode plots). Now you will also consider the output versus time.
+5.  Compare these to your expectated values from your model.
 
-1.  Design an integrator based on Figure @fig:integrator and the discussion above. Choose values for the components (resistors and capacitors) and describe why you chose those values.
+6.  Swap out the resistors so that $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$. Measure the resistors before putting them in the circuit (Don't forget to follow all the IC tips above). Below is the LF356 pin diagram for easy reference.
 
-2.  List some possible applications for the integrator.
+7.  Measure $G_0$ of the amplifier.
 
-3.  Sketch the time response of your circuit (or you could use Mathematica if you wish) for the following input waveforms: square wave, triangle wave, and sine wave. *Hint: What happens when you integrate a constant, a linear function, and a sine function?*
+8.  Measure $f_B$ of the amplifier.
 
-## Lab activities
+9.  Compare these to your expectated values from your model.
 
-1.  Read through all of the lab steps and identify the step (or sub-step) that you think will be the most challenging.
+10.  Was there any signficant difference between the amplifiers you built.
 
-2.  List at least one question you have about the lab activity.
+11.  Use the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your . Does your measured value of $f_T$ agree with what you found last week?
 
-# LF356 Pin Out and Schematic
+## Summing Amplifier Application - Digital-to-Analog Conversion
 
-All op-amp circuits start out by making the basic power connections. Op-amps are active components, which means they need external power to function unlike passive components such as resistors.
+1.  Find resistor values close to what you calculated in your prelab for the 3-bit digital-to-analog converter (you may want to check with an instructor to be sure they make sense). Precision isn't super important here, so don't worry about combining a bunch of resistors to get exactly the right values. Measure all the resistors.
 
-![LF356 schematic and pin-out](../resources/lab5fig/lf356.png){#fig:lf356 width="10cm"}
+2.  Draw a circuit diagram for the summing amplifier with these resistor values and make a table with predicted output voltages for all 8 3-bit inputs.
 
-![Good placement of op-amp and bypass capacitors on a protoboard. Note that short wires are used for all connections.](../resources/lab5fig/pb-example.png){#fig:pb width="10cm"}
+3.  Either make a new circuit or modify your inverting amplifier circuit to make the summing amplifier you designed. 
 
-# General Op-Amp Tips
+4.  Measure the output of your circuit for all 8 3-bit combintations.
+    -   You can use the same two voltage sources $(0\text{ V}$ and $5\text{ V})$ to connect to your 3 inputs 
 
-**These are reminders of the basics steps you should always follow when working with op-amps.**
+5.  Compare these to your predictions.
 
-1.  This experiment will use both +15 V and -15 V to power the LF356 op-amp. <span style="color: red;">Make sure  the **DC power supply channel outputs are turned off** while wiring your op-amp. Everyone makes mistakes in wiring-up circuits. You should always check your circuit over before applying power.</span> Figure @fig:lf356 shows a pin-out for the LF356 chip. Familiarize yourself with the layout. The following procedure will help you wire up a circuit accurately:
+## Integrator Application
 
-    1.  Draw a complete schematic in your lab notebook, including all ground and power connections, and all IC pin numbers. Try to layout your prototype so the parts are arranged in the same way as on the schematic, as far as possible.
+By now, you should be somewhat comfortable with experimental design and reporting of outcomes, especially with op-amps and voltage dividers. In this last section, you will design and characterize an integrator. Your starting point should be the integrator circuit you designed in the prelab. Here are some things to consider and items you may wish to include in your lab notebook:
 
-    2.  Measure all resistor values before putting them in the circuit. Make sure you are using the correct capacitors. Some capacitors indicate the capacitance directly, but small capacitors usually just have a number where 10 = 10 pF, 102 = 10x10^2^ pF = 1 nF, 103 = 10x10^3^ = 10 nF, 104 = 10x10^4^ pF = 100 nF. Also, see the important note below about polarized capacitors.
+-   The integration is over *time*.
 
-    3.  Adhere to a color code for wires. For example:
+-   Describe the circuit you are building and testing (design your integrator for the conditions detailed in the prelab).
 
-        -   <span style="color: black;">0V (ground) Black</span>
+-   Draw the schematic of the circuit with component values labeled (don't forget to measure the parallel resistance of your capacitor).
 
-        -   <span style="color: red;">+15V Red</span>
-
-        -   <span style="color: blue;">-15V Blue</span>
-
-2.  The op-amp chip sits across a groove in the prototyping board (see Figure @fig:pb). Before inserting a chip, ensure the pins are straight (using a needle-nose pliers or something similar). After insertion, check visually that no pin is broken or bent under the chip. To remove the chip, use a small screwdriver in the groove to pry it out.
-
-3.  You will have less trouble with spontaneous oscillations if the circuit layout is neat and compact, in particular the feedback path should be as short as possible to reduce unwanted capacitive coupling (see Figure @fig:pb). Also, wire around the chip rather than over it.
-4.  To help prevent spontaneous oscillations due to unintended coupling via the power supplies, use bypass capacitors to filter the power supply lines. A bypass capacitor between each power supply lead and ground will provide a miniature current "reservoir" that can quickly supply current when needed. This capacitor is normally in the range 1-10 µF. <span style="color: red;">Compact capacitors in this range are usually ***polarized***, meaning that one terminal must always be positive relative to the other. If you put a polarized capacitor in backwards, it will burn out.</span> You will probably hear a pop and smell something foul. Please don't do this. The negative side should have an arrow on the capacitor. Also, the positive side should have a longer lead but this is not a good identification method as the leads can (and should) be cut. Bypass capacitors should be placed close to the op-amp pins. If you are connecting the +15 V supply to ground, the negative capacitor lead is connected to ground and the positive lead is connected to +15 V. If you are connecting the -15 V supply to ground, the negative capacitor lead is connected to -15 V and the positive lead is connected to ground.
-
-# Inverting Amplifier Application - Frequency Dependent Gain
-
-1.  Build the inverting amplifier shown in Figure @fig:invamp, with $R_F = 100 ~k\Omega$ and $R = 10 ~k\Omega$. Measure $R$ and $R_F$ with the DMM before inserting them into the circuit board. Predict $G_0$ and $f_B$ from these measured values and the op-amps value of $f_T$ from the data sheet. (You should be able to review your prelab work here!)
-
-2.  Use the function generator to measure the low frequency gain. What frequency should you use to test the low frequency gain (i.e., what frequency should the signal be below?) Consider the gain-bandwidth product and how it relates to your circuit. What is the predicted gain for the frequency you chose? Measure the low frequency gain, $G_0$, by measuring $V_{in}$ and $V_{out}$ using the scope (as you did in Lab 4). Do your measurements agree with your predictions?
-
-3.  Update your prediction of the 3 dB frequency for your circuit. Include your calculations in your lab notebook. Now, determine the 3 dB frequency experimentally. Describe the procedure you followed to determine $f_B$. Does your measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
-
-4.  Using the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your op-amp. Does your measured value of $f_T$ agree with the one from the datasheet?
-
-5.  Measure the frequency dependence of your circuit. Measure the gain at every decade in frequency from 100 Hz to 1 MHz, with extra data points around the cutoff frequency. Should you use a 10X probe or coax cable to make your measurements? Explain your reasoning. Plot your measurements and predicted gain curve on the same plot. Where, if at all, is the simple model of the op-amp circuit not valid? Suggest possible model refinements and/or physical system refinements to get better agreement between the model predictions and measurements.
-
-# Summing Amplifier Application - Digital to Analog Conversion
-
-1.  Modify your basic inverting op-amp circuit to make it a summing amplifier as shown in Figure @fig:sumamp. Use the component values you determined in your prelab for the resistors (you may want to check with your instructor to be sure they make sense). Draw the schematic in your lab notebook and label all components. Measure the resistors before inserting them into your circuit and record the values.
-2.  Determine the transfer function for your exact component values. What is $V_{out}$ in terms of $V_1$, $V_2$, and $V_3$?
-3.  Confirm your summing amplifier is working by testing a couple of input voltages to compare to your predicted $V_{out}$ from you prelab. What is the best available measurement device to make these measurements? Why did you choose that device? Do these initial measurements agree with your predictions? 
-4.  Use your summing amplifier in "digital to analog conversion mode" to create integer output voltages from 0V to 7V from two input voltages (0V or 1V). Predict what set of input voltages is required to get each desired output voltage (*HINT: You did this in your prelab.)* Do your measurements agree with your predictions for all eight voltages? How accurately were you able to make integer values of output voltage? Describe a way to refine the physical system to more accurately create exact integer output voltages.
-
-
-# Integrator Application
-
-By now, you should be somewhat comfortable with experimental design and reporting of outcomes, especially with op-amps and voltage dividers. In this last section, you will design and characterize an integrator. Your starting point should be the integrator circuit you designed in the prelab. Items you likely wish to include in your lab notebook:
-
--   Describe the circuit you are building and testing. It is suggested that you use $R = 10 k\Omega$ and the necessary capacitor to obtain a time constant of 1 ms.
-
--   Draw the schematic of the circuit with component values labeled.
+-   Design for a parallel resistance of ~$800\text{ k}\Omega$ for the capacitor. Factor in the capacitor's measured parallel resistance for targeting this value.
 
 -   List your predictions / models. It is fine to start by using ideal models.
 
 -   How do you plan to test it? Be sure to use square, triangle, and sine waves at various frequencies.
 
--   The results of the tests with various inputs.
+-   Use sine waves to test the gain at $1\text{ kHz}$, $10\text{ kHz}$, $100\text{ kHz}$
 
 -   Do the results match your model? What didn't match?
 
--   How would you refine your model or physical system to get better agreement?
+-   How would you refine your model or physical system to get better agreement? *Hint:* We didn't consider the parallel resistance in the model. How could you modify analysis above to consider this resistance in your model? Can you correct any major discrepancies between your measured results and the original model?
 
-If you have an issue where the output seems to be at the rail voltage of the op-amp, you likely have a DC signal on the input (in addition to the AC signal). You should review the integrator theory section for ways to alleviate this.
+## The Differentiator Amplifier
+
+We did not cover this in the prelab, but as you may be able to guess, by swapping the input resistor and the feedback capacitor (to an input capacitor and a feedback resistor), instead of integrating the signal, you will differentiate the signal
+
+$$V_\text{out} = - RC \frac{dV_\text{in}}{dt}$$
+
+Differentiator amplifiers, like integrators are used to shape waveforms and in control systems. They can also be used in analog computing applications to solve differential equations (final project idea?).
+
+In this case, the input impedance is related to the impedance of the capacitor (it's the magnitude of the complex impedance)
+
+$$R'_i \approx \frac{1}{2\pi f C}$$
+
+This means to get at least $10\text{ k}\Omega$ of input impedance at $1\text{ kHz}$, the capacitance should be no more than $16\text{ nF}$.
+
+1.  Is your choice of capacitor sufficiently small for $1\text{ kHz}$? (i.e. will there be enough input impedance).
+
+2.  Swap your resistor and capacitor and test a triangle wave input at $1\text{ kHz}$ to confirm that this circuit takes the time derivative of the input.

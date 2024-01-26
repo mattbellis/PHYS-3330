@@ -1,0 +1,49 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+
+\begin{circuitikz}[american voltages]
+\ctikzset{bipoles/diode/height=.3, bipoles/diode/width=.3,}
+    
+    \draw (0,0) node[anchor=south] {5 V} to [short,-o] ++(0,0) to [short,-*] ++(0,-0.75) coordinate(t1) to [empty led] ++(0,-1.5) to ++(0,-0.25) to [R] ++(0,-1.5) to ++(0,-0.5) node[sground] {} 
+    
+    (t1) to ++(1,0) to [empty led] ++(0,-1.5) to ++(0,-0.25) to [R] ++(0,-1.5) to ++(0,-0.5) to ++(-1,0)
+    
+    (t1) to ++(-1,0) to [empty led] ++(0,-1.5) to ++(0,-0.25) to [R] ++(0,-1.5) to ++(0,-0.5) to [short,-*] ++(1,0)
+    ;
+
+    \draw (4,0) node[anchor=south] {5 V} to [short,-o] ++(0,0) to [short,-*] ++(0,-0.75) coordinate(t2) to [empty led] ++(0,-1.5) to ++(0,-0.25) to [R] ++(0,-2) node[sground] {} 
+    
+    (t2) to ++(1,0) to [empty led] ++(0,-1.5) to ++(-1,0)
+    
+    (t2) to ++(-1,0) to [empty led] ++(0,-1.5) to [short,-*] ++(1,0)
+    ;
+
+    \draw (-1.5,0.5) node{a)};
+
+    \draw (2.5,0.5) node{b)};
+
+    
+    
+    
+\end{circuitikz}
+
+
+
+\end{document}
+
+
+ 
