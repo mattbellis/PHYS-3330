@@ -8,7 +8,7 @@ author: [Department of Physics | University of Colorado Boulder]
 In this lab, we will get a sense of the capabilities of Arduino microcontroller boards. Microcontroller units (aka microcontrollers, MCUs, or μCs) are *computers on a chip*; they are programmable ICs (integrated circuit) that contain
 
 -  a central processing unit (CPU)
--  bolatile memory (RAM)
+-  volatile memory (RAM)
 -  non-volatile memory (ROM, EPROM, EEPROM, or flash) to store programs
 -  digital inputs and outputs
 -  analog inputs and outputs
