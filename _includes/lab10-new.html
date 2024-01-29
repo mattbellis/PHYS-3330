@@ -1027,13 +1027,12 @@ Colorado Boulder">
          used in ways to allow a user to interact with the system.</p>
          <h2 data-number="5.3" id="led-bank"><span
          class="header-section-number">5.3</span> 10-LED bank</h2>
-         <p>Now use the Arduinot to control the 10-LED bank
-         (MV57164)</p>
+         <p>Now use the Arduino to control the 10-LED bank (MV57164)</p>
          <ul>
          <li><p>Use 10 separate GPIO pins to control each LED in the
          bank.</p></li>
-         <li><p>Use a single resistor to current limit all 10
-         LEDs.</p></li>
+         <li><p>For each LED in the 10-LED bank, use a unique resistor
+         (so that would be 10 resistors in total).</p></li>
          <li><p>Calculate the current when all 10 are on and the current
          when just 1 LED is on.</p></li>
          <li><p>Don’t use pins 0 and 1, as these are reserved for direct

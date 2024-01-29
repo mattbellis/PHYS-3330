@@ -442,11 +442,11 @@ This just gives a taste of having a *user input* to control something. Potemiome
 
 ## 10-LED bank
 
-Now use the Arduinot to control the 10-LED bank (MV57164)
+Now use the Arduino to control the 10-LED bank (MV57164)
 
 -  Use 10 separate GPIO pins to control each LED in the bank.
 
--  Use a single resistor to current limit all 10 LEDs.
+-  For each LED in the 10-LED bank, use a unique resistor (so that would be 10 resistors in total).
 
 -  Calculate the current when all 10 are on and the current when just 1 LED is on.
 
