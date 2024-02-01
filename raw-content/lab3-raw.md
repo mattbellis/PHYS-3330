@@ -67,13 +67,17 @@ $$\left| T(f) \right| = \frac{1}{\sqrt{1 + (2\pi fRC)^{2}}}~ \mbox{(low-pass)}$$
 
 $$\left| T(f) \right| = \frac{2\pi fRC}{\sqrt{1 + (2\pi fRC)^{2}}} ~\mbox{(high-pass)}$${#eq:2}
 
-For both filters: $f_{C} = 1/{2\pi RC}\ $, where $f_{C}$ is the frequency at which the power drops by 3 dB (which means it is half of the maximum). In this lab, we are finding how efficiently signals of different frequencies are passed. This is called the frequency domain. Later, we will look at the time domain, where we see how the output changes as a function of time. In that context, low-pass and high-pass filters are called integrators and differentiators.
+For both filters: $f_{C} = 1/{2\pi RC} = 1/(2\pi RC) = \frac{1}{2\pi RC}\ $, where $f_{C}$ is the frequency at which the power drops by 3 dB (which means it is half of the maximum). 
+
+*Note: we've explicitly written $f_C$ in this way as we've seen some students see the expression $1/2\pi RC$ and read this as $\frac{1}{2} \pi RC$ or $\frac{\pi RC}{2}$. This is **incorrect**, and we wanted to use this opportunity to clear up this misconception. The expression form $1/2\pi RC$ is common in the [academic literature](https://en.wikipedia.org/wiki/Order_of_operations#Mixed_division_and_multiplication), so hopefully this aside provides you value in the future.*
+
+In this lab, we are finding how efficiently signals of different frequencies are passed. This is called the frequency domain. Later, we will look at the time domain, where we see how the output changes as a function of time. In that context, low-pass and high-pass filters are called integrators and differentiators.
 
 ## Parallel LCR band-pass filters
 
 The LCR circuit is described in Fischer-Cripps 3.12, H&H 1.22, and Steck 2.6 (note that the Steck example is for a *serial* LCR circuit so the concepts are the same but the details are different). As this is another generalized voltage divider,
 
-$$V_{out} = V_{in} = IZ_{2} = V_{in}\frac{Z_{2}}{Z_{1} + Z_{2}}$$ {#eq:3}
+$$V_{out} = IZ_{2} = V_{in}\frac{Z_{2}}{Z_{1} + Z_{2}}$$ {#eq:3}
 
 $$Z_{1} = R$${#eq:4}
 

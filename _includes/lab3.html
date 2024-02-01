@@ -255,15 +255,29 @@ Colorado Boulder">
          fRC}{\sqrt{1 + (2\pi fRC)^{2}}}
          ~\mbox{(high-pass)}\]</span><span class="eqnos-number">(2)</span></span></p>
          <p>For both filters: <span class="math inline">\(f_{C} =
-         1/{2\pi RC}\ \)</span>, where <span
-         class="math inline">\(f_{C}\)</span> is the frequency at which
-         the power drops by 3 dB (which means it is half of the
-         maximum). In this lab, we are finding how efficiently signals
-         of different frequencies are passed. This is called the
-         frequency domain. Later, we will look at the time domain, where
-         we see how the output changes as a function of time. In that
-         context, low-pass and high-pass filters are called integrators
-         and differentiators.</p>
+         1/{2\pi RC} = 1/(2\pi RC) = \frac{1}{2\pi RC}\ \)</span>, where
+         <span class="math inline">\(f_{C}\)</span> is the frequency at
+         which the power drops by 3 dB (which means it is half of the
+         maximum).</p>
+         <p><em>Note: we’ve explicitly written <span
+         class="math inline">\(f_C\)</span> in this way as we’ve seen
+         some students see the expression <span
+         class="math inline">\(1/2\pi RC\)</span> and read this as <span
+         class="math inline">\(\frac{1}{2} \pi RC\)</span> or <span
+         class="math inline">\(\frac{\pi RC}{2}\)</span>. This is
+         <strong>incorrect</strong>, and we wanted to use this
+         opportunity to clear up this misconception. The expression form
+         <span class="math inline">\(1/2\pi RC\)</span> is common in the
+         <a
+         href="https://en.wikipedia.org/wiki/Order_of_operations#Mixed_division_and_multiplication">academic
+         literature</a>, so hopefully this aside provides you value in
+         the future.</em></p>
+         <p>In this lab, we are finding how efficiently signals of
+         different frequencies are passed. This is called the frequency
+         domain. Later, we will look at the time domain, where we see
+         how the output changes as a function of time. In that context,
+         low-pass and high-pass filters are called integrators and
+         differentiators.</p>
          <h2 data-number="4.2" id="parallel-lcr-band-pass-filters"><span
          class="header-section-number">4.2</span> Parallel LCR band-pass
          filters</h2>
@@ -273,7 +287,7 @@ Colorado Boulder">
          the details are different). As this is another generalized
          voltage divider,</p>
          <p><span id="eq:3" class="eqnos"><span
-         class="math display">\[V_{out} = V_{in} = IZ_{2} =
+         class="math display">\[V_{out} = IZ_{2} =
          V_{in}\frac{Z_{2}}{Z_{1} +
          Z_{2}}\]</span><span class="eqnos-number">(3)</span></span>
          </p>
