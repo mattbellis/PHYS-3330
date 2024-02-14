@@ -1,7 +1,6 @@
 ---
 title: "PHYS 3330 - Home"
 layout: homelay
-excerpt: "Electronics Lab at University of Colorado Boulder."
 sitemap: false
 permalink: /
 ---
