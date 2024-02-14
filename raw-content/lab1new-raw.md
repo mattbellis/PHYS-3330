@@ -21,7 +21,7 @@ Today you will learn to use equipment that are useful for building and testing e
     -   This is an extremely versitile tool that can measure DC and AC voltages and currents, resistances, and sometimes more (depending on the model)
     -   It has a simple display that can only show single values such as a root-mean-square voltage of an AC signal.
 
--   Oscilliscope
+-   Oscilloscope
     -   This is a voltage meter that can "plot" voltage over time.
     -   This is a far more powerful tool for characterizing voltages than the DMM because you can characterize wave shapes and noise
 
@@ -35,7 +35,7 @@ In this course you will further develop essential laboratory skills. Not only is
 -->
 In this course, you will practice implementing models, testing those models, and refining them when necessary. Extremely accurate and nuanced models are often difficult to implement because they rely on more complicated and difficult to solve mathematics. Balancing accuracy and simplicity is a skill and takes practice.
 
-Today, you will learn how to
+In this guided lab, you will learn how to
 
 -   Tie (connect) your circuit to *Earth ground*,
 
@@ -43,7 +43,7 @@ Today, you will learn how to
 
 -   Operate the power supply in constant voltage and constant current modes,
 
--   Measure physical properties, such as voltages current, and resistance,
+-   Measure physical properties, such as voltage, current, and resistance,
 
 -   Trigger the oscilliscope,
 
@@ -54,7 +54,7 @@ Today, you will learn how to
 -->
 -   Use a micrometer to measure the diameter of a wire and estimate the resistivity,
 
--   Measure resistors using 2-terminal and with 4-terminal measurement methods,
+-   Measure resistors using 2-terminal and 4-terminal measurement methods,
 
 -   Develop familiarity with the model-based approach to experiment.
 
@@ -97,12 +97,11 @@ The lab notebook will be an important part of your grade because learning to kee
 
 **Common ground** - there are many types of ground and people often confuse them and use the word "ground" to refer to any one of them. A common ground is any part of a circuit which is (arbitrarily) referred to as $0\text{ V}$ and that all other voltages are measured with respect to.
 
-**Earth ground** - a common ground which is ultimately connected to the Earth. The 3<sup>rd</sup> prong on wall outlets is Earth ground. Under buildings large metal plates are buried and are connected to via a *ground wire*. Earth ground allows for certain kinds of short circuit failures (and lightning strikes) to have the power diverted away and avoid excessive damage to devices, buildings, and people.
+**Earth ground** - a common ground which is ultimately connected to the Earth. The 3<sup>rd</sup> round prong on wall outlets is Earth ground. Under buildings, large metal plates or rods are buried and are connected to via a *ground wire*. Earth ground allows for certain kinds of short circuit failures (and lightning strikes) to have the power diverted away and avoid excessive damage to devices, buildings, and people.
 
-**Chassis ground** - a common ground which is a metal frame around the circuit. If a device plugs into the wall with 3 prongs, it *should* have the chassis connect to **Earth ground**. Chassis grounding can help fascilitate the safety of Earth grounding, but also acts a Faraday cage, shielding the circuit from external EM waves.
+**Chassis ground** - a common ground which is a metal frame around the circuit. If a device plugs into the wall with 3 prongs, it *should* have the chassis connect to **Earth ground**. Chassis grounding can help facilitate the safety of Earth grounding, but also acts a Faraday cage, shielding the circuit from external EM waves.
 
 **Electrical Load** - a load refers to the impedance (in ohms) connected to the output of a power source. This could be a speaker, a light bulb, a microwave oven, or anything else which is drawing power from the circuit.
-[//]: # (a load refers to the impedance (in ohms) connected from the output of a power source to the circuit's ground.)
 
 **RMS (Root Mean Square)** - the square root of the average of a periodic function squared over one period $V_\text{RMS}=\sqrt{\langle V(t)^{2}\rangle}$. Example: For the function $V(t) = V_0\sin(\omega t)$, the RMS value is $V_\text{RMS} = \large\frac{V_0}{\sqrt{2}}$.
 
@@ -137,7 +136,7 @@ For today's lab, the following sections are useful and relevant readings
 4.  Horowitz and Hill 3<sup>rd</sup> ed. Sections 1.1 -- 1.2.2, 1.3 -- 1.3.1
     - Multimeters on p. 10
 
-5.  The following [manuals](/PHYS-3330/manuals-data-sheets), which can be found on Canvas:
+5.  The following manuals, which can be found on the [Data Sheets and Instruments Manuals](/PHYS-3330/manuals-data-sheets) page:
 
     -   Keysight EDU33210 Series Waveform Generator User Guide and Data Sheet
 
@@ -149,7 +148,7 @@ For today's lab, the following sections are useful and relevant readings
 
 # Lab Activities
 
-*IMPORTANT NOTE:* In this course's lab manuals, "ground" refers to Earth ground; other kinds of ground will be explictly differentiated.
+*IMPORTANT NOTE:* In this course's guided lab manuals, "ground" refers to Earth ground; other kinds of ground will be explicitly differentiated.
 
 ## Power Supply
 
@@ -159,11 +158,11 @@ Your DC power supply will provide your circuits with the required power. Setting
 
 We want two of the power supply channels to be set up such that the potential difference (voltage) set on one of the channels is ***<span style="color: red;">positive</span>*** **with respect to ground** and the other is ***<span style="color: blue;">negative</span>*** **with respect to ground**. 
 
-By default, all 3 outputs are ***FLOATING*** with respect to ground. You have to manually connect one of the terminals of an output to ground in order to "tie" it to ground. This gives you the flexibility to use the power supply in a number of different ways.
+By default, all 3 outputs are ***FLOATING*** with respect to ground. You have to manually connect one of the terminals of a channel's output to ground in order to "tie" it to ground. This gives you the flexibility to use the power supply in a number of different ways.
 
-When you set $5\text{ V}$ on channel 2, the power supply will make the $(+)$ terminal $5\text{ V}$ above the $(-)$ terminal. In order to get $5\text{ V}$ **relative to ground**, you will need to connect one of these terminals to the ground terminal.
+For example: when you set $5\text{ V}$ on Channel 2, the power supply will make the $(+)$ terminal $5\text{ V}$ above the $(-)$ terminal. In order to get $\pm 5\text{ V}$ **relative to ground**, you will need to connect one of these terminals to the ground terminal.
 
-1.  Get some <span style="color: green;">green</span> wire from the wire spool rack on the top of the blue tool cabinet to make these grounding connections. Connect channel 2's $(-)$ terminal to ground and channel 3's $(+)$ terminal to ground (see the green lines drawn on Figure @fig:ps). You can unscrew the input jacks on the power supply to expose a small hole where the jumper wires can be inserted.
+1.  Get some **<span style="color: green;">green</span>** wire from the wire spool rack on the top of the blue tool cabinet to make these grounding connections. Connect Channel 2's $(-)$ terminal to ground and Channel 3's $(+)$ terminal to ground (see the green lines drawn on Figure @fig:ps). You can unscrew the input jacks on the power supply to expose a small hole where the jumper wires can be inserted.
 <!--
 
 *** I hadn't considered this in detail, but now that you mention it: for single phase AC, hot is black, neutral is white, and ground is green. For DC red is positive, and black is negative: which I believe implies just 2 voltages. Since we use 3 voltages DC, I think the best way to comply with other standards would be for
@@ -183,11 +182,11 @@ Black - DC below ground
 [//]: # (We harp on that black is ground in this course - I'm not certain why that was historically done here and I'm certainly on board to converting to conventional standards (including shifting red to white and blue to black {I might have that backwords}). But, we should change all the proto board connections to be consistent? Buy a bunch of green banana cables? I'm genuinely in favor of this and it will require revisions to subsequent lab guides.)
 -->
 
-2. We will set the outputs of channel 2 and 3 to $15\text{ V}$. Predict what the voltages will be at each of the 4 output terminals (whenever someone refers to a voltage at a location, they always mean "relative to ground").
+2. We will set the outputs of Channel 2 and 3 to $15\text{ V}$ in an upcoming step. Predict what the voltages will be at each of the 4 output terminals (whenever someone refers to a voltage at a location, they always mean "relative to ground").
 
 3. Using banana cables, how would you connect your DMM to the power supply to measure the voltage at these terminals? Sketch it in your notebook (*Hint:* don't use the minigrabbers since there's no sensible place to grab with them).
 
-4.  Set the voltages and turn on the outputs of channels 2 and 3. Set up your DMM to measure the voltages at each terminal. Do your results match your predictions?
+4.  Set the voltages and turn on the outputs of Channels 2 and 3. Set up your DMM to measure the voltages at each terminal. Do your results match your predictions?
 
 ![Keysight EDU36311A DC power supply connections](../resources/lab1fig/EDU36311A.png){#fig:ps width="20cm"}
 
@@ -197,7 +196,7 @@ Black - DC below ground
 
 $$\Delta V = IR$$
 
-But as the load $R$ changes, either the voltage or the current will have to adjust. A *voltage source* supplies a *constant voltage* (the current changes), and a *current source supplies a *constant current* (the voltage changes). Mathematically:
+But as the load $R$ changes, either the voltage or the current will have to adjust. A *voltage source* supplies a *constant voltage* (the current changes), and a *current source* supplies a *constant current* (the voltage changes). Mathematically:
 
 -   Voltage source: $I(R) = \frac{V}{R}$, where $V$ is a constant.
 
@@ -205,7 +204,7 @@ But as the load $R$ changes, either the voltage or the current will have to adju
 
 The power supply can be used either as a voltage or current source. When it is a voltage source, it will display **CV** for *constant voltage* in the top right corner of the channel's display, and when it is a current source, it will display **CC** for *constant current*. The power supply will automatically switch between these modes depending on the voltage and current limits you set as well as the load attached.
 
-1.  With no load attached, what mode is the channel in (CV or CC)? How can you quantify the value of the load $R$?
+1.  With no load attached, what mode is each channel in (CV or CC)? How can you quantify the value of the load $R$?
 <!--
 *** The point of this problem is to get them to think of the load as infinity. I think it's fine if they're confused by the question as long as they ask for help.
 
@@ -228,10 +227,7 @@ The goal of this part of the lab is to be able to use an oscilloscope (aka scope
 There are a few precautions to observe when operating the oscilloscope:
 
 -   Avoid overheating the instrument. Do not block ventilation of the interior.
-
 -   Do not apply more than 300 V to any input terminal.
-
--   Avoid serious or fatal injury from electrical shock. Do not remove the case to expose the 120 V mains.
 
 Otherwise, the instruments are robust and cannot be damaged by wrong settings. So, try whatever you're curious about and measure and document what happens.
 
@@ -257,15 +253,15 @@ The front panel of the scope is organized in a very particular way:
 
 1.  Turn on the scope and once it's booted up, press the **Default Setup** button to reset all the user settings. The default setting is to have the reported voltages be 10x what is actually measured (we'll get to why this is the default later).
 
-2.  Press the yellow 1 button to open channel 1's menu, and set the *Probe Setup* setting to 1x (see Figure @fig:probe-setup). Repeat this for the other 3 menus.
+2.  Press the yellow 1 button to open Channel 1's menu, and set the *Probe Setup* setting to 1x (see Figure @fig:probe-setup). Repeat this for the other 3 channels.
 
-3.  Turn off channels 2, 3 and 4. To turn a channel off (so you don't see it on the screen), you can press the menu button for that channel to open the menu, and then again to disable the channel.
+3.  Turn off Channels 2, 3 and 4. To turn a channel off (so you don't see it on the screen), you can press the menu button for that channel to open the menu, and then again to disable the channel.
 
 ![Set *Probe Setup* to 1x.](../resources/lab1fig/channel-menu.jpg){#fig:probe-setup}
 
 ### Measuring a DC voltage on a scope
 
-1.  Use a BNC cable and a BNC to double banana adapter to connect channel 1 of the scope to the power supply. <!--Measure the voltage on scope using the cursors. Try exploring the different knobs and menus on the scope to make the measurement. Refer to the appendix listed at the end of this document if you get stuck.-->
+1.  Use a BNC cable and a BNC to double banana adapter to connect Channel 1 of the scope to the power supply. <!--Measure the voltage on scope using the cursors. Try exploring the different knobs and menus on the scope to make the measurement. Refer to the appendix listed at the end of this document if you get stuck.-->
 
 2.  Apply a voltage from your power supply and confirm that this is what you see on the oscilliscope. The yellow triangle on the left of the screen indicates where $0\text{ V}$ is (this can be moved with the yellow vertical postion knob). *Hint:* moving the zero position to the bottom of the screen allows you to choose a smaller voltage scale (zooming in) so that you have more resolution on the screen.
     1.   Try to estimate the voltage by counting the number of divisions and using the reported vertical scale (voltage / division) in the bottom left of the screen (see Figure @fig:scope-screen).
@@ -274,7 +270,7 @@ The front panel of the scope is organized in a very particular way:
 
 ***IMPORTANT NOTES:*** 
 
--   Even though this button is called "measure," the real measurement is already being done to display the line on the screen.
+-   Even though this button is called "Measure," the real measurement is already being done to display the line on the screen.
 
 -   The scope stores the real measurements of voltage and time in an internal log.
 
@@ -292,7 +288,7 @@ The front panel of the scope is organized in a very particular way:
 ![The oscilliscope screen.](../resources/lab1fig/scope-screen.png){#fig:scope-screen}
 
 
-## Creating an AC waveform using a function generator and measuring it on a scope
+## Creating an AC waveform using a function generator
 
 The Keysight EDU33212A function generator can produce a number of different waveforms over the frequencies from $10^{-6}\text{ Hz}$ to $20\text{ MHz}$. The output amplitude can be varied between $1\text{ mV}$ and $20\text{ V}$ peak-to-peak with an output impedance of $50\ \Omega$.
 
@@ -306,11 +302,11 @@ The Keysight EDU33212A function generator can produce a number of different wave
 
 In order to view waves on the oscilliscope, it needs to redraw the wave in the right place at the right time. "Triggering" is the process of stabilizing a repeating signal on the screen.
 
-1.  Use a BNC connector to connect the output of the function generator to the input of channel 1 on the scope.
+1.  Use a BNC connector to connect the output of the function generator to the input of Channel 1 on the scope.
 
 2.  Set the *voltage / div* and *time / div* so that the sine wave appears nice and big on the screen. Remember that the period is the inverse of the frequency. Always consider the frequency you are using and adjust the scope's horizontal scale appropriately to avoid aliasing! Talk with an instructor to learn more about aliasing.
 
-3.  The **Trigger** options are in the top-right corner of the front panel. Open the *Trigger Menu*. You should see that the Channel the scope is triggering on is Channel 1.
+3.  The **Trigger** options are in the top-right corner of the front panel. Open the *Trigger Menu*. You should see that the channel the scope is triggering on is Channel 1.
 
 4.  There are 3 options that you will change most regularly. Paraphrase these in your lab notebook for future reference.
 
@@ -348,7 +344,7 @@ In order to view waves on the oscilliscope, it needs to redraw the wave in the r
 
 11. Change the trigger channel to Channel 4. Adjust the trigger level. Does the trigger level matter? Why?
 
-12. Play with the waveform (from channel 1) on the function generator. What happens to the **Sync / Trigger out** when you change the
+12. Play with the waveform (from Channel 1) on the function generator. What happens to the **Sync / Trigger out** when you change
 
     - the amplitude,
 
@@ -378,9 +374,9 @@ In order to view waves on the oscilliscope, it needs to redraw the wave in the r
 
 **The multimeter is a useful device to make quick and easy measurements of all sorts of things.**
 
-1.  The first thing you'll notice is the dial on the on the DMM. This allows you to select what kind of measurement you'd like to make. There is also a yellow button which allows you to cycle through different measurement settings on each of these dial positions. What is the difference between the voltage channel with the straight line over the $\~{\text{V}}$ and the squiggly line over over the $\overline{\text{V}}$?
+1.  The first thing you'll notice is the dial on the on the DMM. This allows you to select what kind of measurement you'd like to make. There is also a yellow button which allows you to cycle through different measurement settings on each of these dial positions. What is the difference between the voltage channel with the straight line over the $\overline{\text{V}}$ and the squiggly line over the $\widetilde{\text{V}}$?
 
-2.  The second thing you'll notice is the single **COM** port and separte ports for current measurements and for everything else (voltage, resistance, etc.). Why would there be separate ports for current?
+2.  The second thing you'll notice is the single **COM** port and separate ports for current measurements and for everything else (voltage, resistance, etc.). Why would there be separate ports for current?
 
 <!--To measure various quantities with the DMM, you must set the dial on the DMM to the correct setting that you want to measure. The Fluke 115 DMM that is in your toolbox at your workbench has three banana jack input ports at the bottom. Based on the quantity that you want to measure (voltage, current, resistance, etc.), you need to be sure that you've installed the leads into the appropriate input ports (NOTE: one of the leads will always be connected to the **COM** port).-->
 
@@ -388,7 +384,7 @@ In order to view waves on the oscilliscope, it needs to redraw the wave in the r
 
 4.  Measure the voltage across the resistor. Why is it $0\text{ V}$?
 
-5.  Connect the resistor to the power supply and set the output to $10\text{ V}$. Use the DMM to measure the voltage across the resistor. Does the DMM agree with the display on power supply? Sketch a circuit diagram representing the arrangment of the supply, resistor, and DMM.
+5.  Connect the resistor to the power supply and set the output to $10\text{ V}$. Use the DMM to measure the voltage across the resistor. Does the DMM agree with the display on power supply? Sketch a circuit diagram representing the arrangement of the supply, resistor, and DMM.
 
 <!-- 
 *** I was thinking of letting them flounder a bit here. The "correct" way I had in mind would be with the mini-grabbers. I think letting them try to be creative so that they can be told why it's a bad idea to jerry-rig connections.
@@ -396,7 +392,7 @@ In order to view waves on the oscilliscope, it needs to redraw the wave in the r
 [//]: # (How do you intend them to do this? Should we provide some direction given they'll have no clue where to start?)
 -->
 
-6.  Switch the DMM to the $\~V$ mode. What does the voltage read now? Does this meet your expectation?
+6.  Switch the DMM to the $\overline{\text{V}}$ mode. What does the voltage read now? Does this meet your expectation?
 
 7.  To measure the current you will have to rearrange the circuit and change the DMM configuration. Set up the DMM properly so that current flows *through* the correct port of the DMM. Does the current measurement match the display on the power supply? Sketch a circuit diagram representing the arrangment of the supply, resistor, and DMM.
 <!--
@@ -405,7 +401,7 @@ In order to view waves on the oscilliscope, it needs to redraw the wave in the r
 [//]: # (Same as above, do we instruct them?)
 -->
 
-8.  Switch the DMM to the $\~A$ mode. What does the current read now? Does this meet your expectation?
+8.  Switch the DMM to the $\text{A}$ mode. What does the current read now? Does this meet your expectation?
 
 <!-- 
 *** I have been working across a few computers and sometimes it seems to not sync. I don't remember what I did, so I will take another stab at it!
@@ -419,7 +415,7 @@ In order to view waves on the oscilliscope, it needs to redraw the wave in the r
 5.  Remember in the future that this is the usable frequency range for the AC setting of the multimeter. Record this frequency in your lab notebook for future reference.
 -->
 
-9.  It should be clear by now that, on the DMM, ~ is a symbol for AC and -- <!-- should render as a long dash --> is a symbol for DC. Use the $\~V$ mode to measure the AC voltage from the function generator. Set the function generator to $2\text{ V}_\text{pp}$ at $1\text{ kHz}$. Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how [“Amplitude” and “Peak-to-Peak”](https://en.wikipedia.org/wiki/Amplitude) are related. Is the measurement from the DMM consistent with your expectation?
+9.  It should be clear by now that, on the DMM, ~ is a symbol for AC and -- <!-- should render as a long dash --> is a symbol for DC. Use the $\widetilde{\text{V}}$ mode to measure the AC voltage from the function generator. Set the function generator to $2\text{ V}_\text{pp}$ at $1\text{ kHz}$. Note: the DMM displays the RMS amplitude of the waveform. See Definitions at the beginning of the guide for an explanation of RMS. You will also need to consider how [“Amplitude” and “Peak-to-Peak”](https://en.wikipedia.org/wiki/Amplitude) are related. Is the measurement from the DMM consistent with your expectation?
 
 ## Measuring Small Resistances (4-Terminal Measurement)
 
@@ -449,9 +445,9 @@ The way the DMM makes a resistance measurement is by delivering a very small, ca
 
 ### Compare the two measurement techniques
 
-1.  The ohmmeter in the DMM works by supplying a calibrated current and measuring the potential difference between the outputs. How is this measurement different than the 4-terminal approach you built?
+1. The ohmmeter in the DMM works by supplying a calibrated current and measuring the potential difference between the outputs. How is this measurement different than the 4-terminal approach you built?
 
-*Hint:* consider where the current is flowing and what resistances are involved with each measurement technique. It is usually helpful to draw a diagram including all the resistances (including the wires and the contacts).
+   *Hint:* consider where the current is flowing and what resistances are involved with each measurement technique. It is usually helpful to draw a diagram including all the resistances (including the wires and the contacts).
 
 2.  Which method is more accurate for measuring small resistances based on your explanation above?
 
