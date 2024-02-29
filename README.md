@@ -2,7 +2,7 @@
 
 The website is built off of the main branch. 
 
-To contribute to the site, you should make changes to the dev branch. You can then create a pull request on the dev branch for review.
+To contribute to the site, you should make a branch. You can then work/commit to your new branch. When finished, create a pull request for review.
 
 When you commit, please create helpful messages/descriptions (i.e. "Update Lab1 Prelab").
 
