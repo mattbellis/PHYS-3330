@@ -30,6 +30,8 @@ incremental: false
 # Exclude
 exclude:
   - /raw-content
+  - /.github
+  - /ta-notes
 
 # Markdown Processing
 kramdown:
