@@ -6,7 +6,7 @@ To contribute to the site, you should make a branch. You can then work in/commit
 
 When you commit, please create helpful messages/descriptions (i.e. "Update Lab1 Prelab").
 
-Since GitHub pages will only build off of the main branch, you will need to test the website locally. This can be done by following [this](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) guide. 
+Since GitHub pages will only build off of the main branch, you will need to host the website locally, and develop in your new branch. This can be done by following [this](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/testing-your-github-pages-site-locally-with-jekyll) guide. 
 
 ## Editing Lab Guides
 
