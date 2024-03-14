@@ -25,5 +25,5 @@ permalink: /lab-guides
 
 [Lab 9 - Digital Electronics: Logic and clocks](/PHYS-3330/lab-guides/lab9)
 
-[Lab 10 - Digital Electronics: ARDUINO](/PHYS-3330/lab-guides/lab10)
+[Lab 10 - Digital Electronics: ARDUINO](/PHYS-3330/lab-guides/lab10new)
 
