@@ -317,7 +317,7 @@ Since it is likely that a circuit you build will involve an op-amp, and your exp
 
 3. What is the current through the coil in the on state?
 
-## Opto-isalated Relay Switch
+## Opto-isoated Relay Switch
 
 ![Relay control with an optocoupler isolating the Arduino and an NPN transistor used as a switch.](../resources/lab10fig/relay-control-circuit2.png){#fig:opto-isolated-relay}
 
@@ -375,7 +375,7 @@ List at least one question you have about the lab activity.
       - [Instructables Arduino projects.](https://www.instructables.com/Arduino-Projects/)
       - Your search engine of choice (look out for stackexchange discussions: these are typically extremely helpful).
 
-3. Open Cicuits has lots of nice relevant teardowns:
+3. Open Circuits has lots of nice relevant teardowns:
    -  76--83, 86--88 to see inside the ICs and the LED
    -  96 to see inside the optocoupler
    -  105--135 to see inside electromechanical objects (all of these are things that could be controlled by an Arduino project)
@@ -490,7 +490,7 @@ will print this to the serial monitor:
 
 ## Opto-isolated Relay Control
 
-Now you will build the circuit in @fig:opto-isolated-relay with the values of resistors you calculated in the prelab (you may want to corroborate with your peers or check with an instructor to confirm your calculations make sense).
+Now you will build the circuit in Figure @fig:opto-isolated-relay with the values of resistors you calculated in the prelab (you may want to corroborate with your peers or check with an instructor to confirm your calculations make sense).
 
 -  The datasheet for the optocoupler (SFH615) has incorrect information on the orientation of the DIP chip. Figure @fig:opto-dip shows the correct orientation with a notch cut out of the left side of the DIP chip.
 
