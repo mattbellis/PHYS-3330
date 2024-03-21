@@ -59,6 +59,8 @@ permalink: /manuals-data-sheets
 
 [IRF710BPF MOSFET Data Sheet](resources/manuals-and-data-sheets/ds-IRF710-MOSFET.pdf)
 
+[J104D2C12VDC.20S Relay Data Sheet](resources/manuals-and-data-sheets/ds-J104D2C12VDC20S-relay.pdf)
+
 [LF356 OP-Amp Data Sheet](resources/manuals-and-data-sheets/ds-LF356-OP-Amp.pdf)
 
 [MV53164-QT Bargraph Display Data Sheet](resources/manuals-and-data-sheets/ds-MV53164-QT-Bargraph-Display.pdf)
@@ -70,3 +72,6 @@ permalink: /manuals-data-sheets
 [PICmicro x14 Architecture](resources/manuals-and-data-sheets/man-PICx14-Architecture.pdf)
 
 [PICmicro x14 Instruction Set](resources/manuals-and-data-sheets/man-PICx14-Instruction-Set.pdf)
+
+[SFH615AGR Optocoupler Data Sheet](resources/manuals-and-data-sheets/ds-SFH615AGR-Optocoupler.pdf)
+
