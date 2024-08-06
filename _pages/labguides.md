@@ -19,7 +19,7 @@ permalink: /lab-guides
 
 [Lab 6 - Optical Communication Link](/PHYS-3330/lab-guides/lab6)
 
-[Lab 7 - Field-Effect Transistors: MOSFETS](/PHYS-3330/lab-guides/lab7)
+[Lab 7 - Transistors](/PHYS-3330/lab-guides/lab7)
 
 [Lab 8 - Bipolar Junction Transistors](/PHYS-3330/lab-guides/lab8)
 
