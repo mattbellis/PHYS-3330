@@ -7,6 +7,7 @@
 
 \documentclass[border=0.2cm]{standalone}
 \usepackage{circuitikz}
+\usepackage{amsmath}
 
 \standaloneenv{circuitikz}
 \begin{document}
@@ -14,10 +15,10 @@
 
     \begin{circuitikz}[american voltages]
     \draw (0,0)
-        to [V, invert, l=$V_{in}$] (0,4)
-        to [rmeter, t=A] ++(2,0) to [R, l=$33~\Omega$] ++(0,-2) coordinate(FB) 
-        to [D,l=$1N4002$] ++(0,-2) to ++(-1,0) node[ground]{} to (0,0);
-    \draw (FB) to [short, *-] ++(0,0) to [short, -o] ++(1,0) node[anchor = west]{$V_{out}$}  
+        to [V, invert, l=$V_\text{in}$] (0,4)
+        to [rmeter, t=A] ++(2,0) to [R, l=$33\ \Omega$] ++(0,-2) coordinate(FB) 
+        to [D,l=1N4002] ++(0,-2) to ++(-1,0) node[ground]{} to (0,0);
+    \draw (FB) to [short, *-] ++(0,0) to [short, -o] ++(1,0) node[anchor = west]{$V_\text{out}$}  
     ;
     \end{circuitikz}
 

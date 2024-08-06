@@ -1,0 +1,29 @@
+% Process for creating PNG:
+% 1 - Compile this document
+% 2 - Download PDF
+% 3 - Upload to https://cloudconvert.com/pdf-to-png
+% 4 - Set Pixel Density to 600
+% 5 - Download PNG file and upload to Overleaf
+
+\documentclass[border=0.2cm]{standalone}
+\usepackage{circuitikz}
+\usepackage{amsmath}
+
+\standaloneenv{circuitikz}
+\begin{document}
+
+
+    \begin{circuitikz}[american voltages]
+    \draw (0,0) node[npn](npn) {NPN}
+    (npn.B) to [short,-o] ++(-.25,0)
+    (npn.E) to [short,-*] ++(0,-.25) coordinate(bot) to [short,-o] ++(-1.1,0) (bot) to [short,-o] ++(1.2,0)
+    (npn.C) to ++(0,.25) to ++(1.2,0) to [short,-o] ++(0,-1);
+    \node at (-1,-.5) {$V_{BE}$};
+    \node at (1.2,-.5) {$V_{CE}$};
+    \end{circuitikz}
+
+
+\end{document}
+
+
+ 
