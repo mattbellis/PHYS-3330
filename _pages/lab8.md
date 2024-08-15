@@ -1,5 +1,5 @@
 ---
-title: "PHYS 3330 - Bipolar Junction Transistors"
+title: "PHYS 3330 - BJT Amplifier"
 layout: lab-guide
 permalink: /lab-guides/lab8
 ---
