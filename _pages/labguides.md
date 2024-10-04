@@ -21,7 +21,7 @@ permalink: /lab-guides
 
 [Lab 7 - Transistors](/PHYS-3330/lab-guides/lab7)
 
-[Lab 8 - Bipolar Junction Transistors](/PHYS-3330/lab-guides/lab8)
+[Lab 8 - Discrete Amplifier](/PHYS-3330/lab-guides/lab8)
 
 [Lab 9 - Digital Electronics: Logic and clocks](/PHYS-3330/lab-guides/lab9)
 
