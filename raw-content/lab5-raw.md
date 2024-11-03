@@ -93,7 +93,7 @@ This simple swapping of the input and ground changes a few properties of the amp
 
 The reduced input impedance has potential issues; however, there is one advantage of the inverting amplifier. Because one of the inputs is held at a constant voltage (ground), the voltage at the inputs barely fluctuates which puts less strain on the op-amp resulting in better performance in reproducing the output waveform.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 Applying the voltage golden rule, it should be clear that the voltage at both inputs is $0\text{ V}$. Even though the voltage at $V_-$ is zero, it is called a **virtual ground**, instead of **ground**, because there is no actual path to *Earth ground*, so it does not serve the full function of ground.
 
@@ -128,7 +128,7 @@ These equations can be manipulated to give
 
 $$G_0=\frac{V_\text{out}}{V_\text{in}}=\frac{-AR_F}{R_F+(1+A)R}=-\frac{A(1-B)}{1+AB}$$
 
-### Prelab Question {#2.1}
+### Prelab Question {#sec:2.1}
 
 Find the closed-loop gain in the limit as $A$ approaches infinity (open-loop gain golden rule); i.e.
 
@@ -136,11 +136,11 @@ $$\lim_{A\rightarrow\infty}G_0$$
 
 *Hint:* L'Hôpital's rule may be helpful.
 
-### Prelab Question {#2.2}
+### Prelab Question {#sec:2.2}
 
 Instead, start with the assumption that the voltage golden rule applies. What is the voltage at $V_-$ then? Derive expressions for $V_\text{out}$ and $V_\text{in}$ using this value for $V_-$ and Kircchoff's voltage rule. Does this lead to the same result for $G_0$ you found in question @sec:2.1? (You may need to do a little rearranging to show they are the same)
 
-### Prelab Question {#2.3}
+### Prelab Question {#sec:2.3}
 
 Find $G_0$ (assume $A\rightarrow\infty$) for
 
@@ -161,7 +161,7 @@ $$R_{o}' = \frac{R_{o}}{(1 + AB)}$$
 
 For the input impedance, as long as the magnitude of the closed-loop gain is significantly less than the open-loop gain, $R_i'=R$. Typically in practice, $R\lesssim 100\text{ k}\Omega$. This is far less than typical op-amp's bare input impedance (the LF356 has $10^{12}\ \Omega$.. that's a **teraohm**!).
 
-### Prelab Question {#3.1}
+### Prelab Question {#sec:3.1}
 
 Calculate $R_i'$ (using $A=2\cdot 10^{5}$) using
 
@@ -171,7 +171,7 @@ Calculate $R_i'$ (using $A=2\cdot 10^{5}$) using
 
 Is it reasonable to just say that $R_i'=R$?
 
-### Prelab Question {#3.2}
+### Prelab Question {#sec:3.2}
 
 ![Both the output impedance of the function generator and the input impedance of the oscilliscope may impact the circuit in significant ways](../resources/lab5fig/invamp-meas-in.png){#fig:invamp-meas-in width="12cm"}
 
@@ -185,11 +185,11 @@ If $V_\text{in}$ is coming from the function generator, there is a $50\ \Omega$ 
 
 *Hint 2:* Consider the voltage division between the output impedance (of the function generator) and the input impedance (of the amplifier).
 
-### Prelab Question {#3.3}
+### Prelab Question {#sec:3.3}
 
 Between the two options for resistor values, do you think it is it more reasonable to choose the lower resistances, or the higher resistances for the same gain? Why?
 
-### Prelab Question {#3.4}
+### Prelab Question {#sec:3.4}
 
 In LTspice, make an inverting amplifier. You will need to power the op-amp (Use the "Net Label" tool to avoid clutter).
 
@@ -233,7 +233,7 @@ so for both inverting and non-inverting amplifiers
 
 $$\text{GBW}=f_T = \frac{f_B}{B}= A_\text{VOL}f_0$$
 
-### Prelab Question {#4.1}
+### Prelab Question {#sec:4.1}
 
 What is $f_B$ when $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$?
 
@@ -259,7 +259,7 @@ $$V_\text{out} = 0-R_FI_F =  -R_F\sum_{i=1}^n \frac{V_i}{R_i}$$
 
 *Note:* If you have the same input source, like the function generator, going into multiple inputs, it will have to supply current to all of these. Sources of current have current limits, and splitting the current into too many outputs can make it quickly reach its current limit.
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 In the lab, you will use a summing amplifier to build a digital-to-analog converter (DAC). This is one of the many incredibly useful applications of the summing amplifier. In order to design the circuit, you will need to have some understanding of binary numbers (in digital circuits, all numbers are in binary). In binary there are only two states: 0 and 1 (aka **false** and **true** or **off** and **on**). In digital circuits, the 1 state is usually $5\text{ V}$ (but $3.3\text{ V}$ is also common).
 
@@ -281,7 +281,7 @@ You will build a 3-bit DAC; this means that it will be able to convert 3 digit b
 
 **Make a table** with all 8 possible 3-bit binary numbers on the left and the corresponding decimal equivalents on the right. For example: 000 in binary is 0 in decimal. If you need more of a refresher on binary or counting in binary, [this Wikipedia entry](https://en.wikipedia.org/wiki/Binary_number#Counting_in_binary) will hopefully be useful.
 
-### Prelab Question {#5.2}
+### Prelab Question {#sec:5.2}
 
 It makes the most sense to make $0\text{ V}$ represent binary 0. However, the choice of voltage to represent binary 1 is mostly arbitrary, but $5\text{ V}$ is the most commonly used.
 
@@ -323,7 +323,7 @@ $$V_\text{out}(t) = \frac{-1}{RC}\int_0^t V_\text{in}(t')\; dt'$$
 
 This relationship between $V_\text{in}$ and $V_\text{out}$ is why this circuit is called an integrator.
 
-<!--### Prelab Question {#6.1}
+<!--### Prelab Question {#sec:6.1}
 
 The sine wave analysis is the easiest because the integral of a sine wave is a sine wave (remember that sine and cosine are the same thing with phase shifts). If $V_\text{in}$ has an amplitude $V_0$ and frequency $f$, then
 
@@ -339,11 +339,11 @@ Evaluate the integral to determine
 
 4.  Use the peak-to-peak amplitude of $V_\text{in}$ and $V_\text{out}$ to determine the gain of the circuit for a square wave input. Express this in terms of $f$ instead of $T$.
 
-### Prelab Question {#6.2}
+### Prelab Question {#sec:6.2}
 
 We just found that the gain not only depends on the RC time constant, but also the frequency of the input. What RC time constant would give a gain of 1 at $1\text{ kHz}$ for the square wave? -->
 
-### Prelab Question {#6.1}
+### Prelab Question {#sec:6.1}
 
 Sketch (or plot in Mathematica or Python) the predicted waveform for the output when the input is a
 
@@ -384,7 +384,7 @@ The complex exponential in the gain has a phase of $\phi=-\frac{\pi}{2}$; this m
 Notice that the gain falls off as a function of frequency. This makes it act like a low-pass filter. Integrators are often used as low-pass filters, but there are better ways to make a proper low-pass filter with op-amps. If you're interested in reading more about the technical difference of a proper op-amp low-pass filter and an integrator, here's a
 [technical paper](https://ieeexplore.ieee.org/document/4313498) (that you can access as long as you're on the university network) and a [forum discussion](https://stackoverflow.com/questions/37067763/what-is-the-difference-between-an-integrator-and-a-low-pass-filter) on the topic.
 
-### Prelab Question {#7.1}
+### Prelab Question {#sec:7.1}
 
 Calculate an RC time constant that results in a gain of
 
@@ -413,7 +413,7 @@ A real capacitor can be accurately modeled as an ideal capacitor with resistance
 ![When you measure your capacitor, make sure the PARAMETER is set to $C+R$ and the Equiv Circuit is set to PARALLEL](../resources/lab5fig/cap-parallel-resistance.png){#fig:LCR width="15cm"}
 
 
-### Prelab Question {#8.1}
+### Prelab Question {#sec:8.1}
 
 Design an integrator that would have
 
@@ -422,7 +422,7 @@ Design an integrator that would have
 
 ## Lab activities
 
-### Prelab Question {#9.1}
+### Prelab Question {#sec:9.1}
 
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 

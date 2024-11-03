@@ -50,7 +50,7 @@ $$I_E\approx I_C$$
 
 There are a lot of great resources for learning more about how BJTs work. [Here is a video](https://www.youtube.com/watch?v=7ukDKVHnac4) discussing more of the physics.
 
-### Question {#1.1}
+### Question {#sec:1.1}
 
 The current gain for a BJT depends on a lot of factors. Look for the [datasheet](/PHYS-3330/manuals-data-sheets) for the 2N3904 BJT and find the section for current gain under "On Characteristics" in the tables. Notice that it gives current gains for different conditions.
 
@@ -68,7 +68,7 @@ In order to push current into the base of an NPN, it must be biased with voltage
 
 Typically the $V_{CE}$ is some power source that is powering your circuit, and $V_{BE}$ could be some signal that controls the collector current. However, due to the diode like nature of the base-emitter junction, in order to get current to flow into the base, this junction needs to be forward biased. This means that $I_B>0$ only if $V_{BE} > V_{th}$ where $V_{th}$ is a threshold voltage. For silicon BJTs, $V_{th}\approx 0.6\text{ V}$ (just like for silicon diodes).
 
-### Question {#2.1}
+### Question {#sec:2.1}
 
 Consider the following circuit
 
@@ -90,7 +90,7 @@ For the following, assume $V_\text{in} > V_{th}$:
 
 6. Write $V_{CE}$ as a function of $R_C$, $R_B$, $V_\text{in}$, $V_{th}$, and $V_\text{supply}$.
 
-### Question {#2.2}
+### Question {#sec:2.2}
 
 Make the circuit above in LTspice with $V_\text{supply}=9\text{ V}$, $R_B=1\text{ k}\Omega$, and $R_C=8\ \Omega$. We can consider this circuit being used to control the current through an $8\ \Omega$ load as a function of $V_\text{in}$. To create a BJT, in the components menu, search "NPN" (or "PNP" if that's the kind of BJT you want).
 
@@ -116,7 +116,7 @@ This will configure a voltage sweep from $0\text{ V}$ to $5\text{ V}$ for the in
 
 4. Come up with a method to determine the current gain of this transistor. You can do this in any way you wish, and may configure a new simulation to do so. Please record your methodology and results.
 
-### Question {#2.3}
+### Question {#sec:2.3}
 
 In the same simulation, remove the $8\ \Omega$ resistor so that the $9\text{ V}$ is directly applied to the collector. Fix the input voltage to $1\text{ V}$ and change the DC sweep to sweep the supply voltage $V_\text{supply}$ from $0\text{ V}$ to $9\text{ V}$ in $0.005\text{ V}$ increments.
 
@@ -136,7 +136,8 @@ In the same simulation, remove the $8\ \Omega$ resistor so that the $9\text{ V}$
 
 4. You can load the data into python with the following code (assuming your files are in a directory called "simulated_data" and the file names are such. You can name your data the same as below or modify the code to accomadate your naming scheme)
 
-```python
+```
+
 import numpy as np
 from pathlib import Path
 
@@ -151,13 +152,14 @@ data_3V = np.loadtxt(data_dir / "ICvsVCE-data-3V.txt", skiprows=1)
 data_4V = np.loadtxt(data_dir / "ICvsVCE-data-4V.txt", skiprows=1)
 
 data_5V = np.loadtxt(data_dir / "ICvsVCE-data-5V.txt", skiprows=1)
+
 ```
 
 The `data_xV` values will be numpy arrays with as many rows as data points in your data and 2 columns (the input voltage, and the corresponding collector currents). You can "slice" the collector voltages for each array with `data_xV[:, 0]` and you can "slice" the collector currents with `data_xV[:, 1]`. Plot all 5 of these on the same $I_C$ vs $V_{CE}$ plot with a legend labeling the $V_\text{in}$ of each curve.
 
 The plot you just created is the classic way people represent the $IV$-characteristics of a BJT.
 
-### Question {#2.4}
+### Question {#sec:2.4}
 
 Now re-consider the $8\ \Omega$ load ($R_C$ in the circuit). When a collector current flows through the resistor, voltage will drop across it and $V_{CE}$ will then be less than the supply voltage $V_\text{supply}$. The voltage drop across $R_C$ is
 
@@ -171,7 +173,7 @@ This can be rearranged to be a function $I_C(V_{CE})$ that we can plot on your g
 
 3. One way to predict the behavior of a BJT in this configuration is to pick the correct curve on the plot corresponding to the input voltage, then find where it intersects the load line. This intersection will represent the collector current and  collector-emitter voltage for this particular choice of $V_\text{supply}$ and $R_C$. Use your plot to record $I_C$ for each choice of $V_\text{in}$.
 
-4. Compare the $I_C$ vs $V_\text{in}$ from the graph to the equations you derived in Question @2.1 (you should use these equations to calculate $I_C$ for each $V_\text{in}$).
+4. Compare the $I_C$ vs $V_\text{in}$ from the graph to the equations you derived in Question @sec:2.1 (you should use these equations to calculate $I_C$ for each $V_\text{in}$).
 
 ## BJT Switch
 
@@ -179,7 +181,7 @@ A common application for a transistor is as a voltage controlled switch. Conside
 
 The BJT switch is a classic way to operate the on/off state of a device that requires more power than the control voltages or currents that can be provided by a controller. Often these switches are designed in a way so that the collector current $I_C$ saturates at the desired operating current for running the device.
 
-### Question {#3.1}
+### Question {#sec:3.1}
 
 In the following steps, you will design a BJT switch to operate an electromagnet with a series resistance of $600\ \Omega$ (this is $R_C$). The recommended operating voltage for the electromagnet is $12\text{ V}$.
 
@@ -207,7 +209,7 @@ The circuit above is an example of a push-pull amplifier. When $V_\text{in}>V_{t
 
 <!--Horowitz and Hill 2.15 details push-pull amplifiers, the crossover distortion, and how to design around it. This section could prove valuable for your final project.-->
 
-### Question {#4.1}
+### Question {#sec:4.1}
 
 Build the circuit shown in @fig:push-pull-basic in LTspice with 
 
@@ -245,7 +247,7 @@ The rest of the circuit is a push-pull amplifier that uses an op-amp with negati
 
 Since the push-pull amplifier (with the second op-amp) has a voltage gain of 1, the total voltage gain of the circuit will be the voltage gain of the non-inverting amplifier. The advantage of this circuit over a non-inverting amplifier followed by just an op-amp buffer, is that the amount of current the BJTs can supply is much greater than the LF356.
 
-### Question {#5.1}
+### Question {#sec:5.1}
 
 Build the circuit shown in Figure @fig:push-pull in LTspice with
 
@@ -303,7 +305,7 @@ FETS are similar to BJTs. The table below relates the two:
 
 A voltage from the gate to the source (gate-source voltage $V_{GS}$) controls current from drain to source (drain current $I_D$). For an N-channel, a positive $V_{GS}$ drives a positive $I_D$ (current flows from drain to source), and for a P-channel, a negative $V_{GS}$ drives a negative $I_D$ (current flows from source to drain).
 
-### Question {#6.1}
+### Question {#sec:6.1}
 
 State whether a BJT, MOSFET, or JFET is most ideal for the following applications:
 
@@ -319,13 +321,13 @@ MOSFETs can operate in three distinct regions. The first region is where the gat
 
 ![Typical output characteristics of a MOSFET. These vary greatly between different types of MOSFETs. Always check the data sheet for your exact part.](../resources/lab8fig/mosfetchar.png){#fig:mosfetchar width="15cm"}
 
-### Question {#7.1}
+### Question {#sec:7.1}
 
 Create a simple n-channel MOSFET circuit with the source grounded and individual voltages applied at the gate and the drain (see the figure below). You can create a n-channel MOSFET by searching "nmos" in the components menu.
 
 ![The circuit to simulate in LTspice. $V_{DS}$ is labeled V_DS and $V_{GS}$ is labeled V_GS](../resources/lab7fig/mostfet-SPICE.png){#fig:mosfetspice width="6cm"}
 
-Configure a linear DC sweep on $V_{DS}$ from $0$ to $10\text{ V}$ with an increment of $0.1\text{ V}$ for the following values of $V_{GS}$, measure the current into the drain $(I_D)$ and export the data as you did for the BJT in question @2.3 (so that you can import it into your Jupyter Notebook)
+Configure a linear DC sweep on $V_{DS}$ from $0$ to $10\text{ V}$ with an increment of $0.1\text{ V}$ for the following values of $V_{GS}$, measure the current into the drain $(I_D)$ and export the data as you did for the BJT in question @sec:2.3 (so that you can import it into your Jupyter Notebook)
 
 - $V_{GS} = 2\text{ V}$
 
@@ -339,13 +341,15 @@ Configure a linear DC sweep on $V_{DS}$ from $0$ to $10\text{ V}$ with an increm
 
 2. Does your plot generally resemble the one shown in Figure @fig:mosfetchar (if not, identify the mistake and resolve it)?
 
-### Question {#7.2}
+### Question {#sec:7.2}
 
 1. Identify the $I_D$ in the saturation region for each $V_{GS}$ (where $I_D$ is constant with respect to $V_{DS}$). Record this data as NumPy arrays. Record $I_D$ in **MICROAMPS** $\mu\text{A}$.
 
-```Python
+```
+
 v_gs = np.array([2, 4, 6, 8])
 i_d = np.array([i0, i1, i2, i3])
+
 ```
 
 We will fit this data to
@@ -354,7 +358,8 @@ $$I_D = k(V_{GS}-V_{th})^2$$
 
 The threshold voltage for this simulated MOSFET is $0\text{ V}$. (You can convince yourself of this by doing a DC sweep of $V_{GS}$ at a fixed $V_{DS}$). We can then define the fitting function as
 
-```Python
+```
+
 def fitting_function_mosfet(V_GS, k):
    """
    :param V_GS: array of gate-source voltages
@@ -362,21 +367,25 @@ def fitting_function_mosfet(V_GS, k):
    :return: drain current
    """
    return k * V_GS ** 2
+
 ```
 
 2. Fit the data to the fitting function to determine the constant $k$. You can utilize the `curve_fit` function ([Documentation can be found here](https://docs.scipy.org/doc/scipy/reference/generated/scipy.optimize.curve_fit.html)). You can access this function with `from scipy.optimize import curve_fit`.
 
-```Python
+```
+
 initial_guess = (1,) # the initial guess for fitting parameters.
 
 popt, pcov = curve_fit(fitting_function_mosfet, v_gs, i_d, initial_guess)
+
 ```
 
 If there are $n$ fitting parameters, then the `initial_guess` needs to be a tuple (or list) with $n$ elements. `popt` will be a list with elements representing the results of the fit (so it will be $n$-long), and `pcov` is a covariance matrix (of size $n\times n$). The estimate of the error can be determined with `perr = np.sqrt(np.diag(pcov))`.
 
 3. Fit the data and plot the data with the fit
 
-```Python
+```
+
 fig, ax = plt.subplots(1, 1, figsize=(4, 3))
 
 ax.scatter(v_gs, i_d, color='k', s=100)
@@ -392,6 +401,7 @@ loc = (0, 850)
 ax.annotate(f"$(k={popt[0]:.4f} \pm {perr[0]:.4f})$", loc)
 
 fig.tight_layout()
+
 ```
 
 4. The annotation will print your fitting result on the plot. However, it's missing units. Determine the units of $k$ and include these units in the annotation, also adjust the number of significant figures (by editing the `4` in `:.4f`) so that the digits displayed are correct. As a refresher, there should only be one significant digit in the error (unless it starts with 1, then you can take two), and the number of digits past the decimal should match in both the parameter and the error.
@@ -408,7 +418,7 @@ $$V_{GS} = \frac{R_{GS}}{R_p}V_\text{supply}$$
 
 The potentiometer then simply sets the gate-source voltage, giving you a way of controlling it through a dial. The load (with resistance $R_L$) will have current $I_D$ run through it depending on the dial position. This will lead to a voltage drop, such that the voltage at the drain (and therefore $V_{DS}$) is less than $V_\text{supply}$. This idea should be familiar from the BJT analysis you did.
 
-### Question {#7.3}
+### Question {#sec:7.3}
 
 A load line (on the $I_D$ vs $V_{DS}$ plot) can be used to determine the behavior of this circuit. Recall that the intersection of the load line and a curve will determine $I_D$ for each choice of $V_{GS}$. The plot is specific to each individual MOSFET design, so you would use the plots supplied by the manufacturer in a datasheet in general; however, we will consider the MOSFET in your simulation since you already have that loaded into your Jupyter Notebook.
 
@@ -420,13 +430,13 @@ A load line (on the $I_D$ vs $V_{DS}$ plot) can be used to determine the behavio
 
 4. What value of $V_{GS}$ get you closest to $0.5\text{ mA}$?
 
-### Question {#7.4}
+### Question {#sec:7.4}
 
 With a supply voltage of $9\text{ V}$ and a load of $10\text{ k}\Omega$, the MOSFET operated in the linear region or the saturation region depending on the choice of $V_{GS}$; however, for a load of $R_L=100\ \Omega$, the MOSFET will operate in the saturation region for all four choices of $V_{GS}$.
 
 1. Show that the MOSFET is in the saturation region for all the $V_{GS}$ on your graph by plotting the new load line with $V_\text{supply}=9\text{ V}$ and $R_L = 100\ \Omega$ (on a new plot). Adjust the axes with `ax.ylim()` to show the plot nicely.
 
-2. Looking at your plot, is it consistent with the $I_D$ vs $V_{GS}$ plot you made in Question @7.2\?
+2. Looking at your plot, is it consistent with the $I_D$ vs $V_{GS}$ plot you made in Question @sec:7.2\?
 
 Since we are in the saturation region, the value of $k$ you determined from your fit can be used to determine the value of $V_{GS}$ needed to get a particular current $I_D$ through the load.
 
@@ -448,7 +458,7 @@ A great final project idea is to build an op-amp from discrete transistors! This
 
 - [Op-amp Cookbook](https://www.nutsvolts.com/magazine/article/op-amp-cookbook)
 
-### Question {#8.1}
+### Question {#sec:8.1}
 
 Read through the first article. What are the 3 primary stages of an op-amp? Describe the function of each one.
 

@@ -75,7 +75,7 @@ The transistor you will use in this lab is the 2N3904, which is an NPN. The data
 
 The 2N3904 and 2N3906 have high current gain $(h_{FE})$, however, they are unable to deliver large amounts of current. This is fine, because the speakers we will use in this are very small and can only handle about half a Watt of power. If you want to power a larger speaker at higher power (louder), you will need transistors that can handle more current: often referred to as \"power transistors.\" Power transistors often have much smaller current gain than other transistors, and sometimes they must be connected as pairs to increase the total gain (you can search for \"Darlington connection\" in Horowitz and Hill). We have a complementary pair of power transistors in the lab: 2N2222 (NPN) and 2N2907 (PNP). These may be useful for a project. It is typically easy to distinguish normal BJTs from power BJTs since power BJTs have ways of mounting heat-sink hardware to help dissipate the heat (a hole for a bolt to go through and a metallic surface for good thermal conductivity).
 
-### Prelab Question {#9.1}
+### Prelab Question {#sec:9.1}
 
 1. What is the maximum $h_{FE}$ value at 10 mA collector current? See the 2N3904 data sheet posted in the [Datasheets and Instrument Manuals page](/PHYS-3330/manuals-data-sheets). For any calculation that requires $h_{FE}$ throughout the prelab, you can use this value.
 
@@ -95,7 +95,7 @@ We will analyze this circuit using the current amplifier model:
 
 - The base-emitter junction acts like a diode.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 1. When $V_\text{in}>V_{th}$, what will the base-emitter voltage $V_{BE}$ be?
 
@@ -103,13 +103,13 @@ We will analyze this circuit using the current amplifier model:
 
 3. Describe the relationship between $V_\text{in}$ and $V_\text{out}$, and explain why this a follower.
 
-### Prelab Question {#1.2}
+### Prelab Question {#sec:1.2}
 
 1. The emitter current can be determined by using Ohm's law from the emitter to ground. In the circuit drawn, the impedance from the emitter to ground is just the emitter resistor $R_E$. Use $V_\text{out}$ to write an expression for $I_E$.
 
 2. Explain why we can assume $I_E=I_C$?
 
-### Prelab Question {#1.3}
+### Prelab Question {#sec:1.3}
 
 The input impedance is defined by
 
@@ -119,7 +119,7 @@ where $I_\text{in}$ is how much current the input draws at an applied voltage of
 
 1. Write $I_\text{in}$ with respect to $I_C$ instead of $I_B$.
 
-2. Use your expression for $I_C$ from Question @1.2\.2 to show
+2. Use your expression for $I_C$ from Question @sec:1.2\.2 to show
 
 $$R_\text{in} = \frac{h_{FE}R_EV_\text{in}}{V_\text{in}-V_{th}}$$
 
@@ -135,7 +135,7 @@ $$R_\text{in}^\text{EF} \approx \frac{h_{FE} R_ER_L}{R_E+R_L}\ \text{ (Load para
 
 <!--If there is a biasing network in place, then the input impedance of the *circuit* will be $r_{in}$ in parallel with the base bias resistors.-->
 
-### Prelab Question {#1.4}
+### Prelab Question {#sec:1.4}
 
 As we've seen in other labs, output impedance $R_\text{out}$ causes a voltage drop when output current flows so that not all of the predicted (or internal) voltage makes it to the load:
 
@@ -189,7 +189,7 @@ $$G = -\frac{R_C}{R_E}$$
 
 Notice how none of this depended on the specific value of $h_{FE}$. This is a good thing because $h_{FE}$ is not a constant, so the amplifier can act stable under various conditions.
 
-### Prelab Question {#2.1}
+### Prelab Question {#sec:2.1}
 
 1. When $V_\text{in}<V_{th}$, is the transistor active?
 
@@ -197,7 +197,7 @@ Notice how none of this depended on the specific value of $h_{FE}$. This is a go
 
 3. When $V_\text{in}<V_{th}$, what is $V_\text{out}$?
 
-### Prelab Question {#2.2}
+### Prelab Question {#sec:2.2}
 
 Consider the common emitter amplifier with 
 
@@ -211,9 +211,9 @@ Consider the common emitter amplifier with
 
 Consider an input signal that is a sine wave that oscillates around $0\text{ V}$ with an amplitude of $4\text{ V}$ ($8\text{ V}$ peak-to-peak)
 
-2. Sketch a plot (you can use Python) with $V_\text{in}$ and $V_\text{out}$. *Hint:* consider your solutions in Question @2.1\.
+2. Sketch a plot (you can use Python) with $V_\text{in}$ and $V_\text{out}$. *Hint:* consider your solutions in Question @sec:2.1\.
 
-### Prelab Question {#2.3}
+### Prelab Question {#sec:2.3}
 
 We found that the output will clip at a maximum of $V_\text{max} = V_\text{supply}$ when $V_\text{in}<V_{th}$. Now consider the clipping for the minimum value of $V_\text{out}$; i.e. $V_\text{min}$. The equation for the output voltage can be rewritten
 
@@ -229,7 +229,7 @@ $$V_C\ge V_E$$
 
 3. What is the maximum input voltage that corresponds to this minimum output voltage (recall this is an inverting amplifier)? *Hint:* Express the equation above under the $V_C=V_E$ condition in terms of $V_E$ instead of $V_C$ and then express it in terms of $V_B$. *Recall:* $V_E=V_B-V_{th}$.
 
-### Prelab Question {#2.4}
+### Prelab Question {#sec:2.4}
 
 The input impedance of the common emitter amplifier is the same as the emitter follower, since we can follow the same logic and steps to arrive at the solution. The output impedance, however, is different because the output is connected to the collector instead of the emitter. \"Looking back at\" the collector from the output sees two paths, one through the collector resistor $R_C$, and one through the collector itself (which is a very large impedance). These two impedances can be thought of as in parallel.
 
@@ -239,7 +239,7 @@ The input impedance of the common emitter amplifier is the same as the emitter f
 
 ## Quiescent Voltage and Biasing a Transistor Amplifier
 
-Your plot in Question @2.2 shows that the common emitter amplifier is unable to effectively amplify signals that oscillate around $0\text{ V}$ due to the fact that the output signal gets clipped at $V_\text{supply}$. One solution to this issue is to 'bias' the input of the amplifier so that the input oscillates around a DC offset instead of around $0\text{ V}$. You found above that when the input voltage is less than the threshold voltage, $V_\text{out}=V_\text{supply}$. We can define the *quiescent voltage* as:
+Your plot in Question @sec:2.2 shows that the common emitter amplifier is unable to effectively amplify signals that oscillate around $0\text{ V}$ due to the fact that the output signal gets clipped at $V_\text{supply}$. One solution to this issue is to 'bias' the input of the amplifier so that the input oscillates around a DC offset instead of around $0\text{ V}$. You found above that when the input voltage is less than the threshold voltage, $V_\text{out}=V_\text{supply}$. We can define the *quiescent voltage* as:
 
 **DEFINITION: Quiescent voltage**: $V_Q$ - the DC voltage at an output terminal with reference to ground when no signal is applied. *Note:* quiescent means 'at rest'.
 
@@ -267,7 +267,7 @@ Assuming $I_C=I_E$, the collector voltage, and therefore the quiescent voltage, 
 
 $$V_Q = V_C = V_\text{supply} - I_CR_C =  \bigg(1-\frac{R_CR_2}{R_E(R_1+R_2)}\bigg)V_\text{supply} + \frac{R_C}{R_E}V_{th}$$
 
-### Prelab Question {#4.1}
+### Prelab Question {#sec:4.1}
 
 The circuit you will build will use a supply voltage of $V_\text{supply}=15\text{ V}$ and collector and emitter resistors of $R_C=2.74\text{ k}\Omega$ and $R_E = 1\text{ k}\Omega$ (you already determined the AC voltage gain for these resistance values). We need to set a quiescent voltage that is roughly half way between the two clipping voltages.
 
@@ -279,7 +279,7 @@ The circuit you will build will use a supply voltage of $V_\text{supply}=15\text
 
 4. What is the 'static state' collector current $I_C$?
 
-### Prelab Question {#4.2}
+### Prelab Question {#sec:4.2}
 
 In the next section, we will detail how to connect the input to this circuit. However, it is important to consider the effects the biasing network will have on the input impedance. The input voltage will now have two new paths, leading to three total paths: (1) through $R_1$, (2) through $R_2$, and (3) into the base.
 
@@ -325,7 +325,7 @@ To access just the AC component, you can simply use the **AC coupling** feature 
 
 This circuit above is a \"complete\" common emitter amplifier. The resistors $R_C$ and $R_E$ set the AC voltage gain. The resistors $R_1$ and $R_2$ bias the transistor and set the quiescent voltage $V_Q$. The input coupling capacitor $C_\text{in}$ allows you to safely add $v_\text{in}$ (the AC component of $V_\text{in}$) to the voltage set by the biasing network formed by $R_1$ and $R_2$. The decoupling capacitor provides a power reservoir and offsets the effects of the power supply's series inductance. And finally the output coupling capacitor $C_\text{out}$ blocks the DC offset (quiescent voltage) while passing the AC signal to the load $R_L$.
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 Notice that the output coupling capacitor and the load form a RC filter (like the ones we studied in lab 3).
 
@@ -335,9 +335,9 @@ Notice that the output coupling capacitor and the load form a RC filter (like th
 
 3. Explain, from the perspective of the filter, how the coupling capacitor \"blocks\" the quiescent voltage from getting to the load.
 
-### Prelab Question {#5.2}
+### Prelab Question {#sec:5.2}
 
-Draw @fig:emittera-full in your lab notebook with the values used in the prelab. For example $V_\text{supply}=15\text{ V}$, $R_C=2.74\text{ k}\Omega$, $R_E=1\text{ k}\Omega$, and $R_2=10\text{ k}\Omega$. You found $R_1$ in Question @3.1\. For the capacitors, the exact value isn't critical for the function of the amplifier, but $47\ \mu\text{F}$ is a good value for the decoupling capacitor and $C_\text{out}$, and $220\text{ nF}$ is a good value for $C_\text{in}$. The load does not need a label because we will consider different loads in the lab.
+Draw @fig:emittera-full in your lab notebook with the values used in the prelab. For example $V_\text{supply}=15\text{ V}$, $R_C=2.74\text{ k}\Omega$, $R_E=1\text{ k}\Omega$, and $R_2=10\text{ k}\Omega$. You found $R_1$ in Question @sec:4.1\. For the capacitors, the exact value isn't critical for the function of the amplifier, but $47\ \mu\text{F}$ is a good value for the decoupling capacitor and $C_\text{out}$, and $220\text{ nF}$ is a good value for $C_\text{in}$. The load does not need a label because we will consider different loads in the lab.
 
 *These will be the values you will use in the lab and to solve the remaining problems in the prelab.*
 
@@ -372,7 +372,7 @@ which shows that the common emitter gain is not infinite when the external emitt
 
 ***For the following questions, use the component values in the circuit diagram you made.***
 
-### Prelab Question {#8.1}
+### Prelab Question {#sec:8.1}
 
 1. Calculate the input impedance $R_\text{in}$ of the circuit you designed. Don't forget to consider the fact that the biasing resistors are in parallel with common emitter amplifier's intrinsic input impedance.
 
@@ -380,7 +380,7 @@ which shows that the common emitter gain is not infinite when the external emitt
 
 3. Calculate the fraction of the original amplitude obtained when a $470\ \Omega$ load is attached. HINT: the $470\ \Omega$ resistor is in series with the output impedance of the circuit to ground. The output capacitor only blocks the DC component; it passes the AC signal just fine.
 
-### Prelab Question {#8.2}
+### Prelab Question {#sec:8.2}
 
 1. A standard non-amplified speaker has an input impedance of $8\ \Omega$. If your computer headphone jack had an output voltage at $1\text{ V}$ unloaded and an output impedance of $8\ \Omega$, what would the loaded voltage be if you hooked it up to the $8\ \Omega$ speaker?
 
@@ -394,11 +394,11 @@ As you found above, the output impedance of the amplifier you designed is quite 
 
 ![A two stage amplifier. The gain is set by the common emitter amplifier (first stage), and the output impedance is improved by the emitter follower (second stage).](../resources/lab8fig/two-stage.png){#fig:two-staged width="14cm"}
 
-### Prelab Question {#6.1}
+### Prelab Question {#sec:6.1}
 
 Draw the dual stage amplifier in your lab notebook and label all the components. The first stage will have all the same values as the amplifier you designed above. Use $820\ \Omega$ for the emitter resistor of the second stage.
 
-### Prelab Question {#6.2}
+### Prelab Question {#sec:6.2}
 
 1. What is the value of the input impedance of the second stage?
 
@@ -410,7 +410,7 @@ Draw the dual stage amplifier in your lab notebook and label all the components.
 
 ## Lab activities
 
-### Prelab Question {#10.1}
+### Prelab Question {#sec:10.1}
 
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 

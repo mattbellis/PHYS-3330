@@ -110,7 +110,7 @@ Figure @fig:555timer shows the circuit for generating a clock with the 555 and s
 
 ## Lab activities
 
-### Prelab Question {#10.1}
+### Prelab Question {#sec:10.1}
 
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 

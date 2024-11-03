@@ -43,7 +43,7 @@ Our breadboards have custom built headers (see Figure @fig:breadheader) to allow
 
 The far left and far right screw terminals are connected to switches and potentiometers (three terminal, variable resistors). The mid-left screw terminal is connected to banana ports, and the mid-right screw terminal is connected to the inner conductors of BNC ports.
 
-### Prelab Question {#0.1}
+### Prelab Question {#sec:0.1}
 
 ![Chassis ground.](../resources/lab2fig/cground.png){#fig:chassis-ground width="4cm"}
 
@@ -57,23 +57,23 @@ Which screw terminal (there's just one) should be used to access the outer condu
 
 An ideal voltage source (no internal resistance) drives current around the loop of  two resistors shown in Figure {@fig:ideal-vd} (all three circuits in this figure are equivalent!). Each resistor has a voltage drop across it due to the current running through them, so the voltage difference labeled $V_\text{out}$ will be less than the voltage applied to the whole circuit.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 What is the current $I$ through each resistor? Represent these with respect to $V_\text{in}$, $R_1$ and $R_2$. *Hint:* the resistors are in series, so the current through them is the same.
 
-### Prelab Question {#1.2}
+### Prelab Question {#sec:1.2}
 
 What is the voltage across $R_2$? Express this with respect to the current. Explain why this is $V_\text{out}$.
 
-### Prelab Question {#1.3}
+### Prelab Question {#sec:1.3}
 
 Express $V_\text{out}$ with respect to $V_\text{in}$ and the two resistors *Hint:* this expression should not depend on the current.
 
 Make a Python function that computes $V_\text{out}$ that takes $V_\text{in}$, $R_1$, and $R_2$ as inputs. You will likely find this function useful throughout the semester.
 
-### Prelab Question {#1.4}
+### Prelab Question {#sec:1.4}
 
-Build the circuit shown in Figure {@fig:ideal-vd} in LTspice. Use these values
+Build the circuit shown in Figure @fig:ideal-vd in LTspice. Use these values
 
 - $V_\text{in} = 10\text{ V}$
 
@@ -93,15 +93,15 @@ T = \frac{V_\text{out}}{V_\text{in}}
 
 A ***voltage divider's*** output will always be less than the input, so the transfer function will range between $0$ and $1$.
 
-### Prelab Question {#2.1}
+### Prelab Question {#sec:2.1}
 
-Write down the equation for the transfer function of the ideal voltage divider. *Hint:* use the result of problem {@1.3}. This should only depend on the values of the two resistors, and should be unitless.
+Write down the equation for the transfer function of the ideal voltage divider. *Hint:* use the result of problem @sec:1.3. This should only depend on the values of the two resistors, and should be unitless.
 
-### Prelab Question {#2.2}
+### Prelab Question {#sec:2.2}
 
 For $R_1 = 2\text{ k}\Omega$ and $R_2 = 1\text{ k}\Omega$, what is the value of the transfer function?
 
-### Prelab Question {#2.3}
+### Prelab Question {#sec:2.3}
 
 For a $V_\text{in}$ of $10\text{ V}$, what will $V_\text{out}$ be (using the resistance values above)?
 
@@ -117,11 +117,11 @@ When the power source with output impedance $R_o$ drives the load with input imp
 
 $$T = \frac{V_\text{supply}^\text{(ext)}}{V_\text{supply}^\text{(ext)}} = \frac{R_i}{R_o+R_i}$$
 
-### Prelab Question {#3.1}
+### Prelab Question {#sec:3.1}
 
-Confirm that your solution for the transfer function from problem {@2.1} is consistent with the transfer function shown above. If it is not, resolve the discrepancy.
+Confirm that your solution for the transfer function from problem @sec:2.1 is consistent with the transfer function shown above. If it is not, resolve the discrepancy.
 
-### Prelab Question {#3.2}
+### Prelab Question {#sec:3.2}
 
 The power delivered to the circuit or the load is determined by
 
@@ -133,11 +133,11 @@ For a given $R_o$, find the $R_i$ that maximizes the power delivered.
 
 $$\frac{\partial P}{\partial R_i} = 0$$
 
-### Prelab Question {#3.3}
+### Prelab Question {#sec:3.3}
 
 Impedance matching is the process of matching load impedances with a power source's output impedance. For high frequency signals, impedance matching is very important, but it is also commonly done because, for a given $R_o$, matching the input impedance to the same value will allow for the maximum amount of power to be delivered to the circuit. Is this consistent with your result for the $R_i$ that gives maximum power? If not, revise your calculation. 
 
-### Prelab Question {#3.4}
+### Prelab Question {#sec:3.4}
 
 Plot $P$ vs $R_i$ from $R_i=0\ \Omega$ to $R_i=100\ \Omega$ using $V_\text{supply}^\text{(int)}=1\text{ V}$ with the following values of $R_o$ on the same plot (use a legend to label the different plots for each $R_o$):
 
@@ -149,18 +149,21 @@ Notice that, even though the curves peak at $R_i=R_o$, that decreasing $R_o$ sti
 
 Here is some sample code for plotting. You can use `%matplotlib widget` to allow you to interact with the inline plot. Otherwise, the default should be `%matplotlib inline`, and this might be preferable to you. To use the widget you will need to install have [ipympl](https://matplotlib.org/ipympl/) installed. This can be done with `pip install ipympl` in your Anaconda prompt with your environment activated.
 
-```python
+```
+
 import numpy as np
 import matplotlib.pylab as plt
 import matplotlib
 %matplotlib widget
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
+
 ```
 
 The above imports the necessary libraries and then configures matplotlib to look nice with LaTeX.
 
-```python
+```
+
 def power(r_o, r_i, v):
     # your code here
     return # result
@@ -185,35 +188,36 @@ ax.legend(title="Output Impedance")
 ax.grid(linestyle="dotted")
 fig.tight_layout()
 fig.savefig('impedance_matching_plot.png', dpi=600, bbox_inches='tight')
+
 ```
 
 ## Voltage Divider with Non-ideal Power Supply
 
 ![A real power source has an output impedance $R_o$ that can impact a voltage divider circuit](../resources/lab2fig/nonideal-vd.png){#fig:nonideal-vd height="7.5cm"}
 
-Now consider a real voltage source (modeled with a resistor in series with the voltage as seen in Figure {@fig:nonideal-vd}) powering a voltage divider. The following questions will explore the potential impact the output impedance can have on a voltage divider circuit.
+Now consider a real voltage source (modeled with a resistor in series with the voltage as seen in Figure @fig:nonideal-vd) powering a voltage divider. The following questions will explore the potential impact the output impedance can have on a voltage divider circuit.
 
-### Prelab Question {#4.1}
+### Prelab Question {#sec:4.1}
 
 What is the input impedance of the voltage divider circuit? *Hint:* the input impedance would be the resistance that you would measure from $V_\text{supply}^\text{(ext)}$ to ground.
 
-### Prelab Question {#4.2}
+### Prelab Question {#sec:4.2}
 
 The $V_\text{in}$ of the voltage divider will be the $V_\text{supply}^\text{(ext)}$ from the power supply (see figure {@fig:input-output-impedance}); i.e. $V_\text{in}=V_\text{supply}^\text{(ext)}$. Express $V_\text{in}$ as a function of $V_\text{supply}^\text{(int)}$ and the resistor values. *Hint:* the results from the input/output impedance section will be helpful here.
 
-### Prelab Question {#4.3}
+### Prelab Question {#sec:4.3}
 
-Using the voltage divider equation (you found this in problem {@1.3}), express $V_\text{out}$ of the circuit with respect to $V_\text{supply}^\text{(int)}$ (of the voltage supply) and the resistor values.
+Using the voltage divider equation (you found this in problem {@sec:1.3}), express $V_\text{out}$ of the circuit with respect to $V_\text{supply}^\text{(int)}$ (of the voltage supply) and the resistor values.
 
 Write a Python function that computes the output voltage of a voltage divider with a non-ideal voltage supply that takes the following inputs: $V_\text{supply}^\text{(int)}$, $R_o$, $R_1$, and $R_2$.
 
-### Prelab Question {#4.7}
+### Prelab Question {#sec:4.7}
 
 - For an ideal voltage divider $(R_o=0\text{ V})$, having $R_1=100\ \Omega$ and $R_2=50\ \Omega$ or $R_1=2\text{ k}\Omega$ and $R_2=1\text{ k}\Omega$ or $R_1=200\text{ k}\Omega$ and $R_2=100\text{ k}\Omega$ will have the same transfer function. Predict $V_\text{out}$ when the ideal voltage source is set to $10\text{ V}$
 
 - Build all 3 of these circuits side by side in an LTspice simulation (use a unique voltage source for each circuit). Screen shot your circuit and confirm that the simulation agrees with your calculations.
 
-### Prelab Question {#4.8}
+### Prelab Question {#sec:4.8}
 
 - What is $V_\text{out}$ for each circuit above if instead of using ideal voltage sources, they each had an output impedance of $R_o=50\ \Omega$?
     - $R_1=100\ \Omega\text{ and }R_2=50\ \Omega$
@@ -224,7 +228,7 @@ Write a Python function that computes the output voltage of a voltage divider wi
 
 - Re-run the simulation and confirm your calculations are correct.
 
-### Prelab Question {#4.9}
+### Prelab Question {#sec:4.9}
 
 - Compare the output voltage of the voltage divider with an ideal voltage source vs a non ideal voltage source.
 - How does the input impedance of the voltage divider $(R_1+R_2)$ impact the non-ideal circuit compared to the ideal circuit?
@@ -252,7 +256,7 @@ As a final step, the $R_1$ can be distributed in the denominator to put this in 
 
 $$T = \frac{R_2R_3}{R_1R_2+R_1R_3+R_2R_3}$$
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 Rearrange the equation you just found to solve for $R_3$ given the other values. This equation will be used during the lab.
 
@@ -272,14 +276,14 @@ $$R_o = \frac{R_1R_2}{R_1+R_2}$$
 
 Naively, one would think that when a load $R_3$ is attached to the voltage divider, you might expect the voltage applied will be the $V_\text{out}$ of the voltage divider: i.e. $V_\text{in} \frac{R_2}{R_1+R_2}$, and indeed, the Thevenin voltage $V_T$ *is* this. However, the Thevenin equivalent resistance is very significant, and the voltage that gets to $R_3$ won't be $V_T$.
 
-### Prelab Question {#6.1}
+### Prelab Question {#sec:6.1}
 
-Use your result of problem {@5.1} to show that the voltage across $R_3$ is the same as the voltage predicted by the Thevenin equivalent circuit.
+Use your result of problem {@sec:5.1} to show that the voltage across $R_3$ is the same as the voltage predicted by the Thevenin equivalent circuit.
 
 
 ## Lab Activities
 
-### Prelab Question {#7.1}
+### Prelab Question {#sec:7.1}
 
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 
@@ -455,7 +459,7 @@ You will now use your skills with building and testing voltage dividers to build
 
 4. Construct your voltage divider using the function generator for $V_\text{in}$ and use a scope to measure the output voltage.
 
-    - Should you include the oscilliscope input impedance in your model? Explain why or why not. Compare the scope input impedance to the resistance of the 10k pot. Consider the situation where $R_1\approx 0\ \Omega$ and $R_2\approx 10\text{ k}\Omega$; when you combine $R_2$ and the scope in parallel, does the resistance significantly deviate from when there is no scope (think back to section {#sec:parallel-model}).
+    - Should you include the oscilliscope input impedance in your model? Explain why or why not. Compare the scope input impedance to the resistance of the 10k pot. Consider the situation where $R_1\approx 0\ \Omega$ and $R_2\approx 10\text{ k}\Omega$; when you combine $R_2$ and the scope in parallel, does the resistance significantly deviate from when there is no scope (think back to section {@sec:parallel-model}).
 
     - Do you need to include the function generator's $50\ \Omega$ output impedance in your model? Explain why or why not. Consider the extreme ends of having the pot turned all the way one way and all the way the other way.
 

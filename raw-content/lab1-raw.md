@@ -153,7 +153,8 @@ For your calculations, you should write a reusable function in a Python script t
 
 For example, with a script called `jlab.py`
 
-```Python
+```
+
 """
 Python script to import useful functions for J-Lab
 """
@@ -168,11 +169,13 @@ def parallel_resistance(resistors: list) -> float:
     for resistance in resistors:
         conductance += 1.0 / resistance  # add each term to sum
     return 1.0 / conductance
+
 ```
 
 This function can be used in a Jupyter Notebook like this
 
-```Python
+```
+
 import jlab as jl
 
 r1 = 2e3  # 2 kOhm
@@ -180,6 +183,7 @@ r2 = 500  # 500 Ohm
 r3 = 1e3  # 1 kOhm
 rp = jl.parallel_restance( [r1, r2, r3] )
 print( "R_p = {:.1f} Ohm".format(rp) )
+
 ```
 
 Throughout this course, there will be many calculations that you will use repeatedly. It may seem like extra work now, but adopting this practice early will help streamline your workflow throughout the semester and make your life easier in the long run.
@@ -206,11 +210,11 @@ However, adding resistors in parallel adds the cross-sectional area, so the tota
 
 $$\frac{1}{R_\text{parallel}} = \sum_{i=1}^n\frac{1}{R_i}$$
 
-### Prelab question {#1.1}
+### Prelab question 
 
 What is the total resistance of two resistors in parallel that each have a resistance of $R$?
 
-### Prelab question {#1.2}
+### Prelab question 
 
 ![These resistors combine to have a total resistance.](../resources/lab1fig/resistor-prob.png){#fig:resistor-prob width="8cm"}
 
@@ -248,7 +252,7 @@ Adding capacitors in parallel is like adding more area to a single capacitor. Th
 
 $$C_\text{parallel} = \sum_{i=1}^nC_i$$
 
-### Prelab question {#2.1}
+### Prelab question 
 
 ![These capacitors combine to have a total capacitance](../resources/lab1fig/capacitor-prob.png){#fig:cap-problem width="8cm"}
 
@@ -268,7 +272,7 @@ SPICE (Simulation Program with Integrated Circuit Emphasis) is an open-source ci
     - Watch the [LTSpice Tutorial - EP1 Getting started](https://www.youtube.com/watch?v=JRcyHuyb1V0) by FesZ Electronics.
         - Mac users should check out [LTspice - Getting Started in 8 Minutes](https://www.youtube.com/watch?v=abyxz8jfgK4) by CircuitBread.
 
-### Prelab Question {#3.1}
+### Prelab Question 
 
 - Start a new project and place a voltage source somewhere. Right click on the element and set the voltage to $10\text{ V}$ (you can just type the number "10" in the text box). Leave the series resistance blank.
 

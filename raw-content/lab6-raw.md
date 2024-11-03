@@ -55,7 +55,7 @@ The fundamental property of a diode is its tendency to conduct electric current 
 
 The IV curve above describes the behavior of the diode as a function of voltage applied. A simple way to interpret this plot is that the diode only allows current to flow in the forward direction (the direction the diode symbol's arrow points) when the voltage is above the forward voltage, and it will allow current in the reverse direction only if a negative voltage exceeds the breakdown voltage. In general, to know the amount of current, requires analysis of the resistors involved in the circuit.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 Fill in the blank:
 
@@ -63,7 +63,7 @@ Fill in the blank:
 
 2. When forward biased, current flows from the ____ode to the ____ode which is marked with "the bar."
 
-### Prelab Question {#1.2}
+### Prelab Question {#sec:1.2}
 
 In your own words, describe:
 
@@ -73,7 +73,7 @@ In your own words, describe:
 
 3. The forward bias region.
 
-### Prelab Question {#1.3}
+### Prelab Question {#sec:1.3}
 
 ![Simple diode circuit](../resources/lab6fig/diode-cir-prelab.png){#fig:diode-cir-prelab width="7cm"}
 
@@ -111,7 +111,7 @@ When electrons cross from the n-type region to the p-type region in a diode, the
 
 <!-- The HLMP-C625 light emitting diode used in this lab acts electrically like any other diode. However, unlike regular diodes it also emits light when forward-biased due to direct radiative recombination of electrons and holes. The forward voltage drop is about 1.9 V rather than 0.6 V because the LED is made of AlInGaP instead of silicon.-->
 
-### Prelab Question {#2.1}
+### Prelab Question {#sec:2.1}
 
 To turn on an LED, you have to run a certain amount of current through it. Current limiting resistors (this is just any resistor in series with the LED) are needed to limit the current to a specific value. Too little current and the LED will be too dim and too much current will destroy the LED. In the lab you will drive the HLMP-C625 LED with $8\text{ V}$. Determine the resistance needed in series with LED to get $20\text{ mA}$ of current through it. Don't forget to consider the forward voltage which is $1.9\text{ V}$. 
 
@@ -151,7 +151,7 @@ Figure @fig:pd204 shows the RSR (aka RSS) from the PD204-6C data sheet. You can 
 
 ![PD204-6C Relative Spectral Response (relative to the sensitivity at $940\text{ nm}$)](../resources/lab6fig/pd204-rss.png){#fig:pd204 width="10cm"}
 
-### Prelab Question {#3.1}
+### Prelab Question {#sec:3.1}
 
 1. The photometer you will build this week will mostly be measuring white light (since this will be the kind of light most easily accessible). We can approximate white light as being $\lambda = 555\text{ nm}$. Use Figure @fig:pd204 and $S_{940} = 0.14\text{ A/W}$ to estimate the sensitivity $S_\lambda$ at this wavelength.
 
@@ -183,11 +183,11 @@ $$G=\frac{V_{out}}{I_{in}}=-R_F$$-->
 
 This gain has the units of impedance i.e., Ohms, and it is often called a transimpedance gain. The current-to-voltage amplifier is also called a transimpedance amplifier. This type of amplifier is very common in research labs when transducer based measurements result in a predictable amount of current, such as photodiodes, photo multiplier tubes, ion detectors, etc.
 
-### Prelab Question {#4.1}
+### Prelab Question {#sec:4.1}
 
 What are the voltages at $V_+$ and $V_-$?
 
-### Prelab Question {#4.2}
+### Prelab Question {#sec:4.2}
 
 In LTspice, make the transimpedance amplifier as seen in @fig:trans-amp. You can create a current source by opening the components menu and searching "current" (the symbol is a circle with an arrow in it). Don't forget to power the op-amp with $\pm 15\text{ V}$.
 
@@ -195,7 +195,7 @@ Test 3 different combinations of $R_F$ and $I_\text{in}$ and record the resultin
 
 Does this circuit obey the transimpedance gain equation we constructed above?
 
-### Prelab Question {#4.3}
+### Prelab Question {#sec:4.3}
 
 This week, you will build a photometer that uses a photodiode as a transducer to turn photon energy into current. You will design a transimpedance amplifier to convert small currents into measurable voltages. The current $I_\text{in}$ flows through the reverse-biased photodiode when it is illuminated. <!--The feedback capacitor $C_F$ enhances stability, i.e., it helps to avoid spontaneous oscillations of the op-amp by reducing the bandwidth of the amplifier (just like an active low-pass filter).-->
 
@@ -205,11 +205,11 @@ Since the photodiode is being pulled down by $-15\text{ V}$, the current will fl
 
 Choose a value for the feedback resistor $R_F$ so that an incident white-light $(\lambda = 555\text{ nm})$ with optical power of $P = 71\ \mu\text{W}$ produces an output of $10\text{ V}$.
 
-### Prelab Question {#4.4}
+### Prelab Question {#sec:4.4}
 
 When there is no light, there is a small amount of "dark current" that flows through the photodiode. The photodiode you will use this week has a dark current of $10\text{ nA}$. Predict the output voltage due to the dark current using the $R_F$ you chose above.
 
-### Prelab Question {#4.5}
+### Prelab Question {#sec:4.5}
 
 ![A basic photometer with reverse biased photodiode.](../resources/lab6fig/photometer-comp-c.png){#fig:photometer-comp-c width="10cm"}
 
@@ -233,7 +233,7 @@ All op-amp circuits start out by making the basic power connections. Op-amps are
 
 ![LF356 schematic and pin-out](../resources/lab6fig/lf356.png){#fig:lf356 width="10cm"} -->
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 1. To drive the transmitter, the function generator will be adjusted to produce a square wave with a high level of $8\text{ V}$ (unloaded) and a low level of 0 V. The high-level (8 V) should give a $20\text{ mA}$ forward current in the LED, and the low level $(0\text{ V})$ should give $0\text{ mA}$. You found the value of $R_s$ that accomplishes this. However, you will drive this using the function generator which has an output impedance of $50\ \Omega$. What value of $R_s$ do you need if you driving the circuit with the function generator?
 
@@ -241,7 +241,7 @@ The data sheet lists the LED forward voltage drop at 20 mA to be 1.9 V (instead 
 
 ## Lab activities
 
-### Prelab question {#6.1}
+### Prelab question {#sec:6.1}
 
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 
@@ -293,11 +293,11 @@ Answer the following questions using Mathematica for the plots. You can use eith
 
 1.  Build the circuit in Figure @fig:diode-cir using the silicon diode 1N4002 and draw the diagram in your lab notebook. Measure the $33\ \Omega$ resistor before placing it in the circuit and record the measured value.
 
-2.  Measure the current $I$ and the voltage across the diode $(V_\text{out})$ for different values of $V_\text{in}$ from $-3\text{ V}$ to $+3\text{ V}$. You can use the DMM to measure the voltage across the diode. To maximize accuracy, you would use another DMM to measure current. But reading the current directly from the power supply is fine. Be sure to take many data points (at least 10) to map out the characteristic curve of the diode, with a few extra points around $V_\text{in}$ of 0.6--0.9 V. How does the result compare with your predictions from prelab question @1.3? How does your plotted data compare with Figure @fig:diode-char?
+2.  Measure the current $I$ and the voltage across the diode $(V_\text{out})$ for different values of $V_\text{in}$ from $-3\text{ V}$ to $+3\text{ V}$. You can use the DMM to measure the voltage across the diode. To maximize accuracy, you would use another DMM to measure current. But reading the current directly from the power supply is fine. Be sure to take many data points (at least 10) to map out the characteristic curve of the diode, with a few extra points around $V_\text{in}$ of 0.6--0.9 V. How does the result compare with your predictions from prelab question @sec:1.3? How does your plotted data compare with Figure @fig:diode-char?
 
 3.  Specifically consider the points at $V_\text{in}$ = $+0.5\text{ V}$, $+0.8\text{ V}$, and $+2.0\text{ V}$. What is the power dissipated in the diode and in the resistor for these values? Remember $P = I\Delta V$ and $I$ is the same for both components, but $\Delta V$ is not.
 
-4.  Now, change $V_\text{in}$ from the DC voltage source (power supply) to the AC voltage source (function generator) and input a $1\text{ kHz}$ sine wave with a $3\text{ V}$ amplitude ($6\text{ V}$ peak-to-peak) Record the resulting $V_\text{in}$ and $V_\text{out}$ waveforms and compare both of them with your prediction in prelab question @1.3.
+4.  Now, change $V_\text{in}$ from the DC voltage source (power supply) to the AC voltage source (function generator) and input a $1\text{ kHz}$ sine wave with a $3\text{ V}$ amplitude ($6\text{ V}$ peak-to-peak) Record the resulting $V_\text{in}$ and $V_\text{out}$ waveforms and compare both of them with your prediction in prelab question @sec:1.3.
 
 5. There should be some discrepancy between your prediction and your measurement. Discuss with an instructor all the things you see that differs from your prediction. Record a brief summary of the discussion explaining the difference in measured and predicted behavior. 
 
@@ -317,7 +317,7 @@ Use your op-amp test circuit to test your op-amp.
 
 <!--![Inverting amplifier circuit](../resources/lab6fig/inv-amp-cir.png){#fig:inv-amp-cir width="12cm"}-->
 
-1. You may have noticed the similarities between the inverting amplifier and the transimpedance amplifier. It is reasonable to think of the $V_\text{in}$ and $R$ of the inverting amplifier as a current source for the transimpedance amplifier. Design an inverting amplifier (refer to your lab notebook if you need a refresher; you built this circuit last week) using the $R_F$ you calculated in @4.3 and a value of $R$ such that a $V_\text{in}=1\text{ V}$ corresponds to an $I_\text{in}=1\ \mu\text{A}$.
+1. You may have noticed the similarities between the inverting amplifier and the transimpedance amplifier. It is reasonable to think of the $V_\text{in}$ and $R$ of the inverting amplifier as a current source for the transimpedance amplifier. Design an inverting amplifier (refer to your lab notebook if you need a refresher; you built this circuit last week) using the $R_F$ you calculated in Question @sec:4.3 and a value of $R$ such that a $V_\text{in}=1\text{ V}$ corresponds to an $I_\text{in}=1\ \mu\text{A}$.
 
     - Don't forget to power the amplifier and use decoupling capacitors.
 
@@ -331,7 +331,7 @@ Use your op-amp test circuit to test your op-amp.
 
 6. Did this change your DC voltage gain? Should it have?
 
-7. Predict the 3 dB frequency of this amplifier. *Hint:* Look at your prelab answers. This will be the $R_FC_F$ time constant from question @4.5; in this circuit the time constant will be determined by the feedback resistor and capacitor (not the input resistor). Do you have the means to be able to measure this 3 dB frequency? Why not? (chat with an instructor if you are not sure)
+7. Predict the 3 dB frequency of this amplifier. *Hint:* Look at your prelab answers. This will be the $R_FC_F$ time constant from Question @sec:4.5; in this circuit the time constant will be determined by the feedback resistor and capacitor (not the input resistor). Do you have the means to be able to measure this 3 dB frequency? Why not? (chat with an instructor if you are not sure)
 
 <!--1.  We will first build the amplifier in a normal voltage amplifier configuration to test the setup and all the connections. Build the inverting amplifier circuit shown in Figure @fig:inv-amp-cir. Use a value for $R_F = R$ close to what you found in @sec:trans-pre, and a 10 pF capacitor $C_F$ in parallel with the feedback resistor to avoid spontaneous oscillations. Draw the schematic in your lab notebook and record the values of the components.
 

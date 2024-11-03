@@ -64,7 +64,7 @@ An ideal op-amp has an **open-loop gain** of infinity and does *not* depend on f
 
 **GOLDEN RULE 1:** The open-loop gain is infinitely large: $A\rightarrow\infty$.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 In this lab, you will be using the LF356 op-amp. Open up its datasheet on the [Datasheets and Instrument Manuals page](/PHYS-3330/manuals-data-sheets). You should keep this open, as you'll refer to it multiple times throughout the prelab and lab activities. Starting on page 2 there are tables with values for various properties of this op-amp and other closely related op-amps (make sure you pull values from the right column).
 
@@ -76,7 +76,7 @@ Op-amps have input terminals that are designed to have very large input impedanc
 
 **GOLDEN RULE 2:** No current flows in or out of the inputs: $I_+=I_-=0$.
 
-### Prelab Question {#2.1}
+### Prelab Question {#sec:2.1}
 
 According to the datasheet, what is the input impedance (resistance) $R_i$?
 
@@ -84,7 +84,7 @@ According to the datasheet, what is the input impedance (resistance) $R_i$?
 
 Op-amps have very low output impedances ($R_o$ in Figure @fig:opamp-man) allowing them to efficiently drive loads (think back to the input and output impedance considerations from lab 2). However, regardless of the output impedance, there is current limit inherent to each op-amp design. The current limit (maximum output current) is an important consideration when it comes to the ability of an op-amp to drive a load.
 
-### Prelab Question {#2.2}
+### Prelab Question {#sec:2.2}
 
 What is the maximum output positive current at $0\text{ V}$ for a supply voltage of $\pm 15 \text{ V}$ at $25 ^{\circ} \text{C}$ (look for a graph on page 5)?
 
@@ -108,11 +108,11 @@ $$G(f)=\frac{G_0}{1+j\frac{f}{f_B}}$$
 
 **Definition 8: unity gain frequency, $f_T$** - the 3 dB point when the gain is 1 (unity). Since this is mathematically equivalent to the $\text{GBW}$, these terms are often used interchangeably.
 
-### Prelab Question {#3.1}
+### Prelab Question {#sec:3.1}
 
 Find the gain bandwidth product in the datasheet. Report this property, and calculate $f_0$ using the open-loop DC gain found earlier in the datasheet.
 
-### Prelab Question {#3.2}
+### Prelab Question {#sec:3.2}
 
 Create a Bode plot (which is a log-log plot of a property vs frequency) for the magnitude of various gain values shown above. (The template from last week's lab should be useful here).
 
@@ -138,7 +138,7 @@ A voltage buffer (aka voltage follower) is the simplest possible negative feedba
 
 Figure @fig:buffer-intro shows a voltage buffer circuit. First notice there is no power to the op-amp in the diagram; often you'll find op-amp example circuits without power explicitly drawn in, but op-amps ***always*** need power (the power is implied - see Figure @fig:pin-diagram for a pinout of the LF356 Op-amp that includes the power info).
 
-### Prelab Question {#4.1}
+### Prelab Question {#sec:4.1}
 
 Start with $V_\text{out}=A(V_+-V_-)$, and use the first two golden rules to show that $G_0=1$ and that $V_+=V_-$.
 
@@ -154,7 +154,7 @@ The two resistors form a voltage divider *feedback network* with a transfer func
 
 $$B = \frac{R}{R_F+R}$$
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 Use golden rules 2 and 3 to show that the DC gain, $G_0$, of the non-inverting amplifier is
 
@@ -164,11 +164,11 @@ $$G_0 = \frac{1}{B} = 1 + \frac{R_F}{R}$$
 
 *Hint 2:* Use Kirkhoff's voltage rule tracing from $V_\text{out}$ to ground and from $V_\text{in}$ to ground to make two equations. You can use these to find $V_\text{out}/V_\text{in}$.
 
-### Prelab Question {#5.2}
+### Prelab Question {#sec:5.2}
 
 Calculate $G_0$ and the bandwidth, $f_B$, for the non-inverting amplifier with $R_F = 10\ \text{k}\Omega$ and $R = 100\ \Omega$ (use the $\text{GBW}$ you found in the datasheet to calculate $f_B$). Feel free to round $G_0$ to a nice clean number ending in zero(s).
 
-### Prelab Question {#5.3}
+### Prelab Question {#sec:5.3}
 
 Predict the amplitude of the output voltage, $V_\text{out}$, for the non-inverting amp with $R_F = 10\ k\Omega$ and $R = 100\ \Omega$ when
 
@@ -187,11 +187,11 @@ $$R_{o}' = \frac{R_{o}}{(1 + AB)}$$
 
 where $R_i$ and $R_o$ are the input and output impedances of the bare op-amp (you already looked up $R_i$ in the datasheet). These impedances will be improved from the values for the bare op-amp if $A B$ is large ($A$ is large, but $B\le 1$). With reasonable conditions, $AB$ is still quite large. Notice then that in the non-inverting amplifier configuration, negative feedback causes the input impedance to increase (from an already large value) and the output impedance to decrease (from an already small value).
 
-### Prelab Question {#6.1}
+### Prelab Question {#sec:6.1}
 
 The output impedance of the LF356 op-amp with no feedback is about $40\ \Omega$ (and you already found $R_i$ from the datasheet). Calculate $R_i'$ and $R_o'$ when $R_F = 10\ k\Omega$ and $R = 100\ \Omega$. Does it seem reasonable to assume the input impedance is infinitely large and the output impedance is $0$?
 
-### Prelab Question {#6.2}
+### Prelab Question {#sec:6.2}
 
 The oscilliscope has a finite measurement impedance $(1\text{ M}\Omega)$, so if you're measuring $V_\text{in}$, you are putting a resistor $R_\text{scope}$ from the input to ground (see Figure @fig:non-invert-input-measure). This will inevitably reduce the input impedance of the amplifier. In the case when $R_F = 10\ k\Omega$ and $R = 100\ \Omega$, what is the input impedance of the amplifier?
 
@@ -199,7 +199,7 @@ The oscilliscope has a finite measurement impedance $(1\text{ M}\Omega)$, so if 
 
 ![Measuring the input changes the input impedance](../resources/lab4fig/measure-input-impedance.png){#fig:non-invert-input-measure width="10cm"}
 
-### Prelab Question {#6.3}
+### Prelab Question {#sec:6.3}
 
 Maybe you already noticed that the buffer is a non-inverting amplifier with $R_F=0$ and $R=\infty$. We already know that it has a DC gain of 1, so $B=1$. Calculate $R_i'$ and $R_o'$ for the buffer.
 
@@ -224,15 +224,15 @@ We always want to apply decoupling capacitors to the the power: plugging one end
 
 Each op-amp design has limits to how much voltage you can apply to the power pins (before something breaks), and typically there is a recommended voltage that is less than this limit (e.g. the LF356 can take up to $\pm 22\ \text{V}$, but it recommends you apply $\pm 15\ \text{V}$). The voltage out is really coming from the power pins (the inputs, in a sense, just tell the op-amp how much of the power voltage to send to the output), so the maximum $V_\text{out}$ depends on the supply voltage.
 
-### Prelab Question {#7.1}
+### Prelab Question {#sec:7.1}
 
 Check the datasheet for the maximum output voltage when the LF356 is powered with $\pm 15\ \text{V}$. This is usually referred to as the **output voltage swing**.
 
-### Prelab Question {#7.2}
+### Prelab Question {#sec:7.2}
 
 Look back at your calculations in prelab question @sec:5.3; when supplying the LF356 with $\pm 15\ \text{V}$, what do you expect happens when the predicted $V_\text{out}$ is greater than the output voltage swing?
 
-### Prelab Question {#7.3}
+### Prelab Question {#sec:7.3}
 
 - There are many choices of op-amps in LTSpice. You can find them in the component's menu (***P*** is the shortcut). In the search bar, type "op" to open the op-amp folder. Selecting an op-amp will reveal a short description of each. In *most* cases, it doesn't matter which you choose for your simulations, and unfortunately, the LF356, isn't built in to the program. The OP07 (which should pop up first in the search) acts fairly ideally; however, for this activity, we will choose the OP113 since it more accurately responds to a non-ideal voltage supply.
 
@@ -266,7 +266,7 @@ Look back at your calculations in prelab question @sec:5.3; when supplying the L
 
 ## Lab activities
 
-### Prelab Question {#8.1}
+### Prelab Question {#sec:8.1}
 
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 

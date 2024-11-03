@@ -23,13 +23,13 @@ Filters are incredibly important components in physical experiments. Often times
 
 There are 4 basic kinds of filters:
 
-    - Low-pass filter (passes low frequencies, cuts high frequencies)
+- Low-pass filter (passes low frequencies, cuts high frequencies)
     
-    - High-pass filter (passes high frequencies, cuts low frequencies)
+- High-pass filter (passes high frequencies, cuts low frequencies)
     
-    - Bandpass filter (passes frequencies centered around a center frequency and cuts both high and low frequencies)
+- Bandpass filter (passes frequencies centered around a center frequency and cuts both high and low frequencies)
     
-    - Notch filter (passes low and high frequencies and cuts frequencies centered arounda center frequency)
+- Notch filter (passes low and high frequencies and cuts frequencies centered arounda center frequency)
 
 In this lab you will model, simulate, and test the first three kinds of circuits, but you will gain the requisite skills to be able to implement a notch filter in your final project if necessary.
 
@@ -145,7 +145,7 @@ $$\omega = 2\pi f$$
 
 Angular frequency $\omega$ is typically used when working out theory to avoid writing $2\pi$ over and over again. However, experimentally, you will be working with cycle frequency $f$ (inverse period) because it is easier to measure.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 Evaluate the impedance of the capacitor at the two frequency extremes ($\omega = 0$ and $\omega\rightarrow\infty$). Describe what the capacitor acts like at these extremes (think in terms of open or short circuits).
 
@@ -175,7 +175,7 @@ Often cables are labeled by their capacitance per length
 
 $$\frac{C}{\ell} = \varepsilon_r\varepsilon_0\frac{2\pi}{\ln{(b/a)}}$$
 
-### Prelab question {#2.1}
+### Prelab question {#sec:2.1}
 
 A BNC cable has an inner conductor with a diameter of roughly 1.1 mm and a dielectric with a diameter of roughly 4.5 mm. The dielectric, Teflon, has a relative dielectric constant of roughly 2. Estimate the capacitance per unit length of this cable (report it in pF/m). *Note:* the electric permitivity of free space in picofarad per meter is $8.85\text{ pF/m}$.
 
@@ -195,7 +195,7 @@ The impedance of an inductor is
 
 $$Z_L = j\omega L$$
 
-### Prelab Question {#3.1}
+### Prelab Question {#sec:3.1}
 
 Evaluate the impedances of the inductor at the two frequency extremes ($\omega = 0$ and $\omega\rightarrow\infty$). Describe what the inductor acts like at these extremes (think in terms of open or short circuits). Compare these results to what you found for the capacitor.
 
@@ -219,15 +219,15 @@ $$R_i = R + Z_C = R + \frac{1}{j\omega C}=R\sqrt{1+\frac{1}{\omega^2 R^2C^2}}\ \
 
 Notice that this is frequency dependent as well. The lowest possible input impedance will be when the frequency is really high and will diverge to infinity at DC (0 frequency).
 
-### Prelab Question {#4.1}
+### Prelab Question {#sec:4.1}
 
 Find $T_\text{low-pass}$ when $\omega=0$ and when $\omega\rightarrow\infty$. Based on these calculations, describe what frequencies the low-pass filter cuts and passes. Is this consistent with its name?
 
-### Prelab Question {#4.2}
+### Prelab Question {#sec:4.2}
 
 Find $|T_\text{low-pass}|$ (the magnitude of the complex number) and express it with respect to $f$ instead of $\omega$. *Hint:* Use the $|T|=\sqrt{TT^*}$ relation.
 
-### Prelab Question {#4.3}
+### Prelab Question {#sec:4.3}
 
 Write two Python functions:
 
@@ -255,15 +255,15 @@ $$R_i = Z_C+R = \frac{1}{j\omega C}+R=R\sqrt{1+\frac{1}{\omega^2 R^2C^2}}\ \ e^{
 
 *Note:* this is the same as the low-pass filter.
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 Find $T_\text{high-pass}$ for $\omega=0$ and $\omega\rightarrow\infty$ to confirm this is a high-pass filter; i.e. does this cut low frequencies and pass high frequenceis?
 
-### Prelab Question {#5.2}
+### Prelab Question {#sec:5.2}
 
 Calculate $|T_\text{high-pass}|$ and express it in terms of $f$ instead of $\omega$.
 
-### Prelab Question {#5.3}
+### Prelab Question {#sec:5.3}
 
 Write two Python functions:
 
@@ -293,7 +293,7 @@ For both the low-pass and high-pass filter, you can take the magnitude of the tr
 
 $$f_c = \frac{1}{2\pi RC}$${#eq:cutoff-freq}
 
-### Prelab Question {#6.1}
+### Prelab Question {#sec:6.1}
 
 A Decibel is a "relative unit of measurement." In electronics, decibels are meant to describe how the power changes. You can calculate decibels with the following equation:
 
@@ -303,11 +303,11 @@ When decibels are negative, it means the power is attenuated (gets reduced), and
 
 Calculate the decibels for when the power is cut in half. Does it make sense that the half power point is also called the 3 dB point?
 
-### Prelab Question {#6.2}
+### Prelab Question {#sec:6.2}
 
 Plug the cutoff frequency from Equation @eq:cutoff-freq into the equations you found for $|T_\text{low-pass}|$ and $|T_\text{high-pass}|$ to confirm this is the half power point.
 
-### Prelab Question {#6.3}
+### Prelab Question {#sec:6.3}
 
 The cutoff frequency of these filters is related to the RC-time (resistance times capacitance has units of time) of the circuit: $f_c = 1/2\pi RC = 1/(2\pi RC)=\frac{1}{2\pi RC}$.
 
@@ -350,11 +350,11 @@ where
 
 $$|R_i| = R\sqrt{1+ \frac{\omega^2L^2}{(R-\omega^2LRC)^2}}$$
 
-### Prelab Question {#7.1}
+### Prelab Question {#sec:7.1}
 
 As the name suggests, this filter passes a "band" of frequencies. This means that it should "cut" both low and high frequencies. Show that at $\omega=0$ and $\omega\rightarrow\infty$ the magnitude of $T$ goes is zero.
 
-### Prelab Question {#7.2}
+### Prelab Question {#sec:7.2}
 
 The *center frequency* $f_0$ is defined by the frequency that maximizes the transfer function (this is the frequency it passes "strongest"). For these simple LRC bandpass filters, this happens when 
 
@@ -362,7 +362,7 @@ $$|T_\text{bandpass}|=1$$
 
 Find $f_0$ using this fact and the equation for $|T_\text{bandpass}|$ above $($*Hint:* $\omega_0=2\pi f_0)$
 
-### Prelab Question {#7.3}
+### Prelab Question {#sec:7.3}
 
 Write two Python functions:
 
@@ -403,7 +403,7 @@ $$\omega_{c,\pm} = \frac{\pm1+\sqrt{1+4\frac{R^2C}{L}}}{2RC}$$
 
 $$\Delta\omega = \omega_{c,+}-\omega_{c,-} = \frac{1}{RC}$$
 
-### Prelab Question {#8.1}
+### Prelab Question {#sec:8.1}
 
 Express the quality factor $Q$ with respect to $L$, $R$, and $C$.
 
@@ -413,7 +413,8 @@ Bode plots are log-log plots of a property vs frequency. You will find all sorts
 
 In Python, log-log plots can be done in the following way
 
-```python
+```
+
 import numpy as np
 import matplotlib.pylab as plt
 
@@ -427,22 +428,25 @@ frequency = np.logspace(0, 8, 1000)
 
 fig, ax = plt.subplots(1, 1, figsize=(4, 3))
 ax.loglog(frequency, function_to_plot(frequency))
+
 ```
 
 The `loglog` function plots with both the x and y axes on a log scale; you can set an individual axis to log scale with
 
-```python
+```
+
 fig, ax = plt.sublots(1, 1, figsize=(4, 3))
 ax.plot(x, y)
 ax.set_xscale('log')
 ax.set_yscale('log')
+
 ```
 
 which gives you more control over which axes are on what scale.
 
 Here's [the documentation for matplotlib.pylab.loglog](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.loglog.html) which may be helpful to look at.
 
-### Prelab question {#9.1}
+### Prelab question {#sec:9.1}
 
 Create a Bode plot for $|T|$ and $\delta$ as a function of $f$ (from $100\text{ Hz}$ to $1\text{ MHz}$) for the **low-pass filter**
 - with $R=10\text{ k}\Omega$ and $C=1\text{ nF}$.
@@ -457,7 +461,8 @@ Create a Bode plot for $|T|$ and $\delta$ as a function of $f$ (from $100\text{ 
 
 Here is a template for plotting with two separate y-axes.
 
-```python
+```
+
 import matplotlib.pylab as plt
 import matplotlib
 %matplotlib widget
@@ -496,13 +501,14 @@ ax2.plot(frequency, phase_shift, color='b', linestyle='dashed', label="phase")
 fig.legend(loc="lower left", bbox_to_anchor=(0.11, 0.15))
 
 fig.tight_layout()
+
 ```
 
 Include a "scatter" point on your plot where the 3 dB frequency is. This will be a point where $f=f_c$ and $|T|=1/\sqrt{2}$
 
 `ax1.scatter(1 / (2 * np.pi * r * c), 1 / np.sqrt(2), color='r', s=100)`
 
-### Prelab question {#9.2}
+### Prelab question {#sec:9.2}
 
 Create a new Bode plot for $|T|$ and $\delta$ as a function of $f$ (from $100\text{ Hz}$ to $1\text{ MHz}$) for the *high-pass filter* with the same capacitance and resistance values and all the same considerations above.
 
@@ -520,7 +526,7 @@ Create a new Bode plot for $|T|$ and $\delta$ as a function of $f$ (from $100\te
 
 - Include a "scatter" point on your plot where the 3 dB frequency is. This will be a point where $f=f_c$ and $|T|=1/\sqrt{2}$.
 
-### Prelab question {#9.3}
+### Prelab question {#sec:9.3}
 
 Create a new Bode plot for $|T|$ and $\delta$ as a function of $f$ (from $100\text{ Hz}$ to $1\text{ MHz}$) for the bandpass filter with $R=10\text{ k}\Omega$, $C=10\text{ nF}$, and $L=10\text{ mH}$ with all the same considerations above.
 
@@ -539,11 +545,11 @@ Create a new Bode plot for $|T|$ and $\delta$ as a function of $f$ (from $100\te
 - Include two "scatter" points on your plot where the 3 dB frequency is. This will be a point for both $f=f_{c,-}$ and $f=f_{c,+}$ where $|T|=1/\sqrt{2}$, you can change the `s` option in the `scatter` function to change the size of the dots on the plot.
 
 
-<!--### Prelab question {#6.4}
+<!--### Prelab question {#sec:6.4}
 
 Draw the 3 circuits in your lab notebook with the values labeled (the ones you used for the Bode plots). You will build these circuits in lab.-->
 
-### Prelab question {#9.4}
+### Prelab question {#sec:9.4}
 
 Create all three circuits above in LTspice (the low-pass, high-pass and bandpass filters with values you used for your plots). For testing the frequency response of filters, an AC Analysis is performed.
 
@@ -578,13 +584,14 @@ Create all three circuits above in LTspice (the low-pass, high-pass and bandpass
 The Bode plots you made in Python are gain vs frequency and the simulated Bode plots are dB vs frequency. However, they should show the same general behavior. Compare your Bode plots to the simulation, and if the shapes are completely different it is likely that you made a mistake calculating $|T|$ or implementing $|T|$ as a Python function. Revise your plots if necessary.
 
 
-### Prelab question {#9.5}
+### Prelab question {#sec:9.5}
 
 During the lab section, you will enter your measurements into your Jupyter notebook and plot them with your model predictions. To prepare for this, create a list of "fake data" and plot it on your Bode plots. This will provide you with a template to be able to compare your measurements to the model.
 
 In Python, it is usually best to handle data as a NumPy array. There are two common schemes for data, which are considered C-like, and Fortran-like. In C, array data is stored from left to right, while in Fortran, it is stored from top to bottom. Numpy is flexible and you can use either convention.
 
-``` Python
+```
+
 # C-like data
 data = np.array([
     [x0, x1, x2, x3, ...],
@@ -600,9 +607,11 @@ y = data[1, :]
 
 """You can get a single data point by slicing all the rows at a given column index"""
 data_point4 = data[:, 4]
+
 ```
 
-``` Python
+```
+
 # Fortran-like data
 data = np.array([
     [x0, y0],
@@ -621,13 +630,14 @@ y = data[:, 1]
 data_point4 = data[4]
 # or
 data_point4 = data[4, :]
+
 ```
 
 Both C-like and Fortran-like data have their pros and cons, but Fortran-like is far more common when working with experimental data because of how simply it translates to and from saved data in the form of data files where the types of data are separated by columns (left to right) and data points are stored in successive rows (top to bottom). Ultimately it is up to you to determine your own workflows and preferences, so we'll leave this up to you to decide.
 
 ## Lab activities
 
-### Prelab question {#10.1}
+### Prelab question {#sec:10.1}
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
 
 # Useful Readings

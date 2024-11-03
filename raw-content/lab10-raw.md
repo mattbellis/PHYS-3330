@@ -57,7 +57,7 @@ These and many other applications require complex digital circuitry. Any digital
 
 There are plenty of applications where TTL chips are the best solution, but if you find yourself needing more than a small handful of these chips, it is probably time to consider using a different tool.
 
-### Prelab Question {#1.1}
+### Prelab Question {#sec:1.1}
 
 Give 3 reasons why MOSFETs would be used for **very large scale integration** programmable circuits instead of BJTs
 
@@ -82,7 +82,7 @@ For more on FPGAs:
 
 -  Horowitz and Hill 3<sup>rd</sup> ed - Sections 11--11.2.5
 
-### Prelab Question {#2.1}
+### Prelab Question {#sec:2.1}
 
 Match the following three tools to the applications you think they would be best suited for
 
@@ -144,30 +144,34 @@ The Arduino Uno R3 is a printed circuit board (PCB) with not only the ATmega328P
 
 Arduino sketches are written in C++ and always take on the following form:
 
-```c++
+```
+
 // You can define global variables at the top of the sketch
 
 void setup() {
-   // The Arduino will start by calling this function.
+// The Arduino will start by calling this function.
 }
 
 void loop() {
-   // After setup() is done, the Arduino will execute this
-   // function repeatedly until it is reset or powered off.
+// After setup() is done, the Arduino will execute this
+// function repeatedly until it is reset or powered off.
 }
+
 ```
 
 Here is a Pythonic representation of what is happening under the hood:
 
-```python
+```
+
 import arduino_stuff
 
 setup()
 while True:
    loop()
+
 ```
 
-### Prelab Question {#3.1}
+### Prelab Question {#sec:3.1}
 
 Set up the Arduino software
 
@@ -206,19 +210,19 @@ In this lab, all the circuit diagrams show a common ground symbol (see Figure @f
 When you draw your diagrams, make sure to use the right ground symbol when appropriate. We will take care to separate and isolate the Arduino circuit from the power supply, and the distinction between these two grounds is important.
 
 
-### Prelab Question {#3.2}
+### Prelab Question {#sec:3.2}
 
 The GPIO on the Arduino board can programmatically set $5\text{ V}$. The ATmega328P datasheet says that each GPIO can source a maximum of $40\text{ mA}$ of current.
 
 What's the ***minimum*** load that should be applied to a GPIO pin?
 
-### Prelab Question {#3.3}
+### Prelab Question {#sec:3.3}
 
 The [HLMP-C625](https://ucboulder.github.io/PHYS-3330/resources/manuals-and-data-sheets/ds-HLMP-C625-LED.pdf) LED has a recommended operating current of $20\text{ mA}$ and has a typical forward voltage of $1.9\text{ V}$.
 
 What resistance should you put in series with this LED to get the recommended current when powered by the microcontrollers GPIO pin?
 
-### Prelab Question {#3.4}
+### Prelab Question {#sec:3.4}
 
 In many microcontroller applications, LEDs are used as indicators to alert users what might be happening in the system. When multiple LEDs are being used, there are two ways to limit the current through them as seen in Figure @fig:led-limiting. In the lab you will be using the MV57164 LED bank of 10 LEDs. This LED bank has a similar design to a DIP chip with 10 LEDs running down chip with all the anodes on one side and cathodes on the other side. The forward voltage of these LEDs is about $2\text{ V}$.
 
@@ -240,7 +244,7 @@ Assuming you have $N$ LEDs with current limiting resistors $R$, for both circuit
 
 The Arduino Uno has 6 analog input pins, which convert an analog input (between $0$ and $5\text{ V}$ by default) into a digital value with 10 bits of resolution. This means that it will store the value as a binary number between 00 0000 0000 (representing $0\text{ V}$) and 11 1111 1111 (representing $5\text{ V}$). When this number is sent to a computer to read out, it will be printed as a decimal number (i.e. 1111 $\rightarrow 15$)
 
-### Prelab Question{#4.1}
+### Prelab Question{#sec:4.1}
 
 1. What is the decimal equivalent of the binary number that represents $5\text{ V}$?
 
@@ -249,7 +253,7 @@ The Arduino Uno has 6 analog input pins, which convert an analog input (between 
    -  output is a number in volts
    -  test that plugging in $0$ returns $0\text{ V}$ and plugging in the number you calculated above returns $5\text{ V}$
 
-### Prelab Question {#4.2}
+### Prelab Question {#sec:4.2}
 
 In the lab, you will use a potentiometer as a variable voltage divider with a $5\text{ V}$ input and use an analog input to read the $V_\text{out}$ of the voltage divider. This is a common way for a user to interact with a microcontroller via a dial.
 
@@ -269,7 +273,7 @@ Microcontrollers are often used to control elements of analog circuits that invo
 
 <span style="color: red;">**TO ISOLATE THE CIRCUIT FROM THE ARDUINO, THE ARDUINO COMMON GROUND MUST *NOT* BE CONNECTED TO THE CIRCUIT'S GROUND**</span>
 
-### Prelab Question {#5.1}
+### Prelab Question {#sec:5.1}
 
 Open the datasheet for the optocoupler (SFH615AGR).
 
@@ -279,7 +283,7 @@ Open the datasheet for the optocoupler (SFH615AGR).
 
 1. What is the maximum output collector current (steady on, not pulsed)?
 
-### Prelab Question {#5.2}
+### Prelab Question {#sec:5.2}
 
 We recommend targeting roughly $17\text{ mA}$ to activate the optocoupler. What current limiting resistance $R_{cl}$ should you use.
 
@@ -295,19 +299,19 @@ The coil can be modeled as a resistor and inductor in series (see Figure @fig:re
 
 ![The coil of the relay can be modeled with an inductor and resistor in series.  It is necessary to place a diode in parallel with the coil to protect the rest of the circuit.](../resources/lab10fig/relay-circuit.png){#fig:relay-circuit}
 
-### Prelab Question {#6.1}
+### Prelab Question {#sec:6.1}
 
 Apart from the moments when the relay is switched, the system is in a state of equilibrium, i.e. the current is constant.
 
 In this case, can the model of the coil be reasonably simplified?
 
-### Prelab Question {#6.2}
+### Prelab Question {#sec:6.2}
 
 Open the datasheet for the relay (J104D2C12VDC.20S). This datasheet covers a few different relays of similar design. The one you will use is the 12VDC 0.2W variation.
 
 What is the coil resistance?
 
-### Prelab Question {#6.3}
+### Prelab Question {#sec:6.3}
 
 Since it is likely that a circuit you build will involve an op-amp, and your experience is with the LF356, it is reasonable to assume you will be powering your circuit with $\pm 15\text{ V}$; however, the relay is rated for $12\text{ V}$. This means you need to put a resistor in series with the coil so that only $12\text{ V}$
 
@@ -331,7 +335,7 @@ In lab 8, you used NPN transistors (BJTs) in to build an audio amplifier with vo
 
 However, the base current $I_b$ should be targeted such that the collector current $I_c$ is limited by the $15\text{ V}$ applied from the top of the relay coil to the emitter of the NPN. You already calculated this current above. Depending on the exact value of $h_{FE}$ is never recommended as this value depends on a number of factors.
 
-### Prelab Question {#7.1}
+### Prelab Question {#sec:7.1}
 
 Looking at the datasheet for the 2N3904, the smallest value for the current gain shown is $h_{FE}=40$. For switching applications like this, it is best to target a base current such that the current gain will easily hit the full collector current. Using the calculated relay current above (this will be the collector current in this application), calculate the base current needed such that only a current gain of 10 is needed; i.e.
 
@@ -339,7 +343,7 @@ $$I_c = 10I_b$$
 
 This will guarantee that enough current flows through the base to get the full amount of collector current needed.
 
-### Prelab Question {#7.2}
+### Prelab Question {#sec:7.2}
 
 In this circuit, when the optocoupler is activated by the Arduino, the voltage at the phototransistor's emitter will be $15\text{ V}$. 
 
@@ -347,17 +351,17 @@ Calculate the base resistance $R_b$ needed to get the $I_b$ you calculated.
 
 *Note:* don't forget to account for the diode-like voltage drop from base to emitter.
 
-### Prelab Question {#7.3}
+### Prelab Question {#sec:7.3}
 
 The switch of the relay can be used for countless applications. You can pass a signal or power through the switch. Decide on two simple projects that you can do for the "Choose your own project" section of this lab (see below). You’ll only need one in the end, but it will be good to have two options in case one doesn’t work out. You can use internet resources such as those listed under “Useful Readings” or look at the appendix.
 
 ## Lab Activities
 
-### Prelab Question {#8.1}
+### Prelab Question {#sec:8.1}
 
 Read through all of the lab steps and identify the step (or sub-step) that you think will be the most challenging.
 
-### Prelab Question {#8.2}
+### Prelab Question {#sec:8.2}
 
 List at least one question you have about the lab activity.
 
@@ -458,20 +462,24 @@ Now use the Arduino to control the 10-LED bank (MV57164)
 
 Here's a quick reminder of C++ for loop syntax
 
-```C++
+```
+
 for (int ii = 0; ii < 5; ii++) {
    Serial.println(ii)
 }
+
 ```
 
 will print this to the serial monitor:
 
 ```
+
 0
 1
 2
 3
 4
+
 ```
 
 2. Now, further modify your code to make each LED flash in sequence. Document your changes in your lab notebook.
@@ -482,10 +490,11 @@ will print this to the serial monitor:
 
 *Hint:* in a Markdown cell in a Jupyter notebook you can use
 
+
 ```
-```c++
+
 \\ code
-```                                    . 
+
 ```
 
 ## Opto-isolated Relay Control

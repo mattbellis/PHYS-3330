@@ -3,8 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="generator" content="pandoc">
-      <meta name="author" content="Department of Physics | University of
-Colorado Boulder">
+      <meta name="author" content="Department of Physics | University of Colorado Boulder">
       
       <title>PHYS 3330</title>
          </head>
@@ -15,113 +14,56 @@ Colorado Boulder">
             .eqnos br { display: none; }
             .eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
          </style>
-         <h1 class="title">Lab Skill Activity - Simulating Electronic
-Circuits</h1>
+         <h1 class="title">Lab Skill Activity - Simulating Electronic Circuits</h1>
                   <h1 class="title">Contents</h1>
         <nav id="TOC">
             <ul>
-            <li><a href="#goals" id="toc-goals"><span
-            class="toc-section-number">1</span> Goals</a></li>
-            <li><a href="#sec:def" id="toc-sec:def"><span
-            class="toc-section-number">2</span> Definitions</a></li>
-            <li><a href="#sec:prep" id="toc-sec:prep"><span
-            class="toc-section-number">3</span> Preparation</a></li>
-            <li><a href="#simulating-a-voltage-divider"
-            id="toc-simulating-a-voltage-divider"><span
-            class="toc-section-number">4</span> Simulating a Voltage
-            Divider</a>
+            <li><a href="#goals"><span class="toc-section-number">1</span> Goals</a></li>
+            <li><a href="#sec:def"><span class="toc-section-number">2</span> Definitions</a></li>
+            <li><a href="#sec:prep"><span class="toc-section-number">3</span> Preparation</a></li>
+            <li><a href="#simulating-a-voltage-divider"><span class="toc-section-number">4</span> Simulating a Voltage Divider</a>
             <ul>
-            <li><a href="#making-the-circuit"
-            id="toc-making-the-circuit"><span
-            class="toc-section-number">4.1</span> Making the
-            circuit</a></li>
-            <li><a href="#running-a-simulation-of-the-circuit"
-            id="toc-running-a-simulation-of-the-circuit"><span
-            class="toc-section-number">4.2</span> Running a simulation
-            of the circuit</a></li>
-            <li><a href="#displaying-the-simulation-graph"
-            id="toc-displaying-the-simulation-graph"><span
-            class="toc-section-number">4.3</span> Displaying the
-            simulation graph</a></li>
-            <li><a href="#copying-the-graph-or-circuit-on-the-screen"
-            id="toc-copying-the-graph-or-circuit-on-the-screen"><span
-            class="toc-section-number">4.4</span> Copying the graph or
-            circuit on the screen</a></li>
-            <li><a href="#variation-of-the-simulation"
-            id="toc-variation-of-the-simulation"><span
-            class="toc-section-number">4.5</span> Variation of the
-            Simulation</a></li>
-            <li><a href="#save-your-simulation"
-            id="toc-save-your-simulation"><span
-            class="toc-section-number">4.6</span> Save your
-            simulation</a></li>
-            <li><a href="#summary" id="toc-summary"><span
-            class="toc-section-number">4.7</span> Summary</a></li>
+            <li><a href="#making-the-circuit"><span class="toc-section-number">4.1</span> Making the circuit</a></li>
+            <li><a href="#running-a-simulation-of-the-circuit"><span class="toc-section-number">4.2</span> Running a simulation of the circuit</a></li>
+            <li><a href="#displaying-the-simulation-graph"><span class="toc-section-number">4.3</span> Displaying the simulation graph</a></li>
+            <li><a href="#copying-the-graph-or-circuit-on-the-screen"><span class="toc-section-number">4.4</span> Copying the graph or circuit on the screen</a></li>
+            <li><a href="#variation-of-the-simulation"><span class="toc-section-number">4.5</span> Variation of the Simulation</a></li>
+            <li><a href="#save-your-simulation"><span class="toc-section-number">4.6</span> Save your simulation</a></li>
+            <li><a href="#summary"><span class="toc-section-number">4.7</span> Summary</a></li>
             </ul></li>
             </ul>
         </nav>
         <hr/>
-         <h1 data-number="1" id="goals"><span
-         class="header-section-number">1</span> Goals</h1>
-         <p>You will install and learn the basics of using LTspice (a
-         particular SPICE program) and simulate a voltage divider.</p>
+         <h1 data-number="1" id="goals"><span class="header-section-number">1</span> Goals</h1>
+         <p>You will install and learn the basics of using LTspice (a particular SPICE program) and simulate a voltage divider.</p>
          <p>Proficiency with:</p>
          <ul>
          <li>LTspice:
          <ul>
          <li>Install program</li>
-         <li>Learn how to configure and simulate a voltage divider
-         circuit</li>
+         <li>Learn how to configure and simulate a voltage divider circuit</li>
          </ul></li>
          </ul>
-         <h1 data-number="2" id="sec:def"><span
-         class="header-section-number">2</span> Definitions</h1>
-         <p><strong>SPICE:</strong> A general purpose open source
-         Simulation Program with Integrated Circuits Emphasis</p>
-         <p><strong>LTspice:</strong> A SPICE program developed by
-         Linear Technology (now owned and maintained by Analog
-         Devices)</p>
-         <h1 data-number="3" id="sec:prep"><span
-         class="header-section-number">3</span> Preparation</h1>
-         <p><strong>Installing LTspice:</strong> <a
-         href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">Download</a>
-         and install the LTspice simulation software.</p>
-         <p><strong>How to use LTspice:</strong> <a
-         href="https://www.youtube.com/watch?v=JRcyHuyb1V0">This</a>
-         tutorial video demonstrates basic functions of the program by
-         simulating a voltage divider. It lasts about 12 minutes. If you
-         have installed the program already, you can skip the
-         installation part and watch starting from 2:30.</p>
-         <p>This tutorial (and the following instructions) are based on
-         the Windows version. For help with the Mac version, you should
-         also review these two files:</p>
+         <h1 data-number="2" id="sec:def"><span class="header-section-number">2</span> Definitions</h1>
+         <p><strong>SPICE:</strong> A general purpose open source Simulation Program with Integrated Circuits Emphasis</p>
+         <p><strong>LTspice:</strong> A SPICE program developed by Linear Technology (now owned and maintained by Analog Devices)</p>
+         <h1 data-number="3" id="sec:prep"><span class="header-section-number">3</span> Preparation</h1>
+         <p><strong>Installing LTspice:</strong> <a href="https://www.analog.com/en/design-center/design-tools-and-calculators/ltspice-simulator.html">Download</a> and install the LTspice simulation software.</p>
+         <p><strong>How to use LTspice:</strong> <a href="https://www.youtube.com/watch?v=JRcyHuyb1V0">This</a> tutorial video demonstrates basic functions of the program by simulating a voltage divider. It lasts about 12 minutes. If you have installed the program already, you can skip the installation part and watch starting from 2:30.</p>
+         <p>This tutorial (and the following instructions) are based on the Windows version. For help with the Mac version, you should also review these two files:</p>
          <ul>
-         <li><a
-         href="../resources/ltspice-resources/TipsForLTspiceOnMac.pdf">Tips
-         for LTspice on a Mac</a></li>
-         <li><a
-         href="../resources/ltspice-resources/LTspiceShortcutsForMacOSX.pdf">Mac
-         keyboard shortcuts for LTspice</a></li>
+         <li><a href="../resources/ltspice-resources/TipsForLTspiceOnMac.pdf">Tips for LTspice on a Mac</a></li>
+         <li><a href="../resources/ltspice-resources/LTspiceShortcutsForMacOSX.pdf">Mac keyboard shortcuts for LTspice</a></li>
          </ul>
-         <h1 data-number="4" id="simulating-a-voltage-divider"><span
-         class="header-section-number">4</span> Simulating a Voltage
-         Divider</h1>
+         <h1 data-number="4" id="simulating-a-voltage-divider"><span class="header-section-number">4</span> Simulating a Voltage Divider</h1>
          <p>Something here</p>
-         <h2 data-number="4.1" id="making-the-circuit"><span
-         class="header-section-number">4.1</span> Making the
-         circuit</h2>
+         <h2 data-number="4.1" id="making-the-circuit"><span class="header-section-number">4.1</span> Making the circuit</h2>
          <ol type="1">
-         <li>Insert each electronic component (a power supply and two
-         resistors in this case) by selecting the appropriate toolbar
-         icon and then clicking to place in the model window.</li>
-         <li>Wire them together using the ‘pen’ tool on the tool
-         bar.</li>
-         <li>Add a ground that corresponds to the negative side of the
-         power supply.</li>
-         <li>Include a <span class="math inline">\(V_{out}\)</span>
-         label in between the two resistors.</li>
-         <li>Set parameters of the components by right-clicking on each
-         component (use the values for Case 1 in the table below).</li>
+         <li>Insert each electronic component (a power supply and two resistors in this case) by selecting the appropriate toolbar icon and then clicking to place in the model window.</li>
+         <li>Wire them together using the ‘pen’ tool on the tool bar.</li>
+         <li>Add a ground that corresponds to the negative side of the power supply.</li>
+         <li>Include a <span class="math inline">\(V_{out}\)</span> label in between the two resistors.</li>
+         <li>Set parameters of the components by right-clicking on each component (use the values for Case 1 in the table below).</li>
          </ol>
          <center>
          <table>
@@ -147,15 +89,13 @@ Circuits</h1>
          <td>10V peak-to-peak with 0V DC offset, 1kHz, sine wave</td>
          </tr>
          <tr class="even">
-         <td>Resistor 1 (<span
-         class="math inline">\(\Omega\)</span>)</td>
+         <td>Resistor 1 (<span class="math inline">\(\Omega\)</span>)</td>
          <td>1k</td>
          <td>10k</td>
          <td>10k</td>
          </tr>
          <tr class="odd">
-         <td>Resistor 2 (<span
-         class="math inline">\(\Omega\)</span>)</td>
+         <td>Resistor 2 (<span class="math inline">\(\Omega\)</span>)</td>
          <td>1k</td>
          <td>90k</td>
          <td>90k</td>
@@ -163,78 +103,36 @@ Circuits</h1>
          </tbody>
          </table>
          </center>
-         <h2 data-number="4.2"
-         id="running-a-simulation-of-the-circuit"><span
-         class="header-section-number">4.2</span> Running a simulation
-         of the circuit</h2>
+         <h2 data-number="4.2" id="running-a-simulation-of-the-circuit"><span class="header-section-number">4.2</span> Running a simulation of the circuit</h2>
          <ol type="1">
-         <li>Set simulation parameters using ‘Edit Simulation Cmd’ from
-         the ‘Simulate’ menu.</li>
+         <li>Set simulation parameters using ‘Edit Simulation Cmd’ from the ‘Simulate’ menu.</li>
          <li>Choose Transient and set the “Stop time” to 1s.</li>
-         <li>Run the simulation by clicking the ‘running man’ icon in
-         the toolbar. Then you will see a graph window.</li>
-         <li>You can select a value of your interest in the circuit my
-         using your cursor to click on:
+         <li>Run the simulation by clicking the ‘running man’ icon in the toolbar. Then you will see a graph window.</li>
+         <li>You can select a value of your interest in the circuit my using your cursor to click on:
          <ul>
          <li>a point of a wire for a voltage</li>
          <li>a component for the current</li>
          <li>a component with the alt key for the power</li>
          </ul></li>
          </ol>
-         <h2 data-number="4.3"
-         id="displaying-the-simulation-graph"><span
-         class="header-section-number">4.3</span> Displaying the
-         simulation graph</h2>
+         <h2 data-number="4.3" id="displaying-the-simulation-graph"><span class="header-section-number">4.3</span> Displaying the simulation graph</h2>
          <ol type="1">
-         <li><p>Adjust the scale of y-axes of the graph and select which
-         data to present as shown in the video for a good presentation
-         of the simulation.</p></li>
-         <li><p>Choose power dissipated in R1. Notice that the graph
-         shows two values using the vertical axes on the left for one
-         value and the vertical axes on the right for the other
-         value.</p></li>
-         <li><p>You can zoom in the graph by selecting an area with the
-         mouse.</p></li>
-         <li><p>You can select or deselect graphs using ‘Pick Visible
-         Traces’ icon on the tool bar.</p></li>
+         <li><p>Adjust the scale of y-axes of the graph and select which data to present as shown in the video for a good presentation of the simulation.</p></li>
+         <li><p>Choose power dissipated in R1. Notice that the graph shows two values using the vertical axes on the left for one value and the vertical axes on the right for the other value.</p></li>
+         <li><p>You can zoom in the graph by selecting an area with the mouse.</p></li>
+         <li><p>You can select or deselect graphs using ‘Pick Visible Traces’ icon on the tool bar.</p></li>
          </ol>
-         <h2 data-number="4.4"
-         id="copying-the-graph-or-circuit-on-the-screen"><span
-         class="header-section-number">4.4</span> Copying the graph or
-         circuit on the screen</h2>
+         <h2 data-number="4.4" id="copying-the-graph-or-circuit-on-the-screen"><span class="header-section-number">4.4</span> Copying the graph or circuit on the screen</h2>
          <ol type="1">
-         <li><p>Copy the image of the graph or circuit to clipboard
-         using the option in the ‘Tools’ menu. This will copy an image
-         of the active window within LTspice. Copy the result of the
-         simulation showing the <span
-         class="math inline">\(V_{out}\)</span> and power at R1 and
-         paste it into your lab notebook. On Mac, you can either do a
-         screenshot or print to a PDF file.</p></li>
-         <li><p>Verify that these results match what you find from
-         calculations using Ohm’s Law (<span class="math inline">\(V =
-         IR\)</span>) and the power equation (<span
-         class="math inline">\(P = IV = I^2 R = V^2 /R\)</span>).
-         Include your calculations in your lab notebook.</p></li>
+         <li><p>Copy the image of the graph or circuit to clipboard using the option in the ‘Tools’ menu. This will copy an image of the active window within LTspice. Copy the result of the simulation showing the <span class="math inline">\(V_{out}\)</span> and power at R1 and paste it into your lab notebook. On Mac, you can either do a screenshot or print to a PDF file.</p></li>
+         <li><p>Verify that these results match what you find from calculations using Ohm’s Law (<span class="math inline">\(V = IR\)</span>) and the power equation (<span class="math inline">\(P = IV = I^2 R = V^2 /R\)</span>). Include your calculations in your lab notebook.</p></li>
          </ol>
-         <h2 data-number="4.5" id="variation-of-the-simulation"><span
-         class="header-section-number">4.5</span> Variation of the
-         Simulation</h2>
-         <p>Repeat the steps above for Case 2 an Case 3. You don’t need
-         to do the calculations for Case 3.</p>
-         <h2 data-number="4.6" id="save-your-simulation"><span
-         class="header-section-number">4.6</span> Save your
-         simulation</h2>
-         <p>Save the circuit file with an appropriate descriptive
-         filename. The default extension of the saved file is .asc when
-         the circuit window is selected. Upload the .asc file to
-         Canvas.</p>
-         <h2 data-number="4.7" id="summary"><span
-         class="header-section-number">4.7</span> Summary</h2>
-         <p>Write a short conclusion paragraph about this activity.
-         Combine this conclusion with your log of the steps above (a
-         scan of your lab notebook), including snapshot circuits and
-         result plots from LTspice, and save as a PDF and submit to
-         Canvas.</p>
+         <h2 data-number="4.5" id="variation-of-the-simulation"><span class="header-section-number">4.5</span> Variation of the Simulation</h2>
+         <p>Repeat the steps above for Case 2 an Case 3. You don’t need to do the calculations for Case 3.</p>
+         <h2 data-number="4.6" id="save-your-simulation"><span class="header-section-number">4.6</span> Save your simulation</h2>
+         <p>Save the circuit file with an appropriate descriptive filename. The default extension of the saved file is .asc when the circuit window is selected. Upload the .asc file to Canvas.</p>
+         <h2 data-number="4.7" id="summary"><span class="header-section-number">4.7</span> Summary</h2>
+         <p>Write a short conclusion paragraph about this activity. Combine this conclusion with your log of the steps above (a scan of your lab notebook), including snapshot circuits and result plots from LTspice, and save as a PDF and submit to Canvas.</p>
                </div>
             <!-- Mathjax -->
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
