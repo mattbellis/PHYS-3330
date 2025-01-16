@@ -538,7 +538,7 @@ In order to view waves on the oscilloscope, it needs to redraw the wave in the r
 
 <!--To measure various quantities with the DMM, you must set the dial on the DMM to the correct setting that you want to measure. The Fluke 115 DMM that is in your toolbox at your workbench has three banana jack input ports at the bottom. Based on the quantity that you want to measure (voltage, current, resistance, etc.), you need to be sure that you've installed the leads into the appropriate input ports (NOTE: one of the leads will always be connected to the **COM** port).-->
 
-3.  Connect the leads and set the dial to measure resistance (the mini grabbers are great for this). Get three $5\text{ k} \Omega$ (5%) resistors from the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
+3.  Connect the leads and set the dial to measure resistance (the mini grabbers are great for this). Get three resistors close to $5\text{ k} \Omega$ (5%) from the stock drawers. Measure the resistance of each resistor. Do all the resistors meet the 5% specification?
 
 4.  Measure the voltage across the resistor. Why is it $0\text{ V}$?
 
