@@ -22,7 +22,7 @@ Since GitHub Pages will only build off of the main branch, you will need to host
 ### Steps
 
 1. Pull all updates to your local repository.
-2. Run `docker-compose build` then `docker-compose up`. You should now have a container running (you can verify in Docker Desktop).
+2. Run `docker-compose build` then `docker-compose up` (or `docker-compose up --build`). You should now have a container running (you can verify in Docker Desktop).
 3. Open the local repository folder in VSCode.
 4. Press `Ctrl+Shift+P`, and choose "Dev Containers: Attach to Running Container...".
 5. Open a web browser and confirm the site is hosted locally by visiting: [http://localhost:4000/PHYS-3330/](http://localhost:4000/PHYS-3330/)

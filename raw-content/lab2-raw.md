@@ -115,7 +115,7 @@ A *real* power source has series resistance (aka output impedance) $R_o$. When y
 
 When the power source with output impedance $R_o$ drives the load with input impedance $R_i$, the output and input impedances form a voltage divider, where the input of the voltage divider is $V_\text{supply}^\text{(int)}$ and the output is $V_\text{supply}^\text{(ext)}$. The transfer function of this voltage divider is then
 
-$$T = \frac{V_\text{supply}^\text{(ext)}}{V_\text{supply}^\text{(ext)}} = \frac{R_i}{R_o+R_i}$$
+$$T = \frac{V_\text{supply}^\text{(ext)}}{V_\text{supply}^\text{(int)}} = \frac{R_i}{R_o+R_i}$$
 
 ### Prelab Question {#sec:3.1}
 
