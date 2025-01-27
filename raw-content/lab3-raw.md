@@ -366,7 +366,7 @@ Find $f_0$ using this fact and the equation for $|T_\text{bandpass}|$ above $($*
 
 Write two Python functions:
 
-- one that calculates $|T|$ with $R$, $C$, and $f$ as inputs.
+- one that calculates $|T|$ with $R$, $L$, $C$, and $f$ as inputs.
 
 - one that calculates $\delta$ with the same inputs (convert from radians to degrees).
 

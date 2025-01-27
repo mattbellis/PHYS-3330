@@ -3,7 +3,8 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="generator" content="pandoc">
-      <meta name="author" content="Department of Physics | University of Colorado Boulder">
+      <meta name="author" content="Department of Physics | University of
+Colorado Boulder">
       
       <title>PHYS 3330</title>
             
@@ -25,521 +26,1290 @@
                   <h1 class="title">Contents</h1>
         <nav id="TOC">
             <ul>
-            <li><a href="#goals"><span class="toc-section-number">1</span> Goals</a></li>
-            <li><a href="#definitions"><span class="toc-section-number">2</span> Definitions</a></li>
-            <li><a href="#voltage-divider-review"><span class="toc-section-number">3</span> Voltage Divider Review</a></li>
-            <li><a href="#quick-complex-numbers-review"><span class="toc-section-number">4</span> Quick Complex Numbers Review</a></li>
-            <li><a href="#prelab"><span class="toc-section-number">5</span> Prelab</a>
+            <li><a href="#goals"><span
+            class="toc-section-number">1</span> Goals</a></li>
+            <li><a href="#definitions"><span
+            class="toc-section-number">2</span> Definitions</a></li>
+            <li><a href="#voltage-divider-review"><span
+            class="toc-section-number">3</span> Voltage Divider
+            Review</a></li>
+            <li><a href="#quick-complex-numbers-review"><span
+            class="toc-section-number">4</span> Quick Complex Numbers
+            Review</a></li>
+            <li><a href="#prelab"><span
+            class="toc-section-number">5</span> Prelab</a>
             <ul>
-            <li><a href="#capacitors"><span class="toc-section-number">5.1</span> Capacitors</a>
+            <li><a href="#capacitors"><span
+            class="toc-section-number">5.1</span> Capacitors</a>
             <ul>
-            <li><a href="#sec:1.1"><span class="toc-section-number">5.1.1</span> Prelab Question</a></li>
+            <li><a href="#sec:1.1"><span
+            class="toc-section-number">5.1.1</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#capacitance-of-cables"><span class="toc-section-number">5.2</span> Capacitance of cables</a>
+            <li><a href="#capacitance-of-cables"><span
+            class="toc-section-number">5.2</span> Capacitance of
+            cables</a>
             <ul>
-            <li><a href="#sec:2.1"><span class="toc-section-number">5.2.1</span> Prelab question</a></li>
+            <li><a href="#sec:2.1"><span
+            class="toc-section-number">5.2.1</span> Prelab
+            question</a></li>
             </ul></li>
-            <li><a href="#inductors"><span class="toc-section-number">5.3</span> Inductors</a>
+            <li><a href="#inductors"><span
+            class="toc-section-number">5.3</span> Inductors</a>
             <ul>
-            <li><a href="#sec:3.1"><span class="toc-section-number">5.3.1</span> Prelab Question</a></li>
+            <li><a href="#sec:3.1"><span
+            class="toc-section-number">5.3.1</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#low-pass-filters"><span class="toc-section-number">5.4</span> Low-Pass Filters</a>
+            <li><a href="#low-pass-filters"><span
+            class="toc-section-number">5.4</span> Low-Pass Filters</a>
             <ul>
-            <li><a href="#sec:4.1"><span class="toc-section-number">5.4.1</span> Prelab Question</a></li>
-            <li><a href="#sec:4.2"><span class="toc-section-number">5.4.2</span> Prelab Question</a></li>
-            <li><a href="#sec:4.3"><span class="toc-section-number">5.4.3</span> Prelab Question</a></li>
+            <li><a href="#sec:4.1"><span
+            class="toc-section-number">5.4.1</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:4.2"><span
+            class="toc-section-number">5.4.2</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:4.3"><span
+            class="toc-section-number">5.4.3</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#high-pass-filters"><span class="toc-section-number">5.5</span> High-Pass Filters</a>
+            <li><a href="#high-pass-filters"><span
+            class="toc-section-number">5.5</span> High-Pass Filters</a>
             <ul>
-            <li><a href="#sec:5.1"><span class="toc-section-number">5.5.1</span> Prelab Question</a></li>
-            <li><a href="#sec:5.2"><span class="toc-section-number">5.5.2</span> Prelab Question</a></li>
-            <li><a href="#sec:5.3"><span class="toc-section-number">5.5.3</span> Prelab Question</a></li>
+            <li><a href="#sec:5.1"><span
+            class="toc-section-number">5.5.1</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:5.2"><span
+            class="toc-section-number">5.5.2</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:5.3"><span
+            class="toc-section-number">5.5.3</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#cutoff-frequency"><span class="toc-section-number">5.6</span> Cutoff Frequency</a>
+            <li><a href="#cutoff-frequency"><span
+            class="toc-section-number">5.6</span> Cutoff Frequency</a>
             <ul>
-            <li><a href="#sec:6.1"><span class="toc-section-number">5.6.1</span> Prelab Question</a></li>
-            <li><a href="#sec:6.2"><span class="toc-section-number">5.6.2</span> Prelab Question</a></li>
-            <li><a href="#sec:6.3"><span class="toc-section-number">5.6.3</span> Prelab Question</a></li>
+            <li><a href="#sec:6.1"><span
+            class="toc-section-number">5.6.1</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:6.2"><span
+            class="toc-section-number">5.6.2</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:6.3"><span
+            class="toc-section-number">5.6.3</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#parallel-lcr-bandpass-filters"><span class="toc-section-number">5.7</span> Parallel LCR Bandpass Filters</a>
+            <li><a href="#parallel-lcr-bandpass-filters"><span
+            class="toc-section-number">5.7</span> Parallel LCR Bandpass
+            Filters</a>
             <ul>
-            <li><a href="#sec:7.1"><span class="toc-section-number">5.7.1</span> Prelab Question</a></li>
-            <li><a href="#sec:7.2"><span class="toc-section-number">5.7.2</span> Prelab Question</a></li>
-            <li><a href="#sec:7.3"><span class="toc-section-number">5.7.3</span> Prelab Question</a></li>
+            <li><a href="#sec:7.1"><span
+            class="toc-section-number">5.7.1</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:7.2"><span
+            class="toc-section-number">5.7.2</span> Prelab
+            Question</a></li>
+            <li><a href="#sec:7.3"><span
+            class="toc-section-number">5.7.3</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#quality-factor"><span class="toc-section-number">5.8</span> Quality factor</a>
+            <li><a href="#quality-factor"><span
+            class="toc-section-number">5.8</span> Quality factor</a>
             <ul>
-            <li><a href="#sec:8.1"><span class="toc-section-number">5.8.1</span> Prelab Question</a></li>
+            <li><a href="#sec:8.1"><span
+            class="toc-section-number">5.8.1</span> Prelab
+            Question</a></li>
             </ul></li>
-            <li><a href="#bode-plots"><span class="toc-section-number">5.9</span> Bode plots</a>
+            <li><a href="#bode-plots"><span
+            class="toc-section-number">5.9</span> Bode plots</a>
             <ul>
-            <li><a href="#sec:9.1"><span class="toc-section-number">5.9.1</span> Prelab question</a></li>
-            <li><a href="#sec:9.2"><span class="toc-section-number">5.9.2</span> Prelab question</a></li>
-            <li><a href="#sec:9.3"><span class="toc-section-number">5.9.3</span> Prelab question</a></li>
-            <li><a href="#sec:9.4"><span class="toc-section-number">5.9.4</span> Prelab question</a></li>
-            <li><a href="#sec:9.5"><span class="toc-section-number">5.9.5</span> Prelab question</a></li>
+            <li><a href="#sec:9.1"><span
+            class="toc-section-number">5.9.1</span> Prelab
+            question</a></li>
+            <li><a href="#sec:9.2"><span
+            class="toc-section-number">5.9.2</span> Prelab
+            question</a></li>
+            <li><a href="#sec:9.3"><span
+            class="toc-section-number">5.9.3</span> Prelab
+            question</a></li>
+            <li><a href="#sec:9.4"><span
+            class="toc-section-number">5.9.4</span> Prelab
+            question</a></li>
+            <li><a href="#sec:9.5"><span
+            class="toc-section-number">5.9.5</span> Prelab
+            question</a></li>
             </ul></li>
-            <li><a href="#lab-activities"><span class="toc-section-number">5.10</span> Lab activities</a>
+            <li><a href="#lab-activities"><span
+            class="toc-section-number">5.10</span> Lab activities</a>
             <ul>
-            <li><a href="#sec:10.1"><span class="toc-section-number">5.10.1</span> Prelab question</a></li>
+            <li><a href="#sec:10.1"><span
+            class="toc-section-number">5.10.1</span> Prelab
+            question</a></li>
             </ul></li>
             </ul></li>
-            <li><a href="#useful-readings"><span class="toc-section-number">6</span> Useful Readings</a></li>
-            <li><a href="#lab-activities-1"><span class="toc-section-number">7</span> Lab Activities</a>
+            <li><a href="#useful-readings"><span
+            class="toc-section-number">6</span> Useful Readings</a></li>
+            <li><a href="#lab-activities-1"><span
+            class="toc-section-number">7</span> Lab Activities</a>
             <ul>
-            <li><a href="#measure-components-predict-build"><span class="toc-section-number">7.1</span> Measure components, Predict, Build</a>
+            <li><a href="#measure-components-predict-build"><span
+            class="toc-section-number">7.1</span> Measure components,
+            Predict, Build</a>
             <ul>
-            <li><a href="#preparation"><span class="toc-section-number">7.1.1</span> Preparation</a></li>
-            <li><a href="#building-the-circuits"><span class="toc-section-number">7.1.2</span> Building the Circuits</a></li>
-            <li><a href="#use-the-models-to-predict-the-behavior-of-the-circuits"><span class="toc-section-number">7.1.3</span> Use the models to predict the behavior of the circuits</a></li>
+            <li><a href="#preparation"><span
+            class="toc-section-number">7.1.1</span> Preparation</a></li>
+            <li><a href="#building-the-circuits"><span
+            class="toc-section-number">7.1.2</span> Building the
+            Circuits</a></li>
+            <li><a
+            href="#use-the-models-to-predict-the-behavior-of-the-circuits"><span
+            class="toc-section-number">7.1.3</span> Use the models to
+            predict the behavior of the circuits</a></li>
             </ul></li>
-            <li><a href="#setting-up-test-and-measurement-equipment-and-testing-your-circuits"><span class="toc-section-number">7.2</span> Setting Up Test and Measurement Equipment and Testing Your Circuits</a>
+            <li><a
+            href="#setting-up-test-and-measurement-equipment-and-testing-your-circuits"><span
+            class="toc-section-number">7.2</span> Setting Up Test and
+            Measurement Equipment and Testing Your Circuits</a>
             <ul>
-            <li><a href="#prepare-to-test-the-circuits"><span class="toc-section-number">7.2.1</span> Prepare to test the circuits</a></li>
-            <li><a href="#sec:vd-freq"><span class="toc-section-number">7.2.2</span> Measure the frequency dependence of the voltage divider</a></li>
-            <li><a href="#refining-the-measurement-system-of-the-voltage-divider"><span class="toc-section-number">7.2.3</span> Refining the measurement system of the voltage divider</a></li>
+            <li><a href="#prepare-to-test-the-circuits"><span
+            class="toc-section-number">7.2.1</span> Prepare to test the
+            circuits</a></li>
+            <li><a href="#sec:vd-freq"><span
+            class="toc-section-number">7.2.2</span> Measure the
+            frequency dependence of the voltage divider</a></li>
+            <li><a
+            href="#refining-the-measurement-system-of-the-voltage-divider"><span
+            class="toc-section-number">7.2.3</span> Refining the
+            measurement system of the voltage divider</a></li>
             </ul></li>
-            <li><a href="#measure-the-frequency-dependence-of-the-low-pass"><span class="toc-section-number">7.3</span> Measure the frequency dependence of the low-pass</a></li>
-            <li><a href="#measure-the-rc-time-of-the-low-pass-filter"><span class="toc-section-number">7.4</span> Measure the RC-time of the low-pass filter</a></li>
-            <li><a href="#measure-the-frequency-dependance-of-the-high-pass-filter"><span class="toc-section-number">7.5</span> Measure the frequency dependance of the high-pass filter</a></li>
-            <li><a href="#measure-the-frequency-dependence-of-the-bandpass-filter"><span class="toc-section-number">7.6</span> Measure the frequency dependence of the bandpass filter</a></li>
+            <li><a
+            href="#measure-the-frequency-dependence-of-the-low-pass"><span
+            class="toc-section-number">7.3</span> Measure the frequency
+            dependence of the low-pass</a></li>
+            <li><a
+            href="#measure-the-rc-time-of-the-low-pass-filter"><span
+            class="toc-section-number">7.4</span> Measure the RC-time of
+            the low-pass filter</a></li>
+            <li><a
+            href="#measure-the-frequency-dependance-of-the-high-pass-filter"><span
+            class="toc-section-number">7.5</span> Measure the frequency
+            dependance of the high-pass filter</a></li>
+            <li><a
+            href="#measure-the-frequency-dependence-of-the-bandpass-filter"><span
+            class="toc-section-number">7.6</span> Measure the frequency
+            dependence of the bandpass filter</a></li>
             </ul></li>
-            <li><a href="#appendix-a-refined-lcr-bandpass-filter-model">Appendix A: Refined LCR BandPass Filter Model</a></li>
+            <li><a
+            href="#appendix-a-refined-lcr-bandpass-filter-model">Appendix
+            A: Refined LCR BandPass Filter Model</a></li>
             </ul>
         </nav>
         <hr/>
-         <h1 data-number="1" id="goals"><span class="header-section-number">1</span> Goals</h1>
-         <p>In this lab, you will characterize the frequency dependence of three passive filters. You will model, simulate, and test passive filter circuits and learn how to make more accurate high-frequency measurements with the oscilloscope.</p>
+         <h1 data-number="1" id="goals"><span
+         class="header-section-number">1</span> Goals</h1>
+         <p>In this lab, you will characterize the frequency dependence
+         of three passive filters. You will model, simulate, and test
+         passive filter circuits and learn how to make more accurate
+         high-frequency measurements with the oscilloscope.</p>
          <p>You will learn to use new equipment and devices</p>
          <ul>
          <li><p>Oscilloscope probe</p></li>
          <li><p>Capacitors and inductors</p></li>
          <li><p>LCR meter</p></li>
          </ul>
-         <p>You will learn to model the frequency dependence and effects on phase of passive filters</p>
-         <p>You will also learn how to refine the oscilloscope measurement to reduce the effect of coax capacitance.</p>
-         <p>Filters are incredibly important components in physical experiments. Often times your experimental goal is to detect an electronic signal hidden in a background of noise and unwated signals. Filters are a tool that remove (cut) signals and noise of certain frequencies, and preserve (pass) signals of other frequencies. For example, the signal of interest may be at a particular frequncy, as in an NMR (nuclear magnetic resonance) experiment, or it may be an electrical pulse from a single photon detector. The background generally contains thermal noise from the transducer and amplifier, pick up of <span class="math inline">\(60\text{ Hz}\)</span> wall power, transients from machinery, radiation from radio, TV stations, light sources, cell phones, and so forth. The purpose of filtering is to enhance the signal of interest by recognizing its characteristic time dependence and to reduce the unwanted background to the lowest possible level. A radio does this when you tune to a particular station, using a resonant circuit to only allow a narrow band of frequency through (the center frequency of this band is <em>the station</em>). The signal you want may be less than <span class="math inline">\(10^{-6}\)</span> of the total radiation power at your antenna, yet you get a high-quality signal from the selected station due to the filtering. Many experiments require specific filters designed so that the signal from the phenomenon of interest lies in the pass-band of the filter, while the attenuation bands are chosen to suppress the background and noise.</p>
+         <p>You will learn to model the frequency dependence and effects
+         on phase of passive filters</p>
+         <p>You will also learn how to refine the oscilloscope
+         measurement to reduce the effect of coax capacitance.</p>
+         <p>Filters are incredibly important components in physical
+         experiments. Often times your experimental goal is to detect an
+         electronic signal hidden in a background of noise and unwated
+         signals. Filters are a tool that remove (cut) signals and noise
+         of certain frequencies, and preserve (pass) signals of other
+         frequencies. For example, the signal of interest may be at a
+         particular frequncy, as in an NMR (nuclear magnetic resonance)
+         experiment, or it may be an electrical pulse from a single
+         photon detector. The background generally contains thermal
+         noise from the transducer and amplifier, pick up of <span
+         class="math inline">\(60\text{ Hz}\)</span> wall power,
+         transients from machinery, radiation from radio, TV stations,
+         light sources, cell phones, and so forth. The purpose of
+         filtering is to enhance the signal of interest by recognizing
+         its characteristic time dependence and to reduce the unwanted
+         background to the lowest possible level. A radio does this when
+         you tune to a particular station, using a resonant circuit to
+         only allow a narrow band of frequency through (the center
+         frequency of this band is <em>the station</em>). The signal you
+         want may be less than <span
+         class="math inline">\(10^{-6}\)</span> of the total radiation
+         power at your antenna, yet you get a high-quality signal from
+         the selected station due to the filtering. Many experiments
+         require specific filters designed so that the signal from the
+         phenomenon of interest lies in the pass-band of the filter,
+         while the attenuation bands are chosen to suppress the
+         background and noise.</p>
          <p>There are 4 basic kinds of filters:</p>
          <ul>
-         <li><p>Low-pass filter (passes low frequencies, cuts high frequencies)</p></li>
-         <li><p>High-pass filter (passes high frequencies, cuts low frequencies)</p></li>
-         <li><p>Bandpass filter (passes frequencies centered around a center frequency and cuts both high and low frequencies)</p></li>
-         <li><p>Notch filter (passes low and high frequencies and cuts frequencies centered arounda center frequency)</p></li>
+         <li><p>Low-pass filter (passes low frequencies, cuts high
+         frequencies)</p></li>
+         <li><p>High-pass filter (passes high frequencies, cuts low
+         frequencies)</p></li>
+         <li><p>Bandpass filter (passes frequencies centered around a
+         center frequency and cuts both high and low
+         frequencies)</p></li>
+         <li><p>Notch filter (passes low and high frequencies and cuts
+         frequencies centered arounda center frequency)</p></li>
          </ul>
-         <p>In this lab you will model, simulate, and test the first three kinds of circuits, but you will gain the requisite skills to be able to implement a notch filter in your final project if necessary.</p>
-         <h1 data-number="2" id="definitions"><span class="header-section-number">2</span> Definitions</h1>
-         <p><strong>Scope probe</strong> - a test probe used to increase the resistive impedance and lower the capacitive impedance compared to a simple coax cable probe.</p>
-         <p><strong>Transfer function</strong> - An output over an input (in the context of circuits: a voltage output over a voltage input). In this lab, we will explore situations where this is a complex valued function which will lead to phase lags/shifts.</p>
-         <p><strong>Gain</strong> - the magnitude of the transfer function is the voltage gain <span class="math inline">\(G=|T|=|V_\text{out}/V_\text{in}|\)</span>. The power gain is the square of this: <span class="math inline">\(|V_\text{out}/V_\text{in}|^2\)</span>. If the gain is not specified, you can assume it is the voltage (or amplitude) gain. Often when the gain is less than one, it is referred to as <em>attenuation</em>.</p>
-         <p><strong>Decibel (dB)</strong> - a measure of the power transmitted by converting the power gain (or voltage gain) to a logarithmic scale. The difference in power between output and input in decibels (dB) is <span class="math inline">\(10\log_{10}|V_\text{out}/V_\text{in}|^2 =20\log_{10}|V_\text{out}/V_\text{in}|\)</span>. One common reference point is where the ratio of output to input power is 1/2, which is <span class="math inline">\(10\log_{10}(0.5) = -3\text{ dB}\)</span>. This corresponds to <span class="math inline">\(|V_\text{out}/V_\text{in}| = 1/\sqrt 2 = 0.707 = 70.7\%\)</span> (Remember, this happens to be the same number from RMS).</p>
-         <p><strong>Pass band</strong> - the range of frequencies that can pass through a filter without being attenuated.</p>
-         <p><strong>Attenuation band</strong> - the range of frequencies where the filter attenuates the signal.</p>
-         <p><strong>Half power point</strong> or <strong>cutoff frequency</strong> or <strong>corner frequency</strong> or <strong>3 dB frequency, <span class="math inline">\(f_0\)</span></strong> - frequency separating the pass and attenuation bands. It is the frequency at the half-power <span class="math inline">\((-3\text{ dB})\)</span> point, where the <em>power</em> transmitted is half the maximum power transmitted. The output voltage <em>amplitude</em> at <span class="math inline">\(f = f_c\)</span> is <span class="math inline">\(\frac{1}{\sqrt{2}} = 70.7\%\)</span> of the maximum amplitude.</p>
-         <p><strong>Low-pass filter</strong> - a filter that passes low frequency signals and attenuates (reduces the amplitude of) signals with frequencies higher than the cutoff frequency. Also known as an integrator.</p>
-         <p><strong>High-pass filter</strong> - a filter that passes high frequency signals and attenuates (reduces the amplitude of) signals with frequencies lower than the cutoff frequency. Also known as a differentiator.</p>
-         <p><strong>Bandpass filter</strong> - passes frequencies within a certain range and attenuates frequencies outside that range.</p>
-         <p><strong>Bandpass filter bandwidth</strong> - the range of frequencies between the upper (<span class="math inline">\(f_{c,+}\)</span>) and lower (<span class="math inline">\(f_{c,-}\)</span>) half power (3dB) points: <span class="math inline">\(\Delta f = f_{c,+} - f_{c,-}\)</span>.</p>
-         <h1 data-number="3" id="voltage-divider-review"><span class="header-section-number">3</span> Voltage Divider Review</h1>
+         <p>In this lab you will model, simulate, and test the first
+         three kinds of circuits, but you will gain the requisite skills
+         to be able to implement a notch filter in your final project if
+         necessary.</p>
+         <h1 data-number="2" id="definitions"><span
+         class="header-section-number">2</span> Definitions</h1>
+         <p><strong>Scope probe</strong> - a test probe used to increase
+         the resistive impedance and lower the capacitive impedance
+         compared to a simple coax cable probe.</p>
+         <p><strong>Transfer function</strong> - An output over an input
+         (in the context of circuits: a voltage output over a voltage
+         input). In this lab, we will explore situations where this is a
+         complex valued function which will lead to phase
+         lags/shifts.</p>
+         <p><strong>Gain</strong> - the magnitude of the transfer
+         function is the voltage gain <span
+         class="math inline">\(G=|T|=|V_\text{out}/V_\text{in}|\)</span>.
+         The power gain is the square of this: <span
+         class="math inline">\(|V_\text{out}/V_\text{in}|^2\)</span>. If
+         the gain is not specified, you can assume it is the voltage (or
+         amplitude) gain. Often when the gain is less than one, it is
+         referred to as <em>attenuation</em>.</p>
+         <p><strong>Decibel (dB)</strong> - a measure of the power
+         transmitted by converting the power gain (or voltage gain) to a
+         logarithmic scale. The difference in power between output and
+         input in decibels (dB) is <span
+         class="math inline">\(10\log_{10}|V_\text{out}/V_\text{in}|^2
+         =20\log_{10}|V_\text{out}/V_\text{in}|\)</span>. One common
+         reference point is where the ratio of output to input power is
+         1/2, which is <span class="math inline">\(10\log_{10}(0.5) =
+         -3\text{ dB}\)</span>. This corresponds to <span
+         class="math inline">\(|V_\text{out}/V_\text{in}| = 1/\sqrt 2 =
+         0.707 = 70.7\%\)</span> (Remember, this happens to be the same
+         number from RMS).</p>
+         <p><strong>Pass band</strong> - the range of frequencies that
+         can pass through a filter without being attenuated.</p>
+         <p><strong>Attenuation band</strong> - the range of frequencies
+         where the filter attenuates the signal.</p>
+         <p><strong>Half power point</strong> or <strong>cutoff
+         frequency</strong> or <strong>corner frequency</strong> or
+         <strong>3 dB frequency, <span
+         class="math inline">\(f_0\)</span></strong> - frequency
+         separating the pass and attenuation bands. It is the frequency
+         at the half-power <span class="math inline">\((-3\text{
+         dB})\)</span> point, where the <em>power</em> transmitted is
+         half the maximum power transmitted. The output voltage
+         <em>amplitude</em> at <span class="math inline">\(f =
+         f_c\)</span> is <span class="math inline">\(\frac{1}{\sqrt{2}}
+         = 70.7\%\)</span> of the maximum amplitude.</p>
+         <p><strong>Low-pass filter</strong> - a filter that passes low
+         frequency signals and attenuates (reduces the amplitude of)
+         signals with frequencies higher than the cutoff frequency. Also
+         known as an integrator.</p>
+         <p><strong>High-pass filter</strong> - a filter that passes
+         high frequency signals and attenuates (reduces the amplitude
+         of) signals with frequencies lower than the cutoff frequency.
+         Also known as a differentiator.</p>
+         <p><strong>Bandpass filter</strong> - passes frequencies within
+         a certain range and attenuates frequencies outside that
+         range.</p>
+         <p><strong>Bandpass filter bandwidth</strong> - the range of
+         frequencies between the upper (<span
+         class="math inline">\(f_{c,+}\)</span>) and lower (<span
+         class="math inline">\(f_{c,-}\)</span>) half power (3dB)
+         points: <span class="math inline">\(\Delta f = f_{c,+} -
+         f_{c,-}\)</span>.</p>
+         <h1 data-number="3" id="voltage-divider-review"><span
+         class="header-section-number">3</span> Voltage Divider
+         Review</h1>
          <div id="fig:vd" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/vd.png" style="width:10cm" alt="" /><figcaption><span>Figure 1:</span> Voltage divider</figcaption>
+         <img src="../resources/lab3fig/vd.png" style="width:10cm"
+         alt="Figure 1: Voltage divider" />
+         <figcaption aria-hidden="true"><span>Figure 1:</span> Voltage
+         divider</figcaption>
          </figure>
          </div>
-         <p>You found last week that the voltage divider splits the total voltage <span class="math inline">\(V_\text{in}\)</span> across <span class="math inline">\(R_1\)</span> and <span class="math inline">\(R_2\)</span> so that the output voltage <span class="math inline">\(V_\text{out}\)</span> is the voltage just across the second resistor. Since</p>
-         <p><span class="math display">\[V_\text{in} = I (R_1+R_2)\]</span></p>
-         <p><span class="math display">\[V_\text{out} = IR_2\]</span></p>
+         <p>You found last week that the voltage divider splits the
+         total voltage <span class="math inline">\(V_\text{in}\)</span>
+         across <span class="math inline">\(R_1\)</span> and <span
+         class="math inline">\(R_2\)</span> so that the output voltage
+         <span class="math inline">\(V_\text{out}\)</span> is the
+         voltage just across the second resistor. Since</p>
+         <p><span class="math display">\[V_\text{in} = I
+         (R_1+R_2)\]</span></p>
+         <p><span class="math display">\[V_\text{out} =
+         IR_2\]</span></p>
          <p>the transfer function is</p>
-         <p><span class="math display">\[T = \frac{V_\text{out}}{V_\text{in}} = \frac{R_2}{R_1+R_2}\]</span></p>
-         <p>In general, any two passive elements that obey Ohm’s law (resistors, capacitors, inductors) in this configuration lead to this same equation. We can generalize it in the following way</p>
-         <p><span class="math display">\[T = \frac{Z_2}{Z_1+Z_2}\]</span></p>
-         <p>where <span class="math inline">\(Z_1\)</span> and <span class="math inline">\(Z_2\)</span> are the <em>impedances</em> of the two passive elements (in the case of a resistor, the impedance is the resistance). For capacitors and inductors, the impedance is complex valued; this will lead to complex valued transfer functions!</p>
-         <p>Last week we considered the affects of a voltage supply’s output impedance on a circuit. This week we will utilize the function generator for each circuit we build. The function generator has a <span class="math inline">\(50\ \Omega\)</span> output impedance.</p>
+         <p><span class="math display">\[T =
+         \frac{V_\text{out}}{V_\text{in}} =
+         \frac{R_2}{R_1+R_2}\]</span></p>
+         <p>In general, any two passive elements that obey Ohm’s law
+         (resistors, capacitors, inductors) in this configuration lead
+         to this same equation. We can generalize it in the following
+         way</p>
+         <p><span class="math display">\[T =
+         \frac{Z_2}{Z_1+Z_2}\]</span></p>
+         <p>where <span class="math inline">\(Z_1\)</span> and <span
+         class="math inline">\(Z_2\)</span> are the <em>impedances</em>
+         of the two passive elements (in the case of a resistor, the
+         impedance is the resistance). For capacitors and inductors, the
+         impedance is complex valued; this will lead to complex valued
+         transfer functions!</p>
+         <p>Last week we considered the affects of a voltage supply’s
+         output impedance on a circuit. This week we will utilize the
+         function generator for each circuit we build. The function
+         generator has a <span class="math inline">\(50\ \Omega\)</span>
+         output impedance.</p>
          <div id="fig:nonideal-vd" class="fignos">
          <figure>
-         <img src="../resources/lab2fig/nonideal-vd.png" style="height:7.5cm" alt="" /><figcaption><span>Figure 2:</span> A real power source has an output impedance <span class="math inline">\(R_o\)</span> that can impact a voltage divider circuit</figcaption>
+         <img src="../resources/lab2fig/nonideal-vd.png"
+         style="height:7.5cm"
+         alt="Figure 2: A real power source has an output impedance R_o that can impact a voltage divider circuit" />
+         <figcaption aria-hidden="true"><span>Figure 2:</span> A real
+         power source has an output impedance <span
+         class="math inline">\(R_o\)</span> that can impact a voltage
+         divider circuit</figcaption>
          </figure>
          </div>
-         <p>The amount of voltage across the circuit <span class="math inline">\(V_\text{supply}^\text{(ext)}\)</span> will be determined by the input impedance <span class="math inline">\(R_i\)</span> of the circuit.</p>
-         <p><span class="math display">\[V_\text{supply}^\text{(ext)} = V_\text{supply}^\text{(int)}\frac{R_2}{R_1+R_2}\]</span></p>
-         <p>where <span class="math inline">\(V_\text{supply}^\text{(int)}\)</span> is the voltage you program the function generator to deliver. <em>Note:</em> for <span class="math inline">\(R_i \gg R_o\)</span>: <span class="math inline">\(V_\text{supply}^\text{(ext)} = V_\text{supply}^\text{(int)}\)</span></p>
-         <h1 data-number="4" id="quick-complex-numbers-review"><span class="header-section-number">4</span> Quick Complex Numbers Review</h1>
-         <p>Capacitors and inductors have imaginary impedances. When these elements are used in voltage divider arrangements, this will lead to transfer functions that are complex valued (they have real and imaginary parts). When dealing with complex transfer functions, it is much simpler to represent sinusoidal functions as complex exponentials:</p>
-         <p><span class="math display">\[e^{j\omega t} = \cos{\omega t} + j \sin{\omega t}\]</span></p>
-         <p><em>Note:</em> in the context of electrical engineering and circuits, we use <span class="math inline">\(j=\sqrt{-1}\)</span> to avoid confusion with <span class="math inline">\(i\)</span> potentially representing a current.</p>
-         <p>Therefore if <span class="math inline">\(V_\text{in}(t)\)</span> is a sine-wave (or cosine-wave) with amplitude <span class="math inline">\(V_0\)</span> and angular frequency <span class="math inline">\(\omega\)</span>, we would write it as:</p>
-         <p><span class="math display">\[V_\text{in}(t) = V_0e^{j\omega t}\]</span></p>
-         <p>Applying any transfer function <span class="math inline">\(T\)</span> to this input will lead to the following output</p>
-         <p><span id="eq:complex-transfer" class="eqnos"><span class="math display">\[V_\text{out}(t) = TV_\text{in}(t) = V_0 T e^{j\omega t}\]</span><span class="eqnos-number">(1)</span></span> </p>
-         <p>When <span class="math inline">\(T\)</span> is a complex function, it is far easier to multiply it and the complex exponential when <span class="math inline">\(T\)</span> is put into its “magnitude and phase” form</p>
+         <p>The amount of voltage across the circuit <span
+         class="math inline">\(V_\text{supply}^\text{(ext)}\)</span>
+         will be determined by the input impedance <span
+         class="math inline">\(R_i\)</span> of the circuit.</p>
+         <p><span class="math display">\[V_\text{supply}^\text{(ext)} =
+         V_\text{supply}^\text{(int)}\frac{R_2}{R_1+R_2}\]</span></p>
+         <p>where <span
+         class="math inline">\(V_\text{supply}^\text{(int)}\)</span> is
+         the voltage you program the function generator to deliver.
+         <em>Note:</em> for <span class="math inline">\(R_i \gg
+         R_o\)</span>: <span
+         class="math inline">\(V_\text{supply}^\text{(ext)} =
+         V_\text{supply}^\text{(int)}\)</span></p>
+         <h1 data-number="4" id="quick-complex-numbers-review"><span
+         class="header-section-number">4</span> Quick Complex Numbers
+         Review</h1>
+         <p>Capacitors and inductors have imaginary impedances. When
+         these elements are used in voltage divider arrangements, this
+         will lead to transfer functions that are complex valued (they
+         have real and imaginary parts). When dealing with complex
+         transfer functions, it is much simpler to represent sinusoidal
+         functions as complex exponentials:</p>
+         <p><span class="math display">\[e^{j\omega t} = \cos{\omega t}
+         + j \sin{\omega t}\]</span></p>
+         <p><em>Note:</em> in the context of electrical engineering and
+         circuits, we use <span
+         class="math inline">\(j=\sqrt{-1}\)</span> to avoid confusion
+         with <span class="math inline">\(i\)</span> potentially
+         representing a current.</p>
+         <p>Therefore if <span
+         class="math inline">\(V_\text{in}(t)\)</span> is a sine-wave
+         (or cosine-wave) with amplitude <span
+         class="math inline">\(V_0\)</span> and angular frequency <span
+         class="math inline">\(\omega\)</span>, we would write it
+         as:</p>
+         <p><span class="math display">\[V_\text{in}(t) = V_0e^{j\omega
+         t}\]</span></p>
+         <p>Applying any transfer function <span
+         class="math inline">\(T\)</span> to this input will lead to the
+         following output</p>
+         <p><span id="eq:complex-transfer" class="eqnos"><span
+         class="math display">\[V_\text{out}(t) = TV_\text{in}(t) = V_0
+         T e^{j\omega
+         t}\]</span><span class="eqnos-number">(1)</span></span> </p>
+         <p>When <span class="math inline">\(T\)</span> is a complex
+         function, it is far easier to multiply it and the complex
+         exponential when <span class="math inline">\(T\)</span> is put
+         into its “magnitude and phase” form</p>
          <p><span class="math display">\[T = |T|e^{j\delta}\]</span></p>
-         <p>where <span class="math inline">\(|T|\)</span> is the magnitude of <span class="math inline">\(T\)</span> and <span class="math inline">\(\delta\)</span> is the phase of <span class="math inline">\(T\)</span> in the complex plane.</p>
-         <p><span class="math display">\[|T| = \sqrt{TT^*} = \sqrt{\text{Re}[T]^2 + \text{Im}[T]^2}\]</span></p>
-         <p><span class="math display">\[\tan\delta = \frac{\text{Im}[T]}{\text{Re}[T]}\]</span></p>
-         <p>In this form, Equation <a href="#eq:complex-transfer">1</a> becomes</p>
-         <p><span class="math display">\[V_\text{out} = |T|V_0e^{j\omega t + \delta}\]</span></p>
-         <p>So the magnitude of <span class="math inline">\(T\)</span> scales the amplitude of <span class="math inline">\(V_\text{out}\)</span> and the phase of <span class="math inline">\(T\)</span> creates an offset in time (or time delay).</p>
-         <p>If you need more review on complex numbers, <a href="/PHYS-3330/resources/complex">check out this resource</a>.</p>
-         <h1 data-number="5" id="prelab"><span class="header-section-number">5</span> Prelab</h1>
-         <h2 data-number="5.1" id="capacitors"><span class="header-section-number">5.1</span> Capacitors</h2>
-         <p>A capacitor is an object that stores energy in the form of electric fields (between two metal objects) when a voltage difference is applied. The capacitance is defined as the ratio of the induced charge (on each of the two metal objects) to the voltage applied; i.e.</p>
+         <p>where <span class="math inline">\(|T|\)</span> is the
+         magnitude of <span class="math inline">\(T\)</span> and <span
+         class="math inline">\(\delta\)</span> is the phase of <span
+         class="math inline">\(T\)</span> in the complex plane.</p>
+         <p><span class="math display">\[|T| = \sqrt{TT^*} =
+         \sqrt{\text{Re}[T]^2 + \text{Im}[T]^2}\]</span></p>
+         <p><span class="math display">\[\tan\delta =
+         \frac{\text{Im}[T]}{\text{Re}[T]}\]</span></p>
+         <p>In this form, Equation <a href="#eq:complex-transfer">1</a>
+         becomes</p>
+         <p><span class="math display">\[V_\text{out} = |T|V_0e^{j\omega
+         t + \delta}\]</span></p>
+         <p>So the magnitude of <span class="math inline">\(T\)</span>
+         scales the amplitude of <span
+         class="math inline">\(V_\text{out}\)</span> and the phase of
+         <span class="math inline">\(T\)</span> creates an offset in
+         time (or time delay).</p>
+         <p>If you need more review on complex numbers, <a
+         href="/PHYS-3330/resources/complex">check out this
+         resource</a>.</p>
+         <h1 data-number="5" id="prelab"><span
+         class="header-section-number">5</span> Prelab</h1>
+         <h2 data-number="5.1" id="capacitors"><span
+         class="header-section-number">5.1</span> Capacitors</h2>
+         <p>A capacitor is an object that stores energy in the form of
+         electric fields (between two metal objects) when a voltage
+         difference is applied. The capacitance is defined as the ratio
+         of the induced charge (on each of the two metal objects) to the
+         voltage applied; i.e.</p>
          <p><span class="math display">\[Q = C\ \Delta V\]</span></p>
-         <p>Capacitance is purely determined by the geometry of the pieces of metal that are separated. You may remember that for parallel plates of area <span class="math inline">\(A\)</span> separated by distance <span class="math inline">\(d\)</span>, the capacitance is</p>
-         <p><span class="math display">\[C = \varepsilon_r\varepsilon_0 \frac{A}{d}\]</span></p>
-         <p>where <span class="math inline">\(\varepsilon_r\)</span> is the relative dielectric constant of whatever material is between the plates.</p>
-         <p>With regards to Ohm’s law <span class="math inline">\((\Delta V=IZ)\)</span>, the impedance of a capacitor is</p>
-         <p><span class="math display">\[Z_C = \frac{1}{j\omega C}\]</span></p>
-         <p>where <span class="math inline">\(\omega\)</span> is the angular frequency (in radians per second) and is related to the frequency (in Hertz) by</p>
+         <p>Capacitance is purely determined by the geometry of the
+         pieces of metal that are separated. You may remember that for
+         parallel plates of area <span class="math inline">\(A\)</span>
+         separated by distance <span class="math inline">\(d\)</span>,
+         the capacitance is</p>
+         <p><span class="math display">\[C = \varepsilon_r\varepsilon_0
+         \frac{A}{d}\]</span></p>
+         <p>where <span class="math inline">\(\varepsilon_r\)</span> is
+         the relative dielectric constant of whatever material is
+         between the plates.</p>
+         <p>With regards to Ohm’s law <span
+         class="math inline">\((\Delta V=IZ)\)</span>, the impedance of
+         a capacitor is</p>
+         <p><span class="math display">\[Z_C = \frac{1}{j\omega
+         C}\]</span></p>
+         <p>where <span class="math inline">\(\omega\)</span> is the
+         angular frequency (in radians per second) and is related to the
+         frequency (in Hertz) by</p>
          <p><span class="math display">\[\omega = 2\pi f\]</span></p>
-         <p>Angular frequency <span class="math inline">\(\omega\)</span> is typically used when working out theory to avoid writing <span class="math inline">\(2\pi\)</span> over and over again. However, experimentally, you will be working with cycle frequency <span class="math inline">\(f\)</span> (inverse period) because it is easier to measure.</p>
-         <h3 data-number="5.1.1" id="sec:1.1"><span class="header-section-number">5.1.1</span> Prelab Question</h3>
-         <p>Evaluate the impedance of the capacitor at the two frequency extremes (<span class="math inline">\(\omega = 0\)</span> and <span class="math inline">\(\omega\rightarrow\infty\)</span>). Describe what the capacitor acts like at these extremes (think in terms of open or short circuits).</p>
-         <h2 data-number="5.2" id="capacitance-of-cables"><span class="header-section-number">5.2</span> Capacitance of cables</h2>
-         <p>Cables carry current to a load and then back to the source (creating a circuit). The two most common cable constructions are a pair of wires (sometimes twisted into a “twisted pair”) or a coaxial cable. Either way, when used, there will be a voltage difference between the conductor carrying current to the load and the conductor carrying current back to the source; therefore, the cable has capacitance!</p>
+         <p>Angular frequency <span
+         class="math inline">\(\omega\)</span> is typically used when
+         working out theory to avoid writing <span
+         class="math inline">\(2\pi\)</span> over and over again.
+         However, experimentally, you will be working with cycle
+         frequency <span class="math inline">\(f\)</span> (inverse
+         period) because it is easier to measure.</p>
+         <h3 data-number="5.1.1" id="sec:1.1"><span
+         class="header-section-number">5.1.1</span> Prelab Question</h3>
+         <p>Evaluate the impedance of the capacitor at the two frequency
+         extremes (<span class="math inline">\(\omega = 0\)</span> and
+         <span class="math inline">\(\omega\rightarrow\infty\)</span>).
+         Describe what the capacitor acts like at these extremes (think
+         in terms of open or short circuits).</p>
+         <h2 data-number="5.2" id="capacitance-of-cables"><span
+         class="header-section-number">5.2</span> Capacitance of
+         cables</h2>
+         <p>Cables carry current to a load and then back to the source
+         (creating a circuit). The two most common cable constructions
+         are a pair of wires (sometimes twisted into a “twisted pair”)
+         or a coaxial cable. Either way, when used, there will be a
+         voltage difference between the conductor carrying current to
+         the load and the conductor carrying current back to the source;
+         therefore, the cable has capacitance!</p>
          <div id="fig:cap-geo" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/coax-cap.png" style="width:5cm" alt="" /><figcaption><span>Figure 3:</span> Geometry of a coax cable’s cross section with an inner conductor with radius <span class="math inline">\(a\)</span> and outer conductor with radius <span class="math inline">\(b\)</span>. When the outer conductor is held at ground and the inner conductor has a positive voltage above ground, positive charge will accumulate on the inner conductor and negative charge on the outer conductor.</figcaption>
+         <img src="../resources/lab3fig/coax-cap.png" style="width:5cm"
+         alt="Figure 3: Geometry of a coax cable’s cross section with an inner conductor with radius a and outer conductor with radius b. When the outer conductor is held at ground and the inner conductor has a positive voltage above ground, positive charge will accumulate on the inner conductor and negative charge on the outer conductor." />
+         <figcaption aria-hidden="true"><span>Figure 3:</span> Geometry
+         of a coax cable’s cross section with an inner conductor with
+         radius <span class="math inline">\(a\)</span> and outer
+         conductor with radius <span class="math inline">\(b\)</span>.
+         When the outer conductor is held at ground and the inner
+         conductor has a positive voltage above ground, positive charge
+         will accumulate on the inner conductor and negative charge on
+         the outer conductor.</figcaption>
          </figure>
          </div>
-         <p>For a coax cable, we can use Gauss’s Law to determine the electric field between the conductors. Drawing a Gaussian cylinder co-axial to the cable and between the conductors <span class="math inline">\((a&lt;r&lt;b)\)</span> will enclose the charge on the inner conductor. However, if you take the radius of the Gaussian cylinder to be greater than the whole cable <span class="math inline">\((r&gt;b)\)</span>, then the charge on the outer conductor will cancel the charge on the inner conductor, so there is <strong>no</strong> field outside the cable (one of the advantages of this choice of cable geometry). If our Gaussian cylinder has radius <span class="math inline">\(r\)</span> and length <span class="math inline">\(\ell\)</span>, then the surface area of the wall is <span class="math inline">\(2\pi r\ell\)</span>. The charge enclosed then would be <span class="math inline">\(2\pi a \ell\sigma\)</span> (where <span class="math inline">\(\sigma\)</span> is the surface charge density). Gauss’s law says</p>
-         <p><span class="math display">\[\int\mathbf{E}\cdot d\mathbf{A} = \frac{\rho_\text{enclosed}}{\varepsilon_r\varepsilon_0}\]</span></p>
-         <p><span class="math display">\[2\pi E r\ell = \frac{2\pi a\ell\sigma}{\varepsilon_r\varepsilon_0}\]</span></p>
-         <p><span class="math display">\[\mathbf{E} = \frac{\sigma}{\varepsilon_r \varepsilon_0}\frac{a}{r}\hat{\mathbf{r}}\]</span></p>
-         <p>We can relate this to the voltage by integrating from <span class="math inline">\(r=b\)</span> (where the voltage is held at ground) to <span class="math inline">\(r=a\)</span></p>
-         <p><span class="math display">\[\Delta V = -\int_b^a \mathbf{E}\cdot d\mathbf{r}&#39; = -\frac{\sigma a}{\varepsilon_r \varepsilon_0} \int_b^a\frac{dr}{r} = \frac{\sigma a}{\varepsilon_r \varepsilon_0}\ln\bigg(\frac{b}{a}\bigg)\]</span></p>
-         <p>The capacitance can then be found by dividing the charge <span class="math inline">\(Q=2\pi a \ell\sigma\)</span> by this voltage</p>
-         <p><span class="math display">\[C = \frac{Q}{V} = \varepsilon_r\varepsilon_0\frac{2\pi a \ell\sigma}{\sigma a\ln{(b/a)}} = \varepsilon_r\varepsilon_0\frac{2\pi \ell}{\ln{(b/a)}}\]</span></p>
+         <p>For a coax cable, we can use Gauss’s Law to determine the
+         electric field between the conductors. Drawing a Gaussian
+         cylinder co-axial to the cable and between the conductors <span
+         class="math inline">\((a&lt;r&lt;b)\)</span> will enclose the
+         charge on the inner conductor. However, if you take the radius
+         of the Gaussian cylinder to be greater than the whole cable
+         <span class="math inline">\((r&gt;b)\)</span>, then the charge
+         on the outer conductor will cancel the charge on the inner
+         conductor, so there is <strong>no</strong> field outside the
+         cable (one of the advantages of this choice of cable geometry).
+         If our Gaussian cylinder has radius <span
+         class="math inline">\(r\)</span> and length <span
+         class="math inline">\(\ell\)</span>, then the surface area of
+         the wall is <span class="math inline">\(2\pi r\ell\)</span>.
+         The charge enclosed then would be <span
+         class="math inline">\(2\pi a \ell\sigma\)</span> (where <span
+         class="math inline">\(\sigma\)</span> is the surface charge
+         density). Gauss’s law says</p>
+         <p><span class="math display">\[\int\mathbf{E}\cdot d\mathbf{A}
+         =
+         \frac{\rho_\text{enclosed}}{\varepsilon_r\varepsilon_0}\]</span></p>
+         <p><span class="math display">\[2\pi E r\ell = \frac{2\pi
+         a\ell\sigma}{\varepsilon_r\varepsilon_0}\]</span></p>
+         <p><span class="math display">\[\mathbf{E} =
+         \frac{\sigma}{\varepsilon_r
+         \varepsilon_0}\frac{a}{r}\hat{\mathbf{r}}\]</span></p>
+         <p>We can relate this to the voltage by integrating from <span
+         class="math inline">\(r=b\)</span> (where the voltage is held
+         at ground) to <span class="math inline">\(r=a\)</span></p>
+         <p><span class="math display">\[\Delta V = -\int_b^a
+         \mathbf{E}\cdot d\mathbf{r}&#39; = -\frac{\sigma
+         a}{\varepsilon_r \varepsilon_0} \int_b^a\frac{dr}{r} =
+         \frac{\sigma a}{\varepsilon_r
+         \varepsilon_0}\ln\bigg(\frac{b}{a}\bigg)\]</span></p>
+         <p>The capacitance can then be found by dividing the charge
+         <span class="math inline">\(Q=2\pi a \ell\sigma\)</span> by
+         this voltage</p>
+         <p><span class="math display">\[C = \frac{Q}{V} =
+         \varepsilon_r\varepsilon_0\frac{2\pi a \ell\sigma}{\sigma
+         a\ln{(b/a)}} = \varepsilon_r\varepsilon_0\frac{2\pi
+         \ell}{\ln{(b/a)}}\]</span></p>
          <p>Often cables are labeled by their capacitance per length</p>
-         <p><span class="math display">\[\frac{C}{\ell} = \varepsilon_r\varepsilon_0\frac{2\pi}{\ln{(b/a)}}\]</span></p>
-         <h3 data-number="5.2.1" id="sec:2.1"><span class="header-section-number">5.2.1</span> Prelab question</h3>
-         <p>A BNC cable has an inner conductor with a diameter of roughly 1.1 mm and a dielectric with a diameter of roughly 4.5 mm. The dielectric, Teflon, has a relative dielectric constant of roughly 2. Estimate the capacitance per unit length of this cable (report it in pF/m). <em>Note:</em> the electric permitivity of free space in picofarad per meter is <span class="math inline">\(8.85\text{ pF/m}\)</span>.</p>
-         <h2 data-number="5.3" id="inductors"><span class="header-section-number">5.3</span> Inductors</h2>
-         <p>The inductor is an element that stores energy in the form of magnetic fields when current is passed through them. Any loop(s) of current has an associated magnetic field that it self generates, so all circuits have some amount of inductance (which is often ignored). When the current changes, naturally the strength of the self-induced magnetic field through the loop changes. Faraday’s law states that this will create a back EMF (electromagnetic force in units of volts). This can be written as a voltage across the inductor</p>
-         <p><span class="math display">\[\Delta V = L\frac{dI}{dt}\]</span></p>
-         <p>where <span class="math inline">\(L\)</span> is the inductance of the inductor. Inductors are made by carefully wrapping long wires into compact coils or solenoids. The inductance of a solenoid can be calculated from its geometry</p>
-         <p><span class="math display">\[L = \mu_r\mu_0\frac{N^2 A}{\ell}\]</span></p>
-         <p>where <span class="math inline">\(\mu_r\)</span> is the relative magnetic permeability of any material the coil is wrapped around and <span class="math inline">\(N\)</span> is the number of turns, <span class="math inline">\(A\)</span> is the cross-sectional area of a loop, <span class="math inline">\(\ell\)</span> is the length of the solenoid.</p>
+         <p><span class="math display">\[\frac{C}{\ell} =
+         \varepsilon_r\varepsilon_0\frac{2\pi}{\ln{(b/a)}}\]</span></p>
+         <h3 data-number="5.2.1" id="sec:2.1"><span
+         class="header-section-number">5.2.1</span> Prelab question</h3>
+         <p>A BNC cable has an inner conductor with a diameter of
+         roughly 1.1 mm and a dielectric with a diameter of roughly 4.5
+         mm. The dielectric, Teflon, has a relative dielectric constant
+         of roughly 2. Estimate the capacitance per unit length of this
+         cable (report it in pF/m). <em>Note:</em> the electric
+         permitivity of free space in picofarad per meter is <span
+         class="math inline">\(8.85\text{ pF/m}\)</span>.</p>
+         <h2 data-number="5.3" id="inductors"><span
+         class="header-section-number">5.3</span> Inductors</h2>
+         <p>The inductor is an element that stores energy in the form of
+         magnetic fields when current is passed through them. Any
+         loop(s) of current has an associated magnetic field that it
+         self generates, so all circuits have some amount of inductance
+         (which is often ignored). When the current changes, naturally
+         the strength of the self-induced magnetic field through the
+         loop changes. Faraday’s law states that this will create a back
+         EMF (electromagnetic force in units of volts). This can be
+         written as a voltage across the inductor</p>
+         <p><span class="math display">\[\Delta V =
+         L\frac{dI}{dt}\]</span></p>
+         <p>where <span class="math inline">\(L\)</span> is the
+         inductance of the inductor. Inductors are made by carefully
+         wrapping long wires into compact coils or solenoids. The
+         inductance of a solenoid can be calculated from its
+         geometry</p>
+         <p><span class="math display">\[L = \mu_r\mu_0\frac{N^2
+         A}{\ell}\]</span></p>
+         <p>where <span class="math inline">\(\mu_r\)</span> is the
+         relative magnetic permeability of any material the coil is
+         wrapped around and <span class="math inline">\(N\)</span> is
+         the number of turns, <span class="math inline">\(A\)</span> is
+         the cross-sectional area of a loop, <span
+         class="math inline">\(\ell\)</span> is the length of the
+         solenoid.</p>
          <p>The impedance of an inductor is</p>
          <p><span class="math display">\[Z_L = j\omega L\]</span></p>
-         <h3 data-number="5.3.1" id="sec:3.1"><span class="header-section-number">5.3.1</span> Prelab Question</h3>
-         <p>Evaluate the impedances of the inductor at the two frequency extremes (<span class="math inline">\(\omega = 0\)</span> and <span class="math inline">\(\omega\rightarrow\infty\)</span>). Describe what the inductor acts like at these extremes (think in terms of open or short circuits). Compare these results to what you found for the capacitor.</p>
-         <h2 data-number="5.4" id="low-pass-filters"><span class="header-section-number">5.4</span> Low-Pass Filters</h2>
+         <h3 data-number="5.3.1" id="sec:3.1"><span
+         class="header-section-number">5.3.1</span> Prelab Question</h3>
+         <p>Evaluate the impedances of the inductor at the two frequency
+         extremes (<span class="math inline">\(\omega = 0\)</span> and
+         <span class="math inline">\(\omega\rightarrow\infty\)</span>).
+         Describe what the inductor acts like at these extremes (think
+         in terms of open or short circuits). Compare these results to
+         what you found for the capacitor.</p>
+         <h2 data-number="5.4" id="low-pass-filters"><span
+         class="header-section-number">5.4</span> Low-Pass Filters</h2>
          <div id="fig:lowpass" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/lowpass.png" style="width:10cm" alt="" /><figcaption><span>Figure 4:</span> A low-pass filter</figcaption>
+         <img src="../resources/lab3fig/lowpass.png" style="width:10cm"
+         alt="Figure 4: A low-pass filter" />
+         <figcaption aria-hidden="true"><span>Figure 4:</span> A
+         low-pass filter</figcaption>
          </figure>
          </div>
-         <p>The filter shown in Figure <a href="#fig:lowpass">4</a> is like the voltage divider, except with <span class="math inline">\(R_2\)</span> replaced with a capacitor. Applying the impedance of these elements to the voltage divider equation yields</p>
-         <p><span class="math display">\[T_\text{low-pass}(\omega)=\frac{V_\text{out}}{V_\text{in}} = \frac{Z_C}{R+Z_C}= \frac{(j\omega C)^{-1}}{(R+(j\omega C)^{-1})} = \frac{1}{1+j\omega RC}\]</span></p>
-         <p>Note that the transfer function depends on frequency (and is complex)! This means that this circuit will affect different frequencies differently (this is how it acts as a filter)</p>
-         <p>For this filter’s transfer function, you will find the magnitude in the following questions. The phase <span class="math inline">\(\delta\)</span> can be found to be</p>
-         <p><span class="math display">\[\delta = -\tan^{-1}(\omega RC)\]</span></p>
+         <p>The filter shown in Figure <a href="#fig:lowpass">4</a> is
+         like the voltage divider, except with <span
+         class="math inline">\(R_2\)</span> replaced with a capacitor.
+         Applying the impedance of these elements to the voltage divider
+         equation yields</p>
+         <p><span
+         class="math display">\[T_\text{low-pass}(\omega)=\frac{V_\text{out}}{V_\text{in}}
+         = \frac{Z_C}{R+Z_C}= \frac{(j\omega C)^{-1}}{(R+(j\omega
+         C)^{-1})} = \frac{1}{1+j\omega RC}\]</span></p>
+         <p>Note that the transfer function depends on frequency (and is
+         complex)! This means that this circuit will affect different
+         frequencies differently (this is how it acts as a filter)</p>
+         <p>For this filter’s transfer function, you will find the
+         magnitude in the following questions. The phase <span
+         class="math inline">\(\delta\)</span> can be found to be</p>
+         <p><span class="math display">\[\delta = -\tan^{-1}(\omega
+         RC)\]</span></p>
          <p>The input impedance of the low-pass filter is</p>
-         <p><span class="math display">\[R_i = R + Z_C = R + \frac{1}{j\omega C}=R\sqrt{1+\frac{1}{\omega^2 R^2C^2}}\ \ e^{\tan^{-1}\frac{1}{\omega R C}}\]</span></p>
-         <p>Notice that this is frequency dependent as well. The lowest possible input impedance will be when the frequency is really high and will diverge to infinity at DC (0 frequency).</p>
-         <h3 data-number="5.4.1" id="sec:4.1"><span class="header-section-number">5.4.1</span> Prelab Question</h3>
-         <p>Find <span class="math inline">\(T_\text{low-pass}\)</span> when <span class="math inline">\(\omega=0\)</span> and when <span class="math inline">\(\omega\rightarrow\infty\)</span>. Based on these calculations, describe what frequencies the low-pass filter cuts and passes. Is this consistent with its name?</p>
-         <h3 data-number="5.4.2" id="sec:4.2"><span class="header-section-number">5.4.2</span> Prelab Question</h3>
-         <p>Find <span class="math inline">\(|T_\text{low-pass}|\)</span> (the magnitude of the complex number) and express it with respect to <span class="math inline">\(f\)</span> instead of <span class="math inline">\(\omega\)</span>. <em>Hint:</em> Use the <span class="math inline">\(|T|=\sqrt{TT^*}\)</span> relation.</p>
-         <h3 data-number="5.4.3" id="sec:4.3"><span class="header-section-number">5.4.3</span> Prelab Question</h3>
+         <p><span class="math display">\[R_i = R + Z_C = R +
+         \frac{1}{j\omega C}=R\sqrt{1+\frac{1}{\omega^2 R^2C^2}}\ \
+         e^{\tan^{-1}\frac{1}{\omega R C}}\]</span></p>
+         <p>Notice that this is frequency dependent as well. The lowest
+         possible input impedance will be when the frequency is really
+         high and will diverge to infinity at DC (0 frequency).</p>
+         <h3 data-number="5.4.1" id="sec:4.1"><span
+         class="header-section-number">5.4.1</span> Prelab Question</h3>
+         <p>Find <span class="math inline">\(T_\text{low-pass}\)</span>
+         when <span class="math inline">\(\omega=0\)</span> and when
+         <span class="math inline">\(\omega\rightarrow\infty\)</span>.
+         Based on these calculations, describe what frequencies the
+         low-pass filter cuts and passes. Is this consistent with its
+         name?</p>
+         <h3 data-number="5.4.2" id="sec:4.2"><span
+         class="header-section-number">5.4.2</span> Prelab Question</h3>
+         <p>Find <span
+         class="math inline">\(|T_\text{low-pass}|\)</span> (the
+         magnitude of the complex number) and express it with respect to
+         <span class="math inline">\(f\)</span> instead of <span
+         class="math inline">\(\omega\)</span>. <em>Hint:</em> Use the
+         <span class="math inline">\(|T|=\sqrt{TT^*}\)</span>
+         relation.</p>
+         <h3 data-number="5.4.3" id="sec:4.3"><span
+         class="header-section-number">5.4.3</span> Prelab Question</h3>
          <p>Write two Python functions:</p>
          <ul>
-         <li><p>one that calculates <span class="math inline">\(|T|\)</span> with <span class="math inline">\(R\)</span>, <span class="math inline">\(C\)</span>, and <span class="math inline">\(f\)</span> as inputs.</p></li>
-         <li><p>one that calculates <span class="math inline">\(\delta\)</span> with the same inputs (convert radians to degrees).</p></li>
+         <li><p>one that calculates <span
+         class="math inline">\(|T|\)</span> with <span
+         class="math inline">\(R\)</span>, <span
+         class="math inline">\(C\)</span>, and <span
+         class="math inline">\(f\)</span> as inputs.</p></li>
+         <li><p>one that calculates <span
+         class="math inline">\(\delta\)</span> with the same inputs
+         (convert radians to degrees).</p></li>
          </ul>
-         <p>Alternatively, you can write a single function that spits out both results, but this is up to you.</p>
-         <h2 data-number="5.5" id="high-pass-filters"><span class="header-section-number">5.5</span> High-Pass Filters</h2>
+         <p>Alternatively, you can write a single function that spits
+         out both results, but this is up to you.</p>
+         <h2 data-number="5.5" id="high-pass-filters"><span
+         class="header-section-number">5.5</span> High-Pass Filters</h2>
          <div id="fig:highpass" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/highpass.png" style="width:10cm" alt="" /><figcaption><span>Figure 5:</span> A high-pass filter</figcaption>
+         <img src="../resources/lab3fig/highpass.png" style="width:10cm"
+         alt="Figure 5: A high-pass filter" />
+         <figcaption aria-hidden="true"><span>Figure 5:</span> A
+         high-pass filter</figcaption>
          </figure>
          </div>
-         <p>The filter shown in Figure <a href="#fig:highpass">5</a> swaps the positions of the capacitor and resistor compared to the previous filter. We can swap <span class="math inline">\(Z_C\)</span> and <span class="math inline">\(R\)</span> in the voltage divider equation to get</p>
-         <p><span class="math display">\[T_\text{high-pass} = \frac{R}{(j\omega C)^{-1}+R} = \frac{j\omega RC}{1 + j\omega RC}\]</span></p>
-         <p>For this filter’s transfer function, you will find the magnitude in the following questions. The phase <span class="math inline">\(\delta\)</span> can be found to be</p>
-         <p><span class="math display">\[\delta = \tan^{-1}\bigg(\frac{1}{\omega RC}\bigg)\]</span></p>
+         <p>The filter shown in Figure <a href="#fig:highpass">5</a>
+         swaps the positions of the capacitor and resistor compared to
+         the previous filter. We can swap <span
+         class="math inline">\(Z_C\)</span> and <span
+         class="math inline">\(R\)</span> in the voltage divider
+         equation to get</p>
+         <p><span class="math display">\[T_\text{high-pass} =
+         \frac{R}{(j\omega C)^{-1}+R} = \frac{j\omega RC}{1 + j\omega
+         RC}\]</span></p>
+         <p>For this filter’s transfer function, you will find the
+         magnitude in the following questions. The phase <span
+         class="math inline">\(\delta\)</span> can be found to be</p>
+         <p><span class="math display">\[\delta =
+         \tan^{-1}\bigg(\frac{1}{\omega RC}\bigg)\]</span></p>
          <p>The input impedance of the high-pass filter is</p>
-         <p><span class="math display">\[R_i = Z_C+R = \frac{1}{j\omega C}+R=R\sqrt{1+\frac{1}{\omega^2 R^2C^2}}\ \ e^{\tan^{-1}\frac{1}{\omega R C}}\]</span></p>
+         <p><span class="math display">\[R_i = Z_C+R = \frac{1}{j\omega
+         C}+R=R\sqrt{1+\frac{1}{\omega^2 R^2C^2}}\ \
+         e^{\tan^{-1}\frac{1}{\omega R C}}\]</span></p>
          <p><em>Note:</em> this is the same as the low-pass filter.</p>
-         <h3 data-number="5.5.1" id="sec:5.1"><span class="header-section-number">5.5.1</span> Prelab Question</h3>
-         <p>Find <span class="math inline">\(T_\text{high-pass}\)</span> for <span class="math inline">\(\omega=0\)</span> and <span class="math inline">\(\omega\rightarrow\infty\)</span> to confirm this is a high-pass filter; i.e. does this cut low frequencies and pass high frequenceis?</p>
-         <h3 data-number="5.5.2" id="sec:5.2"><span class="header-section-number">5.5.2</span> Prelab Question</h3>
-         <p>Calculate <span class="math inline">\(|T_\text{high-pass}|\)</span> and express it in terms of <span class="math inline">\(f\)</span> instead of <span class="math inline">\(\omega\)</span>.</p>
-         <h3 data-number="5.5.3" id="sec:5.3"><span class="header-section-number">5.5.3</span> Prelab Question</h3>
+         <h3 data-number="5.5.1" id="sec:5.1"><span
+         class="header-section-number">5.5.1</span> Prelab Question</h3>
+         <p>Find <span class="math inline">\(T_\text{high-pass}\)</span>
+         for <span class="math inline">\(\omega=0\)</span> and <span
+         class="math inline">\(\omega\rightarrow\infty\)</span> to
+         confirm this is a high-pass filter; i.e. does this cut low
+         frequencies and pass high frequenceis?</p>
+         <h3 data-number="5.5.2" id="sec:5.2"><span
+         class="header-section-number">5.5.2</span> Prelab Question</h3>
+         <p>Calculate <span
+         class="math inline">\(|T_\text{high-pass}|\)</span> and express
+         it in terms of <span class="math inline">\(f\)</span> instead
+         of <span class="math inline">\(\omega\)</span>.</p>
+         <h3 data-number="5.5.3" id="sec:5.3"><span
+         class="header-section-number">5.5.3</span> Prelab Question</h3>
          <p>Write two Python functions:</p>
          <ul>
-         <li><p>one that calculates <span class="math inline">\(|T|\)</span> with <span class="math inline">\(R\)</span>, <span class="math inline">\(C\)</span>, and <span class="math inline">\(f\)</span> as inputs.</p></li>
-         <li><p>one that calculates <span class="math inline">\(\delta\)</span> with the same inputs (convert from radians to degrees).</p></li>
+         <li><p>one that calculates <span
+         class="math inline">\(|T|\)</span> with <span
+         class="math inline">\(R\)</span>, <span
+         class="math inline">\(C\)</span>, and <span
+         class="math inline">\(f\)</span> as inputs.</p></li>
+         <li><p>one that calculates <span
+         class="math inline">\(\delta\)</span> with the same inputs
+         (convert from radians to degrees).</p></li>
          </ul>
-         <p>Alternatively, you can write a single function that spits out both results, but this is up to you.</p>
-         <h2 data-number="5.6" id="cutoff-frequency"><span class="header-section-number">5.6</span> Cutoff Frequency</h2>
-         <p>Defining what frequency a filter starts to <em>cut</em> (as opposed to pass) is somewhat arbitrary. There is a smooth transition between where <span class="math inline">\(T=1\)</span> and <span class="math inline">\(T=0\)</span>; however, the convention is to define the cutoff frequency <span class="math inline">\(f_c\)</span> as <strong>the frequency when the power has dropped half from its full power</strong>.</p>
-         <p><strong><em>DEFINITION:</em></strong> <strong>Half power point</strong> or <strong>cutoff frequency</strong> or <strong>corner frequency</strong> or <strong>3 dB frequency, <span class="math inline">\(f_c\)</span></strong> - frequency separating the pass and attenuation bands. It is the frequency at the half-power <span class="math inline">\((-3\text{ dB})\)</span> point, where the <em>power</em> transmitted is half of the maximum possible power.</p>
+         <p>Alternatively, you can write a single function that spits
+         out both results, but this is up to you.</p>
+         <h2 data-number="5.6" id="cutoff-frequency"><span
+         class="header-section-number">5.6</span> Cutoff Frequency</h2>
+         <p>Defining what frequency a filter starts to <em>cut</em> (as
+         opposed to pass) is somewhat arbitrary. There is a smooth
+         transition between where <span
+         class="math inline">\(T=1\)</span> and <span
+         class="math inline">\(T=0\)</span>; however, the convention is
+         to define the cutoff frequency <span
+         class="math inline">\(f_c\)</span> as <strong>the frequency
+         when the power has dropped half from its full
+         power</strong>.</p>
+         <p><strong><em>DEFINITION:</em></strong> <strong>Half power
+         point</strong> or <strong>cutoff frequency</strong> or
+         <strong>corner frequency</strong> or <strong>3 dB frequency,
+         <span class="math inline">\(f_c\)</span></strong> - frequency
+         separating the pass and attenuation bands. It is the frequency
+         at the half-power <span class="math inline">\((-3\text{
+         dB})\)</span> point, where the <em>power</em> transmitted is
+         half of the maximum possible power.</p>
          <p>The relationship between voltage and power is</p>
          <p><span class="math display">\[P = \frac{V^2}{Z}\]</span></p>
-         <p>Therefore, when the power is cut in half, the voltage is cut by a factor of <span class="math inline">\(\frac{1}{\sqrt{2}}\)</span></p>
-         <p><span class="math display">\[\frac{V_\text{out}}{V_\text{in}} = \sqrt{\frac{P_\text{out}}{P_\text{in}}} = \frac{1}{\sqrt{2}}\approx 0.707\]</span></p>
-         <p>So the cutoff frequency <span class="math inline">\(f_c\)</span> is the frequency at which <span class="math inline">\(T\approx 0.707\)</span></p>
-         <p>For both the low-pass and high-pass filter, you can take the magnitude of the transfer function you calculated and set it equal to <span class="math inline">\(\frac{1}{\sqrt{2}}\)</span>. This will lead to the same result for both kinds of filters:</p>
-         <p><span id="eq:cutoff-freq" class="eqnos"><span class="math display">\[f_c = \frac{1}{2\pi RC}\]</span><span class="eqnos-number">(2)</span></span></p>
-         <h3 data-number="5.6.1" id="sec:6.1"><span class="header-section-number">5.6.1</span> Prelab Question</h3>
-         <p>A Decibel is a “relative unit of measurement.” In electronics, decibels are meant to describe how the power changes. You can calculate decibels with the following equation:</p>
-         <p><span class="math display">\[10\log_{10} \bigg[\frac{P_\text{out}}{P_\text{in}}\bigg]\text{ dB}\]</span></p>
-         <p>When decibels are negative, it means the power is attenuated (gets reduced), and, when positive, it means there is power gain.</p>
-         <p>Calculate the decibels for when the power is cut in half. Does it make sense that the half power point is also called the 3 dB point?</p>
-         <h3 data-number="5.6.2" id="sec:6.2"><span class="header-section-number">5.6.2</span> Prelab Question</h3>
-         <p>Plug the cutoff frequency from Equation <a href="#eq:cutoff-freq">2</a> into the equations you found for <span class="math inline">\(|T_\text{low-pass}|\)</span> and <span class="math inline">\(|T_\text{high-pass}|\)</span> to confirm this is the half power point.</p>
-         <h3 data-number="5.6.3" id="sec:6.3"><span class="header-section-number">5.6.3</span> Prelab Question</h3>
-         <p>The cutoff frequency of these filters is related to the RC-time (resistance times capacitance has units of time) of the circuit: <span class="math inline">\(f_c = 1/2\pi RC = 1/(2\pi RC)=\frac{1}{2\pi RC}\)</span>.</p>
-         <p><em>Note:</em> we’ve explicitly written <span class="math inline">\(f_c\)</span> in this way as we’ve seen some students see the expression <span class="math inline">\(1/2\pi RC\)</span> and read this as <span class="math inline">\(\frac{1}{2}\pi RC\)</span> or <span class="math inline">\(\frac{\pi RC}{2}\)</span>. This is incorrect, and we wanted to use this opportunity to clear up this misconception. The expression from <span class="math inline">\(1/2\pi RC\)</span> is common in the <a href="https://en.wikipedia.org/wiki/Order_of_operations#Mixed_division_and_multiplication">academic literature</a>, so hopefully this aside provides you value in the future.</p>
-         <p>This means that the cutoff frequency can be determined by measuring the RC-time constant related to the charging and discharging of the capacitor. For the low-pass filter, this can be done by applying a voltage long enough to fully charge the capacitor to the input voltage (i.e. when <span class="math inline">\(V_\text{in}=V_\text{out}\)</span>), and then turning off the voltage to allow the capacitor to discharge. This discharge will be an exponential decay over time</p>
-         <p><span class="math display">\[V_\text{out}(t) = V_0e^{-t/\tau}\]</span></p>
-         <p>where <span class="math inline">\(\tau\)</span> is the time constant of the decay <span class="math inline">\((\tau=RC)\)</span> and <span class="math inline">\(t\)</span> is the time since turning off the input voltage.</p>
+         <p>Therefore, when the power is cut in half, the voltage is cut
+         by a factor of <span
+         class="math inline">\(\frac{1}{\sqrt{2}}\)</span></p>
+         <p><span
+         class="math display">\[\frac{V_\text{out}}{V_\text{in}} =
+         \sqrt{\frac{P_\text{out}}{P_\text{in}}} =
+         \frac{1}{\sqrt{2}}\approx 0.707\]</span></p>
+         <p>So the cutoff frequency <span
+         class="math inline">\(f_c\)</span> is the frequency at which
+         <span class="math inline">\(T\approx 0.707\)</span></p>
+         <p>For both the low-pass and high-pass filter, you can take the
+         magnitude of the transfer function you calculated and set it
+         equal to <span
+         class="math inline">\(\frac{1}{\sqrt{2}}\)</span>. This will
+         lead to the same result for both kinds of filters:</p>
+         <p><span id="eq:cutoff-freq" class="eqnos"><span
+         class="math display">\[f_c = \frac{1}{2\pi
+         RC}\]</span><span class="eqnos-number">(2)</span></span></p>
+         <h3 data-number="5.6.1" id="sec:6.1"><span
+         class="header-section-number">5.6.1</span> Prelab Question</h3>
+         <p>A Decibel is a “relative unit of measurement.” In
+         electronics, decibels are meant to describe how the power
+         changes. You can calculate decibels with the following
+         equation:</p>
+         <p><span class="math display">\[10\log_{10}
+         \bigg[\frac{P_\text{out}}{P_\text{in}}\bigg]\text{
+         dB}\]</span></p>
+         <p>When decibels are negative, it means the power is attenuated
+         (gets reduced), and, when positive, it means there is power
+         gain.</p>
+         <p>Calculate the decibels for when the power is cut in half.
+         Does it make sense that the half power point is also called the
+         3 dB point?</p>
+         <h3 data-number="5.6.2" id="sec:6.2"><span
+         class="header-section-number">5.6.2</span> Prelab Question</h3>
+         <p>Plug the cutoff frequency from Equation <a
+         href="#eq:cutoff-freq">2</a> into the equations you found for
+         <span class="math inline">\(|T_\text{low-pass}|\)</span> and
+         <span class="math inline">\(|T_\text{high-pass}|\)</span> to
+         confirm this is the half power point.</p>
+         <h3 data-number="5.6.3" id="sec:6.3"><span
+         class="header-section-number">5.6.3</span> Prelab Question</h3>
+         <p>The cutoff frequency of these filters is related to the
+         RC-time (resistance times capacitance has units of time) of the
+         circuit: <span class="math inline">\(f_c = 1/2\pi RC = 1/(2\pi
+         RC)=\frac{1}{2\pi RC}\)</span>.</p>
+         <p><em>Note:</em> we’ve explicitly written <span
+         class="math inline">\(f_c\)</span> in this way as we’ve seen
+         some students see the expression <span
+         class="math inline">\(1/2\pi RC\)</span> and read this as <span
+         class="math inline">\(\frac{1}{2}\pi RC\)</span> or <span
+         class="math inline">\(\frac{\pi RC}{2}\)</span>. This is
+         incorrect, and we wanted to use this opportunity to clear up
+         this misconception. The expression from <span
+         class="math inline">\(1/2\pi RC\)</span> is common in the <a
+         href="https://en.wikipedia.org/wiki/Order_of_operations#Mixed_division_and_multiplication">academic
+         literature</a>, so hopefully this aside provides you value in
+         the future.</p>
+         <p>This means that the cutoff frequency can be determined by
+         measuring the RC-time constant related to the charging and
+         discharging of the capacitor. For the low-pass filter, this can
+         be done by applying a voltage long enough to fully charge the
+         capacitor to the input voltage (i.e. when <span
+         class="math inline">\(V_\text{in}=V_\text{out}\)</span>), and
+         then turning off the voltage to allow the capacitor to
+         discharge. This discharge will be an exponential decay over
+         time</p>
+         <p><span class="math display">\[V_\text{out}(t) =
+         V_0e^{-t/\tau}\]</span></p>
+         <p>where <span class="math inline">\(\tau\)</span> is the time
+         constant of the decay <span
+         class="math inline">\((\tau=RC)\)</span> and <span
+         class="math inline">\(t\)</span> is the time since turning off
+         the input voltage.</p>
          <div id="fig:rc-time" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/fall-time.png" style="width:14cm" alt="" /><figcaption><span>Figure 6:</span> The capacitor takes time to charge and discharge determined by exponential decays and RC-time constants</figcaption>
+         <img src="../resources/lab3fig/fall-time.png"
+         style="width:14cm"
+         alt="Figure 6: The capacitor takes time to charge and discharge determined by exponential decays and RC-time constants" />
+         <figcaption aria-hidden="true"><span>Figure 6:</span> The
+         capacitor takes time to charge and discharge determined by
+         exponential decays and RC-time constants</figcaption>
          </figure>
          </div>
-         <p>Evaluate <span class="math inline">\(V_\text{out}(\tau)\)</span>; i.e. the voltage across the capacitor when <span class="math inline">\(t=\tau\)</span> (<em>hint:</em> express this in terms of the natural number <span class="math inline">\(e\)</span>). Experimentally, you can measure the time it takes for the capacitor to discharge to this voltage. When the voltage is <span class="math inline">\(V_\text{out}(\tau)\)</span>, then the time it takes to discharge to this voltage will be <span class="math inline">\(\tau=RC\)</span>; therefore, measure the time it takes to reach this voltage is a measure of <span class="math inline">\(RC\)</span> which you can use to calculate <span class="math inline">\(f_c\)</span>.</p>
-         <h2 data-number="5.7" id="parallel-lcr-bandpass-filters"><span class="header-section-number">5.7</span> Parallel LCR Bandpass Filters</h2>
+         <p>Evaluate <span
+         class="math inline">\(V_\text{out}(\tau)\)</span>; i.e. the
+         voltage across the capacitor when <span
+         class="math inline">\(t=\tau\)</span> (<em>hint:</em> express
+         this in terms of the natural number <span
+         class="math inline">\(e\)</span>). Experimentally, you can
+         measure the time it takes for the capacitor to discharge to
+         this voltage. When the voltage is <span
+         class="math inline">\(V_\text{out}(\tau)\)</span>, then the
+         time it takes to discharge to this voltage will be <span
+         class="math inline">\(\tau=RC\)</span>; therefore, measure the
+         time it takes to reach this voltage is a measure of <span
+         class="math inline">\(RC\)</span> which you can use to
+         calculate <span class="math inline">\(f_c\)</span>.</p>
+         <h2 data-number="5.7" id="parallel-lcr-bandpass-filters"><span
+         class="header-section-number">5.7</span> Parallel LCR Bandpass
+         Filters</h2>
          <div id="fig:bandpass" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/bandpass.png" style="width:13cm" alt="" /><figcaption><span>Figure 7:</span> A simple bandpass filter using a parallel inductor and capacitor</figcaption>
+         <img src="../resources/lab3fig/bandpass.png" style="width:13cm"
+         alt="Figure 7: A simple bandpass filter using a parallel inductor and capacitor" />
+         <figcaption aria-hidden="true"><span>Figure 7:</span> A simple
+         bandpass filter using a parallel inductor and
+         capacitor</figcaption>
          </figure>
          </div>
-         <p>Figure <a href="#fig:bandpass">7</a> shows a simple bandpass filter using a resistor, capacitor, and inductor. The capacitor and inductor can be treated as a single lumped element with an impedance equal to the elements’ impedances in parallel</p>
-         <p><span class="math display">\[ \frac{1}{Z_{LC}} = \frac{1}{(j\omega C)^{-1}} + \frac{1}{j\omega L}\]</span></p>
-         <p><span class="math display">\[Z_{LC} = \frac{j\omega L}{1- \omega^2 LC}\]</span></p>
-         <p>Treating this as another generalized voltage divider leads to the transfer function</p>
-         <p><span class="math display">\[T_\text{bandpass} = \frac{Z_{LC}}{R+Z_{LC}} = \frac{j\omega L}{R-\omega^2 LRC + j\omega L}\]</span></p>
-         <p><span class="math display">\[|T_\text{bandpass}| = \frac{\omega L}{\sqrt{(R-\omega^2 LRC)^2+(\omega L)^2}}\]</span></p>
-         <p><span class="math display">\[\delta = \tan^{-1}\bigg(\frac{R-\omega^2LRC}{\omega L}\bigg)\]</span></p>
+         <p>Figure <a href="#fig:bandpass">7</a> shows a simple bandpass
+         filter using a resistor, capacitor, and inductor. The capacitor
+         and inductor can be treated as a single lumped element with an
+         impedance equal to the elements’ impedances in parallel</p>
+         <p><span class="math display">\[ \frac{1}{Z_{LC}} =
+         \frac{1}{(j\omega C)^{-1}} + \frac{1}{j\omega L}\]</span></p>
+         <p><span class="math display">\[Z_{LC} = \frac{j\omega L}{1-
+         \omega^2 LC}\]</span></p>
+         <p>Treating this as another generalized voltage divider leads
+         to the transfer function</p>
+         <p><span class="math display">\[T_\text{bandpass} =
+         \frac{Z_{LC}}{R+Z_{LC}} = \frac{j\omega L}{R-\omega^2 LRC +
+         j\omega L}\]</span></p>
+         <p><span class="math display">\[|T_\text{bandpass}| =
+         \frac{\omega L}{\sqrt{(R-\omega^2 LRC)^2+(\omega
+         L)^2}}\]</span></p>
+         <p><span class="math display">\[\delta =
+         \tan^{-1}\bigg(\frac{R-\omega^2LRC}{\omega
+         L}\bigg)\]</span></p>
          <p>The input impedance is</p>
-         <p><span class="math display">\[R_i = R + Z_{LC} = R + \frac{j\omega L}{1-\omega^2 LC}\]</span></p>
+         <p><span class="math display">\[R_i = R + Z_{LC} = R +
+         \frac{j\omega L}{1-\omega^2 LC}\]</span></p>
          <p>where</p>
-         <p><span class="math display">\[|R_i| = R\sqrt{1+ \frac{\omega^2L^2}{(R-\omega^2LRC)^2}}\]</span></p>
-         <h3 data-number="5.7.1" id="sec:7.1"><span class="header-section-number">5.7.1</span> Prelab Question</h3>
-         <p>As the name suggests, this filter passes a “band” of frequencies. This means that it should “cut” both low and high frequencies. Show that at <span class="math inline">\(\omega=0\)</span> and <span class="math inline">\(\omega\rightarrow\infty\)</span> the magnitude of <span class="math inline">\(T\)</span> goes is zero.</p>
-         <h3 data-number="5.7.2" id="sec:7.2"><span class="header-section-number">5.7.2</span> Prelab Question</h3>
-         <p>The <em>center frequency</em> <span class="math inline">\(f_0\)</span> is defined by the frequency that maximizes the transfer function (this is the frequency it passes “strongest”). For these simple LRC bandpass filters, this happens when</p>
-         <p><span class="math display">\[|T_\text{bandpass}|=1\]</span></p>
-         <p>Find <span class="math inline">\(f_0\)</span> using this fact and the equation for <span class="math inline">\(|T_\text{bandpass}|\)</span> above <span class="math inline">\((\)</span><em>Hint:</em> <span class="math inline">\(\omega_0=2\pi f_0)\)</span></p>
-         <h3 data-number="5.7.3" id="sec:7.3"><span class="header-section-number">5.7.3</span> Prelab Question</h3>
+         <p><span class="math display">\[|R_i| = R\sqrt{1+
+         \frac{\omega^2L^2}{(R-\omega^2LRC)^2}}\]</span></p>
+         <h3 data-number="5.7.1" id="sec:7.1"><span
+         class="header-section-number">5.7.1</span> Prelab Question</h3>
+         <p>As the name suggests, this filter passes a “band” of
+         frequencies. This means that it should “cut” both low and high
+         frequencies. Show that at <span
+         class="math inline">\(\omega=0\)</span> and <span
+         class="math inline">\(\omega\rightarrow\infty\)</span> the
+         magnitude of <span class="math inline">\(T\)</span> goes is
+         zero.</p>
+         <h3 data-number="5.7.2" id="sec:7.2"><span
+         class="header-section-number">5.7.2</span> Prelab Question</h3>
+         <p>The <em>center frequency</em> <span
+         class="math inline">\(f_0\)</span> is defined by the frequency
+         that maximizes the transfer function (this is the frequency it
+         passes “strongest”). For these simple LRC bandpass filters,
+         this happens when</p>
+         <p><span
+         class="math display">\[|T_\text{bandpass}|=1\]</span></p>
+         <p>Find <span class="math inline">\(f_0\)</span> using this
+         fact and the equation for <span
+         class="math inline">\(|T_\text{bandpass}|\)</span> above <span
+         class="math inline">\((\)</span><em>Hint:</em> <span
+         class="math inline">\(\omega_0=2\pi f_0)\)</span></p>
+         <h3 data-number="5.7.3" id="sec:7.3"><span
+         class="header-section-number">5.7.3</span> Prelab Question</h3>
          <p>Write two Python functions:</p>
          <ul>
-         <li><p>one that calculates <span class="math inline">\(|T|\)</span> with <span class="math inline">\(R\)</span>, <span class="math inline">\(C\)</span>, and <span class="math inline">\(f\)</span> as inputs.</p></li>
-         <li><p>one that calculates <span class="math inline">\(\delta\)</span> with the same inputs (convert from radians to degrees).</p></li>
+         <li><p>one that calculates <span
+         class="math inline">\(|T|\)</span> with <span
+         class="math inline">\(R\)</span>, <span
+         class="math inline">\(L\)</span>, <span
+         class="math inline">\(C\)</span>, and <span
+         class="math inline">\(f\)</span> as inputs.</p></li>
+         <li><p>one that calculates <span
+         class="math inline">\(\delta\)</span> with the same inputs
+         (convert from radians to degrees).</p></li>
          </ul>
-         <p>Alternatively, you can write a single function that spits out both results, but this is up to you.</p>
-         <h2 data-number="5.8" id="quality-factor"><span class="header-section-number">5.8</span> Quality factor</h2>
-         <p>For a low-pass and high-pass filter, the bandwidth can be described simply by the cutoff frequency. For a low-pass filter, the bandwidth is <span class="math inline">\(0\text{ Hz}\)</span> to <span class="math inline">\(f_c\)</span> and for the high-pass filter, the bandwidth is <span class="math inline">\(f_c\)</span> to <span class="math inline">\(\infty\text{ Hz}\)</span>. The bandpass filter however, has two cutoff frequencies, one above, and one below the center frequency. The bandwidth is then</p>
-         <p><span class="math display">\[\Delta f = f_{c,+} - f_{c,-}\]</span></p>
-         <p>However, this bandwidth is usually represented as a dimensionless quantity called the <em>quality factor</em> <span class="math inline">\(Q\)</span> which is the center frequency divided by the bandwidth:</p>
-         <p><span class="math display">\[Q = \frac{f_0}{\Delta f}\]</span></p>
-         <p>A <em>quality factor</em> in general, is a property of any resonator (oscillator). Our LCR bandpass filter is a resonator (<a href="https://www.youtube.com/watch?v=nh4q7mIhLrY">here’s a nice, short video explanation</a>): the capacitor and inductor exchange electric field energy (in the capacitor) for magnetic field energy (in the inductor) with a frequency of <span class="math inline">\(f_0\)</span> (the center frequency).</p>
-         <p>For a bandpass filter, the <em>quality factor</em> defines the “sharpness” of the filter. The higher the <em>quality factor</em>, the smaller the bandwidth around the center frequency is. Conversely, the smaller the <em>quality factor</em>, the wider the bandwidth.</p>
-         <p>The two cut off frequencies can be found by setting the magnitude of the transfer function to the -3 dB ratio: <span class="math inline">\((1/\sqrt{2})\)</span></p>
-         <p><span class="math display">\[\frac{\omega L}{\sqrt{(R-\omega^2 LRC)^2+(\omega L)^2}} = \frac{1}{\sqrt{2}}\]</span> <span class="math display">\[\frac{(\omega L)^2}{(R-\omega^2 LRC)^2+(\omega L)^2} = \frac{1}{2}\]</span></p>
-         <p>Clearly, the left hand side equals <span class="math inline">\(1/2\)</span> when</p>
-         <p><span class="math display">\[(R-\omega^2 LRC)^2 = (\omega L)^2\]</span></p>
-         <p><span class="math display">\[R-\omega^2 LRC = \pm\omega L\]</span></p>
-         <p><span class="math display">\[RC \omega^2 \pm\omega - \frac{R}{L} = 0\]</span></p>
-         <p><span class="math display">\[\omega_{c,\pm} = \frac{\pm1+\sqrt{1+4\frac{R^2C}{L}}}{2RC}\]</span></p>
-         <p><span class="math display">\[\Delta\omega = \omega_{c,+}-\omega_{c,-} = \frac{1}{RC}\]</span></p>
-         <h3 data-number="5.8.1" id="sec:8.1"><span class="header-section-number">5.8.1</span> Prelab Question</h3>
-         <p>Express the quality factor <span class="math inline">\(Q\)</span> with respect to <span class="math inline">\(L\)</span>, <span class="math inline">\(R\)</span>, and <span class="math inline">\(C\)</span>.</p>
-         <h2 data-number="5.9" id="bode-plots"><span class="header-section-number">5.9</span> Bode plots</h2>
-         <p>Bode plots are log-log plots of a property vs frequency. You will find all sorts of Bode plots in datasheets for all kinds of devices, and they are also a useful way of visualizing how a filter acts.</p>
-         <p>In Python, log-log plots can be done in the following way</p>
+         <p>Alternatively, you can write a single function that spits
+         out both results, but this is up to you.</p>
+         <h2 data-number="5.8" id="quality-factor"><span
+         class="header-section-number">5.8</span> Quality factor</h2>
+         <p>For a low-pass and high-pass filter, the bandwidth can be
+         described simply by the cutoff frequency. For a low-pass
+         filter, the bandwidth is <span class="math inline">\(0\text{
+         Hz}\)</span> to <span class="math inline">\(f_c\)</span> and
+         for the high-pass filter, the bandwidth is <span
+         class="math inline">\(f_c\)</span> to <span
+         class="math inline">\(\infty\text{ Hz}\)</span>. The bandpass
+         filter however, has two cutoff frequencies, one above, and one
+         below the center frequency. The bandwidth is then</p>
+         <p><span class="math display">\[\Delta f = f_{c,+} -
+         f_{c,-}\]</span></p>
+         <p>However, this bandwidth is usually represented as a
+         dimensionless quantity called the <em>quality factor</em> <span
+         class="math inline">\(Q\)</span> which is the center frequency
+         divided by the bandwidth:</p>
+         <p><span class="math display">\[Q = \frac{f_0}{\Delta
+         f}\]</span></p>
+         <p>A <em>quality factor</em> in general, is a property of any
+         resonator (oscillator). Our LCR bandpass filter is a resonator
+         (<a href="https://www.youtube.com/watch?v=nh4q7mIhLrY">here’s a
+         nice, short video explanation</a>): the capacitor and inductor
+         exchange electric field energy (in the capacitor) for magnetic
+         field energy (in the inductor) with a frequency of <span
+         class="math inline">\(f_0\)</span> (the center frequency).</p>
+         <p>For a bandpass filter, the <em>quality factor</em> defines
+         the “sharpness” of the filter. The higher the <em>quality
+         factor</em>, the smaller the bandwidth around the center
+         frequency is. Conversely, the smaller the <em>quality
+         factor</em>, the wider the bandwidth.</p>
+         <p>The two cut off frequencies can be found by setting the
+         magnitude of the transfer function to the -3 dB ratio: <span
+         class="math inline">\((1/\sqrt{2})\)</span></p>
+         <p><span class="math display">\[\frac{\omega
+         L}{\sqrt{(R-\omega^2 LRC)^2+(\omega L)^2}} =
+         \frac{1}{\sqrt{2}}\]</span> <span
+         class="math display">\[\frac{(\omega L)^2}{(R-\omega^2
+         LRC)^2+(\omega L)^2} = \frac{1}{2}\]</span></p>
+         <p>Clearly, the left hand side equals <span
+         class="math inline">\(1/2\)</span> when</p>
+         <p><span class="math display">\[(R-\omega^2 LRC)^2 = (\omega
+         L)^2\]</span></p>
+         <p><span class="math display">\[R-\omega^2 LRC = \pm\omega
+         L\]</span></p>
+         <p><span class="math display">\[RC \omega^2 \pm\omega -
+         \frac{R}{L} = 0\]</span></p>
+         <p><span class="math display">\[\omega_{c,\pm} =
+         \frac{\pm1+\sqrt{1+4\frac{R^2C}{L}}}{2RC}\]</span></p>
+         <p><span class="math display">\[\Delta\omega =
+         \omega_{c,+}-\omega_{c,-} = \frac{1}{RC}\]</span></p>
+         <h3 data-number="5.8.1" id="sec:8.1"><span
+         class="header-section-number">5.8.1</span> Prelab Question</h3>
+         <p>Express the quality factor <span
+         class="math inline">\(Q\)</span> with respect to <span
+         class="math inline">\(L\)</span>, <span
+         class="math inline">\(R\)</span>, and <span
+         class="math inline">\(C\)</span>.</p>
+         <h2 data-number="5.9" id="bode-plots"><span
+         class="header-section-number">5.9</span> Bode plots</h2>
+         <p>Bode plots are log-log plots of a property vs frequency. You
+         will find all sorts of Bode plots in datasheets for all kinds
+         of devices, and they are also a useful way of visualizing how a
+         filter acts.</p>
+         <p>In Python, log-log plots can be done in the following
+         way</p>
          <pre><code>
-         import numpy as np
-         import matplotlib.pylab as plt
+import numpy as np
+import matplotlib.pylab as plt
 
-         def function_to_plot(frequency):
-             # code to compute function
-             return result
+def function_to_plot(frequency):
+    # code to compute function
+    return result
 
-         # create an array frequencies, evenly spaced on a log scale
-         # this will range from 10^0 to 10^8
-         frequency = np.logspace(0, 8, 1000)
+# create an array frequencies, evenly spaced on a log scale
+# this will range from 10^0 to 10^8
+frequency = np.logspace(0, 8, 1000)
 
-         fig, ax = plt.subplots(1, 1, figsize=(4, 3))
-         ax.loglog(frequency, function_to_plot(frequency))
-         </code></pre>
-         <p>The <code>loglog</code> function plots with both the x and y axes on a log scale; you can set an individual axis to log scale with</p>
+fig, ax = plt.subplots(1, 1, figsize=(4, 3))
+ax.loglog(frequency, function_to_plot(frequency))
+</code></pre>
+         <p>The <code>loglog</code> function plots with both the x and y
+         axes on a log scale; you can set an individual axis to log
+         scale with</p>
          <pre><code>
-         fig, ax = plt.sublots(1, 1, figsize=(4, 3))
-         ax.plot(x, y)
-         ax.set_xscale(&#39;log&#39;)
-         ax.set_yscale(&#39;log&#39;)
-         </code></pre>
-         <p>which gives you more control over which axes are on what scale.</p>
-         <p>Here’s <a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.loglog.html">the documentation for matplotlib.pylab.loglog</a> which may be helpful to look at.</p>
-         <h3 data-number="5.9.1" id="sec:9.1"><span class="header-section-number">5.9.1</span> Prelab question</h3>
-         <p>Create a Bode plot for <span class="math inline">\(|T|\)</span> and <span class="math inline">\(\delta\)</span> as a function of <span class="math inline">\(f\)</span> (from <span class="math inline">\(100\text{ Hz}\)</span> to <span class="math inline">\(1\text{ MHz}\)</span>) for the <strong>low-pass filter</strong> - with <span class="math inline">\(R=10\text{ k}\Omega\)</span> and <span class="math inline">\(C=1\text{ nF}\)</span>.</p>
+fig, ax = plt.sublots(1, 1, figsize=(4, 3))
+ax.plot(x, y)
+ax.set_xscale(&#39;log&#39;)
+ax.set_yscale(&#39;log&#39;)
+</code></pre>
+         <p>which gives you more control over which axes are on what
+         scale.</p>
+         <p>Here’s <a
+         href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.loglog.html">the
+         documentation for matplotlib.pylab.loglog</a> which may be
+         helpful to look at.</p>
+         <h3 data-number="5.9.1" id="sec:9.1"><span
+         class="header-section-number">5.9.1</span> Prelab question</h3>
+         <p>Create a Bode plot for <span
+         class="math inline">\(|T|\)</span> and <span
+         class="math inline">\(\delta\)</span> as a function of <span
+         class="math inline">\(f\)</span> (from <span
+         class="math inline">\(100\text{ Hz}\)</span> to <span
+         class="math inline">\(1\text{ MHz}\)</span>) for the
+         <strong>low-pass filter</strong> - with <span
+         class="math inline">\(R=10\text{ k}\Omega\)</span> and <span
+         class="math inline">\(C=1\text{ nF}\)</span>.</p>
          <ul>
-         <li><p>Both of these should be on the same plot. See the template code below to be able to plot two different y-scales on the same plot.</p></li>
-         <li><p>To make your Bode plots consistent with LTSpice, you should make the phase dashed with the <code>linestyle='dashed'</code> argument in your plotting command.</p></li>
-         <li><p>Set both to have the same color with <code>color='b'</code> (or whatever color you want).</p></li>
-         <li><p>Don’t forget to label your axes and title your plots!</p></li>
+         <li><p>Both of these should be on the same plot. See the
+         template code below to be able to plot two different y-scales
+         on the same plot.</p></li>
+         <li><p>To make your Bode plots consistent with LTSpice, you
+         should make the phase dashed with the
+         <code>linestyle='dashed'</code> argument in your plotting
+         command.</p></li>
+         <li><p>Set both to have the same color with
+         <code>color='b'</code> (or whatever color you want).</p></li>
+         <li><p>Don’t forget to label your axes and title your
+         plots!</p></li>
          </ul>
-         <p>Here is a template for plotting with two separate y-axes.</p>
+         <p>Here is a template for plotting with two separate
+         y-axes.</p>
          <pre><code>
-         import matplotlib.pylab as plt
-         import matplotlib
-         %matplotlib widget
-         matplotlib.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
-         matplotlib.rcParams[&#39;font.family&#39;] = &#39;STIXGeneral&#39;
+import matplotlib.pylab as plt
+import matplotlib
+%matplotlib widget
+matplotlib.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+matplotlib.rcParams[&#39;font.family&#39;] = &#39;STIXGeneral&#39;
 
-         &quot;&quot;&quot;set your component values here&quot;&quot;&quot;
+&quot;&quot;&quot;set your component values here&quot;&quot;&quot;
 
-         frequency = np.logspace(2, 6, 100)
+frequency = np.logspace(2, 6, 100)
 
-         &quot;&quot;&quot;Calculate gain and phase shift&quot;&quot;&quot;
-         gain, phase_shift = low_pass(r, c, frequency)
-         # or
-         gain = low_pass_gain(r, c, frequency)
-         phase_shift = low_pass_phase(r, c, frequency)
+&quot;&quot;&quot;Calculate gain and phase shift&quot;&quot;&quot;
+gain, phase_shift = low_pass(r, c, frequency)
+# or
+gain = low_pass_gain(r, c, frequency)
+phase_shift = low_pass_phase(r, c, frequency)
 
-         fig, ax1 = plt.subplots(1, 1, figsize=(4, 3))
+fig, ax1 = plt.subplots(1, 1, figsize=(4, 3))
 
-         ax1.set_xlabel(&#39;Frequency (Hz)&#39;)
-         ax1.set_ylabel(&#39;gain&#39;)
-         ax1.plot(frequency, gain, color=&#39;b&#39;, label=&quot;gain&quot;)
-         ax1.set_xscale(&#39;log&#39;)
-         ax1.set_yscale(&#39;log&#39;)
-         ax1.set_title(&#39;Low-pass filter&#39;)
-         ax1.tick_params(axis=&#39;both&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
-         ax1.set_xlim(1e2, 1e6)
-         ax1.grid(axis=&#39;both&#39;, linestyle=&#39;dotted&#39;)
+ax1.set_xlabel(&#39;Frequency (Hz)&#39;)
+ax1.set_ylabel(&#39;gain&#39;)
+ax1.plot(frequency, gain, color=&#39;b&#39;, label=&quot;gain&quot;)
+ax1.set_xscale(&#39;log&#39;)
+ax1.set_yscale(&#39;log&#39;)
+ax1.set_title(&#39;Low-pass filter&#39;)
+ax1.tick_params(axis=&#39;both&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
+ax1.set_xlim(1e2, 1e6)
+ax1.grid(axis=&#39;both&#39;, linestyle=&#39;dotted&#39;)
 
-         ax2 = ax1.twinx()
-         ax2.tick_params(axis=&#39;y&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
-         ax2.set_yticks(np.arange(-90, 1, 10))
-         ax2.set_yticks(np.arange(-90, 1, 2), minor=True)
+ax2 = ax1.twinx()
+ax2.tick_params(axis=&#39;y&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
+ax2.set_yticks(np.arange(-90, 1, 10))
+ax2.set_yticks(np.arange(-90, 1, 2), minor=True)
 
-         ax2.set_ylabel(&#39;phase shift $(\\degree)$&#39;)
-         ax2.plot(frequency, phase_shift, color=&#39;b&#39;, linestyle=&#39;dashed&#39;, label=&quot;phase&quot;)
-         fig.legend(loc=&quot;lower left&quot;, bbox_to_anchor=(0.11, 0.15))
+ax2.set_ylabel(&#39;phase shift $(\\degree)$&#39;)
+ax2.plot(frequency, phase_shift, color=&#39;b&#39;, linestyle=&#39;dashed&#39;, label=&quot;phase&quot;)
+fig.legend(loc=&quot;lower left&quot;, bbox_to_anchor=(0.11, 0.15))
 
-         fig.tight_layout()
-         </code></pre>
-         <p>Include a “scatter” point on your plot where the 3 dB frequency is. This will be a point where <span class="math inline">\(f=f_c\)</span> and <span class="math inline">\(|T|=1/\sqrt{2}\)</span></p>
+fig.tight_layout()
+</code></pre>
+         <p>Include a “scatter” point on your plot where the 3 dB
+         frequency is. This will be a point where <span
+         class="math inline">\(f=f_c\)</span> and <span
+         class="math inline">\(|T|=1/\sqrt{2}\)</span></p>
          <p><code>ax1.scatter(1 / (2 * np.pi * r * c), 1 / np.sqrt(2), color='r', s=100)</code></p>
-         <h3 data-number="5.9.2" id="sec:9.2"><span class="header-section-number">5.9.2</span> Prelab question</h3>
-         <p>Create a new Bode plot for <span class="math inline">\(|T|\)</span> and <span class="math inline">\(\delta\)</span> as a function of <span class="math inline">\(f\)</span> (from <span class="math inline">\(100\text{ Hz}\)</span> to <span class="math inline">\(1\text{ MHz}\)</span>) for the <em>high-pass filter</em> with the same capacitance and resistance values and all the same considerations above.</p>
+         <h3 data-number="5.9.2" id="sec:9.2"><span
+         class="header-section-number">5.9.2</span> Prelab question</h3>
+         <p>Create a new Bode plot for <span
+         class="math inline">\(|T|\)</span> and <span
+         class="math inline">\(\delta\)</span> as a function of <span
+         class="math inline">\(f\)</span> (from <span
+         class="math inline">\(100\text{ Hz}\)</span> to <span
+         class="math inline">\(1\text{ MHz}\)</span>) for the
+         <em>high-pass filter</em> with the same capacitance and
+         resistance values and all the same considerations above.</p>
          <ul>
          <li><p>You will have to change the title of the plot.</p></li>
          <li><p>Changing the color may be nice (up to you).</p></li>
-         <li><p>You will also need to change these two lines to change the phase shift axis ticks:</p>
+         <li><p>You will also need to change these two lines to change
+         the phase shift axis ticks:</p>
          <ul>
          <li><p><code>ax2.set_yticks(np.arange(0, 91, 20))</code></p></li>
          <li><p><code>ax2.set_yticks(np.arange(0, 91, 5), minor=True)</code></p></li>
          </ul></li>
-         <li><p>You can move the legend by altering the <code>loc</code> command (<a href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html">valid locations can be found here</a>), and the <code>bbox_to_anchor</code> is used to offset the legend.</p></li>
-         <li><p>Include a “scatter” point on your plot where the 3 dB frequency is. This will be a point where <span class="math inline">\(f=f_c\)</span> and <span class="math inline">\(|T|=1/\sqrt{2}\)</span>.</p></li>
+         <li><p>You can move the legend by altering the <code>loc</code>
+         command (<a
+         href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html">valid
+         locations can be found here</a>), and the
+         <code>bbox_to_anchor</code> is used to offset the
+         legend.</p></li>
+         <li><p>Include a “scatter” point on your plot where the 3 dB
+         frequency is. This will be a point where <span
+         class="math inline">\(f=f_c\)</span> and <span
+         class="math inline">\(|T|=1/\sqrt{2}\)</span>.</p></li>
          </ul>
-         <h3 data-number="5.9.3" id="sec:9.3"><span class="header-section-number">5.9.3</span> Prelab question</h3>
-         <p>Create a new Bode plot for <span class="math inline">\(|T|\)</span> and <span class="math inline">\(\delta\)</span> as a function of <span class="math inline">\(f\)</span> (from <span class="math inline">\(100\text{ Hz}\)</span> to <span class="math inline">\(1\text{ MHz}\)</span>) for the bandpass filter with <span class="math inline">\(R=10\text{ k}\Omega\)</span>, <span class="math inline">\(C=10\text{ nF}\)</span>, and <span class="math inline">\(L=10\text{ mH}\)</span> with all the same considerations above.</p>
+         <h3 data-number="5.9.3" id="sec:9.3"><span
+         class="header-section-number">5.9.3</span> Prelab question</h3>
+         <p>Create a new Bode plot for <span
+         class="math inline">\(|T|\)</span> and <span
+         class="math inline">\(\delta\)</span> as a function of <span
+         class="math inline">\(f\)</span> (from <span
+         class="math inline">\(100\text{ Hz}\)</span> to <span
+         class="math inline">\(1\text{ MHz}\)</span>) for the bandpass
+         filter with <span class="math inline">\(R=10\text{
+         k}\Omega\)</span>, <span class="math inline">\(C=10\text{
+         nF}\)</span>, and <span class="math inline">\(L=10\text{
+         mH}\)</span> with all the same considerations above.</p>
          <ul>
          <li><p>You will have to change the title of the plot.</p></li>
          <li><p>Changing the color may be nice (up to you).</p></li>
-         <li><p>You will have to alter the <code>yticks</code> for <code>ax2</code> for this plot:</p>
+         <li><p>You will have to alter the <code>yticks</code> for
+         <code>ax2</code> for this plot:</p>
          <ul>
          <li><p><code>ax2.set_yticks(np.arange(-90, 91, 10))</code></p></li>
          <li><p><code>ax2.set_yticks(np.arange(-90, 91, 2), minor=True)</code></p></li>
          </ul></li>
          <li><p>Make sure the legend is a nice place.</p></li>
-         <li><p>Include two “scatter” points on your plot where the 3 dB frequency is. This will be a point for both <span class="math inline">\(f=f_{c,-}\)</span> and <span class="math inline">\(f=f_{c,+}\)</span> where <span class="math inline">\(|T|=1/\sqrt{2}\)</span>, you can change the <code>s</code> option in the <code>scatter</code> function to change the size of the dots on the plot.</p></li>
+         <li><p>Include two “scatter” points on your plot where the 3 dB
+         frequency is. This will be a point for both <span
+         class="math inline">\(f=f_{c,-}\)</span> and <span
+         class="math inline">\(f=f_{c,+}\)</span> where <span
+         class="math inline">\(|T|=1/\sqrt{2}\)</span>, you can change
+         the <code>s</code> option in the <code>scatter</code> function
+         to change the size of the dots on the plot.</p></li>
          </ul>
          <!--### Prelab question {#sec:6.4}
 
          Draw the 3 circuits in your lab notebook with the values labeled (the ones you used for the Bode plots). You will build these circuits in lab.-->
-         <h3 data-number="5.9.4" id="sec:9.4"><span class="header-section-number">5.9.4</span> Prelab question</h3>
-         <p>Create all three circuits above in LTspice (the low-pass, high-pass and bandpass filters with values you used for your plots). For testing the frequency response of filters, an AC Analysis is performed.</p>
+         <h3 data-number="5.9.4" id="sec:9.4"><span
+         class="header-section-number">5.9.4</span> Prelab question</h3>
+         <p>Create all three circuits above in LTspice (the low-pass,
+         high-pass and bandpass filters with values you used for your
+         plots). For testing the frequency response of filters, an AC
+         Analysis is performed.</p>
          <ul>
-         <li><p>Create all three circuits with unique voltage sources for each circuit.</p></li>
-         <li><p>Set the values for the resistors, capacitors, and inductor.</p></li>
-         <li><p>Right click the voltage source and select “Advanced”.</p></li>
+         <li><p>Create all three circuits with unique voltage sources
+         for each circuit.</p></li>
+         <li><p>Set the values for the resistors, capacitors, and
+         inductor.</p></li>
+         <li><p>Right click the voltage source and select
+         “Advanced”.</p></li>
          <li><p>Under “Small signal AC analysis(.AC)” set:</p>
          <ul>
          <li><p>AC amplitude: 1</p></li>
          <li><p>AC phase: 0</p></li>
          </ul></li>
-         <li><p>The above configuration is specific for “AC Analysis” simulations.</p></li>
-         <li><p>In the “Configure Analysis” prompt, select the “AC Analysis” tab and set</p>
+         <li><p>The above configuration is specific for “AC Analysis”
+         simulations.</p></li>
+         <li><p>In the “Configure Analysis” prompt, select the “AC
+         Analysis” tab and set</p>
          <ul>
          <li><p>Type of sweep: decade</p></li>
          <li><p>Number of points per decade: 10</p></li>
          <li><p>Start frequency: 100</p></li>
          <li><p>Stop frequency: 1000k (this is 1 MHz)</p></li>
          </ul></li>
-         <li><p>Run the simulation and measure <span class="math inline">\(V_\text{out}\)</span> for each circuit.</p></li>
+         <li><p>Run the simulation and measure <span
+         class="math inline">\(V_\text{out}\)</span> for each
+         circuit.</p></li>
          <li><p>Screen shot each circuit and simulation result.</p></li>
          </ul>
-         <p>The Bode plots you made in Python are gain vs frequency and the simulated Bode plots are dB vs frequency. However, they should show the same general behavior. Compare your Bode plots to the simulation, and if the shapes are completely different it is likely that you made a mistake calculating <span class="math inline">\(|T|\)</span> or implementing <span class="math inline">\(|T|\)</span> as a Python function. Revise your plots if necessary.</p>
-         <h3 data-number="5.9.5" id="sec:9.5"><span class="header-section-number">5.9.5</span> Prelab question</h3>
-         <p>During the lab section, you will enter your measurements into your Jupyter notebook and plot them with your model predictions. To prepare for this, create a list of “fake data” and plot it on your Bode plots. This will provide you with a template to be able to compare your measurements to the model.</p>
-         <p>In Python, it is usually best to handle data as a NumPy array. There are two common schemes for data, which are considered C-like, and Fortran-like. In C, array data is stored from left to right, while in Fortran, it is stored from top to bottom. Numpy is flexible and you can use either convention.</p>
+         <p>The Bode plots you made in Python are gain vs frequency and
+         the simulated Bode plots are dB vs frequency. However, they
+         should show the same general behavior. Compare your Bode plots
+         to the simulation, and if the shapes are completely different
+         it is likely that you made a mistake calculating <span
+         class="math inline">\(|T|\)</span> or implementing <span
+         class="math inline">\(|T|\)</span> as a Python function. Revise
+         your plots if necessary.</p>
+         <h3 data-number="5.9.5" id="sec:9.5"><span
+         class="header-section-number">5.9.5</span> Prelab question</h3>
+         <p>During the lab section, you will enter your measurements
+         into your Jupyter notebook and plot them with your model
+         predictions. To prepare for this, create a list of “fake data”
+         and plot it on your Bode plots. This will provide you with a
+         template to be able to compare your measurements to the
+         model.</p>
+         <p>In Python, it is usually best to handle data as a NumPy
+         array. There are two common schemes for data, which are
+         considered C-like, and Fortran-like. In C, array data is stored
+         from left to right, while in Fortran, it is stored from top to
+         bottom. Numpy is flexible and you can use either
+         convention.</p>
          <pre><code>
-         # C-like data
-         data = np.array([
-             [x0, x1, x2, x3, ...],
-             [y0, y1, y2, y3, ...]
-         ])
+# C-like data
+data = np.array([
+    [x0, x1, x2, x3, ...],
+    [y0, y1, y2, y3, ...]
+])
 
-         &quot;&quot;&quot;You can get all the x&#39;s or all the y&#39;s by either calling just the row index, or by calling for the slice of all columns at a row&quot;&quot;&quot;
-         x = data[0]
-         y = data[1]
-         # or
-         x = data[0, :]
-         y = data[1, :]
+&quot;&quot;&quot;You can get all the x&#39;s or all the y&#39;s by either calling just the row index, or by calling for the slice of all columns at a row&quot;&quot;&quot;
+x = data[0]
+y = data[1]
+# or
+x = data[0, :]
+y = data[1, :]
 
-         &quot;&quot;&quot;You can get a single data point by slicing all the rows at a given column index&quot;&quot;&quot;
-         data_point4 = data[:, 4]
-         </code></pre>
+&quot;&quot;&quot;You can get a single data point by slicing all the rows at a given column index&quot;&quot;&quot;
+data_point4 = data[:, 4]
+</code></pre>
          <pre><code>
-         # Fortran-like data
-         data = np.array([
-             [x0, y0],
-             [x1, y1],
-             [x2, y2],
-             [x3, y3],
-             ...
-         ])
+# Fortran-like data
+data = np.array([
+    [x0, y0],
+    [x1, y1],
+    [x2, y2],
+    [x3, y3],
+    ...
+])
 
-         &quot;&quot;&quot;To slice the x-data and y-data, you have to ask for all the rows at a given column&quot;&quot;&quot;
-         x = data[:, 0]
-         y = data[:, 1]
+&quot;&quot;&quot;To slice the x-data and y-data, you have to ask for all the rows at a given column&quot;&quot;&quot;
+x = data[:, 0]
+y = data[:, 1]
 
-         &quot;&quot;&quot;You can get a single point however by either slicing all the columns at a row, or just by asking for the row index&quot;&quot;&quot;
+&quot;&quot;&quot;You can get a single point however by either slicing all the columns at a row, or just by asking for the row index&quot;&quot;&quot;
 
-         data_point4 = data[4]
-         # or
-         data_point4 = data[4, :]
-         </code></pre>
-         <p>Both C-like and Fortran-like data have their pros and cons, but Fortran-like is far more common when working with experimental data because of how simply it translates to and from saved data in the form of data files where the types of data are separated by columns (left to right) and data points are stored in successive rows (top to bottom). Ultimately it is up to you to determine your own workflows and preferences, so we’ll leave this up to you to decide.</p>
-         <h2 data-number="5.10" id="lab-activities"><span class="header-section-number">5.10</span> Lab activities</h2>
-         <h3 data-number="5.10.1" id="sec:10.1"><span class="header-section-number">5.10.1</span> Prelab question</h3>
-         <p>Please review the lab activities so that you’re better prepared when you arrive to your lab section.</p>
-         <h1 data-number="6" id="useful-readings"><span class="header-section-number">6</span> Useful Readings</h1>
-         <p>You can read more on passive elements and passive filters in the follow sections of the following texts.</p>
+data_point4 = data[4]
+# or
+data_point4 = data[4, :]
+</code></pre>
+         <p>Both C-like and Fortran-like data have their pros and cons,
+         but Fortran-like is far more common when working with
+         experimental data because of how simply it translates to and
+         from saved data in the form of data files where the types of
+         data are separated by columns (left to right) and data points
+         are stored in successive rows (top to bottom). Ultimately it is
+         up to you to determine your own workflows and preferences, so
+         we’ll leave this up to you to decide.</p>
+         <h2 data-number="5.10" id="lab-activities"><span
+         class="header-section-number">5.10</span> Lab activities</h2>
+         <h3 data-number="5.10.1" id="sec:10.1"><span
+         class="header-section-number">5.10.1</span> Prelab
+         question</h3>
+         <p>Please review the lab activities so that you’re better
+         prepared when you arrive to your lab section.</p>
+         <h1 data-number="6" id="useful-readings"><span
+         class="header-section-number">6</span> Useful Readings</h1>
+         <p>You can read more on passive elements and passive filters in
+         the follow sections of the following texts.</p>
          <ol type="1">
-         <li><p><a href="https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf">Steck</a> Sections 2.1, 2.3, 2.4, 2.6</p></li>
+         <li><p><a
+         href="https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf">Steck</a>
+         Sections 2.1, 2.3, 2.4, 2.6</p></li>
          <li><p>Fischer-Cripps 3.4-3.18</p></li>
-         <li><p>Horowitz &amp; Hill 2<sup>nd</sup> Ed. 1.13-1.24 (and Appendix A on scope probes)</p></li>
-         <li><p>Horowitz &amp; Hill 3<sup>rd</sup> Ed. 1.3-1.5, 1.7, 6.2 (and Appendix O.1.5 on scope probes)</p></li>
+         <li><p>Horowitz &amp; Hill 2<sup>nd</sup> Ed. 1.13-1.24 (and
+         Appendix A on scope probes)</p></li>
+         <li><p>Horowitz &amp; Hill 3<sup>rd</sup> Ed. 1.3-1.5, 1.7, 6.2
+         (and Appendix O.1.5 on scope probes)</p></li>
          </ol>
-         <h1 data-number="7" id="lab-activities-1"><span class="header-section-number">7</span> Lab Activities</h1>
-         <h2 data-number="7.1" id="measure-components-predict-build"><span class="header-section-number">7.1</span> Measure components, Predict, Build</h2>
-         <p>You can measure your resistors, and in some cases your capacitors, with your DMM. However, we have two powerful LCR measurement bridges in the lab for measuring inductances, capacitances, and resistances very accurately.</p>
+         <h1 data-number="7" id="lab-activities-1"><span
+         class="header-section-number">7</span> Lab Activities</h1>
+         <h2 data-number="7.1"
+         id="measure-components-predict-build"><span
+         class="header-section-number">7.1</span> Measure components,
+         Predict, Build</h2>
+         <p>You can measure your resistors, and in some cases your
+         capacitors, with your DMM. However, we have two powerful LCR
+         measurement bridges in the lab for measuring inductances,
+         capacitances, and resistances very accurately.</p>
          <div id="fig:lcr-meter" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/LCR%20Meter.JPG" style="width:12cm" alt="" /><figcaption><span>Figure 8:</span> The front panel of the LCR measurement bridge</figcaption>
+         <img src="../resources/lab3fig/LCR%20Meter.JPG"
+         style="width:12cm"
+         alt="Figure 8: The front panel of the LCR measurement bridge" />
+         <figcaption aria-hidden="true"><span>Figure 8:</span> The front
+         panel of the LCR measurement bridge</figcaption>
          </figure>
          </div>
-         <p>On the left of the front panel, you can select what you intend to measure. The first letter determines whether you are measuring a resistance, capacitance, or inductance. The second letter is usually some associated parameter that has something to do with “how good” the component is. For example, you can determine the <span class="math inline">\(Q\)</span> of an inductor or the loss of a capacitor. Most of the time, in this class, the second parameter isn’t very important.</p>
-         <p>The bridge uses an AC voltage to make the measurement, and often components are frequency dependent. Ask an instructor to help you pick the best measurement frequency if you’re unsure. Often times, using the lowest frequency is a good bet, but if you know what frequency you will be using with the component, measuring with that frequency is a good idea.</p>
-         <h3 data-number="7.1.1" id="preparation"><span class="header-section-number">7.1.1</span> Preparation</h3>
+         <p>On the left of the front panel, you can select what you
+         intend to measure. The first letter determines whether you are
+         measuring a resistance, capacitance, or inductance. The second
+         letter is usually some associated parameter that has something
+         to do with “how good” the component is. For example, you can
+         determine the <span class="math inline">\(Q\)</span> of an
+         inductor or the loss of a capacitor. Most of the time, in this
+         class, the second parameter isn’t very important.</p>
+         <p>The bridge uses an AC voltage to make the measurement, and
+         often components are frequency dependent. Ask an instructor to
+         help you pick the best measurement frequency if you’re unsure.
+         Often times, using the lowest frequency is a good bet, but if
+         you know what frequency you will be using with the component,
+         measuring with that frequency is a good idea.</p>
+         <h3 data-number="7.1.1" id="preparation"><span
+         class="header-section-number">7.1.1</span> Preparation</h3>
          <ol type="1">
          <li>Start by drawing the following circuits in your lab manual
          <ul>
@@ -548,103 +1318,362 @@
          <li>the high-pass filter,</li>
          <li>the bandpass filter.</li>
          </ul></li>
-         <li>Gather the components to be able to build all four of these circuits (grab enough components to have them all built simultaneously) <strong><em>Do not build them yet</em></strong>
+         <li>Gather the components to be able to build all four of these
+         circuits (grab enough components to have them all built
+         simultaneously) <strong><em>Do not build them yet</em></strong>
          <ul>
-         <li>voltage divider: <span class="math inline">\(R_1 = 10\text{ k}\Omega\)</span>, <span class="math inline">\(R_2=6.8\text{ k}\Omega\)</span>,</li>
-         <li>low-pass filter: <span class="math inline">\(R = 10\text{ k}\Omega\)</span>, <span class="math inline">\(C = 1\text{ nF}\)</span>,</li>
-         <li>high-pass filter: <span class="math inline">\(R = 10\text{ k}\Omega\)</span>, <span class="math inline">\(C = 1\text{ nF}\)</span>,</li>
-         <li>bandpass filter: <span class="math inline">\(R = 10\text{ k}\Omega\)</span>, <span class="math inline">\(C = 10\text{ nF}\)</span>, <span class="math inline">\(L = 10\text{ mH}\)</span>.</li>
+         <li>voltage divider: <span class="math inline">\(R_1 = 10\text{
+         k}\Omega\)</span>, <span class="math inline">\(R_2=6.8\text{
+         k}\Omega\)</span>,</li>
+         <li>low-pass filter: <span class="math inline">\(R = 10\text{
+         k}\Omega\)</span>, <span class="math inline">\(C = 1\text{
+         nF}\)</span>,</li>
+         <li>high-pass filter: <span class="math inline">\(R = 10\text{
+         k}\Omega\)</span>, <span class="math inline">\(C = 1\text{
+         nF}\)</span>,</li>
+         <li>bandpass filter: <span class="math inline">\(R = 10\text{
+         k}\Omega\)</span>, <span class="math inline">\(C = 10\text{
+         nF}\)</span>, <span class="math inline">\(L = 10\text{
+         mH}\)</span>.</li>
          </ul></li>
          </ol>
-         <p><em>Reminder:</em> all components that aren’t resistors or capacitors (which would include the <span class="math inline">\(10\text{ mH}\)</span> inductor) are found in the <strong><em>Guided Lab Components</em></strong> bins on the wall next to the resistors and capacitors.</p>
+         <p><em>Reminder:</em> all components that aren’t resistors or
+         capacitors (which would include the <span
+         class="math inline">\(10\text{ mH}\)</span> inductor) are found
+         in the <strong><em>Guided Lab Components</em></strong> bins on
+         the wall next to the resistors and capacitors.</p>
          <ol start="3" type="1">
-         <li><p>Measure all components and keep track of which ones will go into which circuits: this can be done by drawing labeled circles in your lab notebook and placing them in the corresponding circles or by using pieces of label tape on each component (or any other method you come up with). Label the values in your circuit diagrams.</p></li>
-         <li><p>Justify why you don’t need to consider the <span class="math inline">\(50\ \Omega\)</span> output impedance of the function generator in your models. Consider the minimal input impedance for each of these circuits and make a mathematical argument.</p></li>
+         <li><p>Measure all components and keep track of which ones will
+         go into which circuits: this can be done by drawing labeled
+         circles in your lab notebook and placing them in the
+         corresponding circles or by using pieces of label tape on each
+         component (or any other method you come up with). Label the
+         values in your circuit diagrams.</p></li>
+         <li><p>Justify why you don’t need to consider the <span
+         class="math inline">\(50\ \Omega\)</span> output impedance of
+         the function generator in your models. Consider the minimal
+         input impedance for each of these circuits and make a
+         mathematical argument.</p></li>
          </ol>
-         <h3 data-number="7.1.2" id="building-the-circuits"><span class="header-section-number">7.1.2</span> Building the Circuits</h3>
+         <h3 data-number="7.1.2" id="building-the-circuits"><span
+         class="header-section-number">7.1.2</span> Building the
+         Circuits</h3>
          <ol type="1">
-         <li><p>You should not design these circuits such that the signal and the ground wires from the header go to the long rails on the breadboard. Consider why that would be in terms of parasitic capacitance, and estimate the parasitic capacitance between two of the long rails. <em>Hint:</em> Measure the length of the rail and treat it like a parallel plate capacitor (this will underestimate the capacitance because it won’t consider the fringe fields, but it should get you pretty close). You can take the gap between the rails to be <span class="math inline">\(1.5\text{ mm}\)</span> and the height of the wire grabbers enclosed to be <span class="math inline">\(4\text{ mm}\)</span>.</p></li>
-         <li><p>Explain (using a mathematical argument) why you would not want to put a signal and ground in the long rails next to each other (consider the fact that a signal will oscillate at some or many frequencies, and the impedance of a capacitor).</p></li>
-         <li><p>Build all four circuits on separate parts of your breadboard. Don’t connect anything to power or ground yet. <strong>The leads on the inductors are too thick to be inserted into the breadboards directly.</strong> There should already be jumper wires soldered onto the ends of the inductor leads (please talk to your instructor or TA if that is not the case).</p></li>
+         <li><p>You should not design these circuits such that the
+         signal and the ground wires from the header go to the long
+         rails on the breadboard. Consider why that would be in terms of
+         parasitic capacitance, and estimate the parasitic capacitance
+         between two of the long rails. <em>Hint:</em> Measure the
+         length of the rail and treat it like a parallel plate capacitor
+         (this will underestimate the capacitance because it won’t
+         consider the fringe fields, but it should get you pretty
+         close). You can take the gap between the rails to be <span
+         class="math inline">\(1.5\text{ mm}\)</span> and the height of
+         the wire grabbers enclosed to be <span
+         class="math inline">\(4\text{ mm}\)</span>.</p></li>
+         <li><p>Explain (using a mathematical argument) why you would
+         not want to put a signal and ground in the long rails next to
+         each other (consider the fact that a signal will oscillate at
+         some or many frequencies, and the impedance of a
+         capacitor).</p></li>
+         <li><p>Build all four circuits on separate parts of your
+         breadboard. Don’t connect anything to power or ground yet.
+         <strong>The leads on the inductors are too thick to be inserted
+         into the breadboards directly.</strong> There should already be
+         jumper wires soldered onto the ends of the inductor leads
+         (please talk to your instructor or TA if that is not the
+         case).</p></li>
          </ol>
-         <h3 data-number="7.1.3" id="use-the-models-to-predict-the-behavior-of-the-circuits"><span class="header-section-number">7.1.3</span> Use the models to predict the behavior of the circuits</h3>
+         <h3 data-number="7.1.3"
+         id="use-the-models-to-predict-the-behavior-of-the-circuits"><span
+         class="header-section-number">7.1.3</span> Use the models to
+         predict the behavior of the circuits</h3>
          <ol type="1">
-         <li><p>Calculate the expected gain <span class="math inline">\(|T|\)</span> of the resistive divider using the measured component values.</p></li>
-         <li><p>Calculate the expected values of the cut-off frequencies for the high- and low-pass filters using the measured component values.</p></li>
-         <li><p>Calculate the expected resonant (center) frequency <span class="math inline">\(f_0\)</span> and quality factor <span class="math inline">\(Q\)</span> for the bandpass filter using the measured component values.</p></li>
-         <li><p>Make new Bode plots for all three filter circuits (three independent Bode plots) using your measured component values. The frequency range should cover about 2 orders of magnitude above and below the cutoff frequency (i.e. <span class="math inline">\(10^{-2}f_c-10^2f_c\)</span>).</p></li>
+         <li><p>Calculate the expected gain <span
+         class="math inline">\(|T|\)</span> of the resistive divider
+         using the measured component values.</p></li>
+         <li><p>Calculate the expected values of the cut-off frequencies
+         for the high- and low-pass filters using the measured component
+         values.</p></li>
+         <li><p>Calculate the expected resonant (center) frequency <span
+         class="math inline">\(f_0\)</span> and quality factor <span
+         class="math inline">\(Q\)</span> for the bandpass filter using
+         the measured component values.</p></li>
+         <li><p>Make new Bode plots for all three filter circuits (three
+         independent Bode plots) using your measured component values.
+         The frequency range should cover about 2 orders of magnitude
+         above and below the cutoff frequency (i.e. <span
+         class="math inline">\(10^{-2}f_c-10^2f_c\)</span>).</p></li>
          </ol>
-         <h2 data-number="7.2" id="setting-up-test-and-measurement-equipment-and-testing-your-circuits"><span class="header-section-number">7.2</span> Setting Up Test and Measurement Equipment and Testing Your Circuits</h2>
+         <h2 data-number="7.2"
+         id="setting-up-test-and-measurement-equipment-and-testing-your-circuits"><span
+         class="header-section-number">7.2</span> Setting Up Test and
+         Measurement Equipment and Testing Your Circuits</h2>
          <div id="fig:setup" class="fignos">
          <figure>
-         <img src="../resources/lab3fig/equip-setup.png" style="width:10cm" alt="" /><figcaption><span>Figure 9:</span> Test and Measurement Set-up. Channel 1 will “pick off” the function generator signal on its way to the circuit board. You can do this using a BNC “T” connector mounted directly on the oscilloscope input. When you connect the oscilloscope like this, you need to make sure the channel impedance is set to high impedance (not <span class="math inline">\(50 \Omega\)</span>).</figcaption>
+         <img src="../resources/lab3fig/equip-setup.png"
+         style="width:10cm"
+         alt="Figure 9: Test and Measurement Set-up. Channel 1 will “pick off” the function generator signal on its way to the circuit board. You can do this using a BNC “T” connector mounted directly on the oscilloscope input. When you connect the oscilloscope like this, you need to make sure the channel impedance is set to high impedance (not 50 \Omega)." />
+         <figcaption aria-hidden="true"><span>Figure 9:</span> Test and
+         Measurement Set-up. Channel 1 will “pick off” the function
+         generator signal on its way to the circuit board. You can do
+         this using a BNC “T” connector mounted directly on the
+         oscilloscope input. When you connect the oscilloscope like
+         this, you need to make sure the channel impedance is set to
+         high impedance (not <span class="math inline">\(50
+         \Omega\)</span>).</figcaption>
          </figure>
          </div>
-         <h3 data-number="7.2.1" id="prepare-to-test-the-circuits"><span class="header-section-number">7.2.1</span> Prepare to test the circuits</h3>
+         <h3 data-number="7.2.1" id="prepare-to-test-the-circuits"><span
+         class="header-section-number">7.2.1</span> Prepare to test the
+         circuits</h3>
          <ol type="1">
-         <li><p>Connect the circuit board to the function generator and the oscilloscope as shown in Figure <a href="#fig:setup">9</a>. It is always helpful to display both the input voltage as well as the output voltage on the scope at the same time.</p></li>
-         <li><p>Test your setup by creating a <span class="math inline">\(1\text{ kHz}\)</span> sine wave at <span class="math inline">\(1\text{ V}_{pp}\)</span> using the function generator and confirm the waveform frequency and amplitude by measuring the signal on the scope. Trigger the scope off of the Sync output of the function generator. Remember that the output termination on the function generator can be set to either <span class="math inline">\(50\ \Omega\)</span> or HIGH Z. Consider which setting should be used here and <a href="/PHYS-3330/lab-guides/lab1#appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a">set it to that setting</a>. <em>Hint:</em> is your load <span class="math inline">\(50\ \Omega\)</span>?</p></li>
+         <li><p>Connect the circuit board to the function generator and
+         the oscilloscope as shown in Figure <a href="#fig:setup">9</a>.
+         It is always helpful to display both the input voltage as well
+         as the output voltage on the scope at the same time.</p></li>
+         <li><p>Test your setup by creating a <span
+         class="math inline">\(1\text{ kHz}\)</span> sine wave at <span
+         class="math inline">\(1\text{ V}_{pp}\)</span> using the
+         function generator and confirm the waveform frequency and
+         amplitude by measuring the signal on the scope. Trigger the
+         scope off of the Sync output of the function generator.
+         Remember that the output termination on the function generator
+         can be set to either <span class="math inline">\(50\
+         \Omega\)</span> or HIGH Z. Consider which setting should be
+         used here and <a
+         href="/PHYS-3330/lab-guides/lab1#appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a">set
+         it to that setting</a>. <em>Hint:</em> is your load <span
+         class="math inline">\(50\ \Omega\)</span>?</p></li>
          </ol>
-         <h3 data-number="7.2.2" id="sec:vd-freq"><span class="header-section-number">7.2.2</span> Measure the frequency dependence of the voltage divider</h3>
-         <p>In this experiment, you will test the frequency response of the voltage divider.</p>
+         <h3 data-number="7.2.2" id="sec:vd-freq"><span
+         class="header-section-number">7.2.2</span> Measure the
+         frequency dependence of the voltage divider</h3>
+         <p>In this experiment, you will test the frequency response of
+         the voltage divider.</p>
          <ol type="1">
-         <li><p>According to your model, what is the frequency dependence of the voltage divider? I.e. how should the transfer function behave as a function of frequncy?</p></li>
-         <li><p>Connect the signal from the function generator to the input of the voltage divider.</p></li>
-         <li><p>Measure the transfer function (attenuation) <span class="math inline">\(V_\text{out}/V_\text{in}\)</span> over a large range in frequency (<span class="math inline">\(1\text{ kHz}\)</span> to <span class="math inline">\(15\text{ MHz}\)</span> in approximately decade (x10) steps; i.e. on a log-scale; i.e. 10, 100, 1000, …). Record your measurements in your lab notebook.</p></li>
+         <li><p>According to your model, what is the frequency
+         dependence of the voltage divider? I.e. how should the transfer
+         function behave as a function of frequncy?</p></li>
+         <li><p>Connect the signal from the function generator to the
+         input of the voltage divider.</p></li>
+         <li><p>Measure the transfer function (attenuation) <span
+         class="math inline">\(V_\text{out}/V_\text{in}\)</span> over a
+         large range in frequency (<span class="math inline">\(1\text{
+         kHz}\)</span> to <span class="math inline">\(15\text{
+         MHz}\)</span> in approximately decade (x10) steps; i.e. on a
+         log-scale; i.e. 10, 100, 1000, …). Record your measurements in
+         your lab notebook.</p></li>
          <li><p>Plot your data points on a log-log plot.</p></li>
-         <li><p>At lower frequencies (like <span class="math inline">\(1\text{ kHz}\)</span>), compare your measured value of the attenuation to what your model predicted using your actual component values. Does your low frequency measurement agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.</p></li>
-         <li><p>At high frequencies (like <span class="math inline">\(15\text{ MHz}\)</span>), compare your measured value of the attenuation to what your model predicted. Does this agree with your prediction? Explicitly record what criteria you used to determine whether or not the model and measurements agree.</p></li>
-         <li><p>What do you think might be missing from your model that would accurately account for this discrepancy? <em>Hint:</em> compare the shape of the log-log plot of your data to the Bode plots you made in the prelab.</p></li>
+         <li><p>At lower frequencies (like <span
+         class="math inline">\(1\text{ kHz}\)</span>), compare your
+         measured value of the attenuation to what your model predicted
+         using your actual component values. Does your low frequency
+         measurement agree with your prediction? Explicitly record what
+         criteria you used to determine whether or not the model and
+         measurements agree.</p></li>
+         <li><p>At high frequencies (like <span
+         class="math inline">\(15\text{ MHz}\)</span>), compare your
+         measured value of the attenuation to what your model predicted.
+         Does this agree with your prediction? Explicitly record what
+         criteria you used to determine whether or not the model and
+         measurements agree.</p></li>
+         <li><p>What do you think might be missing from your model that
+         would accurately account for this discrepancy? <em>Hint:</em>
+         compare the shape of the log-log plot of your data to the Bode
+         plots you made in the prelab.</p></li>
          </ol>
-         <h3 data-number="7.2.3" id="refining-the-measurement-system-of-the-voltage-divider"><span class="header-section-number">7.2.3</span> Refining the measurement system of the voltage divider</h3>
+         <h3 data-number="7.2.3"
+         id="refining-the-measurement-system-of-the-voltage-divider"><span
+         class="header-section-number">7.2.3</span> Refining the
+         measurement system of the voltage divider</h3>
          <ol type="1">
-         <li><p>Your voltage divider is cutting very high frequencies (like a low pass filter). Find the cutoff frequency (where the voltage is reduced to 0.707 of the low frequency value of the transfer function). Record the cut-off frequency. <em>Note:</em> in this case, because the voltage divider already attenuates a fixed amount, the cutoff frequency is the frequency when <span class="math inline">\(V_\text{out}\)</span> falls to <span class="math inline">\(0.707\cdot V_\text{out}\)</span> where <span class="math inline">\(V_\text{out}\)</span> is the low frequency output voltage (when it is acting like an ideal voltage divider).</p></li>
-         <li><p>An ideal voltage divider containing only resistors should not have any frequency dependence. However, these coax cables have a capacitance of about <span class="math inline">\(80\text{ pF/m}\)</span>. You could refine your model to include this capacitance by considering the fact that the cable carrying <span class="math inline">\(V_\text{out}\)</span> to the scope introduces capacitance in parallel to <span class="math inline">\(R_2\)</span>. However, in this case, we will refine the physical system instead by using a scope probe (see definitions) in place of the coax cable to reduce the capacitance of the measurement probe.</p>
+         <li><p>Your voltage divider is cutting very high frequencies
+         (like a low pass filter). Find the cutoff frequency (where the
+         voltage is reduced to 0.707 of the low frequency value of the
+         transfer function). Record the cut-off frequency.
+         <em>Note:</em> in this case, because the voltage divider
+         already attenuates a fixed amount, the cutoff frequency is the
+         frequency when <span
+         class="math inline">\(V_\text{out}\)</span> falls to <span
+         class="math inline">\(0.707\cdot V_\text{out}\)</span> where
+         <span class="math inline">\(V_\text{out}\)</span> is the low
+         frequency output voltage (when it is acting like an ideal
+         voltage divider).</p></li>
+         <li><p>An ideal voltage divider containing only resistors
+         should not have any frequency dependence. However, these coax
+         cables have a capacitance of about <span
+         class="math inline">\(80\text{ pF/m}\)</span>. You could refine
+         your model to include this capacitance by considering the fact
+         that the cable carrying <span
+         class="math inline">\(V_\text{out}\)</span> to the scope
+         introduces capacitance in parallel to <span
+         class="math inline">\(R_2\)</span>. However, in this case, we
+         will refine the physical system instead by using a scope probe
+         (see definitions) in place of the coax cable to reduce the
+         capacitance of the measurement probe.</p>
          <ul>
-         <li><em>Note:</em> the scope’s measurement involves a capacitor (this is labeled near the inputs). This leads to fundamental limitations to what frequencies can be measured by the scope (regardless of scope-probe design).</li>
+         <li><em>Note:</em> the scope’s measurement involves a capacitor
+         (this is labeled near the inputs). This leads to fundamental
+         limitations to what frequencies can be measured by the scope
+         (regardless of scope-probe design).</li>
          </ul></li>
-         <li><p>Repeat the measurements (and record them in your lab notebook) from <a href="#sec:vd-freq">7.2.2</a>.1 using the 10x probe to measure the output of the circuit. Whenever you use the 10x probe, you will need to change the probe setting in the channel menu to “10x”.</p></li>
-         <li><p>Plot the data using the scope-probe on the same plot as the data without using the scope-probe. Use a legend to differentiate the two.</p></li>
-         <li><p>Does you original model of just two resistors now predict the behavior of the circuit when you use a 10X probe?</p></li>
+         <li><p>Repeat the measurements (and record them in your lab
+         notebook) from <a href="#sec:vd-freq">7.2.2</a>.1 using the 10x
+         probe to measure the output of the circuit. Whenever you use
+         the 10x probe, you will need to change the probe setting in the
+         channel menu to “10x”.</p></li>
+         <li><p>Plot the data using the scope-probe on the same plot as
+         the data without using the scope-probe. Use a legend to
+         differentiate the two.</p></li>
+         <li><p>Does you original model of just two resistors now
+         predict the behavior of the circuit when you use a 10X
+         probe?</p></li>
          </ol>
-         <h2 data-number="7.3" id="measure-the-frequency-dependence-of-the-low-pass"><span class="header-section-number">7.3</span> Measure the frequency dependence of the low-pass</h2>
-         <p><strong>In the previous section, you have shown with data that the 10X probe perturbs your measurements less than the coax cable. Use the probe for the rest of your measurements!</strong></p>
+         <h2 data-number="7.3"
+         id="measure-the-frequency-dependence-of-the-low-pass"><span
+         class="header-section-number">7.3</span> Measure the frequency
+         dependence of the low-pass</h2>
+         <p><strong>In the previous section, you have shown with data
+         that the 10X probe perturbs your measurements less than the
+         coax cable. Use the probe for the rest of your
+         measurements!</strong></p>
          <ol type="1">
-         <li><p>Connect the signal from the function generator to the input of the low-pass filter. Measure the transfer function <span class="math inline">\(|V_\text{out}/V_\text{in}|\)</span> at a low frequency (say <span class="math inline">\(500\text{ Hz}\)</span>) and confirm that the filter fully passes the low frequency; i.e. has a transfer function of 1.</p></li>
-         <li><p>Change the frequency until the output is 0.707 of the input. Record the frequency and explain why this is the 3 dB point.</p></li>
-         <li><p>Record a frequency and transfer function roughly an order of magnitude above and below and a few points in between.</p></li>
-         <li><p>Plot the data you recorded on top of the theoretical model you plotted based on your measured values of <span class="math inline">\(R\)</span> and <span class="math inline">\(C\)</span>. Do your measurements agree with your model?</p></li>
+         <li><p>Connect the signal from the function generator to the
+         input of the low-pass filter. Measure the transfer function
+         <span class="math inline">\(|V_\text{out}/V_\text{in}|\)</span>
+         at a low frequency (say <span class="math inline">\(500\text{
+         Hz}\)</span>) and confirm that the filter fully passes the low
+         frequency; i.e. has a transfer function of 1.</p></li>
+         <li><p>Change the frequency until the output is 0.707 of the
+         input. Record the frequency and explain why this is the 3 dB
+         point.</p></li>
+         <li><p>Record a frequency and transfer function roughly an
+         order of magnitude above and below and a few points in
+         between.</p></li>
+         <li><p>Plot the data you recorded on top of the theoretical
+         model you plotted based on your measured values of <span
+         class="math inline">\(R\)</span> and <span
+         class="math inline">\(C\)</span>. Do your measurements agree
+         with your model?</p></li>
          </ol>
-         <h2 data-number="7.4" id="measure-the-rc-time-of-the-low-pass-filter"><span class="header-section-number">7.4</span> Measure the RC-time of the low-pass filter</h2>
+         <h2 data-number="7.4"
+         id="measure-the-rc-time-of-the-low-pass-filter"><span
+         class="header-section-number">7.4</span> Measure the RC-time of
+         the low-pass filter</h2>
          <ol type="1">
-         <li><p>Change the waveform to a square wave and give it an offset so that the wave oscillates between <span class="math inline">\(0\)</span> and <span class="math inline">\(5\text{ V}\)</span>.</p></li>
-         <li><p>Adjust the frequency to be slow enough such that the capacitor fully charges. How are you able to tell that the capacitor charges?</p></li>
-         <li><p>Set the trigger mode to trigger on a falling edge so that the scope’s display centers around when the voltage falls from <span class="math inline">\(5\text{ V}\)</span> to <span class="math inline">\(0\)</span>. At this moment, the capacitor will start to discharge. Use the cursors to measure the RC-time based on the exponential decay of the capacitor discharging. <em>Hint:</em> you worked this out in the prelab.</p></li>
-         <li><p>Calculate the 3 dB point from the RC-time and compare it to your previous measure of the 3 dB point.</p></li>
+         <li><p>Change the waveform to a square wave and give it an
+         offset so that the wave oscillates between <span
+         class="math inline">\(0\)</span> and <span
+         class="math inline">\(5\text{ V}\)</span>.</p></li>
+         <li><p>Adjust the frequency to be slow enough such that the
+         capacitor fully charges. How are you able to tell that the
+         capacitor charges?</p></li>
+         <li><p>Set the trigger mode to trigger on a falling edge so
+         that the scope’s display centers around when the voltage falls
+         from <span class="math inline">\(5\text{ V}\)</span> to <span
+         class="math inline">\(0\)</span>. At this moment, the capacitor
+         will start to discharge. Use the cursors to measure the RC-time
+         based on the exponential decay of the capacitor discharging.
+         <em>Hint:</em> you worked this out in the prelab.</p></li>
+         <li><p>Calculate the 3 dB point from the RC-time and compare it
+         to your previous measure of the 3 dB point.</p></li>
          </ol>
-         <h2 data-number="7.5" id="measure-the-frequency-dependance-of-the-high-pass-filter"><span class="header-section-number">7.5</span> Measure the frequency dependance of the high-pass filter</h2>
+         <h2 data-number="7.5"
+         id="measure-the-frequency-dependance-of-the-high-pass-filter"><span
+         class="header-section-number">7.5</span> Measure the frequency
+         dependance of the high-pass filter</h2>
          <ol type="1">
-         <li><p>Over a large range in frequency, <span class="math inline">\(1\text{ kHz}\)</span> to <span class="math inline">\(1\text{ MHz}\)</span> at each decade (order of magnitude), and several extra steps within the decade around your expected cutoff frequency. Record your measurements in your lab notebook.</p></li>
-         <li><p>Determine and record the cut-off frequency for the high-pass filter. Compare your measured half power point with the cut-off frequency computed from the actual component values used. Include your comparison in your lab notebook.</p></li>
-         <li><p>Test the predicted frequency response by plotting your data points directly on your Bode plot. Does the model agree with your data? Explicitly record what criteria you used to determine whether or not the model and measurements agree.</p></li>
+         <li><p>Over a large range in frequency, <span
+         class="math inline">\(1\text{ kHz}\)</span> to <span
+         class="math inline">\(1\text{ MHz}\)</span> at each decade
+         (order of magnitude), and several extra steps within the decade
+         around your expected cutoff frequency. Record your measurements
+         in your lab notebook.</p></li>
+         <li><p>Determine and record the cut-off frequency for the
+         high-pass filter. Compare your measured half power point with
+         the cut-off frequency computed from the actual component values
+         used. Include your comparison in your lab notebook.</p></li>
+         <li><p>Test the predicted frequency response by plotting your
+         data points directly on your Bode plot. Does the model agree
+         with your data? Explicitly record what criteria you used to
+         determine whether or not the model and measurements
+         agree.</p></li>
          </ol>
-         <h2 data-number="7.6" id="measure-the-frequency-dependence-of-the-bandpass-filter"><span class="header-section-number">7.6</span> Measure the frequency dependence of the bandpass filter</h2>
+         <h2 data-number="7.6"
+         id="measure-the-frequency-dependence-of-the-bandpass-filter"><span
+         class="header-section-number">7.6</span> Measure the frequency
+         dependence of the bandpass filter</h2>
          <ol type="1">
-         <li>When the input frequency is at the resonance value (i.e. center frequency) <span class="math inline">\(f_0\)</span>, <span class="math inline">\(V_\text{out}\)</span> will be a maximum and the phase shift between the input and output waveforms will be zero. Consider both these facts and find the resonant frequency. Describe your procedure and compare your result to your predicted value.</li>
+         <li>When the input frequency is at the resonance value
+         (i.e. center frequency) <span
+         class="math inline">\(f_0\)</span>, <span
+         class="math inline">\(V_\text{out}\)</span> will be a maximum
+         and the phase shift between the input and output waveforms will
+         be zero. Consider both these facts and find the resonant
+         frequency. Describe your procedure and compare your result to
+         your predicted value.</li>
          </ol>
          <!--Find the resonant frequency $f_0$ both ways. That is, adjust the frequency so that (1) $|V_{out}/V_{in}|$ is a maximum, and (2) there is zero phase difference between $V_{out}$ and $V_{in}$. Record both measurements of $f_0$. Which method is more precise? Explain why you think so. *Hint: try to estimate the uncertainty in both cases.*-->
          <!--2.  The LCR meter measured the inductance of your inductor at a particular frequency. Your inductor's inductance changes slightly at different frequencies. Use your measurement of $f_c$ to get a more accurate measure of $L$ on resonance by doing the following. Compare the measured $f_c$ with the expected value $1/(2\pi\sqrt{LC})$. Refine the model of the inductor by calculating a corrected value of $L$ from the measured values of $f_0$ and $C$, and use this refined value below. Compare this value to the value you measured using the LCR meter in the lab.-->
          <ol start="2" type="1">
-         <li><p>The LCR meter measured the inductance of your inductor at a particular frequency; however, the inductance itself is frequency dependent. In the prelab, you calculated the relationship between the resonant frequency and the capacitance and inductance. Use this equation and your measurements of the center frequency and the capacitance to refine your measure of the inductance.</p></li>
-         <li><p>Determine the quality factor <span class="math inline">\(Q\)</span> by measuring the frequencies at the two half-power points <span class="math inline">\(f_{c,+}\)</span> and <span class="math inline">\(f_{c,–}\)</span>. Record your measurements. Recall that <span class="math inline">\(Q=f_0/\Delta f\)</span> where <span class="math inline">\(\Delta f=f_{c,+}-f_{c,-}\)</span>. <em>Hint:</em> The half-power points are where <span class="math inline">\(V_\text{out}=V_\text{out}(\text{max})/\sqrt 2\)</span>, not necessarily <span class="math inline">\(V_\text{in}/\sqrt{2}\)</span>.</p></li>
-         <li><p>Compare the measured value of <span class="math inline">\(Q\)</span> with your predicted value. Do they agree?</p></li>
-         <li><p>It is common in all electrical circuits to find <span class="math inline">\(Q\)</span> values that are somewhat lower than values you predict. This is due to additional losses in the circuit. In this case the losses are primarily in the inductor. Measure the inductor’s “equivalent series resistance” (ESR) using a DMM. You can refine your model by including this resistance in your circuit. Draw a schematic that includes this resistor. What is the predicted <span class="math inline">\(Q\)</span> when you include this resistance in your model? <em>See Appendix A.</em> Does this result in better agreement with your measured <span class="math inline">\(Q\)</span>?</p></li>
-         <li><p>Measure the gain <span class="math inline">\((|V_\text{out}/V_\text{in}|)\)</span> as function of frequency. Use your model prediction to decide what values of frequency to take data. Plot your measurements on the same graph as your model. Does your data match your model prediction? Note, your transfer function did not include the refined value of <span class="math inline">\(Q\)</span>.</p></li>
+         <li><p>The LCR meter measured the inductance of your inductor
+         at a particular frequency; however, the inductance itself is
+         frequency dependent. In the prelab, you calculated the
+         relationship between the resonant frequency and the capacitance
+         and inductance. Use this equation and your measurements of the
+         center frequency and the capacitance to refine your measure of
+         the inductance.</p></li>
+         <li><p>Determine the quality factor <span
+         class="math inline">\(Q\)</span> by measuring the frequencies
+         at the two half-power points <span
+         class="math inline">\(f_{c,+}\)</span> and <span
+         class="math inline">\(f_{c,–}\)</span>. Record your
+         measurements. Recall that <span
+         class="math inline">\(Q=f_0/\Delta f\)</span> where <span
+         class="math inline">\(\Delta f=f_{c,+}-f_{c,-}\)</span>.
+         <em>Hint:</em> The half-power points are where <span
+         class="math inline">\(V_\text{out}=V_\text{out}(\text{max})/\sqrt
+         2\)</span>, not necessarily <span
+         class="math inline">\(V_\text{in}/\sqrt{2}\)</span>.</p></li>
+         <li><p>Compare the measured value of <span
+         class="math inline">\(Q\)</span> with your predicted value. Do
+         they agree?</p></li>
+         <li><p>It is common in all electrical circuits to find <span
+         class="math inline">\(Q\)</span> values that are somewhat lower
+         than values you predict. This is due to additional losses in
+         the circuit. In this case the losses are primarily in the
+         inductor. Measure the inductor’s “equivalent series resistance”
+         (ESR) using a DMM. You can refine your model by including this
+         resistance in your circuit. Draw a schematic that includes this
+         resistor. What is the predicted <span
+         class="math inline">\(Q\)</span> when you include this
+         resistance in your model? <em>See Appendix A.</em> Does this
+         result in better agreement with your measured <span
+         class="math inline">\(Q\)</span>?</p></li>
+         <li><p>Measure the gain <span
+         class="math inline">\((|V_\text{out}/V_\text{in}|)\)</span> as
+         function of frequency. Use your model prediction to decide what
+         values of frequency to take data. Plot your measurements on the
+         same graph as your model. Does your data match your model
+         prediction? Note, your transfer function did not include the
+         refined value of <span
+         class="math inline">\(Q\)</span>.</p></li>
          </ol>
-         <h1 class="unnumbered" data-number="" id="appendix-a-refined-lcr-bandpass-filter-model">Appendix A: Refined LCR BandPass Filter Model</h1>
-         <p>Inductors often have considerable resistance as they are just wires wrapped around a ferrite core. One can include this resistance as a resistor in series with the inductor. The refined model of the Q of this system is</p>
-         <p><span id="eq:10" class="eqnos"><span class="math display">\[Q_\text{refined} = \frac{\frac{R}{R_{L}}}{R\sqrt{\frac{C}{L}} + \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}\]</span><span class="eqnos-number">(3)</span></span></p>
-         <p>where <span class="math inline">\(R_L\)</span> is the equivalent series resistance of the inductor. This is non-trivial to derive.</p>
+         <h1 class="unnumbered"
+         id="appendix-a-refined-lcr-bandpass-filter-model">Appendix A:
+         Refined LCR BandPass Filter Model</h1>
+         <p>Inductors often have considerable resistance as they are
+         just wires wrapped around a ferrite core. One can include this
+         resistance as a resistor in series with the inductor. The
+         refined model of the Q of this system is</p>
+         <p><span id="eq:10" class="eqnos"><span
+         class="math display">\[Q_\text{refined} =
+         \frac{\frac{R}{R_{L}}}{R\sqrt{\frac{C}{L}} +
+         \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}\]</span><span class="eqnos-number">(3)</span></span></p>
+         <p>where <span class="math inline">\(R_L\)</span> is the
+         equivalent series resistance of the inductor. This is
+         non-trivial to derive.</p>
                </div>
             <!-- Mathjax -->
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
