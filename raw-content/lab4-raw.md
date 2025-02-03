@@ -195,7 +195,7 @@ The output impedance of the LF356 op-amp with no feedback is about $40\ \Omega$ 
 
 The oscilliscope has a finite measurement impedance $(1\text{ M}\Omega)$, so if you're measuring $V_\text{in}$, you are putting a resistor $R_\text{scope}$ from the input to ground (see Figure @fig:non-invert-input-measure). This will inevitably reduce the input impedance of the amplifier. In the case when $R_F = 10\ k\Omega$ and $R = 100\ \Omega$, what is the input impedance of the amplifier?
 
-*Hint:* $R_\text{scope}$ is in parallel with $R_o'$.
+*Hint:* $R_\text{scope}$ is in parallel with $R_i'$.
 
 ![Measuring the input changes the input impedance](../resources/lab4fig/measure-input-impedance.png){#fig:non-invert-input-measure width="10cm"}
 
