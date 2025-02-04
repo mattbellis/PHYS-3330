@@ -133,32 +133,28 @@ I</h1>
             <li><a href="#lab-activities-1"><span
             class="toc-section-number">6</span> Lab Activities</a>
             <ul>
-            <li><a
-            href="#the-function-generator-and-its-output-impedance."><span
-            class="toc-section-number">6.1</span> The Function Generator
-            and Its Output Impedance.</a></li>
             <li><a href="#building-an-op-amp-test-circuit"><span
-            class="toc-section-number">6.2</span> Building an op-amp
+            class="toc-section-number">6.1</span> Building an op-amp
             test circuit</a></li>
             <li><a href="#voltage-buffer"><span
-            class="toc-section-number">6.3</span> Voltage
+            class="toc-section-number">6.2</span> Voltage
             Buffer</a></li>
             <li><a href="#non-inverting-amplifier-1"><span
-            class="toc-section-number">6.4</span> Non-Inverting
+            class="toc-section-number">6.3</span> Non-Inverting
             Amplifier</a>
             <ul>
             <li><a href="#frequency-limitations-of-the-amplifier"><span
-            class="toc-section-number">6.4.1</span> Frequency
+            class="toc-section-number">6.3.1</span> Frequency
             limitations of the amplifier</a></li>
             <li><a
             href="#output-voltage-limitations-of-the-amplifier"><span
-            class="toc-section-number">6.4.2</span> Output voltage
+            class="toc-section-number">6.3.2</span> Output voltage
             limitations of the amplifier</a></li>
             <li><a href="#input-impedance-of-the-amplifier"><span
-            class="toc-section-number">6.4.3</span> Input impedance of
+            class="toc-section-number">6.3.3</span> Input impedance of
             the amplifier</a></li>
             <li><a href="#output-impedance-of-the-amplifier"><span
-            class="toc-section-number">6.4.4</span> Output impedance of
+            class="toc-section-number">6.3.4</span> Output impedance of
             the amplifier</a></li>
             </ul></li>
             </ul></li>
@@ -1106,10 +1102,8 @@ I</h1>
          </ol>
          <h1 data-number="6" id="lab-activities-1"><span
          class="header-section-number">6</span> Lab Activities</h1>
-         <h2 data-number="6.1"
-         id="the-function-generator-and-its-output-impedance."><span
-         class="header-section-number">6.1</span> The Function Generator
-         and Its Output Impedance.</h2>
+         <!--## The Function Generator and Its Output Impedance.
+
          <!--Remember last week when we set the function generator to an output termination of *High Z*? We want to do this EVERY TIME we use the function generator in this class. This does not change the output impedance of the function generator: it's ALWAYS $50\ \Omega$, but by default, it *assumes* you are impedance matching everything with $50\ \Omega$ (this is important at high frequencies; feel free to ask an instructor if you're curious to hear more).
 
          When  the output goes through a $50\ \Omega$ load (i.e. $50\ \Omega$ termination), the voltage output will divide over the output impedance and the load, so only half the voltage will be applied to the load $\frac{50\ \Omega}{50\ \Omega+50\ \Omega} = \frac{1}{2}$. When the output termination **setting** is set to $50\ \Omega$, the device will assume half the voltage will drop across the output impedance, and display only half the voltage being applied (since this will be how much is expected to reach the $50\ \Omega$ termination). Since we won't be doing any $50\ \Omega$ impedance matching, we always want set the function generator to be in *High Z* mode and know that if the termination impedance is small, that this will voltage divide with the $50\ \Omega$ output impedance of the function generator. If you don't remember how to change this setting, refer to Appendix B in Lab 1.
@@ -1147,9 +1141,9 @@ I</h1>
              2.  Draw a full circuit diagram which describes why this behavior is happening. *Hint*: there should be 3 resistors: the output impedance of the function generator, the impedance of the speaker, and the input impedance of the oscilliscope.
 
          Since the impedance of the speaker can't be changed, in order to get the full voltage to the speaker, you will have to decrease the output impedance. This can be done with a voltage buffer.-->
-         <h2 data-number="6.2"
+         <h2 data-number="6.1"
          id="building-an-op-amp-test-circuit"><span
-         class="header-section-number">6.2</span> Building an op-amp
+         class="header-section-number">6.1</span> Building an op-amp
          test circuit</h2>
          <p>Before you build any useful op-amp circuits, let’s build a
          simple means to test if an op-amp chip is functioning.</p>
@@ -1190,8 +1184,8 @@ I</h1>
          chip, throw it in the trash and grab another (In case you are
          wondering, the LF356 costs less than $1). If you’re not sure,
          grab an instructor and have them take a look with you.</p>
-         <h2 data-number="6.3" id="voltage-buffer"><span
-         class="header-section-number">6.3</span> Voltage Buffer</h2>
+         <h2 data-number="6.2" id="voltage-buffer"><span
+         class="header-section-number">6.2</span> Voltage Buffer</h2>
          <div id="fig:voltage-follower" class="fignos">
          <figure>
          <img src="../resources/lab4fig/voltage-follower.png"
@@ -1295,8 +1289,8 @@ I</h1>
          6.  If you observed ideal behavior, you're lucky! At frequencies above a few MHz, the simple model of the frequency response of the op-amp is not accurate. Once you are in this frequency range, many physical details of your circuit and breadboard can have large effects in the circuit (see notes in 7.1.4 above). You could model these effects, but a better procedure to follow is to modify the physical setup. Building reliable circuits at these frequencies typically requires careful attention to grounding and minimization of capacitive and inductive coupling between circuit elements and to ground. Printed circuit boards are much better for high-frequency applications. At lower frequencies, our model of the circuit will work much better.
 
          -->
-         <h2 data-number="6.4" id="non-inverting-amplifier-1"><span
-         class="header-section-number">6.4</span> Non-Inverting
+         <h2 data-number="6.3" id="non-inverting-amplifier-1"><span
+         class="header-section-number">6.3</span> Non-Inverting
          Amplifier</h2>
          <div id="fig:non-inv-amp" class="fignos">
          <figure>
@@ -1333,9 +1327,9 @@ I</h1>
          class="math inline">\(V_\text{out}\)</span> and then calculate
          the gain. How does this compare to your prediction?</p></li>
          </ol>
-         <h3 data-number="6.4.1"
+         <h3 data-number="6.3.1"
          id="frequency-limitations-of-the-amplifier"><span
-         class="header-section-number">6.4.1</span> Frequency
+         class="header-section-number">6.3.1</span> Frequency
          limitations of the amplifier</h3>
          <ol type="1">
          <li><p>Set the frequency to the calculated 3 dB frequency and
@@ -1354,9 +1348,9 @@ I</h1>
          Bandwidth Product along with these data points. Do your
          measurements agree with the model?</p></li>
          </ol>
-         <h3 data-number="6.4.2"
+         <h3 data-number="6.3.2"
          id="output-voltage-limitations-of-the-amplifier"><span
-         class="header-section-number">6.4.2</span> Output voltage
+         class="header-section-number">6.3.2</span> Output voltage
          limitations of the amplifier</h3>
          <ol type="1">
          <li><p>Return the frequency to a “low” frequency when <span
@@ -1378,9 +1372,9 @@ I</h1>
          the amplitude of the input so that the output is within this
          range.</p></li>
          </ol>
-         <h3 data-number="6.4.3"
+         <h3 data-number="6.3.3"
          id="input-impedance-of-the-amplifier"><span
-         class="header-section-number">6.4.3</span> Input impedance of
+         class="header-section-number">6.3.3</span> Input impedance of
          the amplifier</h3>
          <ol type="1">
          <li>Unplug <span class="math inline">\(V_\text{in}\)</span>
@@ -1403,9 +1397,9 @@ I</h1>
          this resistor affect the circuit?</figcaption>
          </figure>
          </div>
-         <h3 data-number="6.4.4"
+         <h3 data-number="6.3.4"
          id="output-impedance-of-the-amplifier"><span
-         class="header-section-number">6.4.4</span> Output impedance of
+         class="header-section-number">6.3.4</span> Output impedance of
          the amplifier</h3>
          <ol type="1">
          <li><p>Consider driving a load with resistance <span

@@ -365,7 +365,7 @@ In this lab, we will use ICs (integrated circuits) for the first time. ICs come 
 
 # Lab Activities
 
-## The Function Generator and Its Output Impedance.
+<!--## The Function Generator and Its Output Impedance.
 
 <!--Remember last week when we set the function generator to an output termination of *High Z*? We want to do this EVERY TIME we use the function generator in this class. This does not change the output impedance of the function generator: it's ALWAYS $50\ \Omega$, but by default, it *assumes* you are impedance matching everything with $50\ \Omega$ (this is important at high frequencies; feel free to ask an instructor if you're curious to hear more).
 
