@@ -438,7 +438,7 @@ You will use the buffer to take the output of the function generator (with a $50
 
 ![Test and measurement setup for op-amp circuits](../resources/lab4fig/op-amp-test.png){#fig:op-amp-test width="15cm"} 
 
-1.  Build the voltage follower using the function generator as $V_\text{in}$. You will use the same settings as before ($400\text{ mV}_\text{pp}$ sine wave at $432\text{ Hz}$). Figure @fig:op-amp-test shows a schematic of the full set up using Channel 1 to measure $V_\text{in}$, Channel 2 to measure $V_\text{out}$, and Channel 4 to trigger on the *Sync* output.
+1.  Build the voltage follower using the function generator as $V_\text{in}$, set to a $400\text{ mV}_\text{pp}$ sine wave at $432\text{ Hz}$ (like we did in Lab 2). Figure @fig:op-amp-test shows a schematic of the full set up using Channel 1 to measure $V_\text{in}$, Channel 2 to measure $V_\text{out}$, and Channel 4 to trigger on the *Sync* output. **You should use an oscilloscope probe for this measurement** (and probably all oscilloscope measurements for the rest of your electronics career, but certainly for this course).
 
 2.  Confirm the gain is $1$. If the gain is $10$ or $0.1$, this is likely due to a setting on the oscilliscope (ask for help if you're lost).
 
