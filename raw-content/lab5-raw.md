@@ -173,7 +173,7 @@ Is it reasonable to just say that $R_i'=R$?
 
 ### Prelab Question {#sec:3.2}
 
-![Both the output impedance of the function generator and the input impedance of the oscilliscope may impact the circuit in significant ways](../resources/lab5fig/invamp-meas-in.png){#fig:invamp-meas-in width="12cm"}
+![Both the output impedance of the function generator and the input impedance of the oscilloscope may impact the circuit in significant ways](../resources/lab5fig/invamp-meas-in.png){#fig:invamp-meas-in width="12cm"}
 
 If $V_\text{in}$ is coming from the function generator, there is a $50\ \Omega$ output impedance, and when you measure $V_\text{in}$ on the scope there is a $1\text{ M}\Omega$ measurement impedance (see Figure @fig:invamp-meas-in). In each of the following cases, decide whether the  $50\ \Omega$, the $1\text{ M}\Omega$, both, or neither impedances will significantly impact either the measurement of $V_\text{in}$ or $V_\text{out}$. In each case draw an updated diagram which simplifies the model appropriately.
 
@@ -351,7 +351,7 @@ Sketch (or plot in Mathematica or Python) the predicted waveform for the output 
 2.  Square wave
 3.  Triangle Wave
 
-These are Voltage vs time plots/sketches (like what you would see on the oscilliscope). For the square and triangle waves, it will help to break them up into piecewise continuous functions with continuous derivatives.
+These are Voltage vs time plots/sketches (like what you would see on the oscilloscope). For the square and triangle waves, it will help to break them up into piecewise continuous functions with continuous derivatives.
 
 -   *Hint:* the square wave takes on a constant value in the regions where the function is continuous.
 
@@ -488,31 +488,31 @@ In this lab, we will use ICs (integrated circuits) for the second time. Here's a
 
 ## Inverting amplifier
 
-1.  Use your test circuit from lab 4 to confirm that your op-amp is working.
+1. Use your test circuit from Lab 4 to confirm that your op-amp is working (if you missed this detail last week, rebuild your test circuit in a bottom corner of your breadboard, out of the way, and leave it there - it will save you time later by being able to quickly confirm if your op-amp is working or not).
 
-1.  Find and measure resistors with the following values: $100\ \Omega$, $1\text{ k}\Omega$, $10\text{ k}\Omega$, and $100\text{ k}\Omega$.
+2.  Find and measure resistors with the following values: $100\ \Omega$, $1\text{ k}\Omega$, $10\text{ k}\Omega$, and $100\text{ k}\Omega$.
 
-2.  Draw a circuit diagram that appropriately models the behavior of the inverting amplifier with $R=100\ \Omega$, $R_F=1\text{ k}\Omega$, considering the output impedance of the function generator and/or the input impedance of the oscilliscope (check in with an instructor if you're unsure your models are reasonable).
+3.  Draw a circuit diagram that appropriately models the behavior of the inverting amplifier with $R=100\ \Omega$, $R_F=1\text{ k}\Omega$, considering the output impedance of the function generator and/or the input impedance of the oscilloscope (check in with an instructor if you're unsure your models are reasonable).
 
-3.  Build an inverting amplifier with $R=100\ \Omega$ and $R_F=1\text{ k}\Omega$. (Don't forget to follow all the IC tips above). Below is the LF356 pin diagram for easy reference.
+4.  Build an inverting amplifier with $R=100\ \Omega$ and $R_F=1\text{ k}\Omega$. (Don't forget to follow all the IC tips above.) Below is the LF356 pin diagram for easy reference.
 
 ![Pin diagram for LF356 (left). The numbers correspond to the corresponding pin on the DIP chip (right)](../resources/lab4fig/lf356-pins.png){#fig:pin-diagram width="10cm"}
 
-4.  Use the function generator and the oscilliscope to measure $G_0$ of the amplifier.
+5.  Use the function generator and the oscilloscope to measure $G_0$ of the amplifier. (Remember, you should be using an oscilloscope probe for these measurements from now on.)
 
-5.  Compare these to your expectated values from your model.
+6.  Compare these to your expectated values from your model.
 
-6.  Swap out the resistors so that $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$. Measure the resistors before putting them in the circuit (Don't forget to follow all the IC tips above). Below is the LF356 pin diagram for easy reference.
+7.  Swap out the resistors so that $R=10\text{ k}\Omega$ and $R_F=100\text{ k}\Omega$. Measure the resistors before putting them in the circuit (Don't forget to follow all the IC tips above). Below is the LF356 pin diagram for easy reference.
 
-7.  Measure $G_0$ of the amplifier.
+8.  Measure $G_0$ of the amplifier.
 
-8.  Measure $f_B$ of the amplifier.
+9.  Measure $f_B$ of the amplifier.
 
-9.  Compare these to your expectated values from your model.
+10.  Compare these to your expectated values from your model.
 
-10.  Was there any signficant difference between the amplifiers you built.
+11.  Was there any signficant difference between the amplifiers you built.
 
-11.  Use the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your . Does your measured value of $f_T$ agree with what you found last week?
+12.  Use the gain-bandwidth relation and your measurements of $G_0$ and $f_B$ to determine $f_T$ for your . Does your measured value of $f_T$ agree with what you found last week?
 
 ## Summing Amplifier Application - Digital-to-Analog Conversion
 
