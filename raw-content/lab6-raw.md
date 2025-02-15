@@ -39,7 +39,7 @@ This week, you will build:
 
 ## Diodes {#sec:simp-diodes}
 
-A diode is a device which conducts electricity primarily in one direction. The original diodes were in the form of vacuum tubes ([here's a fun video if you care to learn more](https://www.youtube.com/watch?v=FU_YFpfDqqA)), but today they are made from semiconducting materials (like silicon) because of their relative robustness, long lifetimes, and compact size. A diode is mode from a p-n junction where a positively-doped semiconductor (p-type) with mobile "holes" is in contact with a negatively-doped semiconductor (n-type) with mobile electrons. [Watch this short video.](https://www.youtube.com/watch?v=JNi6WY7WKAI)
+A diode is a device which conducts electricity primarily in one direction. The original diodes were in the form of vacuum tubes ([here's a fun video if you care to learn more](https://www.youtube.com/watch?v=FU_YFpfDqqA)), but today they are made from semiconducting materials (like silicon) because of their relative robustness, long lifetimes, and compact size. A diode is made from a p-n junction where a positively-doped semiconductor (p-type) with mobile "holes" is in contact with a negatively-doped semiconductor (n-type) with mobile electrons. [Watch this short video.](https://www.youtube.com/watch?v=JNi6WY7WKAI)
 
 A semiconductor diode has two terminals: an anode (+) and a cathode (-); a good mnemonic to remember the polarity of anodes and cathodes is remembering that cats (cathodes) have negative attitudes (sorry cat lovers). The symbol for a diode resembles an arrow with a hat (see the diagram in Figure @fig:diode-char), where the hat is referred to as "the bar" and is the cathode; a good mnemonic is seeing the symbol as an arrow which points in the direction that the diode allows current, since current flows from positive to negative, "the bar" is the cathode.
 
@@ -47,9 +47,10 @@ The fundamental property of a diode is its tendency to conduct electric current 
 
 - The first region, called *forward biased*, is when the anode has a higher potential relative to the cathode by at least some threshold voltage (about $0.6\text{ V}$ for silicon diodes). When the anode-cathode voltage is above the threshold voltage the diode conducts with almost zero resistance and has a constant $0.6\text{ V}$ drop across it.
 
-- The second region of operation is where the cathode has a lower potential relative to the anode. This region is called reversed biased and essentially no current can flow.
+- The second region of operation is where the cathode has a higher potential relative to the anode. This region is called *reversed biased* and essentially no current can flow.
 
-- Finally, if the potential difference from the cathode to the anode is negative and larger than some breakdown voltage, the diode will again conduct. Regular diodes are not used in the break down region (on purpose), but Zener diodes have well defined breakdown voltages and are used for several purpose (these may be useful for your final project).
+- In the reverse bias configuration, if the voltage across the diode exceeds a certain *breakdown* voltage, the diode will begin to conduct current. While regular diodes are not intended for operation in this region, Zener diodes are designed with specific breakdown voltages for various applications (these may be useful for your final project).
+
 
 ![ [Diode characteristics](https://commons.wikimedia.org/wiki/File:Diode_current_wiki.png). The IV curve describes how much current will flow at different at different voltages.](../resources/lab6fig/diode-characteristics.png){#fig:diode-char width="15cm"}
 
