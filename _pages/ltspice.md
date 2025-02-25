@@ -2,7 +2,7 @@
 title: "PHYS 3330 - LTspice on macOS"
 layout: textlay
 sitemap: false
-permalink: /LTspice
+permalink: /ltspice
 ---
 
 
