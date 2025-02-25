@@ -5,7 +5,7 @@ sitemap: false
 permalink: /final-project-considerations
 ---
 
-# **Final Project Considerations**
+# Final Project Considerations
 
 **Introduction:**
 
@@ -100,4 +100,48 @@ This final project is your opportunity to synthesize and expand upon the knowled
     * List of required components.
     * Timeline for completion.
     
-    
+**Past Projects**:
+
+Here is a list of some of the projects students have done in the past:
+
+- A Device Exhibiting Magnetic Levitation
+- Syringe Rotisserie
+- "Voice-on" Light Switch
+- Heart Rate Monitor
+- Motorized Tracking Equatorial Telescope
+- Audio Mixer
+- Car Audio: 50W Audio Amplifier
+- Tracking and Homing Transmitter
+- Diode Thermometer
+- Audio LED Flasher
+- Traffic Light Controller
+- Infrared Transmitter
+- LED Volume Meter
+- Audio Synthesizer
+- Clicker Jammer
+- Lie Detector
+- Pulse Oximeter
+- Automatic Light Dimmer
+- Servo Controlled Cart Placement System
+- Resonant Frequency Meter
+- Network Cable Tester
+- Lego Robot
+- Bio-Feedback Machine
+- Self-Contained IR Photometer for Astronomy
+- Waveform Visualizer
+- The Electronic Voice Changer
+- Temperature Control via Digital PID Loop
+- Universal Television Off Remote
+- Square Wave Optical Music Player
+- Counting Photons
+- Optoelectronic Resonance Detector
+- Electronic Keyboard
+- Digital Counter
+- Analog Temperature Control Circuit
+- AM Transmitter
+- A Simple Scanning Tunneling Microscope
+- 3rd Order Butterworth Audio Crossover & Equalizer
+- 10 Second Teeth-Brushing Timer
+- Nixie tube clock
+- Enigma
+- Electrocardiograph
