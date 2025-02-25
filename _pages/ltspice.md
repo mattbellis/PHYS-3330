@@ -1,18 +1,18 @@
 ---
-title: "PHYS 3330 - LTSpice Resources"
+title: "PHYS 3330 - LTspice on macOS"
 layout: textlay
 sitemap: false
-permalink: /ltspice
+permalink: /LTspice
 ---
 
 
-# Installing the Updated Windows Version of LTSpice on macOS via Wine (Experimental)
+# Installing the Updated Windows Version of LTspice on macOS via Wine (Experimental)
 
 **Disclaimer:** Please be aware that using Wine to run Windows applications on macOS can introduce instability and potential bugs. This method is considered experimental and may not provide a flawless experience. Use with caution.
 
 **Introduction:**
 
-This document outlines the steps to install the Windows version of LTSpice on macOS using Wine. This allows you to run the updated version of LTSpice even if you don't have a Windows machine available.
+This document outlines the steps to install the Windows version of LTspice on macOS using Wine. This allows you to run the updated version of LTspice even if you don't have a Windows machine available.
 
 **Prerequisites:**
 
@@ -59,17 +59,17 @@ This document outlines the steps to install the Windows version of LTSpice on ma
      brew install --cask gstreamer-development
      ```
 
-5. **Download LTSpice for Windows:**
-   - Visit the Analog Devices website to download the Windows version of LTSpice: [https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html](https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html)
+5. **Download LTspice for Windows:**
+   - Visit the Analog Devices website to download the Windows version of LTspice: [https://www.analog.com/en/resources/design-tools-and-calculators/LTspice-simulator.html](https://www.analog.com/en/resources/design-tools-and-calculators/LTspice-simulator.html)
    - Download the .msi installer file (e.g., LTspice64.msi). In our testing, v24.1.4 was used.
 
-6. **Install LTSpice via Wine:**
+6. **Install LTspice via Wine:**
 
    - Open Terminal.
 
-   - Navigate to the directory where you downloaded the LTSpice installer.
+   - Navigate to the directory where you downloaded the LTspice installer.
 
-   - Execute the following command to install LTSpice:
+   - Execute the following command to install LTspice:
 
    - ```Bash 
      wine msiexec /i LTspice64.msi
@@ -77,24 +77,24 @@ This document outlines the steps to install the Windows version of LTSpice on ma
 
    - Follow the on-screen instructions to complete the installation. Use the default install location.
 
-7. **Run LTSpice:**
+7. **Run LTspice:**
 
-   - To run LTSpice, open Terminal and execute the following command:
+   - To run LTspice, open Terminal and execute the following command:
 
    - ```Bash
      wine users/YOUR_USERNAME/AppData/Local/Programs/ADI/LTspice/LTspice.exe
      ```
 
    - Replace YOUR_USERNAME with your macOS username.
-   - You may want to create an alias or script to simplify launching LTSpice.
+   - You may want to create an alias or script to simplify launching LTspice.
 
 **Important Considerations:**
 
 - **Stability:** Running Windows applications via Wine can lead to unexpected behavior and crashes.
-- **Compatibility:** Not all features of LTSpice may function correctly under Wine.
-- **Updates:** Updates to macOS, Wine, or LTSpice may break this installation.
+- **Compatibility:** Not all features of LTspice may function correctly under Wine.
+- **Updates:** Updates to macOS, Wine, or LTspice may break this installation.
 - **Troubleshooting:** If you experience issues, consult the Wine documentation and community forums.
 
 **Disclaimer Reminder:**
 
-This installation method is provided for informational purposes only. Use it at your own risk. Be prepared for potential issues and consider using the native macOS LTSpice installation.
+This installation method is provided for informational purposes only. Use it at your own risk. Be prepared for potential issues and consider using the native macOS LTspice installation.

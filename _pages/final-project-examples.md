@@ -35,8 +35,8 @@ This final project is your opportunity to synthesize and expand upon the knowled
     * **Examples:**
         * Modular synthesizer with voltage-controlled oscillators (VCOs) and amplifiers (VCAs).
         * Stylophone or keyboard.
-        * Theremin (be aware of the complexity of this project and that most groups fail to complete a functioning device).
         * Instruments controlled by transducers (Hall-effect, photodiodes, etc.).
+        * A note on Theremins: most groups fail to complete a functioning device when choosing this project. Instead, we encourage groups to pursue transducer based instruments, as indicated above.
     * **Features to Consider:**
         * VCOs, VCAs, envelope generators.
         * Waveform manipulation (square, triangle, compression, limiting).
@@ -45,15 +45,7 @@ This final project is your opportunity to synthesize and expand upon the knowled
         * Heterodyne principle audio generation.
 * **Why this is valuable:** Combines analog electronics with creative applications.
 
-**3. Analog Signal Encoding/Decoding:**
-
-* Explore analog signal modulation and demodulation techniques.
-    * **Examples:**
-        * Amplitude modulation (AM radio).
-        * Frequency Modulation (FM) at lower frequencies. This is typically discouraged because it's conventionally done above 88 MHz (too fast for our oscilloscopes), but technically it can be done with slower carrier waves at a sacrifice for signal quality.
-* **Why this is valuable:** Provides insight into signal transmission and processing.
-
-**4. Digital Signal Encoding/Decoding (with Analog Components):**
+**3. Digital Signal Encoding/Decoding (with Analog Components):**
 
 * Combine digital signal processing (e.g., using Arduinos) with analog circuitry for encoding and decoding.
     * **Examples:**
@@ -63,7 +55,7 @@ This final project is your opportunity to synthesize and expand upon the knowled
         * Quadrature amplitude modulation (QAM).
 * **Why this is valuable:** Bridges the gap between analog and digital electronics.
 
-**5. Advanced Analog Circuit Design:**
+**4. Advanced Analog Circuit Design:**
 
 * Explore more advanced analog circuit designs.
     * **Examples:**
@@ -80,6 +72,7 @@ This final project is your opportunity to synthesize and expand upon the knowled
 * **Explore Op-Amp Configurations:** Experiment with op-amp circuits using no feedback or positive feedback.
 * **Analog-Digital Interfacing:** Find creative ways to interface analog and digital components.
 * **Noise Analysis:** Include noise analysis in your project.
+* **Horowitz and Hill:** Have a look at the BJT and Op-Amp chapters of Horowitz and Hill for other project inspiration!
 * **Creativity is Encouraged:** Don't be afraid to propose your own unique project ideas.
 
 **Project Evaluation:**
