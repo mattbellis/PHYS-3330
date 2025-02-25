@@ -1,60 +1,110 @@
 ---
-title: "PHYS 3330 - Final Project Examples"
+title: "PHYS 3330 - Final Project Considerations"
 layout: textlay
 sitemap: false
-permalink: /final-project-examples
+permalink: /final-project-considerations
 ---
 
-# Final Project Examples
+# **Final Project Considerations**
 
-A non-exhaustive list of projects from previous years for reference.
+**Introduction:**
 
-- A Device Exhibiting Magnetic Levitation
-- Syringe Rotisserie
-- Electric Guitar Tuner
-- "Voice-on" Light Switch
-- Heart Rate Monitor
-- Motorized Tracking Equatorial Telescope
-- Audio Mixer
-- Car Audio: 50W Audio Amplifier
-- Morse Code Walkie Talkie
-- Tracking and Homing Transmitter
-- Motion Detector and Alarm
-- Diode Thermometer
-- Audio LED Flasher
-- Traffic Light Controller
-- Infrared Transmitter
-- LED Volume Meter
-- Audio Synthesizer
-- Clicker Jammer
-- Lie Detector
-- Pulse Oximeter
-- Automatic Light Dimmer
-- Guitar Distortion Pedal
-- Servo Controlled Cart Placement System
-- Resonant Frequency Meter
-- Vintage Wah Pedal
-- Network Cable Tester
-- Transistor Organ
-- Lego Robot
-- Bio-Feedback Machine
-- Self-Contained IR Photometer for Astronomy
-- Waveform Visualizer
-- Theremin
-- The Party Starter (3 function remote control)
-- The Electronic Voice Changer
-- Temperature Control via Digital PID Loop
-- Universal Television O  Remote
-- Square Wave Optical Music Player
-- 4 Transistor Class D FM Transmitter
-- Optomin
-- Counting Photons
-- The Three Little Sirens
-- Optoelectronic Resonance Detector
-- Electronic Keyboard
-- Digital Counter
-- Analog Temperature Control Circuit
-- AM Transmitter
-- A Simple Scanning Tunneling Microscope
-- 3rd Order Butterworth Audio Crossover & Equalizer
-- 10 Second Teeth-Brushing Timer
+This final project is your opportunity to synthesize and expand upon the knowledge and skills you've gained in this course. It's not just about building something that works; it's about demonstrating your understanding of fundamental principles, your ability to apply them in a creative way, and your capacity to communicate your learning effectively.
+
+**Core Requirements:**
+
+* **Analog Focus:** While digital components (like Arduinos) can be incorporated, the core of your project must demonstrate a strong understanding and application of analog electronics principles (op-amps, BJTs, FETs, etc.).
+* **Proof of Concept:** Your project should demonstrate a functional proof of concept.
+* **Emphasis on Understanding:** Your grade will primarily reflect your ability to articulate your understanding of the electronic principles involved, not just the complexity of the project. Clear explanations in your presentation and report are crucial.
+
+**Project Ideas & Inspiration:**
+
+**1. Analog Control Systems (PID Control Loop):**
+
+* Implement a PID control loop to regulate a physical system. This involves measuring a parameter (e.g., temperature, speed, position), comparing it to a setpoint, and adjusting the system to minimize the error.
+    * **Examples:**
+        * Temperature controller for a hotplate (essential in physics labs).
+        * Speed-controlled motor (maintaining speed under varying loads).
+        * Magnetic levitation system.
+        * Displacement control for a robotic arm.
+* **Why this is valuable:** PID control is a fundamental concept used in countless real-world applications.
+
+**2. Electronic Musical Instruments & Audio Processing:**
+
+* Design and build an analog musical instrument or audio processing device.
+    * **Examples:**
+        * Modular synthesizer with voltage-controlled oscillators (VCOs) and amplifiers (VCAs).
+        * Stylophone or keyboard.
+        * Theremin (be aware of the complexity of this project and that most groups fail to complete a functioning device).
+        * Instruments controlled by transducers (Hall-effect, photodiodes, etc.).
+    * **Features to Consider:**
+        * VCOs, VCAs, envelope generators.
+        * Waveform manipulation (square, triangle, compression, limiting).
+        * Class AB audio amplifier (~5W peak power).
+        * Low-frequency oscillators for modulation.
+        * Heterodyne principle audio generation.
+* **Why this is valuable:** Combines analog electronics with creative applications.
+
+**3. Analog Signal Encoding/Decoding:**
+
+* Explore analog signal modulation and demodulation techniques.
+    * **Examples:**
+        * Amplitude modulation (AM radio).
+        * Frequency Modulation (FM) at lower frequencies. This is typically discouraged because it's conventionally done above 88 MHz (too fast for our oscilloscopes), but technically it can be done with slower carrier waves at a sacrifice for signal quality.
+* **Why this is valuable:** Provides insight into signal transmission and processing.
+
+**4. Digital Signal Encoding/Decoding (with Analog Components):**
+
+* Combine digital signal processing (e.g., using Arduinos) with analog circuitry for encoding and decoding.
+    * **Examples:**
+        * Phase-shift keying (PSK).
+        * Frequency-shift keying (FSK).
+        * Amplitude-shift keying (ASK).
+        * Quadrature amplitude modulation (QAM).
+* **Why this is valuable:** Bridges the gap between analog and digital electronics.
+
+**5. Advanced Analog Circuit Design:**
+
+* Explore more advanced analog circuit designs.
+    * **Examples:**
+        * Class D audio amplifier with equalizer.
+        * Musical instrument tuner using high-Q bandpass filters.
+        * Op-amp design from discrete transistors.
+        * Active Filter Design.
+* **Why this is valuable:** Deepens understanding of analog circuit design principles.
+
+**Additional Considerations:**
+
+* **Experiment with Different Amplifier Classes:** Explore amplifier classes beyond what we've covered in labs.
+* **Utilize 555 Timers:** Implement 555 timers for timing and control applications (e.g., motor speed control).
+* **Explore Op-Amp Configurations:** Experiment with op-amp circuits using no feedback or positive feedback.
+* **Analog-Digital Interfacing:** Find creative ways to interface analog and digital components.
+* **Noise Analysis:** Include noise analysis in your project.
+* **Creativity is Encouraged:** Don't be afraid to propose your own unique project ideas.
+
+**Project Evaluation:**
+
+* **Understanding of Principles:** Your ability to explain the underlying electronics concepts.
+* **Application of Skills:** How effectively you apply the knowledge gained in the course.
+* **Project Functionality:** The successful implementation of your design.
+* **Presentation and Report:** The clarity and thoroughness of your documentation.
+* **Analog Component Usage:** The degree to which analog components are used.
+
+**Important Note:**
+
+* While digital tools can be used, this is an analog electronics course. Programming-heavy projects are strongly discouraged.
+* A well documented and explained simple project is far superior to a poorly explained complicated project.
+
+**Next Steps:**
+
+* Brainstorm project ideas.
+
+* Submit your final project idea proposal for approval.
+
+* Develop a detailed project proposal, including:
+    * Project description and goals.
+    * Block diagram of the system.
+    * List of required components.
+    * Timeline for completion.
+    
+    
