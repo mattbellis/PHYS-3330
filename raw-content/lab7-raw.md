@@ -88,7 +88,7 @@ For the following, assume $V_\text{in} > V_{th}$:
 
 5. Since $I_C$ flows through $R_C$, what will be the voltage drop across $R_C$? Considering this drop in voltage, what will the voltage be at the collector relative to ground?
 
-6. Write $V_{CE}$ as a function of $R_C$, $R_B$, $V_\text{in}$, $V_{th}$, and $V_\text{supply}$.
+6. Write $V_{CE}$ as a function of $R_C$, $R_B$, $h_{FE}$, $V_\text{in}$, $V_{th}$, and $V_\text{supply}$.
 
 ### Question {#sec:2.2}
 
@@ -417,6 +417,8 @@ The potentiometer with total resistance $R_p$ acts as a voltage divider to set a
 $$V_{GS} = \frac{R_{GS}}{R_p}V_\text{supply}$$
 
 The potentiometer then simply sets the gate-source voltage, giving you a way of controlling it through a dial. The load (with resistance $R_L$) will have current $I_D$ run through it depending on the dial position. This will lead to a voltage drop, such that the voltage at the drain (and therefore $V_{DS}$) is less than $V_\text{supply}$. This idea should be familiar from the BJT analysis you did.
+
+The circuit in Figure @fig:mosfet-cir is a way of adding physical control for the gate-source voltage $V_{GS}$. You already simulated this circuit (see Figure @fig:mosfetspice), where you applied a DC sweep to the $V_{GS}$. In that case, the DC sweep acted as the dial of the potentiometer.
 
 ### Question {#sec:7.3}
 
