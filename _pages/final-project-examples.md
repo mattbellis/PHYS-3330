@@ -102,17 +102,17 @@ This final project is your opportunity to synthesize and expand upon the knowled
     
 **Past Projects**:
 
-Here is a list of some of the projects students have done in the past:
+Here is a list of some of the favorite projects students have done in the past:
 
+- Discrete Transitor Op-Amp (with at least 5 transistors)
+- Analog Computer (solves a physics problem)
+- Analog Control Circuit (PID)
+- Advanced Active Filters (see Horowitz and Hill Chapter 4)
 - A Device Exhibiting Magnetic Levitation
-- Syringe Rotisserie
 - "Voice-on" Light Switch
-- Heart Rate Monitor
+- Heart Rate Monitor (Electrocardiograph)
 - Motorized Tracking Equatorial Telescope
-- Audio Mixer
 - Car Audio: 50W Audio Amplifier
-- Tracking and Homing Transmitter
-- Diode Thermometer
 - Audio LED Flasher
 - Traffic Light Controller
 - Infrared Transmitter
@@ -129,19 +129,10 @@ Here is a list of some of the projects students have done in the past:
 - Bio-Feedback Machine
 - Self-Contained IR Photometer for Astronomy
 - Waveform Visualizer
-- The Electronic Voice Changer
-- Temperature Control via Digital PID Loop
-- Universal Television Off Remote
 - Square Wave Optical Music Player
 - Counting Photons
 - Optoelectronic Resonance Detector
 - Electronic Keyboard
 - Digital Counter
-- Analog Temperature Control Circuit
-- AM Transmitter
 - A Simple Scanning Tunneling Microscope
 - 3rd Order Butterworth Audio Crossover & Equalizer
-- 10 Second Teeth-Brushing Timer
-- Nixie tube clock
-- Enigma
-- Electrocardiograph
