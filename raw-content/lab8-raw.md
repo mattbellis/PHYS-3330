@@ -73,7 +73,7 @@ The difference between $I_C$ and $I_E$ is almost never important since $h_{FE}$ 
 
 The transistor you will use in this lab is the 2N3904, which is an NPN. The datasheet can be found in the [Datasheets and Instrument Manuals page](/PHYS-3330/manuals-data-sheets). Most NPNs have a "complement," which is a PNP with very similar characteristics. The 2N3904's complement is the 2N3906. We have 2N3906s in the lab, but we won't need them in this lab; however, you may want them for your project.
 
-The 2N3904 and 2N3906 have high current gain $(h_{FE})$, however, they are unable to deliver large amounts of current. This is fine, because the speakers we will use in this are very small and can only handle about half a Watt of power. If you want to power a larger speaker at higher power (louder), you will need transistors that can handle more current: often referred to as \"power transistors.\" Power transistors often have much smaller current gain than other transistors, and sometimes they must be connected as pairs to increase the total gain (you can search for \"Darlington connection\" in Horowitz and Hill). We have a complementary pair of power transistors in the lab: 2N2222 (NPN) and 2N2907 (PNP). These may be useful for a project. It is typically easy to distinguish normal BJTs from power BJTs since power BJTs have ways of mounting heat-sink hardware to help dissipate the heat (a hole for a bolt to go through and a metallic surface for good thermal conductivity).
+The 2N3904 and 2N3906 have high current gain $(h_{FE})$, however, they are unable to deliver large amounts of current. This is fine, because the speakers we will use in this lab are very small and can only handle about half a Watt of power. If you want to power a larger speaker at higher power (louder), you will need transistors that can handle more current: often referred to as \"power transistors.\" Power transistors often have much smaller current gain than other transistors, and sometimes they must be connected in pairs to increase the total gain (you can search for \"Darlington connection\" in Horowitz and Hill). We have a complementary pair of power transistors in the lab: 2N2222 (NPN) and 2N2907 (PNP). These may be useful for a project. It is typically easy to distinguish normal BJTs from power BJTs since power BJTs have ways of mounting heat-sink hardware to help dissipate the heat (a hole for a bolt to go through and a metallic surface for good thermal conductivity).
 
 ### Prelab Question {#sec:9.1}
 
@@ -119,7 +119,7 @@ where $I_\text{in}$ is how much current the input draws at an applied voltage of
 
 1. Write $I_\text{in}$ with respect to $I_C$ instead of $I_B$.
 
-2. Use your expression for $I_C$ from Question @sec:1.2\.2 to show
+2. Use Question @sec:1.2\.1 and @sec:1.2\.2 to create an expression for $I_C$ to show
 
 $$R_\text{in} = \frac{h_{FE}R_EV_\text{in}}{V_\text{in}-V_{th}}$$
 
@@ -156,8 +156,6 @@ where $R_B$ indicates whatever impedance is connected to the base. **To be more 
 1. The circuit shown in Figure @fig:emitterf does not have any impedance connected to the base, but if you use the function generator, the output impedance of the function generator will act as $R_B$. What is $R_\text{out}$ if you use the function generator for $V_\text{in}$ and if the transistor has an $h_{FE}=300$?
 
 2. If $R_E = 800\ \Omega$, will this, appreciably change the output impedance?
-
-**NOTE**: in a later section we will work out a more precise estimate of $R_\text{out}$.
 
 ## Common Emitter Amplifier
 
@@ -275,7 +273,7 @@ The circuit you will build will use a supply voltage of $V_\text{supply}=15\text
 
 2. Determine the 'static state' base voltage value that will result in the quiescent voltage you determined.
 
-3. If $R_2=10\text{ k}\Omega$, what value of $R_1$ will result in the desired quiescent voltage?
+3. If $R_2=10\text{ k}\Omega$, what value of $R_1$ will result in the desired quiescent voltage?  ***Hint:*** This voltage will be the output of the bias network (voltage divider), so you will be looking to solve for $V_\text{supply}R_2/(R_1+R_2)$.
 
 4. What is the 'static state' collector current $I_C$?
 
@@ -337,7 +335,7 @@ Notice that the output coupling capacitor and the load form a RC filter (like th
 
 ### Prelab Question {#sec:5.2}
 
-Draw @fig:emittera-full in your lab notebook with the values used in the prelab. For example $V_\text{supply}=15\text{ V}$, $R_C=2.74\text{ k}\Omega$, $R_E=1\text{ k}\Omega$, and $R_2=10\text{ k}\Omega$. You found $R_1$ in Question @sec:4.1\. For the capacitors, the exact value isn't critical for the function of the amplifier, but $47\ \mu\text{F}$ is a good value for the decoupling capacitor and $C_\text{out}$, and $220\text{ nF}$ is a good value for $C_\text{in}$. The load does not need a label because we will consider different loads in the lab.
+Draw the diagram in Figure @fig:emittera-full in your lab notebook with the values used in the prelab. For example $V_\text{supply}=15\text{ V}$, $R_C=2.74\text{ k}\Omega$, $R_E=1\text{ k}\Omega$, and $R_2=10\text{ k}\Omega$. You found $R_1$ in Question @sec:4.1\. For the capacitors, the exact value isn't critical for the function of the amplifier, but $47\ \mu\text{F}$ is a good value for the decoupling capacitor and $C_\text{out}$, and $220\text{ nF}$ is a good value for $C_\text{in}$. The load does not need a label because we will consider different loads in the lab.
 
 *These will be the values you will use in the lab and to solve the remaining problems in the prelab.*
 
@@ -374,9 +372,9 @@ which shows that the common emitter gain is not infinite when the external emitt
 
 ### Prelab Question {#sec:8.1}
 
-1. Calculate the input impedance $R_\text{in}$ of the circuit you designed. Don't forget to consider the fact that the biasing resistors are in parallel with common emitter amplifier's intrinsic input impedance.
+1. Calculate the input impedance $R_\text{in}$ of the circuit you designed. Don't forget to consider the fact that the biasing resistors are in parallel with common emitter amplifier's intrinsic input impedance. ***Hint:*** Use the static state $I_C$ you determined above to find $r_e$.
 
-2. What is the value of the output impedance?
+2. What is the output impedance of the common emitter follower you drew a diagram for?
 
 3. Calculate the fraction of the original amplitude obtained when a $470\ \Omega$ load is attached. HINT: the $470\ \Omega$ resistor is in series with the output impedance of the circuit to ground. The output capacitor only blocks the DC component; it passes the AC signal just fine.
 
@@ -400,13 +398,13 @@ Draw the dual stage amplifier in your lab notebook and label all the components.
 
 ### Prelab Question {#sec:6.2}
 
-1. What is the value of the input impedance of the second stage?
+1. What is the input impedance of the second stage when no load is attached, and what is it when a load of $8\ \Omega$ is attached?
 
-2. The output impedance of the second stage depends on the impedance connected to the base. In this case, the output impedance of the first stage will be the impedance leading into the base. Calculate the output impedance of the circuit.
+2. The output impedance of the second stage depends on the impedance connected to the base. In this case, the output impedance of the first stage will be the impedance leading into the base. Calculate the output impedance of the whole circuit.
 
 3. Calculate the fraction of the output will make it to an $8\ \Omega$ load.
 
-4. What is the gain of this circuit?
+4. What is the output voltage when the input is $1\text{ V}$ amplitude? Consider both the voltage gain and the transfer function you calculated above.
 
 ## Lab activities
 
