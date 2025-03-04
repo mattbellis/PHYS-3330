@@ -233,8 +233,6 @@ The input impedance of the common emitter amplifier is the same as the emitter f
 
 1. If $R_C\ll\text{(the impedance looking into the collector)}$, what is $R_\text{out}$?
 
-**NOTE**: in a later section we will work out a more precise estimate of $R_\text{out}$.
-
 ## Quiescent Voltage and Biasing a Transistor Amplifier
 
 Your plot in Question @sec:2.2 shows that the common emitter amplifier is unable to effectively amplify signals that oscillate around $0\text{ V}$ due to the fact that the output signal gets clipped at $V_\text{supply}$. One solution to this issue is to 'bias' the input of the amplifier so that the input oscillates around a DC offset instead of around $0\text{ V}$. You found above that when the input voltage is less than the threshold voltage, $V_\text{out}=V_\text{supply}$. We can define the *quiescent voltage* as:
