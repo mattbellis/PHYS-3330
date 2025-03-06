@@ -677,6 +677,10 @@ data_5V = np.loadtxt(data_dir / &quot;ICvsVCE-data-5V.txt&quot;, skiprows=1)
          href="#fig:push-pull">5</a> in LTspice with</p>
          <ul>
          <li><p>OP113 op-amps</p></li>
+         <li><p>NPN transistor</p></li>
+         <li><p>PNP transistor (Pro tip: rotate 180 degrees (ctrl+R x2)
+         and flip (ctrl+E) to get the emitter to be at the top of the
+         PNP)</p></li>
          <li><p><span class="math inline">\(R_F=100\text{
          k}\Omega\)</span></p></li>
          <li><p><span class="math inline">\(R=1\text{
@@ -999,12 +1003,12 @@ ax.scatter(v_gs, i_d, color=&#39;k&#39;, s=100)
 v_gs_fit = np.linspace(0, 10, 100)
 ax.plot(v_gs_fit, function(v_gs_fit, popt[0]), &#39;r&#39;)
 
-ax.set_xlabel(&quot;$V_{{GS}}$ (V)&quot;)
+ax.set_xlabel(&quot;$V_$ (V)&quot;)
 ax.set_ylabel(&quot;$I_D$ (mA)&quot;)
-ax.set_title(&quot;$I_D = k(V_{{GS}}-V_{{th}})^2$&quot;)
+ax.set_title(r&quot;$I_D = k(V_{GS}-V_{th})^2$&quot;)
 
 loc = (0, 850)
-ax.annotate(f&quot;$(k={popt[0]:.4f} \pm {perr[0]:.4f})$&quot;, loc)
+ax.annotate(rf&quot;$(k={popt[0]:.4f} \pm {perr[0]:.4f})$&quot;, loc)
 
 fig.tight_layout()
 </code></pre>

@@ -253,6 +253,10 @@ Build the circuit shown in Figure @fig:push-pull in LTspice with
 
 - OP113 op-amps
 
+- NPN transistor
+
+- PNP transistor (Pro tip: rotate 180 degrees (ctrl+R x2) and flip (ctrl+E) to get the emitter to be at the top of the PNP)
+
 - $R_F=100\text{ k}\Omega$
 
 - $R=1\text{ k}\Omega$
@@ -393,12 +397,12 @@ ax.scatter(v_gs, i_d, color='k', s=100)
 v_gs_fit = np.linspace(0, 10, 100)
 ax.plot(v_gs_fit, function(v_gs_fit, popt[0]), 'r')
 
-ax.set_xlabel("$V_{{GS}}$ (V)")
+ax.set_xlabel("$V_$ (V)")
 ax.set_ylabel("$I_D$ (mA)")
-ax.set_title("$I_D = k(V_{{GS}}-V_{{th}})^2$")
+ax.set_title(r"$I_D = k(V_{GS}-V_{th})^2$")
 
 loc = (0, 850)
-ax.annotate(f"$(k={popt[0]:.4f} \pm {perr[0]:.4f})$", loc)
+ax.annotate(rf"$(k={popt[0]:.4f} \pm {perr[0]:.4f})$", loc)
 
 fig.tight_layout()
 
