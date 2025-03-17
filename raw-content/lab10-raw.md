@@ -484,9 +484,7 @@ will print this to the serial monitor:
 
 2. Now, further modify your code to make each LED flash in sequence. Document your changes in your lab notebook.
 
-3. Now, further modify your code to make each LED flash in sequence. Document your changes in your lab notebook.
-
-4. Include the final version of your sketch in your lab notebook.
+3. Include the final version of your sketch in your lab notebook.
 
 *Hint:* in a Markdown cell in a Jupyter notebook you can use
 
