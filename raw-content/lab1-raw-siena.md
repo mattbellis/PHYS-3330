@@ -1,5 +1,5 @@
 ---
-title: "Lab 1 - Electronic Measurements"
+title: "Lab 1 - Electronic Measurements (Siena)"
 author: [Department of Physics | University of Colorado Boulder]
 ---
 
