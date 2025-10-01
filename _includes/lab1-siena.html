@@ -1,0 +1,1129 @@
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="generator" content="pandoc">
+      <meta name="author" content="Department of Physics | University of
+Colorado Boulder">
+      
+      <title>PHYS 3330</title>
+         </head>
+   <body>
+            <div>
+         <style>
+            .eqnos { display: inline-block; position: relative; width: 100%; }
+            .eqnos br { display: none; }
+            .eqnos-number { position: absolute; right: 0em; top: 50%; line-height: 0; }
+         </style>
+         <h1 class="title">Lab 1 - Electronic Measurements (Siena)</h1>
+                  <h1 class="title">Contents</h1>
+        <nav id="TOC">
+            <ul>
+            <li><a href="#goals"><span
+            class="toc-section-number">1</span> Goals</a></li>
+            <li><a href="#lab-notebook-guidelines"><span
+            class="toc-section-number">2</span> Lab Notebook
+            Guidelines</a></li>
+            <li><a href="#cables-and-adapters"><span
+            class="toc-section-number">3</span> Cables and
+            Adapters</a></li>
+            <li><a href="#some-useful-definitions"><span
+            class="toc-section-number">4</span> Some Useful
+            Definitions</a></li>
+            <li><a href="#preparing-for-computational-work"><span
+            class="toc-section-number">5</span> Preparing for
+            computational work</a>
+            <ul>
+            <li><a href="#physics-2-review-resistors"><span
+            class="toc-section-number">5.1</span> Physics 2 review:
+            Resistors</a>
+            <ul>
+            <li><a href="#prelab-question"><span
+            class="toc-section-number">5.1.1</span> Prelab
+            question</a></li>
+            <li><a href="#prelab-question-1"><span
+            class="toc-section-number">5.1.2</span> Prelab
+            question</a></li>
+            </ul></li>
+            <li><a href="#physics-2-review-joule-heating"><span
+            class="toc-section-number">5.2</span> Physics 2 review:
+            Joule heating</a></li>
+            <li><a href="#physics-2-review-capacitors"><span
+            class="toc-section-number">5.3</span> Physics 2 review:
+            Capacitors</a>
+            <ul>
+            <li><a href="#prelab-question-2"><span
+            class="toc-section-number">5.3.1</span> Prelab
+            question</a></li>
+            </ul></li>
+            <li><a href="#spice-simulation"><span
+            class="toc-section-number">5.4</span> SPICE simulation</a>
+            <ul>
+            <li><a href="#prelab-question-3"><span
+            class="toc-section-number">5.4.1</span> Prelab
+            Question</a></li>
+            </ul></li>
+            </ul></li>
+            <li><a href="#lab-activities"><span
+            class="toc-section-number">6</span> Lab Activities</a>
+            <ul>
+            <li><a href="#the-oscilloscope-scope"><span
+            class="toc-section-number">6.1</span> The Oscilloscope
+            (Scope)</a>
+            <ul>
+            <li><a href="#setting-up-the-scope"><span
+            class="toc-section-number">6.1.1</span> Setting up the
+            Scope</a></li>
+            <li><a href="#measuring-a-dc-voltage-on-a-scope"><span
+            class="toc-section-number">6.1.2</span> Measuring a DC
+            voltage on a scope</a></li>
+            </ul></li>
+            <li><a
+            href="#creating-an-ac-waveform-using-a-function-generator-and-measuring-it-on-a-scope"><span
+            class="toc-section-number">6.2</span> Creating an AC
+            waveform using a function generator and measuring it on a
+            scope</a></li>
+            <li><a href="#triggering"><span
+            class="toc-section-number">6.3</span> Triggering</a></li>
+            <li><a href="#measuring-waves-with-the-scope"><span
+            class="toc-section-number">6.4</span> Measuring Waves with
+            the Scope</a></li>
+            </ul></li>
+            <li><a
+            href="#appendix-a-tektronix-tbs-2000-series-oscilloscope-controls">Appendix
+            A: Tektronix TBS 2000 Series Oscilloscope Controls</a></li>
+            <li><a
+            href="#appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a">Appendix
+            B: Changing the Output Termination on the Function Generator
+            (Keysight EDU33212A)</a></li>
+            </ul>
+        </nav>
+        <hr/>
+         <h1 data-number="1" id="goals"><span
+         class="header-section-number">1</span> Goals</h1>
+         <p>Today you will learn to use equipment that are useful for
+         building and testing electronic circuits. You will use all of
+         these instruments extensively throughout the semester.</p>
+         <ul>
+         <li>Power supply
+         <ul>
+         <li>This is used to provide DC power to your circuits</li>
+         <li>It can be used as a voltage source (constant voltage) or a
+         current source (constant current).</li>
+         </ul></li>
+         <li>Function generator
+         <ul>
+         <li>This is used to create signals with various waveforms</li>
+         <li>This is an incredibly useful tool for characterizing the
+         frequency dependance of your circuits.</li>
+         </ul></li>
+         <li>Digital multimeter (DMM)
+         <ul>
+         <li>This is an extremely versatile tool that can measure DC and
+         AC voltages and currents, resistances, and sometimes more
+         (depending on the model)</li>
+         <li>It has a simple display that can only show single values
+         such as a root-mean-square voltage <em>or</em> the frequency of
+         an AC signal.</li>
+         </ul></li>
+         <li>Oscilloscope (aka scope)
+         <ul>
+         <li>This is a voltage meter that can “plot” voltage over
+         time</li>
+         <li>This is a far more powerful tool for characterizing
+         voltages than the DMM because you can characterize wave shapes
+         and noise.</li>
+         </ul></li>
+         </ul>
+         <!--
+         *** added "further" to imply continuation. some other minor edits 
+         -->
+         <p>In this course you will continue to develop essential
+         laboratory skills. Not only is the above equipment found in
+         nearly every lab space, but you will practice keeping a lab
+         notebook in a practical way and practice a model based approach
+         to experimental design.</p>
+         <!-- 
+         *** had difficulty parsing the feedback for this part, but I think I improved it
+         -->
+         <p>In this course, you will practice implementing, testing, and
+         refining models. Extremely accurate and nuanced models are
+         often difficult to implement, so it can be desirable to adjust
+         physical systems to accommodate simpler models. Balancing
+         accuracy and simplicity is a skill and takes practice.</p>
+         <p>Today, you will</p>
+         <ul>
+         <li><p>Connect your circuit to <em>Earth ground</em>,</p></li>
+         <li><p>Set up the power supply so that you can get voltages
+         both above and below ground (positive and negative
+         voltages),</p></li>
+         <li><p>Operate the power supply in constant voltage and
+         constant current modes,</p></li>
+         <li><p>Measure physical properties, such as voltage
+         differences, current, and resistance,</p></li>
+         <li><p>Trigger the oscilloscope,</p></li>
+         <li><p>Operate the function generator,</p></li>
+         </ul>
+         <!--
+         *** added this 
+         -->
+         <ul>
+         <li><p>Use a caliper or micrometer to measure the diameter of a
+         wire and estimate the resistance,</p></li>
+         <li><p>Measure resistors using 2-terminal and with 4-terminal
+         measurement methods,</p></li>
+         <li><p>Develop familiarity with the model-based approach to
+         experiment.</p></li>
+         </ul>
+         <h1 data-number="2" id="lab-notebook-guidelines"><span
+         class="header-section-number">2</span> Lab Notebook
+         Guidelines</h1>
+         <p>Lab notebooks are an essential tool in research and
+         development settings. They may seem tedious to maintain, but if
+         you develop good habits now, you will avoid unnecessary
+         headaches in the future. Poor notetaking can cause you to lose
+         track of data or the meaning of data which can force you to
+         unnecessarily repeat experiments and/or calculations.</p>
+         <p>The lab notebook will play an essential role in this course
+         and will be graded each week. You will use your notebook for
+         keeping records of many things including:</p>
+         <ul>
+         <li><p>Answering prelab questions from the lab guide to prepare
+         you for upcoming lab activities,</p></li>
+         <li><p>Answering in-lab questions,</p></li>
+         <li><p>Measurements and data,</p></li>
+         <li><p>Plots, diagrams, pictures, and sketches,</p></li>
+         <li><p>Experimental procedures and designs,</p></li>
+         <li><p>Analyses and results.</p></li>
+         </ul>
+         <p>The lab notebook will be an important part of your grade
+         because learning to keep a good lab notebook is crucial for
+         your professional development. Keeping a physical notebook is
+         very common, but many people like to keep digital notebooks
+         nowadays, usually as a supplement to a physical notebook. There
+         are many popular tools; since the University now uses a
+         Microsoft ecosystem, OneNote ends up being very convenient for
+         integrating with other Microsoft tools such as Teams and
+         OneDrive. Jupyter notebooks are another useful tool as they can
+         integrate Python code with Markdown (with LaTeX compatibility)
+         which can streamline your calculations and allow for nice and
+         easy plots. Your lab notebook is the main mechanism for
+         communicating your processes and results of the lab
+         experiments. Each week, you will be responsible for turning in
+         both your pre-lab work and your lab notebook / analyses via
+         Canvas. See the syllabus for more information.</p>
+         <!--You may find it helpful to write up many of your notes on the computer, for example, within Mathematica, Jupyter Notebooks. This is fine. However, before your notebook is turned in, the notes, plots, and analysis should be transferred to the lab notebook by printing and taping the pages or keeping them in a three-ring binder. This is standard practice in research labs. Your lab notebook is the main mechanism for communicating your process and results of the lab experiments. Each week, you will be responsible for turning in both your pre-laboratory work and your lab notebook / analysis via Canvas in scanned format. See the syllabus for more information.-->
+         <h1 data-number="3" id="cables-and-adapters"><span
+         class="header-section-number">3</span> Cables and Adapters</h1>
+         <p>There are many kinds of cables and adapters found in the
+         lab. The following are some of the more common ones you will
+         encounter.</p>
+         <figure>
+         <img src="../resources/lab1fig/banana.jpg" id="fig:banana"
+         style="width:8cm"
+         alt="Banana cables - wires with banana connectors at the end. The power supply and DMM have banana sockets to make connections to." />
+         <figcaption aria-hidden="true"><strong>Banana cables</strong> -
+         wires with banana connectors at the end. The power supply and
+         DMM have banana sockets to make connections to.</figcaption>
+         </figure>
+         <figure>
+         <img src="../resources/lab1fig/coax.png" id="fig:coax"
+         style="width:10cm"
+         alt="Coaxial (coax) cables - this kind of cable is specially designed for sending signals through. It has two conductors: one is the inner conductor which is used to send the signal through, and the other is the outer conductor which is designed to be grounded. Gauss’s law suggests this geometry will shield the inner conductor from external EM fields." />
+         <figcaption aria-hidden="true"><strong>Coaxial (coax)
+         cables</strong> - this kind of cable is specially designed for
+         sending signals through. It has two conductors: one is the
+         inner conductor which is used to send the signal through, and
+         the other is the outer conductor which is designed to be
+         grounded. Gauss’s law suggests this geometry will shield the
+         inner conductor from external EM fields.</figcaption>
+         </figure>
+         <figure>
+         <img src="../resources/lab1fig/bnc-plug.jpg" id="fig:bnc"
+         style="width:10cm"
+         alt="BNC plug connector - there are many kinds of connectors used for coax cables. BNC is a large, robust, and popular connector." />
+         <figcaption aria-hidden="true"><strong>BNC plug
+         connector</strong> - there are many kinds of connectors used
+         for coax cables. BNC is a large, robust, and popular
+         connector.</figcaption>
+         </figure>
+         <figure>
+         <img src="../resources/lab1fig/mini-grabber-to-bnc.png"
+         id="fig:grabber" style="width:10cm"
+         alt="Mini-Grabber to BNC Socket Connector - this allows you to make connections to exposed wires. The red grabber is connected to the inner conductor and the black grabber is connected to the outer conductor." />
+         <figcaption aria-hidden="true"><strong>Mini-Grabber to BNC
+         Socket Connector</strong> - this allows you to make connections
+         to exposed wires. The red grabber is connected to the inner
+         conductor and the black grabber is connected to the outer
+         conductor.</figcaption>
+         </figure>
+         <figure>
+         <img src="../resources/lab1fig/bnc%20banana%20adapter.png"
+         id="fig:banana-to-coax" style="width:10cm"
+         alt="BNC to double banana adapter - this adapter allows you to connect coax cables to the DMM or power supply. The “ground” tab (labeled GND) lets you know which banana plug gets connected to the outer conductor of the coax. Well designed devices have banana sockets spaced just far enough for these adapters to fit." />
+         <figcaption aria-hidden="true"><strong>BNC to double banana
+         adapter</strong> - this adapter allows you to connect coax
+         cables to the DMM or power supply. The <em>“ground” tab</em>
+         (labeled GND) lets you know which banana plug gets connected to
+         the outer conductor of the coax. Well designed devices have
+         banana sockets spaced just far enough for these adapters to
+         fit.</figcaption>
+         </figure>
+         <h1 data-number="4" id="some-useful-definitions"><span
+         class="header-section-number">4</span> Some Useful
+         Definitions</h1>
+         <p><strong>Common ground</strong> - there are many types of
+         ground and people often confuse them and use the word “ground”
+         to refer to any one of them. A common ground is any part of a
+         circuit which is (arbitrarily) referred to as <span
+         class="math inline">\(0\text{ V}\)</span> and that all other
+         voltages are measured with respect to.</p>
+         <p><strong>Earth ground</strong> - a common ground which is
+         ultimately connected to the Earth. The 3<sup>rd</sup> prong on
+         wall outlets is Earth ground. Under buildings large metal
+         plates are buried and are connected to via a <em>ground
+         wire</em>. Earth ground allows for certain kinds of short
+         circuit failures (and lightning strikes) to have the power
+         diverted away and avoid excessive damage to devices, buildings,
+         or <strong>YOU</strong>.</p>
+         <p><strong>Chassis ground</strong> - a common ground which is a
+         metal frame around the circuit. If a device plugs into the wall
+         with 3 prongs, it is likely that the chassis is also connected
+         to <strong>Earth ground</strong>. Chassis grounding can help
+         facilitate the safety of Earth grounding, but also acts a
+         Faraday cage, shielding the circuit from external EM waves.</p>
+         <p><strong>Electrical load</strong> - a load refers to the
+         impedance/resistance (in ohms) connected from the output of a
+         power source to the circuit’s ground. This could be a speaker,
+         a light bulb, a microwave oven, or anything else which is
+         drawing power from the circuit.</p>
+         <p><strong>RMS (Root Mean Square)</strong> - the square root of
+         the average of a periodic function squared over one period
+         <span class="math inline">\(V_\text{RMS}=\sqrt{\langle
+         V(t)^{2}\rangle}\)</span>. Example: For the function <span
+         class="math inline">\(V(t) = V_0\sin(\omega t)\)</span>, the
+         RMS value is <span class="math inline">\(V_\text{RMS} =
+         \large\frac{V_0}{\sqrt{2}}\)</span>.</p>
+         <p><em>Note:</em> <span
+         class="math inline">\(\frac{1}{\sqrt{2}}=\frac{\sqrt{2}}{2}\approx
+         0.707\)</span>. This number will come up <strong>a lot</strong>
+         in this course, and is worth committing to memory!</p>
+         <!--
+         # Text Books
+
+         This course does not require purchasing a textbook, but we recommend using an external resource to read as a supplement. Each prelab will point out sections in each of these books that are relevant to the content of the lab that week.
+
+         1.  [Analog and Digital Electronics - D. A. Steck](https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf)
+             - This text is freely available as a PDF, so you may want to download it and keep it handy.
+
+         2.  The Electronics Companion - A. C. Fischer-Cripps
+             - This is a great reference for quick information.
+             - There is a copy of the first edition in the lab.
+
+         3.  The Art of Electronics - P. Horowitz and W. Hill 
+             - This is a very practical (and in depth) textbook
+             - This book is an invaluable resource for designing your final projects
+             - Very comprehensive discussions of advanced topics, but sparse on the introductory basics.
+             - There are 3 copies of the 2<sup>nd</sup> Edition in the lab.
+
+         For today's lab, the following sections are useful and relevant readings
+
+         1.  Steck Sections 1.1 -- 1.3.2
+
+         2.  Fischer-Cripps Sections 1.1 -- 1.11, 2.1 -- 2.5, 3.1 -- 3.3
+             - Resistor color code chart on p. 247 (Here's a [Code calculator](https://www.digikey.com/en/resources/conversion-calculators/conversion-calculator-resistor-color-code) and an [online chart](https://www.allaboutcircuits.com/textbook/reference/chpt-2/resistor-color-codes/))
+
+         3.  Horowitz and Hill 2<sup>nd</sup> ed. Sections 1.01 -- 1.12
+
+         4.  Horowitz and Hill 3<sup>rd</sup> ed. Sections 1.1 -- 1.2.2, 1.3 -- 1.3.1
+             - Multimeters on p. 10
+
+         5.  The following manuals, which can be found on on the [lab manuals page](/PHYS-3330/manuals-data-sheets):
+
+             -   Keysight EDU33210 Series Waveform Generator User Guide and Data Sheet
+
+             -   Keysight EDU36311A Power Supply User Guide (p. 43-45) and Data Sheet
+
+             -   Tektronix TBS2000 Series Oscilloscope User Manual
+
+         6.  There's also a [math review on complex numbers](/PHYS-3330/resources/complex)
+         -->
+         <h1 data-number="5" id="preparing-for-computational-work"><span
+         class="header-section-number">5</span> Preparing for
+         computational work</h1>
+         <p>Throughout this course, there will be many calculations that
+         you will use repeatedly. It may seem like extra work now, but
+         adopting this practice early will help streamline your workflow
+         throughout the semester and make your life easier in the long
+         run.</p>
+         <p>It’s important then to be able to plot data or mathematical
+         functions with relative ease. There is an “Assignment”
+         associated with this lab on Canvas. You are asked to share a
+         link to whatever computational tool you want to use (python
+         with Colab, Google Sheets, etc.) to do the following
+         calculations. If you instead have a standalone file, check with
+         the instructor to make sure the format is OK and if it is, then
+         upload the file to Canvas.</p>
+         <ol type="1">
+         <li><p>Make a plot with two curves for cosine and sine of x for
+         x from 0 to 10.</p></li>
+         <li><p>Plot the following data points on a separate graph where
+         the x coordinates are (1, 2, 3, 4, 5) and the y coordinates are
+         (0.8, 9.3, 23.6, 50.8, 98.9).</p></li>
+         <li><p>Write a function that takes in the resistance and
+         voltage and calculates the current. Use this to make a plot of
+         the current through a 100 Ohm resistor as function of the
+         voltage across it. Choose values of the voltage such that you
+         can see what is happening in the circuit.</p></li>
+         </ol>
+         <p>You can choose to do this part of the lab first, or save it
+         ’til the end.</p>
+         <h2 data-number="5.1" id="physics-2-review-resistors"><span
+         class="header-section-number">5.1</span> Physics 2 review:
+         Resistors</h2>
+         <p>In Physics 2, you learned introductory basics to circuits.
+         Metals have free electrons that can flow through the material
+         (current) when there is a difference in electric potential
+         across it (voltage applied). Ohm’s law describes the
+         relationship between current and voltage:</p>
+         <p><span class="math display">\[\Delta V = IR\]</span></p>
+         <p>where <span class="math inline">\(R\)</span> is resistance
+         with units of <span class="math inline">\(\Omega\)</span>
+         (Ohm’s). The resistance of a uniform piece of metal can be
+         described by</p>
+         <p><span class="math display">\[R =
+         \rho\frac{\ell}{A}\]</span></p>
+         <p>where <span class="math inline">\(\rho\)</span> is
+         resistivity (a property that depends on the type of metal),
+         <span class="math inline">\(\ell\)</span> is the length of the
+         metal in the direction the voltage is applied, and <span
+         class="math inline">\(A\)</span> is the cross-sectional area in
+         the other two directions.</p>
+         <figure>
+         <img src="../resources/lab1fig/resistivity.png"
+         id="fig:resistivity" style="width:14cm"
+         alt="A cylindrical metal (like a copper wire) with voltage difference of V_2-V_1 applied along its long axis will have a cross sectional area of \pi r^2." />
+         <figcaption aria-hidden="true">A cylindrical metal (like a
+         copper wire) with voltage difference of <span
+         class="math inline">\(V_2-V_1\)</span> applied along its long
+         axis will have a cross sectional area of <span
+         class="math inline">\(\pi r^2\)</span>.</figcaption>
+         </figure>
+         <p>Adding two resistors in series adds their lengths together,
+         so the resistance goes up. In general, <span
+         class="math inline">\(n\)</span> resistors in series will have
+         a total resistance of</p>
+         <p><span class="math display">\[R_\text{series} =
+         \sum_{i=1}^nR_i\]</span></p>
+         <p>However, adding resistors in parallel adds the
+         cross-sectional area, so the total resistance will decrease.
+         The total resistance of <span class="math inline">\(n\)</span>
+         resistors in parallel obeys</p>
+         <p><span class="math display">\[\frac{1}{R_\text{parallel}} =
+         \sum_{i=1}^n\frac{1}{R_i}\]</span></p>
+         <h3 data-number="5.1.1" id="prelab-question"><span
+         class="header-section-number">5.1.1</span> Prelab question</h3>
+         <p>What is the total resistance of two resistors in parallel
+         that each have a resistance of <span
+         class="math inline">\(R\)</span>?</p>
+         <h3 data-number="5.1.2" id="prelab-question-1"><span
+         class="header-section-number">5.1.2</span> Prelab question</h3>
+         <figure>
+         <img src="../resources/lab1fig/resistor-prob.png"
+         id="fig:resistor-prob" style="width:8cm"
+         alt="These resistors combine to have a total resistance." />
+         <figcaption aria-hidden="true">These resistors combine to have
+         a total resistance.</figcaption>
+         </figure>
+         <p>Find the total resistance of the combination of resistors
+         shown in Figure <span class="citation"
+         data-cites="fig:resistor-prob">@fig:resistor-prob</span>.</p>
+         <h2 data-number="5.2" id="physics-2-review-joule-heating"><span
+         class="header-section-number">5.2</span> Physics 2 review:
+         Joule heating</h2>
+         <p>When current flows in the metal, there will be power
+         dissipated due to heat. This phenomena is known as Joule
+         heating, and the power (energy/time) can be calculated by</p>
+         <p><span class="math display">\[P=I\Delta V\]</span></p>
+         <p>where <span class="math inline">\(I\)</span> is the current
+         through the metal/resistor and <span
+         class="math inline">\(\Delta V\)</span> is the voltage across
+         it. This can be expressed in terms of the current and
+         resistance or the voltage and resistance using Ohm’s Law</p>
+         <p><span class="math display">\[P = I^2R = \frac{(\Delta
+         V)^2}{R}\]</span></p>
+         <h2 data-number="5.3" id="physics-2-review-capacitors"><span
+         class="header-section-number">5.3</span> Physics 2 review:
+         Capacitors</h2>
+         <p>A capacitor stores energy in the form of electric fields
+         that are generated by separated charge. In Physics 2 you
+         considered the parallel plate capacitor.</p>
+         <figure>
+         <img src="../resources/lab1fig/pp-cap.png" id="fig:pp-cap"
+         style="width:7cm" alt="A parallel plate capacitor." />
+         <figcaption aria-hidden="true">A parallel plate
+         capacitor.</figcaption>
+         </figure>
+         <p>When a voltage difference <span class="math inline">\(\Delta
+         V\)</span> is applied to the plates, equal and opposite charge
+         <span class="math inline">\(Q\)</span> will accumulate on each
+         plate according to</p>
+         <p><span class="math display">\[Q = C\Delta V\]</span></p>
+         <p>where <span class="math inline">\(C\)</span> is the
+         capacitance of the capacitor with units of F (Farads). The
+         capacitance can be determined through considering the electric
+         fields produces by the charged sheets. At some point, you’ve
+         worked this out using Gauss’s law. The result is</p>
+         <p><span class="math display">\[C =
+         \varepsilon_0\frac{A}{d}\]</span></p>
+         <p>Adding capacitors in series then increases the total gap
+         distance, decreasing the capacitance. The total capacitance of
+         <span class="math inline">\(n\)</span> capacitors in series
+         is</p>
+         <p><span class="math display">\[\frac{1}{C_\text{series}} =
+         \sum_{i=1}^n\frac{1}{C_i}\]</span></p>
+         <p>Adding capacitors in parallel is like adding more area to a
+         single capacitor. The total capacitance of <span
+         class="math inline">\(n\)</span> capacitors in parallel is</p>
+         <p><span class="math display">\[C_\text{parallel} =
+         \sum_{i=1}^nC_i\]</span></p>
+         <h3 data-number="5.3.1" id="prelab-question-2"><span
+         class="header-section-number">5.3.1</span> Prelab question</h3>
+         <figure>
+         <img src="../resources/lab1fig/capacitor-prob.png"
+         id="fig:cap-problem" style="width:8cm"
+         alt="These capacitors combine to have a total capacitance" />
+         <figcaption aria-hidden="true">These capacitors combine to have
+         a total capacitance</figcaption>
+         </figure>
+         <p>Calculate the total capacitance of the combination of
+         capacitors shown above.</p>
+         <h2 data-number="5.4" id="spice-simulation"><span
+         class="header-section-number">5.4</span> SPICE simulation</h2>
+         <p>SPICE (Simulation Program with Integrated Circuit Emphasis)
+         is an open-source circuit simulation tool that is commonly used
+         to help prototype and analyze circuits. There are many
+         implementations of SPICE, but for this class, we will use
+         Analog Devices’ LTspice (because it’s free!).</p>
+         <ul>
+         <li><p><a
+         href="https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html">Download
+         and install LTspice</a>. Sometimes, the website changes; if the
+         link is broken <a href="/PHYS-3330/report-lab-issue">please
+         report the issue to the technical staff</a>, and search
+         “site:analog.com LTspice download” to locate the download
+         page.</p></li>
+         <li><p>Download and save this <a
+         href="../resources/ltspice-resources/ltspice_shortcutflyer.pdf">useful
+         PDF of shortcuts</a> <!--
+           - *Note:* Mac users should keep these two references handy
+               - [Tips for LTspice on Mac](https://ucboulder.github.io/PHYS-3330/resources/ltspice-resources/TipsForLTspiceOnMac.pdf)
+               - [Shortcuts](https://ucboulder.github.io/PHYS-3330/resources/ltspice-resources/LTspiceShortcutsForMacOSX) --></p></li>
+         <li><p>On the download page there are several tutorials.</p>
+         <ul>
+         <li>Watch the <a
+         href="https://www.youtube.com/watch?v=JRcyHuyb1V0">LTSpice
+         Tutorial - EP1 Getting started</a> by FesZ Electronics.
+         <ul>
+         <li>Mac users should check out <a
+         href="https://www.youtube.com/watch?v=abyxz8jfgK4">LTspice -
+         Getting Started in 8 Minutes</a> by CircuitBread.</li>
+         </ul></li>
+         </ul></li>
+         </ul>
+         <h3 data-number="5.4.1" id="prelab-question-3"><span
+         class="header-section-number">5.4.1</span> Prelab Question</h3>
+         <ul>
+         <li><p>Start a new project and place a voltage source
+         somewhere. Right click on the element and set the voltage to
+         <span class="math inline">\(10\text{ V}\)</span> (you can just
+         type the number “10” in the text box). Leave the series
+         resistance blank.</p></li>
+         <li><p>Place a resistor next to the voltage source. Right click
+         it and set it’s value to <span class="math inline">\(1\text{
+         k}\Omega\)</span> (you can just type “1k” in the box)</p></li>
+         <li><p>Use the wire tool to connect the source to the resistor
+         to create a complete circuit.</p></li>
+         <li><p>Use the ground tool and place the ground somewhere along
+         the wire connected to the <span
+         class="math inline">\((-)\)</span> terminal of the source. This
+         tool tells the simulation what voltage you are referencing
+         from; all voltage measurements will be relative to this voltage
+         (i.e. you can refer to this as “<span
+         class="math inline">\(0\text{ V}\)</span>”).</p></li>
+         <li><p><strong>Take a screen shot of the circuit and include it
+         in your prelab.</strong></p></li>
+         <li><p>Use Ohm’s law to predict the current through the
+         resistor. What is this current (don’t forget units!).</p></li>
+         <li><p>Use the Joule heating equation to predict the power
+         dissipated in the resistor (don’t forget units!).</p></li>
+         <li><p>Configure the analysis:</p>
+         <ul>
+         <li>Select the “Transient” tab</li>
+         <li>Stop time: 1 (for 1 second)</li>
+         <li>Time to start taking data: 0</li>
+         <li>Click okay</li>
+         </ul></li>
+         <li><p>The simulation should now be running.</p>
+         <ul>
+         <li>hover the mouse over the wire connected to the <span
+         class="math inline">\((+)\)</span> terminal, so that the mouse
+         icon turns into a red probe-like object. Click on the wire to
+         measure the voltage. The voltage here should obviously be <span
+         class="math inline">\(10\text{ V}\)</span>.</li>
+         <li>hover the mouse over the resistor so that the icon turns
+         into a blue arrow through a loop. Click to measure the current
+         through the resistor. What is this current? Does it match what
+         you calculated using Ohm’s law?</li>
+         <li>hold the <strong>Alt</strong> key to turn the current
+         measuring tool to a power measuring tool (the icon should look
+         like a mercury thermometer). While holding <strong>Alt</strong>
+         click the resistor to measure the power dissipated in the
+         resistor. What is the power? Does it match your
+         calculation?</li>
+         </ul></li>
+         </ul>
+         <h1 data-number="6" id="lab-activities"><span
+         class="header-section-number">6</span> Lab Activities</h1>
+         <p><em>IMPORTANT NOTE:</em> In this course’s lab manuals,
+         “ground” refers to Earth ground; other kinds of ground will be
+         explictly differentiated.</p>
+         <h2 data-number="6.1" id="the-oscilloscope-scope"><span
+         class="header-section-number">6.1</span> The Oscilloscope
+         (Scope)</h2>
+         <p><strong>Pre-caveat!</strong> We have a variety of models of
+         oscillocopes for use in our labs. Your oscilloscope may not be
+         exactly the same model as described below, however, it should
+         have the same functionality. That is, it should be able to do
+         everything that the described model can: it will have a
+         vertical control, a horizontal control, etc. While it seems
+         like an excuse (and perhaps it is), it’s a good skill to learn
+         how to work with different types of equipment.</p>
+         <p>If you absolutely cannot find the same control on your scope
+         as described in this text, let your instructor know.</p>
+         <p><strong>OK, back to the lab…</strong></p>
+         <p>The goal of this part of the lab is to be able to use an
+         oscilloscope (aka scope or o-scope) to make voltage
+         measurements over time. Old, analog scopes scanned an electron
+         beam horizontally across fluorescent screen, and applying a
+         voltage at the input would cause the beam to deflect up and
+         down with the voltage, allowing you to visualize how the
+         voltage behaved over time. Today, most labs are equipped with
+         digital oscilloscopes which rapidly measure the voltage and
+         then plot the data on a screen in real time. This has many
+         advantages over using the DMM as a voltmeter because it gives
+         you much more information about the voltage you’re
+         measuring.</p>
+         <p>There are a few precautions to observe when operating the
+         oscilloscope:</p>
+         <ul>
+         <li><p>Avoid overheating the instrument. Do not block
+         ventilation of the interior.</p></li>
+         <li><p>Do not apply more than 300 V to any input
+         terminal.</p></li>
+         <li><p>Avoid serious or fatal injury from electrical shock. Do
+         not remove the case to expose the 120 V mains.</p></li>
+         </ul>
+         <p>Otherwise, the instruments are robust and cannot be damaged
+         by wrong settings. So, try whatever you’re curious about and
+         measure and document what happens.</p>
+         <figure>
+         <img src="../resources/lab1fig/scope-guide.png"
+         id="fig:scope-guide" style="width:14cm"
+         alt="Basic operation guide for the oscilloscope." />
+         <figcaption aria-hidden="true">Basic operation guide for the
+         oscilloscope.</figcaption>
+         </figure>
+         <p>The front panel of the scope is organized in a very
+         particular way:</p>
+         <ul>
+         <li><p>Vertical refers to controlling the y-axis of the plot
+         (which is voltage).</p>
+         <ul>
+         <li>These scopes have 2 or 4 separate inputs which can all be
+         used at the same time, and have individual controls for scaling
+         and offsetting the voltages of each.</li>
+         </ul></li>
+         <li><p>Horizontal refers to controlling the x-axis of the plot
+         (which is time).</p>
+         <ul>
+         <li>All 4 (or 2) channels have to be displayed with the same
+         time scale, so there is only one set of horizontal controls for
+         all 4 (or 2) channels.</li>
+         </ul></li>
+         <li><p>The black buttons allow you to select options displayed
+         next to them on the screen.</p></li>
+         <li><p>Some of the knobs can be pressed like buttons (read the
+         labels to see what they do).</p></li>
+         </ul>
+         <h3 data-number="6.1.1" id="setting-up-the-scope"><span
+         class="header-section-number">6.1.1</span> Setting up the
+         Scope</h3>
+         <!--The Tektronix TBS 2000 Series has four independent channels so that four separate signals can be displayed at once. Each trace is color coded with the buttons on the panel, and you can open a menu specific for each channel with the rectangular, colored, numbered buttons in the vertical control area.-->
+         <figure>
+         <img src="../resources/lab1fig/scope-default.png"
+         id="fig:scope-default-setup" style="width:10cm"
+         alt="The Default Setup button resets the scope to all of the default settings. This is a great way to clear the previous users settings. Note: the default is to report the signal as 10x greater than measured (this is to compensate for the scope-probes which attenuate the signal by 10x)." />
+         <figcaption aria-hidden="true">The Default Setup button resets
+         the scope to all of the default settings. This is a great way
+         to clear the previous users settings. <em>Note:</em> the
+         default is to report the signal as 10x greater than measured
+         (this is to compensate for the scope-probes which attenuate the
+         signal by 10x).</figcaption>
+         </figure>
+         <ol type="1">
+         <li><p>Turn on the scope and once it’s booted up, press the
+         <strong>Default Setup</strong> button to reset all the user
+         settings. The default setting is to have the reported voltages
+         be 10x what is actually measured (we’ll get to why this is the
+         default later).</p></li>
+         <li><p>Press the yellow 1 button to open channel 1’s menu, and
+         set the <em>Probe Setup</em> setting to 1x (see Figure <span
+         class="citation"
+         data-cites="fig:probe-setup">@fig:probe-setup</span>). Repeat
+         this for the other 3 menus.</p></li>
+         <li><p>Turn off channels all channels other than 1. To turn a
+         channel off (so you don’t see it on the screen), you can press
+         the menu button for that channel to open the menu, and then
+         again to disable the channel.</p></li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/channel-menu.jpg"
+         id="fig:probe-setup" style="width:10cm"
+         alt="Set Probe Setup to 1x." />
+         <figcaption aria-hidden="true">Set <em>Probe Setup</em> to
+         1x.</figcaption>
+         </figure>
+         <h3 data-number="6.1.2"
+         id="measuring-a-dc-voltage-on-a-scope"><span
+         class="header-section-number">6.1.2</span> Measuring a DC
+         voltage on a scope</h3>
+         <ol type="1">
+         <li><p>Use a BNC cable and a BNC to double banana adapter to
+         connect channel 1 of the scope to the +5V power supply of your
+         protobard, as shown in the Slides.
+         <!--Measure the voltage on scope using the cursors. Try exploring the different knobs and menus on the scope to make the measurement. Refer to the appendix listed at the end of this document if you get stuck.--></p></li>
+         <li><p>Turn on the power supply and confirm that this is what
+         you see on the oscilloscope. The yellow triangle on the left of
+         the screen indicates where <span class="math inline">\(0\text{
+         V}\)</span> is (this can be moved with the yellow vertical
+         position knob). <em>Hint:</em> moving the zero position to the
+         bottom of the screen allows you to choose a smaller voltage
+         scale (zooming in) so that you have more resolution on the
+         screen.</p>
+         <ol type="1">
+         <li>Try to estimate the voltage by counting the number of
+         divisions and using the reported vertical scale (voltage /
+         division) in the bottom left of the screen (see Figure <span
+         class="citation"
+         data-cites="fig:scope-screen">@fig:scope-screen</span>).</li>
+         <li>Play around with the vertical positioning and “Volts/div”
+         knob so that you get a sense of what you can do with it. If
+         you’re not seeing a signal, you might need to change these
+         values.</li>
+         <li>Alternatively, if you’re not seeing a signal, you might
+         need to find the <strong>Trigger</strong> menu. If you are
+         using <strong>Channel 1</strong>, it should trigger on
+         <strong>Channel 1</strong>. If you are using <strong>Channel
+         2</strong>, it should trigger on <strong>Channel
+         2</strong>.</li>
+         </ol></li>
+         </ol>
+         <p><strong><em>IMPORTANT NOTES:</em></strong></p>
+         <ul>
+         <li><p>Even though this button is called “measure,” the real
+         measurement is already being done to display the line on the
+         screen.</p></li>
+         <li><p>The scope stores the real measurements of voltage and
+         time in an internal log.</p></li>
+         <li><p>“Measure” allows you to analyze the stored data by
+         applying computations to report certain values.</p></li>
+         <li><p>It is important to read the details of an option before
+         using it because it may not do what you think it does.</p></li>
+         <li><p>If you have a <strong>Run/Stop</strong> button, try that
+         and see what happens.</p></li>
+         </ul>
+         <!--
+         *** good call, I meant to put it back in somehow, but forgot
+         -->
+         <ul>
+         <li>Oscilloscopes can only distinguish about 100 different
+         values on the vertical axes of the screen. Before you use the
+         “Measure” button, make sure that the trace covers at least half
+         the screen vertically without clipping at the top or bottom.
+         This way you get a resolution/accuracy of approximately
+         ±2%.</li>
+         </ul>
+         <ol start="4" type="1">
+         <li><p>Once you have measured the output of the +5V, do the
+         same for the 1.3-15V output and the -1.3-15V. There are images
+         in the slide to help guide you.</p></li>
+         <li><p>In your lab notebook, describe the setup of the electric
+         circuits (diagrams are useful) and the outcomes
+         measured.</p></li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/scope-screen.png"
+         id="fig:scope-screen" style="width:18cm"
+         alt="The oscilloscope screen." />
+         <figcaption aria-hidden="true">The oscilloscope
+         screen.</figcaption>
+         </figure>
+         <h2 data-number="6.2"
+         id="creating-an-ac-waveform-using-a-function-generator-and-measuring-it-on-a-scope"><span
+         class="header-section-number">6.2</span> Creating an AC
+         waveform using a function generator and measuring it on a
+         scope</h2>
+         <p>The function generator can produce a number of different
+         waveforms over the frequencies from <span
+         class="math inline">\(10^{-6}\text{ Hz}\)</span> to <span
+         class="math inline">\(20\text{ MHz}\)</span>, though it is
+         dependent on the model. The output amplitude can be varied
+         between <span class="math inline">\(1\text{ mV}\)</span> and
+         <span class="math inline">\(20\text{ V}\)</span> peak-to-peak
+         with an output impedance of <span class="math inline">\(50\
+         \Omega\)</span> or more.</p>
+         <p><span style="color: red;">There is one main
+         <strong>precaution</strong> to keep in mind: <strong><em>Do not
+         connect any output of the function generator directly to DC
+         power</em></strong> or to the output of any other instrument or
+         circuit. Doing so will burn out the output amplifier!</span> In
+         a later lab, we’ll learn how to use different tools to allow
+         you to safely interface the function generator with DC
+         power.</p>
+         <p><strong>Applicable for some of the function
+         generators</strong></p>
+         <ol type="1">
+         <li><p>The function generator has an output impedance of <span
+         class="math inline">\(50\ \Omega\)</span> (there is a <span
+         class="math inline">\(50\ \Omega\)</span> resistor in series
+         with the output), and it assumes, by default, that you will use
+         a <span class="math inline">\(50\ \Omega\)</span> load. This
+         means that half of the voltage will drop across the output
+         impedance, and half will drop across the load, so by default,
+         the function generator displays only half the voltage that it
+         is actually trying to apply (because this is how much “reaches”
+         the load). <span style="color: red;"><strong>Every time you
+         turn on the function generator, you have to set the output
+         termination setting to High-Z</strong></span> so that it
+         displays the full voltage (see the appendix or page 53 of the
+         user manual).</p>
+         <ul>
+         <li>We will explore the idea of output impedance (and input
+         impedance) in much more detail in another lab.</li>
+         </ul></li>
+         <li><p>On Channel 1, create a <span
+         class="math inline">\(1\text{ V}_\text{pp}\)</span> (volts
+         peak-to-peak) sine wave at 1 kHz with no DC offset, and turn
+         the output
+         <strong>on</strong>.<!-- (you may want to use this standard setup in the future if you have trouble).--></p></li>
+         </ol>
+         <h2 data-number="6.3" id="triggering"><span
+         class="header-section-number">6.3</span> Triggering</h2>
+         <p>In order to view waves on the oscilloscope, it needs to
+         redraw the wave in the right place at the right time.
+         “Triggering” is the process of stabilizing a repeating signal
+         on the screen.</p>
+         <ol type="1">
+         <li><p>Use a BNC connector to connect the output of the
+         function generator to the input of channel 1 on the
+         scope.</p></li>
+         <li><p>Set the <em>voltage / div</em> and <em>time / div</em>
+         so that the sine wave appears nice and big on the screen.
+         Remember that the period is the inverse of the frequency.
+         Always consider the frequency you are using and adjust the
+         scope’s horizontal scale appropriately to avoid aliasing! Talk
+         with an instructor to learn more about aliasing.</p></li>
+         <li><p>The <strong>Trigger</strong> options are in the
+         top-right corner of the oscilloscope’s front panel. Open the
+         <em>Trigger Menu</em>. You should see that the Channel the
+         scope is triggering on is Channel 1.</p></li>
+         <li><p>There are 3 options that you will change most regularly.
+         Paraphrase these in your lab notebook for future reference.</p>
+         <ul>
+         <li><p><strong>Trigger channel:</strong> the input that the
+         scope uses to trigger (this setting can be changed by pressing
+         the vertical-scale knob corresponding to the channel you want
+         to trigger to).</p></li>
+         <li><p><strong>Trigger level:</strong> the scope knows to
+         trigger the wave when the voltage changes through the trigger
+         level voltage (this setting can be changed with the
+         <em>Level</em> knob below the <em>Trigger Menu</em>
+         button).</p></li>
+         <li><p><strong>Slope:</strong> selects whether to trigger when
+         the voltage rises to the trigger level (rising edge), or falls
+         to the trigger level (falling edge).</p></li>
+         <li><p><strong>Trigger mode:</strong> of the modes, there are 2
+         you will mostly use for this class:</p>
+         <ol type="1">
+         <li><p><strong>Auto (untriggered roll)</strong>: This setting
+         is needed to measure DC voltages that don’t pass through a
+         trigger level. It does a poor job of triggering on slower waves
+         (less than a few hundred <span
+         class="math inline">\(\text{Hz}\)</span>).</p></li>
+         <li><p><strong>Normal:</strong> If no trigger event occurs,
+         nothing will be displayed (so measuring DC can’t be done). But
+         this setting allows you to trigger on slower waves.</p></li>
+         </ol></li>
+         </ul></li>
+         <li><p>Change the trigger channel. Since there is nothing to
+         trigger on on other channels, you will see that the wave no
+         longer displays in a measurable way (this is what “untriggered”
+         looks like). Describe what you see. Change the trigger channel
+         back to Channel 1.</p></li>
+         <li><p>Play with the trigger level. Describe what you see. Why
+         does the wave move? Get help if you don’t understand.</p></li>
+         <li><p>Press the slope button to change between rising and
+         falling edge triggering. Describe what happens (<em>Hint:</em>
+         the wave is <strong>not</strong> “flipping”).</p></li>
+         <li><p>Set the trigger level to <span
+         class="math inline">\(-400\text{ mV}\)</span>. Is the wave
+         still triggered? If not, increase the trigger level a small
+         amount until it is.</p></li>
+         <li><p>On the function generator, change the amplitude to <span
+         class="math inline">\(100\text{ mV}_\text{pp}\)</span>. The
+         waveform should no longer be triggered. Why?</p></li>
+         </ol>
+         <!--
+         10. It is annoying to have to adjust the trigger every time you adjust your waveform. To accommodate this, the function generator has an output specifically for triggering on: **Sync / Trigger out** (just to the left of the Channel 1 output).
+
+             - Use a coax cable to connect this output to Channel 4 of the scope.
+
+             - Turn on Channel 4 on the scope.
+             
+             - Adjust the vertical scale to fully view the waveform. A good habit is to have the wave occupy roughly 75% of the screen vertically.
+
+             - Describe the waveshape.
+
+         11. Change the trigger channel to Channel 4. Adjust the trigger level. Does the trigger level matter? Why?
+
+         12. Play with the waveform (from channel 1) on the function generator. What happens to the **Sync / Trigger out** when you change the
+
+             - the amplitude,
+
+             - the frequency,
+             
+             - the DC offset,
+
+             - the phase offset,
+
+             - the wave shape?
+
+         14. Why is the **Sync / Trigger out** a square wave?
+         -->
+         <h2 data-number="6.4" id="measuring-waves-with-the-scope"><span
+         class="header-section-number">6.4</span> Measuring Waves with
+         the Scope</h2>
+         <ol type="1">
+         <li><p>Make a waveform of your choice with the function
+         generator. Measure the period, frequency and peak-to-peak
+         amplitude</p>
+         <ul>
+         <li><p>by estimating using the divisions,</p></li>
+         <li><p>using the cursors,</p></li>
+         <li><p>using the <em>Measure</em> button. <strong><em>Be
+         careful to read how the result is calculated in the bottom-left
+         corner of the screen to make sure you’re choosing the right
+         option!</em></strong></p></li>
+         </ul></li>
+         <li><p>Try this with all the other wave shapes that your
+         function generator can produce.</p></li>
+         <li><p>If you don’t understand how the settings on the function
+         generator match up with what you see on the scope, talk with
+         your lab partner or the instructor.</p></li>
+         </ol>
+         <h1 class="unnumbered"
+         id="appendix-a-tektronix-tbs-2000-series-oscilloscope-controls">Appendix
+         A: Tektronix TBS 2000 Series Oscilloscope Controls</h1>
+         <p><strong>To change the horizontal (time base)
+         scale:</strong></p>
+         <ol type="1">
+         <li><p>Horizontal scale knob changes the time per
+         division</p></li>
+         <li><p>Horizontal position knob changes location of the trigger
+         (labeled as a orange arrow on the top of the screen)</p></li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/horizontal-scope.png"
+         id="fig:hori-dials" style="width:10cm"
+         alt="Horizontal settings are for adjusting time scale and offset" />
+         <figcaption aria-hidden="true">Horizontal settings are for
+         adjusting time scale and offset</figcaption>
+         </figure>
+         <p><strong>To change the vertical (voltage base)
+         scale:</strong></p>
+         <ol type="1">
+         <li><p>Vertical scale knob changes the voltage per
+         division</p></li>
+         <li><p>Vertical position knob changes location of the ground
+         (labeled as a colored-coded arrow on the left of the
+         screen)</p></li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/vertical-scope.png"
+         id="fig:vert-dials" data-wdith="14cm"
+         alt="Vertical settings are for adjusting voltage scale and offset." />
+         <figcaption aria-hidden="true">Vertical settings are for
+         adjusting voltage scale and offset.</figcaption>
+         </figure>
+         <p><strong>To access the parameters for each
+         channel:</strong></p>
+         <p>The channel buttons open the corresponding channel menu with
+         the following options:</p>
+         <ol type="1">
+         <li><p>Input Coupling (AC/DC/Ground)</p>
+         <ul>
+         <li>This should <strong>ALMOST ALWAYS</strong> be set to DC! AC
+         coupling removes DC offsets, which can be convenient if you
+         know what you’re doing with it.</li>
+         </ul></li>
+         <li><p>Invert Signal (this should be left off)</p></li>
+         <li><p>Probe Setup</p>
+         <ul>
+         <li>This setting multiplies the measured voltage by the amount
+         specified. In most cases, this should be set to 1x.</li>
+         </ul></li>
+         </ol>
+         <p>If a channel menu is open, pressing the channel button again
+         will turn off that channel’s trace.</p>
+         <figure>
+         <img src="../resources/lab1fig/vertical-scope2.png"
+         id="fig:ch-menu" style="width:14cm"
+         alt="The channel buttons can be used to turn on/off channel traces and open channel menus." />
+         <figcaption aria-hidden="true">The channel buttons can be used
+         to turn on/off channel traces and open channel
+         menus.</figcaption>
+         </figure>
+         <p><strong>To adjust the trigger:</strong></p>
+         <ol type="1">
+         <li><p>Trigger knob changes the voltage level of the
+         trigger</p></li>
+         <li><p>Trigger MENU button</p>
+         <ul>
+         <li><p>Select which channel to trigger off of (trigger level
+         arrow changes color to show which channel is being triggered).
+         You can also change the trigger channel by pressing the
+         vertical scale knobs like buttons.</p></li>
+         <li><p>Slope: can trigger off a rising or falling
+         edge.</p></li>
+         <li><p>Trigger Mode:</p>
+         <ul>
+         <li><p>Auto: (will display a “roll” of measurements when not
+         triggered). This setting will cause the wave to crawl across
+         the screen at low frequencies.</p></li>
+         <li><p>Normal: (won’t update the display if not triggered).
+         This setting will not allow you to display DC without an
+         external trigger source.</p></li>
+         </ul></li>
+         </ul></li>
+         <li><p>The “Force Trigger” button should be avoided. If you’re
+         having trouble triggering, this button often won’t help, and it
+         will stunt your growth with regards to learning how to use the
+         scope properly!</p></li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/trigger-scope.png"
+         id="fig:trig-menu" style="width:10cm"
+         alt="The triggering options can all be found on the top-right of the front panel." />
+         <figcaption aria-hidden="true">The triggering options can all
+         be found on the top-right of the front panel.</figcaption>
+         </figure>
+         <figure>
+         <img src="../resources/lab1fig/scope-screen-trigger.png"
+         id="fig:trig-indic" style="width:10cm"
+         alt="The bottom right of the screen shows what channel the scope is triggering on as well as the trigger level and the rate at which the trigger is occurring." />
+         <figcaption aria-hidden="true">The bottom right of the screen
+         shows what channel the scope is triggering on as well as the
+         trigger level and the rate at which the trigger is
+         occurring.</figcaption>
+         </figure>
+         <p><strong>To select the AQUIRE mode:</strong></p>
+         <ol type="1">
+         <li><p>Run/Stop: sets the scope to continuously acquire or
+         freeze after last trigger. The button will glow red when
+         “stopped” and green when “running.”</p></li>
+         <li><p>Single: (aka single shot) acquires a single trace from
+         the trigger and then doesn’t continue to update.</p></li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/scope-top-bar.png"
+         id="fig:scope-shot" style="width:14cm"
+         alt="These buttons are used to set how the scope should update." />
+         <figcaption aria-hidden="true">These buttons are used to set
+         how the scope should update.</figcaption>
+         </figure>
+         <p><strong>Measure Menu (top of panel):</strong></p>
+         <p>You can select various operations to perform on the
+         measurements on various channels. <em>Be very careful</em> with
+         these because they can be very deceptive and may not give the
+         result you are expecting, and how you display the wave on the
+         screen greatly affects the number that “Measure” will report.
+         Generally use cursors to make accurate measurements.</p>
+         <p><strong>Cursor Menu (under Navigation):</strong></p>
+         <ol type="1">
+         <li><p>Choose time (vertical bars) or voltage (horizontal bars)
+         measurement.</p></li>
+         <li><p>Choose which channel to measure (measurement cursors are
+         the same color as the channel they are measuring). You can
+         change the channel by pressing the numbered channel
+         button.</p></li>
+         <li><p>Big top knob moves the cursors. You can press “Fine” to
+         make it move more smoothly (this will also cause other knobs to
+         move more smoothly which can be very annoying).</p></li>
+         <li><p>Press the knob like a button to switch cursors.</p></li>
+         <li><p>Position relative to ground (trigger zero time) is
+         displayed on the screen with the T symbol.</p></li>
+         <li><p>Relative distance between cursors is displayed on the
+         screen with the <span class="math inline">\(\Delta\)</span>
+         symbol.</p></li>
+         </ol>
+         <h1 class="unnumbered"
+         id="appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a">Appendix
+         B: Changing the Output Termination on the Function Generator
+         (Keysight EDU33212A)</h1>
+         <ol type="1">
+         <li>Press a channel [Setup] key to open the channel
+         configuration screen. Note that the current output termination
+         values (both <span class="math inline">\(50\ \Omega\)</span> in
+         this case) appear at the top left of the channel display.</li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/EDU33212A-term1.png"
+         id="fig:setup" style="width:15cm"
+         alt="Keysight EDU33212A Setup Menu" />
+         <figcaption aria-hidden="true">Keysight EDU33212A Setup
+         Menu</figcaption>
+         </figure>
+         <ol start="2" type="1">
+         <li>Begin specifying the output termination by pressing Output
+         Load.</li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/EDU33212A-term2.png"
+         id="fig:output" style="width:15cm"
+         alt="Keysight EDU33212A Output Selection" />
+         <figcaption aria-hidden="true">Keysight EDU33212A Output
+         Selection</figcaption>
+         </figure>
+         <ol start="3" type="1">
+         <li>Select the desired output termination either by using the
+         knob or numeric keypad to select the desired load impedance or
+         by pressing Set to <span class="math inline">\(50\
+         \Omega\)</span> or Set to High Z. You can also set a specific
+         value by pressing Load.</li>
+         </ol>
+         <figure>
+         <img src="../resources/lab1fig/EDU33212A-term3.png"
+         id="fig:termination" style="width:15cm"
+         alt="Keysight EDU33212A Termination Selection" />
+         <figcaption aria-hidden="true">Keysight EDU33212A Termination
+         Selection</figcaption>
+         </figure>
+               </div>
+            <!-- Mathjax -->
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script>
+
+      </script>
+   </body>
+</html>
