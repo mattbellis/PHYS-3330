@@ -21,4 +21,7 @@ pandoc complex-raw.md -o ../_includes/complex.html --toc --filter pandoc-xnos --
 pandoc prelab-raw.md -o ../_includes/prelab.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
 
 
+# Siena labs
+pandoc lab1-raw-siena.md -o ../_includes/lab1-siena.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
+
 

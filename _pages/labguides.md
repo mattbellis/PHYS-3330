@@ -9,6 +9,8 @@ permalink: /lab-guides
 
 [Lab 1 - Electronic Measurements](/PHYS-3330/lab-guides/lab1)
 
+[Lab 1 - Electronic Measurements (Siena)](/PHYS-3330/lab-guides/lab1-siena)
+
 [Lab 2 - Modeling Measurement Systems Using Voltage Dividers](/PHYS-3330/lab-guides/lab2)
 
 [Lab 3 - Filters](/PHYS-3330/lab-guides/lab3)
