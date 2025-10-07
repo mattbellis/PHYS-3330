@@ -13,6 +13,8 @@ permalink: /lab-guides
 
 [Lab 2 - Modeling Measurement Systems Using Voltage Dividers](/PHYS-3330/lab-guides/lab2)
 
+[Lab 2 - Modeling Measurement Systems Using Voltage Dividers (Siena)](/PHYS-3330/lab-guides/lab2-siena)
+
 [Lab 3 - Filters](/PHYS-3330/lab-guides/lab3)
 
 [Lab 4 - Operational Amplifiers (OP-Amps) I](/PHYS-3330/lab-guides/lab4)

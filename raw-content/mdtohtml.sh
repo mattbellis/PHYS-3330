@@ -13,6 +13,7 @@ pandoc lab9-raw.md -o ../_includes/lab9.html --toc --filter pandoc-xnos --mathja
 pandoc lab10-raw.md -o ../_includes/lab10.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
 # Siena labs
 pandoc lab1-raw-siena.md -o ../_includes/lab1-siena.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
+pandoc lab2-raw-siena.md -o ../_includes/lab2-siena.html --toc --filter pandoc-xnos --mathjax="https://cdn.mathjax.org/mathjax/..." -s -N --template Template.html 
 
 
 
