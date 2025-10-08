@@ -7,15 +7,11 @@ author: [Department of Physics | University of Colorado Boulder]
 
 The goals of this lab are to
 
--  familiarize yourself with the prototyping boards (breadboards). You will use this tool extensively for the rest of the semester. 
-
--  learn how to interface your equipment with the prototyping board through the header attached to the board.
-
 -  build, test, and explore refined models of voltage divider circuits to include the effects of measurements and loads.
 
 -  get first exposure to the impact of input and output impedance.
 
--  learn how to use the switches and potentiometers on the header.
+-  continue to use the switches and potentiometers on the header.
 
 -  build a volume knob using your knowledge of voltage dividers and switches.
 
@@ -24,32 +20,6 @@ The goals of this lab are to
 **Potentiometer (pot)** - a three-terminal resistive device that provides a variable resistance between the ends and the \"wiper\" connection.-->
 
 # Prelab
-
-## Breadboard
-
-Before modern prototyping boards, people would take wooden cutting boards (aka breadboards) and tack nails into them to provide scaffolding for testing circuits. [Take a look!](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/history) Modern prototyping boards are far more sophisticated but are affectionately still called breadboards.
-
-Breadboards allow you to quickly create and modify circuits without needing to solder anything. Once the circuit works and meets the desired specifications, a printed circuit board (PCB) can be designed and made. All the components can be soldered to the PCB and the circuit can be mounted in a metal case to shield it from external electromagnetic fields. Present technology allows anyone to cheaply design, layout, and print professional circuit boards. For example: <http://www.expresspcb.com/>
-
-![Example of breadboard with rows of holes. (left) The front of the breadboard, and (right) the backside of the breadboard. [Image from Sparkfun.](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/anatomy-of-a-breadboard)](../resources/lab2fig/breadboard-pins.jpg){#fig:breadpins width="10cm"}
-
-Breadboards are composed of several holes that you can stick wires into. The holes form rows of metallic connection (as seen in Figure {@fig:breadpins}). Each of these rows are constructed like little grabbers that allow for secure connections (as seen in Figure {@fig:breadrow}).
-
-![The breadboard is composed of many of these rows of grabbers. [Image from Sparkfun.](https://learn.sparkfun.com/tutorials/how-to-use-a-breadboard/anatomy-of-a-breadboard)](../resources/lab2fig/breadboard-row.JPG){#fig:breadrow width="6cm"}
-
-Our breadboards have custom built headers (see Figure @fig:breadheader) to allow you to easily interface your equipment (scope, power supply, function generator, etc.) with the breadboard. All the connectors, switches, and potentiometers are connected to the green screw terminals that wires can be clamped in to connect to the breadboard.
-
-![A breadboard with a header attached (a second header is shown upside-down to reveal what's going on "under the hood")](../resources/lab2fig/breadboard-header.png){#fig:breadheader width="13cm"}
-
-The far left and far right screw terminals are connected to switches and potentiometers (three terminal, variable resistors). The mid-left screw terminal is connected to banana ports, and the mid-right screw terminal is connected to the inner conductors of BNC ports.
-
-### Prelab Question {#sec:0.1}
-
-![Chassis ground.](../resources/lab2fig/cground.png){#fig:chassis-ground width="4cm"}
-
-The symbol shown above is chassis ground. This refers to a common connection to the case. Notice that this is labeled in a few places on the breadboard's header (suggesting connection to the metal case).
-
-Which screw terminal (there's just one) should be used to access the outer conductor of the BNCs? You can describe the screw terminal by which connector is connected to it.
 
 ## Voltage Dividers
 
@@ -147,14 +117,14 @@ Plot $P$ vs $R_i$ from $R_i=0\ \Omega$ to $R_i=100\ \Omega$ using $V_\text{suppl
 
 Notice that, even though the curves peak at $R_i=R_o$, that decreasing $R_o$ still increases the power at all $R_i$. To deliver a lot of power, having a low output impedance is often the best choice, but this isn't always a parameter we can control.
 
-Here is some sample code for plotting. You can use `%matplotlib widget` to allow you to interact with the inline plot. Otherwise, the default should be `%matplotlib inline`, and this might be preferable to you. To use the widget you will need to install have [ipympl](https://matplotlib.org/ipympl/) installed. This can be done with `pip install ipympl` in your Anaconda prompt with your environment activated.
+Here is some sample code for plotting. 
 
 ```
 
 import numpy as np
 import matplotlib.pylab as plt
 import matplotlib
-%matplotlib widget
+
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 
@@ -173,23 +143,33 @@ Ri = np.linspace(0, 100, 1000)  # input impedance
 output_impedances = (10, 25, 50)
 
 fig, ax = plt.subplots(1, 1, figsize=(4, 3))
+
 for Ro in output_impedances:
     ax.plot(Ri, power(Ro, Ri, volt), label=f'{Ro} $\\Omega$')
+
 ax.set_xlabel('Input Impedance ($\\Omega$)')
 ax.set_ylabel('Power (W)')
+
 ax.set_title('Power delivered from non-ideal voltage source')
+
 ax.set_xticks(np.arange(0, 101, 10))
 ax.set_xticks(np.arange(0, 101, 2), minor=True)
+
 ax.set_xlim(0, 100)
 ax.set_ylim(0, .026)
+
 ax.yaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
 ax.tick_params(axis='both', which='both', direction='in', top=True, right=True)
+
 ax.legend(title="Output Impedance")
 ax.grid(linestyle="dotted")
+
 fig.tight_layout()
 fig.savefig('impedance_matching_plot.png', dpi=600, bbox_inches='tight')
 
 ```
+
+Print out this plot and put it in your notebook, along with some explanation of what it is.
 
 ## Voltage Divider with Non-ideal Power Supply
 
@@ -219,14 +199,11 @@ Write a Python function that computes the output voltage of a voltage divider wi
 
 ### Prelab Question {#sec:4.8}
 
-- What is $V_\text{out}$ for each circuit above if instead of using ideal voltage sources, they each had an output impedance of $R_o=50\ \Omega$?
+- What is $V_\text{out}$ for each circuit above if instead of using ideal voltage sources, they each had an output impedance of $R_o=50\ \Omega$? You can do this by adding an additional resistor in series, immediately after your voltage source.
     - $R_1=100\ \Omega\text{ and }R_2=50\ \Omega$
     - $R_1=2\text{ k}\Omega\text{ and }R_2=1\text{ k}\Omega$
     - $R_1=200\text{ k}\Omega\text{ and }R_2=100\text{ k}\Omega$
 
-- Right click each voltage source in the simulation and change the series resistance (output impedance) to $50\ \Omega$.
-
-- Re-run the simulation and confirm your calculations are correct.
 
 ### Prelab Question {#sec:4.9}
 
@@ -276,10 +253,12 @@ $$R_o = \frac{R_1R_2}{R_1+R_2}$$
 
 Naively, one would think that when a load $R_3$ is attached to the voltage divider, you might expect the voltage applied will be the $V_\text{out}$ of the voltage divider: i.e. $V_\text{in} \frac{R_2}{R_1+R_2}$, and indeed, the Thevenin voltage $V_T$ *is* this. However, the Thevenin equivalent resistance is very significant, and the voltage that gets to $R_3$ won't be $V_T$.
 
+<!--
 ### Prelab Question {#sec:6.1}
 
 Use your result of problem {@sec:5.1} to show that the voltage across $R_3$ is the same as the voltage predicted by the Thevenin equivalent circuit.
-
+# HOLDING OFF OF THIS ONE FOR NOW
+--> 
 
 ## Lab Activities
 
@@ -303,75 +282,19 @@ You can find more helpful information in the following sections of the text book
 
 
 
-## Test your protoboard
-
-1.  Get a protoboard (breadboard) from the shelf labeled with your section number. Using the label printer in the lab (and 12mm label tape), make a label for each of your group member's names and place on the metal plate that the breadboards are attached to. Your team will use the same board all semester. It's good practice to note the bin number in your lab notebook and continue to use that bin for the semester. At the end of the lab, you will store your protoboard in this bin (the protoboards may not be removed from the lab).
-
-2. On the protoboard interface panel, you will find:
-
-   -   BNC cable jacks that carry electric signals between your circuit on the board and the function generator and oscilloscope.
-
-   -   Colored banana jacks to bring in DC power for transistors or chips from an external power supply.
-   
-   -   Two precision $10\text{ k}\Omega$ ten‑turn potentiometers with fuses on the wiper (the fuse is a 125 mA Type 2AG measuring 5 mm x 20 mm if you need a replacement).
-   
-   -   Four switches.
-   
-   -   Screw terminals which can be used to grab wires to connect the header components to your breadboard.
-
-   <br>The components on the interface panel are pre-soldered to the screw terminals and a wiring diagram is printed on the panel. If you think there are any issues with your interface panel, please notify the [technical staff](/PHYS-3330/report-lab-issue).
-
-3.  The breadboard contains arrays of holes, interconnected by buried conductors. There is a pattern to how the the holes are connected: typically in the form of short rows and long columns (sometimes called rails). Use the DMM, mini-grabbers, and a couple short wires to test the connections of the breadboard.
-
-    - There are hundreds of holes, so testing every pair of holes would take days. Take a strategic approach to testing.
-
-    - Assume connections are in single rows or columns.
-
-    - How far does each row/column connect?
-
-4.  Draw a diagram of the basic pattern in your lab notebook of the connections. You can refer back to this diagram throughout the semester as you build new circuits.
-
-5.  Find a $1\text{ k}\Omega$ resistor and measure the resistor directly with the DMM. Now insert the resistor into two holes on the breadboard that you know are not connected and remeasure the resistance. Now insert the resistor into two holes on the breadboard that you know **are** connected and remeasure the resistance. Explain your results. What does this tell you about when/where you should measure resistors?
-
-### Making power connections to your protoboard
-
-1.  Many circuits require DC power connections. This semester, you will commonly use components that need $+15\text{ V}$ and $-15\text{ V}$. Connect the power supply to the breadboard header using banana cables, so that you can get $+15\text{ V}$ and $-15\text{ V}$ to your board.
-
-2.  **USE A COLOR CODE FOR THE POWER CONNECTIONS!** The convention used in this course is **black = ground**, <span style="color: red;">**red = $+15\text{ V}$**</span>, and <span style="color: blue;">**blue = $-15\text{ V}$**</span>. Using a consistent color code will allow you and others to understand and debug your circuits quickly. You are also less likely to plug something in incorrectly and burn up a component. You should also have a white colored banana jack on your interface panel. You may find that this is useful during your final project phase if you require a 3rd voltage source. Remember to note your color code in your lab notebook. 
-
-3.  Once you have power connected to the interface panel, use jumper wires (from the spools of wire) to connect the screw terminals to to the breadboard (+15, -15, and ground). The long rails that run the length of the board are best for distributing power to all of your components.
-
-    - ***Note:* Use these long columns for only DC power or ground.**
-    - There is capacitance between all the breadboard connections, and the longer the row/column, the more capacitance there will be to a neighbor.
-    - We will learn in lab 4 that putting capacitance between power and ground is actually helpful, so connecting ground next to both your $+15\text{ V}$ and $-15\text{ V}$ columns is good.
-
-4.  Good electrical contact is essential when you plug in components or wires. Use 22-gauge solid wire, not stranded wire. The 22-gauge wire should make a good connection with the conductors inside the board without slipping out easily. Push in each wire until you feel the contacts grip. **Don't force larger wires into the protoboard. You can damage the connectors.**
-
-    - *Note:* rotating the screws counter-clockwise (like loosening a screw) will lower/open the clamp of the terminal, allowing you place wire in the terminal; you can then turn the screw clockwise (like tightening a screw) to raise/close the clamp onto the wire. You should inspect and tug on wires when you clamp them to ensure they are connected securely.
-
-5.  It is essential to have reliable access to ground from any point on the breadboard. The interface panel is wired such that outer conductor on the BNC connectors are connected to the **black** banana jack, which forces a common chassis ground. This is indicated on the wiring diagram printed on the interface panel. To confirm this, measure the resistance between the black banana socket and the outer conductors of the BNC ports. They should read basically $0\ \Omega$. Record this in your lab notebook.
-
-![The outer conductor of the BNC connectors are all connected to the black banana port.](<../resources/lab2fig/grounding connections.png>){#fig:header width="10cm"}
-
-### Supplying power to your protoboard
-
-1.  Turn on your DC power supply; the red wire to your breadboard should now be $+15\text{ V}$ and the blue wire to your breadboard should be $-15\text{ V}$. Use your DMM to confirm this and record your results.
-
-2.  Set the current limit to about $100\text{ mA}$. This will reduce the amount of smoke released from your components when you happen to plug in the power incorrectly.
-
 ## Building and Testing Voltage Dividers
 
-Components (resistors, capacitors, transistors, etc.) are available from the community stock. Take what components you need for your experiments, and put things back when you're done with them. If you notice the inventory getting low, please let the [technical staff](/PHYS-3330/report-lab-issue) know.
+Components (resistors, capacitors, transistors, etc.) are available from the community stock. Take what components you need for your experiments, and keep them for the term. If you notice the inventory getting low, please let your instructor know.
 
 ## Fixed-value voltage divider - $1\text{ k}\Omega$
 
-1.  Build a voltage divider similar to the one shown in Figure {@fig:ideal-vd} using resistors of around $1\text{ k}\Omega$. Draw a diagram of the circuit in your lab notebook. Make sure to label the resistors and record all measured component values and voltages.
+1.  Build a voltage divider similar to the one shown in Figure {@fig:ideal-vd} using resistors of around $1\text{ k}\Omega$ and connect it to the +5 VDC source on your protoboard. Draw a diagram of the circuit in your lab notebook. Make sure to label the resistors and record all measured component values and voltages.
 
 2.  Measure each resistor with your DMM before inserting it into your circuit and record the value. Why should you measure component values before placing them in the circuit?
 
 3.  Predict the output voltage you should measure based on your input voltage and resistance measurements. Include your calculations and numerical predictions in your lab notebook.
 
-4.  Now, connect your voltage divider so that it divides the $+15\text{ V}$. Measure the output voltage using your DMM and then using your oscilloscope. Record your measurements. *Do not have the DMM and the oscilloscope connected at the same time because each may perturb the measurement differently.*
+4.  Now, connect your voltage divider so that it divides the $+5\text{ V}$. Measure the output voltage using your DMM and then using your oscilloscope. Record your measurements. *Do not have the DMM and the oscilloscope connected at the same time because each may perturb the measurement differently.*
 
 5.  Compare the voltages you predicted to the voltages you measured. Does your model of the voltage divider agree with each of your measurements? Explicitly record what criteria you used to determine whether or not the model and measurements agreed.
 
@@ -394,6 +317,8 @@ Components (resistors, capacitors, transistors, etc.) are available from the com
 7.  Does the measured input impedance agree with the instrument specs? Explicitly record what criteria you used to determine whether or not the resistances agree.
 
 We just practiced changing our model to better represent our experiment. Next week we will practice changing our experiment to better be represented by our model.
+
+# Day 2 --------------------------
 
 ## Hidden Voltage Dividers (Output Impedance)
 
