@@ -98,85 +98,34 @@ Colorado Boulder">
             <li><a href="#sec:9.1"><span
             class="toc-section-number">5.6.1</span> Prelab
             question</a></li>
-            <li><a href="#sec:9.2"><span
+            <li><a href="#sec:9.4"><span
             class="toc-section-number">5.6.2</span> Prelab
             question</a></li>
-            <li><a href="#sec:9.3"><span
+            <li><a href="#sec:10.1"><span
             class="toc-section-number">5.6.3</span> Prelab
             question</a></li>
-            <li><a href="#sec:9.4"><span
-            class="toc-section-number">5.6.4</span> Prelab
-            question</a></li>
-            <li><a href="#sec:9.5"><span
-            class="toc-section-number">5.6.5</span> Prelab
-            question</a></li>
+            </ul></li>
             </ul></li>
             <li><a href="#lab-activities"><span
-            class="toc-section-number">5.7</span> Lab activities</a>
-            <ul>
-            <li><a href="#generating-an-audio-signal"><span
-            class="toc-section-number">5.7.1</span> Generating an audio
-            signal</a></li>
-            <li><a href="#sec:10.1"><span
-            class="toc-section-number">5.7.2</span> Prelab
-            question</a></li>
-            </ul></li>
-            </ul></li>
-            <li><a href="#useful-readings"><span
-            class="toc-section-number">6</span> Useful Readings</a></li>
-            <li><a href="#lab-activities-1"><span
-            class="toc-section-number">7</span> Lab Activities</a>
+            class="toc-section-number">6</span> Lab Activities</a>
             <ul>
             <li><a href="#measure-components-predict-build"><span
-            class="toc-section-number">7.1</span> Measure components,
-            Predict, Build</a>
-            <ul>
+            class="toc-section-number">6.1</span> Measure components,
+            Predict, Build</a></li>
             <li><a href="#preparation"><span
-            class="toc-section-number">7.1.1</span> Preparation</a></li>
+            class="toc-section-number">6.2</span> Preparation</a></li>
             <li><a href="#building-the-circuits"><span
-            class="toc-section-number">7.1.2</span> Building the
+            class="toc-section-number">6.3</span> Building the
             Circuits</a></li>
-            <li><a
-            href="#use-the-models-to-predict-the-behavior-of-the-circuits"><span
-            class="toc-section-number">7.1.3</span> Use the models to
-            predict the behavior of the circuits</a></li>
             </ul></li>
-            <li><a
-            href="#setting-up-test-and-measurement-equipment-and-testing-your-circuits"><span
-            class="toc-section-number">7.2</span> Setting Up Test and
-            Measurement Equipment and Testing Your Circuits</a>
+            <li><a href="#day-2"><span
+            class="toc-section-number">7</span> Day 2 ———————————–</a>
             <ul>
-            <li><a href="#prepare-to-test-the-circuits"><span
-            class="toc-section-number">7.2.1</span> Prepare to test the
-            circuits</a></li>
-            <li><a href="#sec:vd-freq"><span
-            class="toc-section-number">7.2.2</span> Measure the
-            frequency dependence of the voltage divider</a></li>
-            <li><a
-            href="#refining-the-measurement-system-of-the-voltage-divider"><span
-            class="toc-section-number">7.2.3</span> Refining the
-            measurement system of the voltage divider</a></li>
-            </ul></li>
-            <li><a
-            href="#measure-the-frequency-dependence-of-the-low-pass"><span
-            class="toc-section-number">7.3</span> Measure the frequency
-            dependence of the low-pass</a></li>
             <li><a
             href="#measure-the-rc-time-of-the-low-pass-filter"><span
-            class="toc-section-number">7.4</span> Measure the RC-time of
+            class="toc-section-number">7.1</span> Measure the RC-time of
             the low-pass filter</a></li>
-            <li><a
-            href="#measure-the-frequency-dependance-of-the-high-pass-filter"><span
-            class="toc-section-number">7.5</span> Measure the frequency
-            dependance of the high-pass filter</a></li>
-            <li><a
-            href="#measure-the-frequency-dependence-of-the-bandpass-filter"><span
-            class="toc-section-number">7.6</span> Measure the frequency
-            dependence of the bandpass filter</a></li>
             </ul></li>
-            <li><a
-            href="#appendix-a-refined-lcr-bandpass-filter-model">Appendix
-            A: Refined LCR BandPass Filter Model</a></li>
             </ul>
         </nav>
         <hr/>
@@ -784,133 +733,82 @@ ax.set_yscale(&#39;log&#39;)
          class="math inline">\(\delta\)</span> as a function of <span
          class="math inline">\(f\)</span> (from <span
          class="math inline">\(100\text{ Hz}\)</span> to <span
-         class="math inline">\(1\text{ MHz}\)</span>) for the
-         <strong>low-pass filter</strong> - with <span
+         class="math inline">\(1\text{ MHz}\)</span>) for both the
+         <strong>low-pass filter</strong> and the
+         <strong>high-pass</strong> filter. - with <span
          class="math inline">\(R=10\text{ k}\Omega\)</span> and <span
          class="math inline">\(C=1\text{ nF}\)</span>.</p>
          <ul>
-         <li><p>Both of these should be on the same plot. See the
-         template code below to be able to plot two different y-scales
-         on the same plot.</p></li>
-         <li><p>To make your Bode plots consistent with LTSpice, you
-         should make the phase dashed with the
-         <code>linestyle='dashed'</code> argument in your plotting
-         command.</p></li>
-         <li><p>Set both to have the same color with
-         <code>color='b'</code> (or whatever color you want).</p></li>
-         <li><p>Don’t forget to label your axes and title your
-         plots!</p></li>
+         <li>Both of the filters should be on the same plots. See the
+         template code below.</li>
          </ul>
-         <p>Here is a template for plotting with two separate
-         y-axes.</p>
          <pre><code>
 import matplotlib.pylab as plt
 import matplotlib
-%matplotlib widget
+import numpy as np
+
 matplotlib.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
 matplotlib.rcParams[&#39;font.family&#39;] = &#39;STIXGeneral&#39;
 
-&quot;&quot;&quot;set your component values, r and c, here&quot;&quot;&quot;
+matplotlib.rcParams[&#39;mathtext.fontset&#39;] = &#39;cm&#39;
+matplotlib.rcParams[&#39;font.family&#39;] = &#39;STIXGeneral&#39;
+
+&quot;&quot;&quot;set your component (resistor and capacitor) values here&quot;&quot;&quot;
 
 frequency = np.logspace(2, 6, 100)
 
 &quot;&quot;&quot;Calculate gain and phase shift&quot;&quot;&quot;
-gain, phase_shift = T_low_pass(r, c, frequency)
+gain_lp, phase_shift_lp = T_low_pass(r, c, frequency)
+gain_hp, phase_shift_hp = T_high_pass(r, c, frequency)
 
-fig, ax1 = plt.subplots(1, 1, figsize=(4, 3))
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+
+ax1 = axes[0]
+ax2 = axes[1]
+
+# Plot the gains (magnitude of transfer function)
+ax1.plot(frequency, gain_lp, color=&#39;b&#39;, label=&quot;low-pass&quot;)
+ax1.plot(frequency, gain_hp, color=&#39;k&#39;, label=&quot;high-pass&quot;)
 
 ax1.set_xlabel(&#39;Frequency (Hz)&#39;)
 ax1.set_ylabel(&#39;gain&#39;)
-ax1.plot(frequency, gain, color=&#39;b&#39;, label=&quot;gain&quot;)
 ax1.set_xscale(&#39;log&#39;)
 ax1.set_yscale(&#39;log&#39;)
-ax1.set_title(&#39;Low-pass filter&#39;)
-ax1.tick_params(axis=&#39;both&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
+
 ax1.set_xlim(1e2, 1e6)
+
+ax1.set_title(&#39;Gain&#39;)
+ax1.tick_params(axis=&#39;both&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
 ax1.grid(axis=&#39;both&#39;, linestyle=&#39;dotted&#39;)
 
-ax2 = ax1.twinx()
-ax2.tick_params(axis=&#39;y&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
-ax2.set_yticks(np.arange(-90, 1, 10))
-ax2.set_yticks(np.arange(-90, 1, 2), minor=True)
+ax1.legend(loc=&quot;lower left&quot;, bbox_to_anchor=(0.11, 0.15))
+
+
+# Plot the phase shift (angle of transfer function)
+ax2.plot(frequency, phase_shift_lp, color=&#39;b&#39;, linestyle=&#39;dashed&#39;, label=&quot;low-pass&quot;)
+ax2.plot(frequency, phase_shift_hp, color=&#39;k&#39;, linestyle=&#39;dashed&#39;, label=&quot;high-pass&quot;)
 
 ax2.set_ylabel(&#39;phase shift $(\\degree)$&#39;)
-ax2.plot(frequency, phase_shift, color=&#39;b&#39;, linestyle=&#39;dashed&#39;, label=&quot;phase&quot;)
-fig.legend(loc=&quot;lower left&quot;, bbox_to_anchor=(0.11, 0.15))
+ax2.grid(axis=&#39;both&#39;, linestyle=&#39;dotted&#39;)
+ax2.set_xscale(&#39;log&#39;)
+ax1.set_xlim(1e2, 1e6)
+
+ax1.set_title(&#39;Phase shift&#39;)
+ax2.tick_params(axis=&#39;both&#39;, which=&#39;both&#39;, direction=&#39;in&#39;, top=True, right=True)
+
+ax2.legend(loc=&quot;lower left&quot;, bbox_to_anchor=(0.11, 0.15))
 
 fig.tight_layout()
-</code></pre>
-         <p>Include a “scatter” point on your plot where the 3 dB
-         frequency is. This will be a point where <span
+
+;</code></pre>
+         <p>Note that we included “scatter” point on your plot where the
+         3 dB frequency is. This will be a point where <span
          class="math inline">\(f=f_c\)</span> and <span
          class="math inline">\(|T|=1/\sqrt{2}\)</span></p>
          <p><code>ax1.scatter(1 / (2 * np.pi * r * c), 1 / np.sqrt(2), color='r', s=100)</code></p>
-         <h3 data-number="5.6.2" id="sec:9.2"><span
+         <h3 data-number="5.6.2" id="sec:9.4"><span
          class="header-section-number">5.6.2</span> Prelab question</h3>
-         <p>Create a new Bode plot for <span
-         class="math inline">\(|T|\)</span> and <span
-         class="math inline">\(\delta\)</span> as a function of <span
-         class="math inline">\(f\)</span> (from <span
-         class="math inline">\(100\text{ Hz}\)</span> to <span
-         class="math inline">\(1\text{ MHz}\)</span>) for the
-         <em>high-pass filter</em> with the same capacitance and
-         resistance values and all the same considerations above.</p>
-         <ul>
-         <li><p>You will have to change the title of the plot.</p></li>
-         <li><p>Changing the color may be nice (up to you).</p></li>
-         <li><p>You will also need to change these two lines to change
-         the phase shift axis ticks:</p>
-         <ul>
-         <li><p><code>ax2.set_yticks(np.arange(0, 91, 20))</code></p></li>
-         <li><p><code>ax2.set_yticks(np.arange(0, 91, 5), minor=True)</code></p></li>
-         </ul></li>
-         <li><p>You can move the legend by altering the <code>loc</code>
-         command (<a
-         href="https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.legend.html">valid
-         locations can be found here</a>), and the
-         <code>bbox_to_anchor</code> is used to offset the
-         legend.</p></li>
-         <li><p>Include a “scatter” point on your plot where the 3 dB
-         frequency is. This will be a point where <span
-         class="math inline">\(f=f_c\)</span> and <span
-         class="math inline">\(|T|=1/\sqrt{2}\)</span>.</p></li>
-         </ul>
-         <h3 data-number="5.6.3" id="sec:9.3"><span
-         class="header-section-number">5.6.3</span> Prelab question</h3>
-         <p>Create a new Bode plot for <span
-         class="math inline">\(|T|\)</span> and <span
-         class="math inline">\(\delta\)</span> as a function of <span
-         class="math inline">\(f\)</span> (from <span
-         class="math inline">\(100\text{ Hz}\)</span> to <span
-         class="math inline">\(1\text{ MHz}\)</span>) for the bandpass
-         filter with <span class="math inline">\(R=10\text{
-         k}\Omega\)</span>, <span class="math inline">\(C=10\text{
-         nF}\)</span>, and <span class="math inline">\(L=10\text{
-         mH}\)</span> with all the same considerations above.</p>
-         <ul>
-         <li><p>You will have to change the title of the plot.</p></li>
-         <li><p>Changing the color may be nice (up to you).</p></li>
-         <li><p>You will have to alter the <code>yticks</code> for
-         <code>ax2</code> for this plot:</p>
-         <ul>
-         <li><p><code>ax2.set_yticks(np.arange(-90, 91, 10))</code></p></li>
-         <li><p><code>ax2.set_yticks(np.arange(-90, 91, 2), minor=True)</code></p></li>
-         </ul></li>
-         <li><p>Make sure the legend is a nice place.</p></li>
-         <li><p>Include two “scatter” points on your plot where the 3 dB
-         frequency is. This will be a point for both <span
-         class="math inline">\(f=f_{c,-}\)</span> and <span
-         class="math inline">\(f=f_{c,+}\)</span> where <span
-         class="math inline">\(|T|=1/\sqrt{2}\)</span>, you can change
-         the <code>s</code> option in the <code>scatter</code> function
-         to change the size of the dots on the plot.</p></li>
-         </ul>
-         <!--### Prelab question {#sec:6.4}
-
-         Draw the 3 circuits in your lab notebook with the values labeled (the ones you used for the Bode plots). You will build these circuits in lab.-->
-         <h3 data-number="5.6.4" id="sec:9.4"><span
-         class="header-section-number">5.6.4</span> Prelab question</h3>
-         <p>Create all three circuits above in LTspice (the low-pass,
+         <p>Create both circuits above in LTspice (the low-pass,
          high-pass and bandpass filters with values you used for your
          plots). For testing the frequency response of filters, an AC
          Analysis is performed.</p>
@@ -949,382 +847,75 @@ fig.tight_layout()
          class="math inline">\(|T|\)</span> or implementing <span
          class="math inline">\(|T|\)</span> as a Python function. Revise
          your plots if necessary.</p>
-         <h3 data-number="5.6.5" id="sec:9.5"><span
-         class="header-section-number">5.6.5</span> Prelab question</h3>
-         <p>During the lab section, you will enter your measurements
-         into your Jupyter notebook and plot them with your model
-         predictions. To prepare for this, create a list of “fake data”
-         and plot it on your Bode plots. This will provide you with a
-         template to be able to compare your measurements to the
-         model.</p>
-         <p>In Python, it is usually best to handle data as a NumPy
-         array. There are two common schemes for data, which are
-         considered C-like, and Fortran-like. In C, array data is stored
-         from left to right, while in Fortran, it is stored from top to
-         bottom. Numpy is flexible and you can use either
-         convention.</p>
-         <pre><code>
-# C-like data
-data = np.array([
-    [x0, x1, x2, x3, ...],
-    [y0, y1, y2, y3, ...]
-])
-
-&quot;&quot;&quot;You can get all the x&#39;s or all the y&#39;s by either calling just the row index, or by calling for the slice of all columns at a row&quot;&quot;&quot;
-x = data[0]
-y = data[1]
-# or
-x = data[0, :]
-y = data[1, :]
-
-&quot;&quot;&quot;You can get a single data point by slicing all the rows at a given column index&quot;&quot;&quot;
-data_point4 = data[:, 4]
-</code></pre>
-         <pre><code>
-# Fortran-like data
-data = np.array([
-    [x0, y0],
-    [x1, y1],
-    [x2, y2],
-    [x3, y3],
-    ...
-])
-
-&quot;&quot;&quot;To slice the x-data and y-data, you have to ask for all the rows at a given column&quot;&quot;&quot;
-x = data[:, 0]
-y = data[:, 1]
-
-&quot;&quot;&quot;You can get a single point however by either slicing all the columns at a row, or just by asking for the row index&quot;&quot;&quot;
-
-data_point4 = data[4]
-# or
-data_point4 = data[4, :]
-</code></pre>
-         <p>Both C-like and Fortran-like data have their pros and cons,
-         but Fortran-like is far more common when working with
-         experimental data because of how simply it translates to and
-         from saved data in the form of data files where the types of
-         data are separated by columns (left to right) and data points
-         are stored in successive rows (top to bottom). Ultimately it is
-         up to you to determine your own workflows and preferences, so
-         we’ll leave this up to you to decide.</p>
-         <h2 data-number="5.7" id="lab-activities"><span
-         class="header-section-number">5.7</span> Lab activities</h2>
+         <h3 data-number="5.6.3" id="sec:10.1"><span
+         class="header-section-number">5.6.3</span> Prelab question</h3>
+         <p>Please review the lab activities so that you’re better
+         prepared when you arrive to your lab section.</p>
+         <h1 data-number="6" id="lab-activities"><span
+         class="header-section-number">6</span> Lab Activities</h1>
+         <h2 data-number="6.1"
+         id="measure-components-predict-build"><span
+         class="header-section-number">6.1</span> Measure components,
+         Predict, Build</h2>
          <p><strong><em>In this section you will use the function
          generator to power your circuit. You will use the breadboard on
          the protoboard to construct your circuit but at no time will
          you use the power on the protoboard to power your
          circuit.</em></strong></p>
-         <h3 data-number="5.7.1" id="generating-an-audio-signal"><span
-         class="header-section-number">5.7.1</span> Generating an audio
-         signal</h3>
-         <ol type="1">
-         <li>Connect a BNC-to-banana plug to the output of the function
-         generator.</li>
-         </ol>
-         <h3 data-number="5.7.2" id="sec:10.1"><span
-         class="header-section-number">5.7.2</span> Prelab question</h3>
-         <p>Please review the lab activities so that you’re better
-         prepared when you arrive to your lab section.</p>
-         <h1 data-number="6" id="useful-readings"><span
-         class="header-section-number">6</span> Useful Readings</h1>
-         <p>You can read more on passive elements and passive filters in
-         the follow sections of the following texts.</p>
-         <ol type="1">
-         <li><p><a
-         href="https://atomoptics-nas.uoregon.edu/~dsteck/teaching/electronics/electronics-notes.pdf">Steck</a>
-         Sections 2.1, 2.3, 2.4, 2.6</p></li>
-         <li><p>Fischer-Cripps 3.4-3.18</p></li>
-         <li><p>Horowitz &amp; Hill 2<sup>nd</sup> Ed. 1.13-1.24 (and
-         Appendix A on scope probes)</p></li>
-         <li><p>Horowitz &amp; Hill 3<sup>rd</sup> Ed. 1.3-1.5, 1.7, 6.2
-         (and Appendix O.1.5 on scope probes)</p></li>
-         </ol>
-         <h1 data-number="7" id="lab-activities-1"><span
-         class="header-section-number">7</span> Lab Activities</h1>
-         <h2 data-number="7.1"
-         id="measure-components-predict-build"><span
-         class="header-section-number">7.1</span> Measure components,
-         Predict, Build</h2>
-         <p>You can measure your resistors, and in some cases your
-         capacitors, with your DMM. However, we have two powerful LCR
-         measurement bridges in the lab for measuring inductances,
-         capacitances, and resistances very accurately.</p>
-         <div id="fig:lcr-meter" class="fignos">
-         <figure>
-         <img src="../resources/lab3fig/LCR%20Meter.JPG"
-         style="width:12cm"
-         alt="Figure 6: The front panel of the LCR measurement bridge" />
-         <figcaption aria-hidden="true"><span>Figure 6:</span> The front
-         panel of the LCR measurement bridge</figcaption>
-         </figure>
-         </div>
-         <p>On the left of the front panel, you can select what you
-         intend to measure. The first letter determines whether you are
-         measuring a resistance, capacitance, or inductance. The second
-         letter is usually some associated parameter that has something
-         to do with “how good” the component is. For example, you can
-         determine the <span class="math inline">\(Q\)</span> of an
-         inductor or the loss of a capacitor. Most of the time, in this
-         class, the second parameter isn’t very important.</p>
-         <p>The bridge uses an AC voltage to make the measurement, and
-         often components are frequency dependent. Ask an instructor to
-         help you pick the best measurement frequency if you’re unsure.
-         Often times, using the lowest frequency is a good bet, but if
-         you know what frequency you will be using with the component,
-         measuring with that frequency is a good idea.</p>
-         <h3 data-number="7.1.1" id="preparation"><span
-         class="header-section-number">7.1.1</span> Preparation</h3>
+         <h2 data-number="6.2" id="preparation"><span
+         class="header-section-number">6.2</span> Preparation</h2>
          <ol type="1">
          <li>Start by drawing the following circuits in your lab manual
          <ul>
-         <li>the voltage divider,</li>
          <li>the low-pass filter,</li>
          <li>the high-pass filter,</li>
-         <li>the bandpass filter.</li>
          </ul></li>
          <li>Gather the components to be able to build all four of these
          circuits (grab enough components to have them all built
          simultaneously) <strong><em>Do not build them yet</em></strong>
          <ul>
-         <li>voltage divider: <span class="math inline">\(R_1 = 10\text{
-         k}\Omega\)</span>, <span class="math inline">\(R_2=6.8\text{
-         k}\Omega\)</span>,</li>
          <li>low-pass filter: <span class="math inline">\(R = 10\text{
          k}\Omega\)</span>, <span class="math inline">\(C = 1\text{
          nF}\)</span>,</li>
          <li>high-pass filter: <span class="math inline">\(R = 10\text{
          k}\Omega\)</span>, <span class="math inline">\(C = 1\text{
          nF}\)</span>,</li>
-         <li>bandpass filter: <span class="math inline">\(R = 10\text{
-         k}\Omega\)</span>, <span class="math inline">\(C = 10\text{
-         nF}\)</span>, <span class="math inline">\(L = 10\text{
-         mH}\)</span>.</li>
          </ul></li>
          </ol>
-         <p><em>Reminder:</em> all components that aren’t resistors or
-         capacitors (which would include the <span
-         class="math inline">\(10\text{ mH}\)</span> inductor) are found
-         in the <strong><em>Guided Lab Components</em></strong> bins on
-         the wall next to the resistors and capacitors.</p>
-         <ol start="3" type="1">
-         <li><p>Measure all components and keep track of which ones will
-         go into which circuits: this can be done by drawing labeled
-         circles in your lab notebook and placing them in the
-         corresponding circles or by using pieces of label tape on each
-         component (or any other method you come up with). Label the
-         values in your circuit diagrams.</p></li>
-         <li><p>Justify why you don’t need to consider the <span
-         class="math inline">\(50\ \Omega\)</span> output impedance of
-         the function generator in your models. Consider the minimal
-         input impedance for each of these circuits and make a
-         mathematical argument.</p></li>
-         </ol>
-         <h3 data-number="7.1.2" id="building-the-circuits"><span
-         class="header-section-number">7.1.2</span> Building the
-         Circuits</h3>
+         <h2 data-number="6.3" id="building-the-circuits"><span
+         class="header-section-number">6.3</span> Building the
+         Circuits</h2>
          <ol type="1">
-         <li><p>You should not design these circuits such that the
-         signal and the ground wires from the header go to the long
-         rails on the breadboard. Consider why that would be in terms of
-         parasitic capacitance, and estimate the parasitic capacitance
-         between two of the long rails. <em>Hint:</em> Measure the
-         length of the rail and treat it like a parallel plate capacitor
-         (this will underestimate the capacitance because it won’t
-         consider the fringe fields, but it should get you pretty
-         close). You can take the gap between the rails to be <span
-         class="math inline">\(1.5\text{ mm}\)</span> and the height of
-         the wire grabbers enclosed to be <span
-         class="math inline">\(4\text{ mm}\)</span>.</p></li>
-         <li><p>Explain (using a mathematical argument) why you would
-         not want to put a signal and ground in the long rails next to
-         each other (consider the fact that a signal will oscillate at
-         some or many frequencies, and the impedance of a
-         capacitor).</p></li>
-         <li><p>Build all four circuits on separate parts of your
-         breadboard. Don’t connect anything to power or ground yet.
-         <strong>The leads on the inductors are too thick to be inserted
-         into the breadboards directly.</strong> There should already be
-         jumper wires soldered onto the ends of the inductor leads
-         (please talk to your instructor or TA if that is not the
-         case).</p></li>
-         </ol>
-         <h3 data-number="7.1.3"
-         id="use-the-models-to-predict-the-behavior-of-the-circuits"><span
-         class="header-section-number">7.1.3</span> Use the models to
-         predict the behavior of the circuits</h3>
-         <ol type="1">
-         <li><p>Calculate the expected gain <span
-         class="math inline">\(|T|\)</span> of the resistive divider
-         using the measured component values.</p></li>
-         <li><p>Calculate the expected values of the cut-off frequencies
-         for the high- and low-pass filters using the measured component
-         values.</p></li>
-         <li><p>Calculate the expected resonant (center) frequency <span
-         class="math inline">\(f_0\)</span> and quality factor <span
-         class="math inline">\(Q\)</span> for the bandpass filter using
-         the measured component values.</p></li>
-         <li><p>Make new Bode plots for all three filter circuits (three
-         independent Bode plots) using your measured component values.
-         The frequency range should cover about 2 orders of magnitude
-         above and below the cutoff frequency (i.e. <span
-         class="math inline">\(10^{-2}f_c-10^2f_c\)</span>).</p></li>
-         </ol>
-         <h2 data-number="7.2"
-         id="setting-up-test-and-measurement-equipment-and-testing-your-circuits"><span
-         class="header-section-number">7.2</span> Setting Up Test and
-         Measurement Equipment and Testing Your Circuits</h2>
-         <div id="fig:setup" class="fignos">
-         <figure>
-         <img src="../resources/lab3fig/equip-setup.png"
-         style="width:10cm"
-         alt="Figure 7: Test and Measurement Set-up. Channel 1 will “pick off” the function generator signal on its way to the circuit board. You can do this using a BNC “T” connector mounted directly on the oscilloscope input. When you connect the oscilloscope like this, you need to make sure the channel impedance is set to high impedance (not 50 \Omega)." />
-         <figcaption aria-hidden="true"><span>Figure 7:</span> Test and
-         Measurement Set-up. Channel 1 will “pick off” the function
-         generator signal on its way to the circuit board. You can do
-         this using a BNC “T” connector mounted directly on the
-         oscilloscope input. When you connect the oscilloscope like
-         this, you need to make sure the channel impedance is set to
-         high impedance (not <span class="math inline">\(50
-         \Omega\)</span>).</figcaption>
-         </figure>
-         </div>
-         <h3 data-number="7.2.1" id="prepare-to-test-the-circuits"><span
-         class="header-section-number">7.2.1</span> Prepare to test the
-         circuits</h3>
-         <ol type="1">
-         <li><p>Connect the circuit board to the function generator and
-         the oscilloscope as shown in Figure <a href="#fig:setup">7</a>.
-         It is always helpful to display both the input voltage as well
-         as the output voltage on the scope at the same time.</p></li>
-         <li><p>Test your setup by creating a <span
-         class="math inline">\(1\text{ kHz}\)</span> sine wave at <span
-         class="math inline">\(1\text{ V}_{pp}\)</span> using the
-         function generator and confirm the waveform frequency and
-         amplitude by measuring the signal on the scope. Trigger the
-         scope off of the Sync output of the function generator.
-         Remember that the output termination on the function generator
-         can be set to either <span class="math inline">\(50\
-         \Omega\)</span> or HIGH Z. Consider which setting should be
-         used here and <a
-         href="/PHYS-3330/lab-guides/lab1#appendix-b-changing-the-output-termination-on-the-function-generator-keysight-edu33212a">set
-         it to that setting</a>. <em>Hint:</em> is your load <span
-         class="math inline">\(50\ \Omega\)</span>?</p></li>
-         </ol>
-         <h3 data-number="7.2.2" id="sec:vd-freq"><span
-         class="header-section-number">7.2.2</span> Measure the
-         frequency dependence of the voltage divider</h3>
-         <p>In this experiment, you will test the frequency response of
-         the voltage divider.</p>
-         <ol type="1">
-         <li><p>According to your model, what is the frequency
-         dependence of the voltage divider? I.e. how should the transfer
-         function behave as a function of frequency?</p></li>
-         <li><p>Connect the signal from the function generator to the
-         input of the voltage divider.</p></li>
-         <li><p>Measure the transfer function (attenuation) <span
-         class="math inline">\(V_\text{out}/V_\text{in}\)</span> over a
-         large range in frequency (<span class="math inline">\(1\text{
-         kHz}\)</span> to <span class="math inline">\(15\text{
-         MHz}\)</span> in approximately decade (x10) steps; i.e. on a
-         log-scale; i.e. 10, 100, 1000, …). Record your measurements in
-         your lab notebook.</p></li>
-         <li><p>Plot your data points on a log-log plot.</p></li>
-         <li><p>At lower frequencies (like <span
-         class="math inline">\(1\text{ kHz}\)</span>), compare your
-         measured value of the attenuation to what your model predicted
-         using your actual component values. Does your low frequency
-         measurement agree with your prediction? Explicitly record what
-         criteria you used to determine whether or not the model and
-         measurements agree.</p></li>
-         <li><p>At high frequencies (like <span
-         class="math inline">\(15\text{ MHz}\)</span>), compare your
-         measured value of the attenuation to what your model predicted.
-         Does this agree with your prediction? Explicitly record what
-         criteria you used to determine whether or not the model and
-         measurements agree.</p></li>
-         <li><p>What do you think might be missing from your model that
-         would accurately account for this discrepancy? <em>Hint:</em>
-         compare the shape of the log-log plot of your data to the Bode
-         plots you made in the prelab.</p></li>
-         </ol>
-         <h3 data-number="7.2.3"
-         id="refining-the-measurement-system-of-the-voltage-divider"><span
-         class="header-section-number">7.2.3</span> Refining the
-         measurement system of the voltage divider</h3>
-         <ol type="1">
-         <li><p>Your voltage divider is cutting very high frequencies
-         (like a low pass filter). Find the cutoff frequency (where the
-         voltage is reduced to 0.707 of the low frequency value of the
-         transfer function). Record the cut-off frequency.
-         <em>Note:</em> in this case, because the voltage divider
-         already attenuates a fixed amount, the cutoff frequency is the
-         frequency when <span
-         class="math inline">\(V_\text{out}\)</span> falls to <span
-         class="math inline">\(0.707\cdot V_\text{out}\)</span> where
-         <span class="math inline">\(V_\text{out}\)</span> is the low
-         frequency output voltage (when it is acting like an ideal
-         voltage divider).</p></li>
-         <li><p>An ideal voltage divider containing only resistors
-         should not have any frequency dependence. However, these coax
-         cables have a capacitance of about <span
-         class="math inline">\(80\text{ pF/m}\)</span>. You could refine
-         your model to include this capacitance by considering the fact
-         that the cable carrying <span
-         class="math inline">\(V_\text{out}\)</span> to the scope
-         introduces capacitance in parallel to <span
-         class="math inline">\(R_2\)</span>. However, in this case, we
-         will refine the physical system instead by using a scope probe
-         (see definitions) in place of the coax cable to reduce the
-         capacitance of the measurement probe.</p>
-         <ul>
-         <li><em>Note:</em> the scope’s measurement involves a capacitor
-         (this is labeled near the inputs). This leads to fundamental
-         limitations to what frequencies can be measured by the scope
-         (regardless of scope-probe design).</li>
-         </ul></li>
-         <li><p>Repeat the measurements (and record them in your lab
-         notebook) from <a href="#sec:vd-freq">7.2.2</a>.1 using the 10x
-         probe to measure the output of the circuit. Whenever you use
-         the 10x probe, you will need to change the probe setting in the
-         channel menu to “10x”.</p></li>
-         <li><p>Plot the data using the scope-probe on the same plot as
-         the data without using the scope-probe. Use a legend to
-         differentiate the two.</p></li>
-         <li><p>Does you original model of just two resistors now
-         predict the behavior of the circuit when you use a 10X
-         probe?</p></li>
-         </ol>
-         <h2 data-number="7.3"
-         id="measure-the-frequency-dependence-of-the-low-pass"><span
-         class="header-section-number">7.3</span> Measure the frequency
-         dependence of the low-pass</h2>
-         <p><strong>In the previous section, you have shown with data
-         that the 10X probe perturbs your measurements less than the
-         coax cable. Use the probe for the rest of your
-         measurements!</strong></p>
-         <ol type="1">
-         <li><p>Connect the signal from the function generator to the
-         input of the low-pass filter. Measure the transfer function
-         <span class="math inline">\(|V_\text{out}/V_\text{in}|\)</span>
-         at a low frequency (say <span class="math inline">\(500\text{
-         Hz}\)</span>) and confirm that the filter fully passes the low
-         frequency; i.e. has a transfer function of 1.</p></li>
+         <li><p>Build the low-pass filter on your breadboard.</p></li>
+         <li><p>Set the function generator to a 10 Hz sine wave and use
+         it to power the filter.</p></li>
+         <li><p>Use the oscilloscope to measure the signal at the <span
+         class="math inline">\(V_{\rm out}\)</span> point, as shown in
+         the circuit diagrams in the lab. Take note of the amplitude of
+         the signal and set the function generator to output something
+         on the order of a few volts. Record the signal amplitude in
+         your logbook.</p></li>
          <li><p>Change the frequency until the output is 0.707 of the
          input. Record the frequency and explain why this is the 3 dB
          point.</p></li>
-         <li><p>Record a frequency and transfer function roughly an
-         order of magnitude above and below and a few points in
-         between.</p></li>
-         <li><p>Plot the data you recorded on top of the theoretical
-         model you plotted based on your measured values of <span
-         class="math inline">\(R\)</span> and <span
-         class="math inline">\(C\)</span>. Do your measurements agree
-         with your model?</p></li>
+         <li><p>Now go back down to 100 Hz. Vary the frequency of the
+         signal coming from the function generator and go up in factors
+         of 10x (100 Hz, 1000 Hz, 10 kHz, etc.) and each time, record
+         the amplitude of the signal record this in your logbook for
+         later plotting.</p></li>
+         <li><p>Describe the behavior you are seeing and write it in
+         your logbook.</p></li>
+         <li><p>Repeat this process for the high-pass filter.</p></li>
+         <li><p>Plot this data on a new plot, overlaid over the
+         theoretical predictions you made earlier. How well do they
+         agree?</p></li>
+         <li><p>Repeat this process for the high-pass filter.</p></li>
          </ol>
-         <h2 data-number="7.4"
+         <h1 data-number="7" id="day-2"><span
+         class="header-section-number">7</span> Day 2 ———————————–</h1>
+         <h2 data-number="7.1"
          id="measure-the-rc-time-of-the-low-pass-filter"><span
-         class="header-section-number">7.4</span> Measure the RC-time of
+         class="header-section-number">7.1</span> Measure the RC-time of
          the low-pass filter</h2>
          <ol type="1">
          <li><p>Change the waveform to a square wave and give it an
@@ -1344,101 +935,6 @@ data_point4 = data[4, :]
          <li><p>Calculate the 3 dB point from the RC-time and compare it
          to your previous measure of the 3 dB point.</p></li>
          </ol>
-         <h2 data-number="7.5"
-         id="measure-the-frequency-dependance-of-the-high-pass-filter"><span
-         class="header-section-number">7.5</span> Measure the frequency
-         dependance of the high-pass filter</h2>
-         <ol type="1">
-         <li><p>Over a large range in frequency, <span
-         class="math inline">\(1\text{ kHz}\)</span> to <span
-         class="math inline">\(1\text{ MHz}\)</span> at each decade
-         (order of magnitude), and several extra steps within the decade
-         around your expected cutoff frequency. Record your measurements
-         in your lab notebook.</p></li>
-         <li><p>Determine and record the cut-off frequency for the
-         high-pass filter. Compare your measured half power point with
-         the cut-off frequency computed from the actual component values
-         used. Include your comparison in your lab notebook.</p></li>
-         <li><p>Test the predicted frequency response by plotting your
-         data points directly on your Bode plot. Does the model agree
-         with your data? Explicitly record what criteria you used to
-         determine whether or not the model and measurements
-         agree.</p></li>
-         </ol>
-         <h2 data-number="7.6"
-         id="measure-the-frequency-dependence-of-the-bandpass-filter"><span
-         class="header-section-number">7.6</span> Measure the frequency
-         dependence of the bandpass filter</h2>
-         <ol type="1">
-         <li>When the input frequency is at the resonance value
-         (i.e. center frequency) <span
-         class="math inline">\(f_0\)</span>, <span
-         class="math inline">\(V_\text{out}\)</span> will be a maximum
-         and the phase shift between the input and output waveforms will
-         be zero. Consider both these facts and find the resonant
-         frequency. Describe your procedure and compare your result to
-         your predicted value.</li>
-         </ol>
-         <!--Find the resonant frequency $f_0$ both ways. That is, adjust the frequency so that (1) $|V_{out}/V_{in}|$ is a maximum, and (2) there is zero phase difference between $V_{out}$ and $V_{in}$. Record both measurements of $f_0$. Which method is more precise? Explain why you think so. *Hint: try to estimate the uncertainty in both cases.*-->
-         <!--2.  The LCR meter measured the inductance of your inductor at a particular frequency. Your inductor's inductance changes slightly at different frequencies. Use your measurement of $f_c$ to get a more accurate measure of $L$ on resonance by doing the following. Compare the measured $f_c$ with the expected value $1/(2\pi\sqrt{LC})$. Refine the model of the inductor by calculating a corrected value of $L$ from the measured values of $f_0$ and $C$, and use this refined value below. Compare this value to the value you measured using the LCR meter in the lab.-->
-         <ol start="2" type="1">
-         <li><p>The LCR meter measured the inductance of your inductor
-         at a particular frequency; however, the inductance itself is
-         frequency dependent. In the prelab, you calculated the
-         relationship between the resonant frequency and the capacitance
-         and inductance. Use this equation and your measurements of the
-         center frequency and the capacitance to refine your measure of
-         the inductance.</p></li>
-         <li><p>Determine the quality factor <span
-         class="math inline">\(Q\)</span> by measuring the frequencies
-         at the two half-power points <span
-         class="math inline">\(f_{c,+}\)</span> and <span
-         class="math inline">\(f_{c,–}\)</span>. Record your
-         measurements. Recall that <span
-         class="math inline">\(Q=f_0/\Delta f\)</span> where <span
-         class="math inline">\(\Delta f=f_{c,+}-f_{c,-}\)</span>.
-         <em>Hint:</em> The half-power points are where <span
-         class="math inline">\(V_\text{out}=V_\text{out}(\text{max})/\sqrt
-         2\)</span>, not necessarily <span
-         class="math inline">\(V_\text{in}/\sqrt{2}\)</span>.</p></li>
-         <li><p>Compare the measured value of <span
-         class="math inline">\(Q\)</span> with your predicted value. Do
-         they agree?</p></li>
-         <li><p>It is common in all electrical circuits to find <span
-         class="math inline">\(Q\)</span> values that are somewhat lower
-         than values you predict. This is due to additional losses in
-         the circuit. In this case the losses are primarily in the
-         inductor. Measure the inductor’s “equivalent series resistance”
-         (ESR) using a DMM. You can refine your model by including this
-         resistance in your circuit. Draw a schematic that includes this
-         resistor. What is the predicted <span
-         class="math inline">\(Q\)</span> when you include this
-         resistance in your model? <em>See Appendix A.</em> Does this
-         result in better agreement with your measured <span
-         class="math inline">\(Q\)</span>?</p></li>
-         <li><p>Measure the gain <span
-         class="math inline">\((|V_\text{out}/V_\text{in}|)\)</span> as
-         function of frequency. Use your model prediction to decide what
-         values of frequency to take data. Plot your measurements on the
-         same graph as your model. Does your data match your model
-         prediction? Note, your transfer function did not include the
-         refined value of <span
-         class="math inline">\(Q\)</span>.</p></li>
-         </ol>
-         <h1 class="unnumbered"
-         id="appendix-a-refined-lcr-bandpass-filter-model">Appendix A:
-         Refined LCR BandPass Filter Model</h1>
-         <p>Inductors often have considerable resistance as they are
-         just wires wrapped around a ferrite core. One can include this
-         resistance as a resistor in series with the inductor. The
-         refined model of the Q of this system is</p>
-         <p><span id="eq:10" class="eqnos"><span
-         class="math display">\[Q_\text{refined} =
-         \frac{\frac{R}{R_{L}}}{R\sqrt{\frac{C}{L}} +
-         \frac{1}{R_{L}}\sqrt{\frac{L}{C}}}\]</span><span class="eqnos-number">(3)</span></span></p>
-         <p>where <span class="math inline">\(R_L\)</span> is the
-         equivalent series resistance of the inductor. This is
-         non-trivial to derive.</p>
                </div>
             <!-- Mathjax -->
       <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
