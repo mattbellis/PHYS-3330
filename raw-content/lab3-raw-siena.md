@@ -5,19 +5,15 @@ author: [Department of Physics | University of Colorado Boulder]
 
 # Goals
 
-In this lab, you will characterize the frequency dependence of three passive filters. You will model, simulate, and test passive filter circuits and learn how to make more accurate high-frequency measurements with the oscilloscope.
+In this lab, you will characterize the frequency dependence of two passive filters. You will model, simulate, and test passive filter circuits and learn how to make more accurate high-frequency measurements with the oscilloscope.
 
 You will learn to use new equipment and devices
 
 -   Oscilloscope probe
 
--   Capacitors and inductors
-
--   LCR meter
+-   Capacitors 
 
 You will learn to model the frequency dependence and effects on phase of passive filters
-
-You will also learn how to refine the oscilloscope measurement to reduce the effect of coax capacitance.
 
 Filters are incredibly important components in physical experiments. Often times your experimental goal is to detect an electronic signal hidden in a background of noise and unwated signals. Filters are a tool that remove (cut) signals and noise of certain frequencies, and preserve (pass) signals of other frequencies. For example, the signal of interest may be at a particular frequency, as in an NMR (nuclear magnetic resonance) experiment, or it may be an electrical pulse from a single photon detector. The background generally contains thermal noise from the transducer and amplifier, pick up of $60\text{ Hz}$ wall power, transients from machinery, radiation from radio, TV stations, light sources, cell phones, and so forth. The purpose of filtering is to enhance the signal of interest by recognizing its characteristic time dependence and to reduce the unwanted background to the lowest possible level. A radio does this when you tune to a particular station, using a resonant circuit to only allow a narrow band of frequency through (the center frequency of this band is *the station*). The signal you want may be less than $10^{-6}$ of the total radiation power at your antenna, yet you get a high-quality signal from the selected station due to the filtering. Many experiments require specific filters designed so that the signal from the phenomenon of interest lies in the pass-band of the filter, while the attenuation bands are chosen to suppress the background and noise.
 
@@ -31,7 +27,7 @@ There are 4 basic kinds of filters:
     
 - Notch filter (passes low and high frequencies and cuts frequencies centered arounda center frequency)
 
-In this lab you will model, simulate, and test the first three kinds of circuits, but you will gain the requisite skills to be able to implement a notch filter in your final project if necessary.
+In this lab you will model, simulate, and test the first *two* kinds of circuits.
 
 # Definitions
 
@@ -149,36 +145,6 @@ Angular frequency $\omega$ is typically used when working out theory to avoid wr
 
 Evaluate the impedance of the capacitor at the two frequency extremes ($\omega = 0$ and $\omega\rightarrow\infty$). Describe what the capacitor acts like at these extremes (think in terms of open or short circuits).
 
-## Capacitance of cables
-
-Cables carry current to a load and then back to the source (creating a circuit). The two most common cable constructions are a pair of wires (sometimes twisted into a "twisted pair") or a coaxial cable. Either way, when used, there will be a voltage difference between the conductor carrying current to the load and the conductor carrying current back to the source; therefore, the cable has capacitance!
-
-![Geometry of a coax cable's cross section with an inner conductor with radius $a$ and outer conductor with radius $b$. When the outer conductor is held at ground and the inner conductor has a positive voltage above ground, positive charge will accumulate on the inner conductor and negative charge on the outer conductor.](../resources/lab3fig/coax-cap.png){#fig:cap-geo width="5cm"}
-
-For a coax cable, we can use Gauss's Law to determine the electric field between the conductors. Drawing a Gaussian cylinder co-axial to the cable and between the conductors $(a<r<b)$ will enclose the charge on the inner conductor. However, if you take the radius of the Gaussian cylinder to be greater than the whole cable $(r>b)$, then the charge on the outer conductor will cancel the charge on the inner conductor, so there is **no** field outside the cable (one of the advantages of this choice of cable geometry). If our Gaussian cylinder has radius $r$ and length $\ell$, then the surface area of the wall is $2\pi r\ell$. The charge enclosed then would be $2\pi a \ell\sigma$ (where $\sigma$ is the surface charge density). Gauss's law says
-
-$$\int\mathbf{E}\cdot d\mathbf{A} = \frac{\rho_\text{enclosed}}{\varepsilon_r\varepsilon_0}$$
-
-$$2\pi E r\ell = \frac{2\pi a\ell\sigma}{\varepsilon_r\varepsilon_0}$$
-
-$$\mathbf{E} = \frac{\sigma}{\varepsilon_r \varepsilon_0}\frac{a}{r}\hat{\mathbf{r}}$$
-
-We can relate this to the voltage by integrating from $r=b$ (where the voltage is held at ground) to $r=a$
-
-$$\Delta V = -\int_b^a \mathbf{E}\cdot d\mathbf{r}' = -\frac{\sigma a}{\varepsilon_r \varepsilon_0} \int_b^a\frac{dr}{r} = \frac{\sigma a}{\varepsilon_r \varepsilon_0}\ln\bigg(\frac{b}{a}\bigg)$$
-
-The capacitance can then be found by dividing the charge $Q=2\pi a \ell\sigma$ by this voltage
-
-$$C = \frac{Q}{V} = \varepsilon_r\varepsilon_0\frac{2\pi a \ell\sigma}{\sigma a\ln{(b/a)}} = \varepsilon_r\varepsilon_0\frac{2\pi \ell}{\ln{(b/a)}}$$
-
-Often cables are labeled by their capacitance per length
-
-$$\frac{C}{\ell} = \varepsilon_r\varepsilon_0\frac{2\pi}{\ln{(b/a)}}$$
-
-### Prelab question {#sec:2.1}
-
-A BNC cable has an inner conductor with a diameter of roughly 1.1 mm and a dielectric with a diameter of roughly 4.5 mm. The dielectric, Teflon, has a relative dielectric constant of roughly 2. Estimate the capacitance per unit length of this cable (report it in pF/m). *Note:* the electric permitivity of free space in picofarad per meter is $8.85\text{ pF/m}$.
-
 ## Inductors
 
 The inductor is an element that stores energy in the form of magnetic fields when current is passed through them. Any loop(s) of current has an associated magnetic field that it self generates, so all circuits have some amount of inductance (which is often ignored). When the current changes, naturally the strength of the self-induced magnetic field through the loop changes. Faraday's law states that this will create a back EMF (electromagnetic force in units of volts). This can be written as a voltage across the inductor
@@ -229,14 +195,27 @@ Find $|T_\text{low-pass}|$ (the magnitude of the complex number) and express it 
 
 ### Prelab Question {#sec:4.3}
 
-Write two Python functions:
+Write a Python function called `T_low_pass` that, for a low-pass filter
 
-- one that calculates $|T|$ with $R$, $C$, and $f$ as inputs.
+- Takes in $R$, $C$, and $f$ as inputs.
+- And returns that $|T|$ and $\delta$ (in degrees)
 
-- one that calculates $\delta$ with the same inputs (convert radians to degrees).
+To use complex numbers in python, you can use the `nj` notation, where `n` is a number. For example, 
+here is how you would construct a complex number and then find the magnitude (or argument) and
+the phase. 
 
-Alternatively, you can write a single function that spits out both results, but this is up to you.
+```
 
+z = 3 + 4j
+
+print(z)
+
+mag = np.abs(z)
+phase = np.angle(z)
+
+print(f"magnitude: {mag}    phase: {phase}")
+
+```
 ## High-Pass Filters
 
 ![A high-pass filter](../resources/lab3fig/highpass.png){#fig:highpass width="10cm"}
@@ -265,13 +244,11 @@ Calculate $|T_\text{high-pass}|$ and express it in terms of $f$ instead of $\ome
 
 ### Prelab Question {#sec:5.3}
 
-Write two Python functions:
+Write a Python function called `T_high_pass` that, for a high-pass filter
 
-- one that calculates $|T|$ with $R$, $C$, and $f$ as inputs.
+- Takes in $R$, $C$, and $f$ as inputs.
+- And returns that $|T|$ and $\delta$ (in degrees)
 
-- one that calculates $\delta$ with the same inputs (convert from radians to degrees).
-
-Alternatively, you can write a single function that spits out both results, but this is up to you.
 
 ## Cutoff Frequency
 
@@ -324,89 +301,6 @@ where $\tau$ is the time constant of the decay $(\tau=RC)$ and $t$ is the time s
 
 Evaluate $V_\text{out}(\tau)$; i.e. the voltage across the capacitor when $t=\tau$ (*hint:* express this in terms of the natural number $e$). Experimentally, you can measure the time it takes for the capacitor to discharge to this voltage. When the voltage is $V_\text{out}(\tau)$, then the time it takes to discharge to this voltage will be $\tau=RC$; therefore, measure the time it takes to reach this voltage is a measure of $RC$ which you can use to calculate $f_c$.
 
-## Parallel LCR Bandpass Filters
-
-![A simple bandpass filter using a parallel inductor and capacitor](../resources/lab3fig/bandpass.png){#fig:bandpass width="13cm"}
-
-Figure @fig:bandpass shows a simple bandpass filter using a resistor, capacitor, and inductor. The capacitor and inductor can be treated as a single lumped element with an impedance equal to the elements' impedances in parallel
-
-$$ \frac{1}{Z_{LC}} = \frac{1}{(j\omega C)^{-1}} + \frac{1}{j\omega L}$$
-
-$$Z_{LC} = \frac{j\omega L}{1- \omega^2 LC}$$
-
-Treating this as another generalized voltage divider leads to the transfer function
-
-$$T_\text{bandpass} = \frac{Z_{LC}}{R+Z_{LC}} = \frac{j\omega L}{R-\omega^2 LRC + j\omega L}$$
-
-$$|T_\text{bandpass}| = \frac{\omega L}{\sqrt{(R-\omega^2 LRC)^2+(\omega L)^2}}$$
-
-$$\delta = \tan^{-1}\bigg(\frac{R-\omega^2LRC}{\omega L}\bigg)$$
-
-The input impedance is
-
-$$R_i = R + Z_{LC} = R + \frac{j\omega L}{1-\omega^2 LC}$$
-
-where
-
-$$|R_i| = R\sqrt{1+ \frac{\omega^2L^2}{(R-\omega^2LRC)^2}}$$
-
-### Prelab Question {#sec:7.1}
-
-As the name suggests, this filter passes a "band" of frequencies. This means that it should "cut" both low and high frequencies. Show that at $\omega=0$ and $\omega\rightarrow\infty$ the magnitude of $T$ goes is zero.
-
-### Prelab Question {#sec:7.2}
-
-The *center frequency* $f_0$ is defined by the frequency that maximizes the transfer function (this is the frequency it passes "strongest"). For these simple LRC bandpass filters, this happens when 
-
-$$|T_\text{bandpass}|=1$$
-
-Find $f_0$ using this fact and the equation for $|T_\text{bandpass}|$ above $($*Hint:* $\omega_0=2\pi f_0)$
-
-### Prelab Question {#sec:7.3}
-
-Write two Python functions:
-
-- one that calculates $|T|$ with $R$, $L$, $C$, and $f$ as inputs.
-
-- one that calculates $\delta$ with the same inputs (convert from radians to degrees).
-
-Alternatively, you can write a single function that spits out both results, but this is up to you.
-
-## Quality factor
-
-For a low-pass and high-pass filter, the bandwidth can be described simply by the cutoff frequency. For a low-pass filter, the bandwidth is $0\text{ Hz}$ to $f_c$ and for the high-pass filter, the bandwidth is $f_c$ to $\infty\text{ Hz}$. The bandpass filter however, has two cutoff frequencies, one above, and one below the center frequency. The bandwidth is then
-
-$$\Delta f = f_{c,+} - f_{c,-}$$
-
-However, this bandwidth is usually represented as a dimensionless quantity called the *quality factor* $Q$ which is the center frequency divided by the bandwidth:
-
-$$Q = \frac{f_0}{\Delta f}$$
-
-A *quality factor* in general, is a property of any resonator (oscillator). Our LCR bandpass filter is a resonator ([here's a nice, short video explanation](https://www.youtube.com/watch?v=nh4q7mIhLrY)): the capacitor and inductor exchange electric field energy (in the capacitor) for magnetic field energy (in the inductor) with a frequency of $f_0$ (the center frequency).
-
-For a bandpass filter, the *quality factor* defines the "sharpness" of the filter. The higher the *quality factor*, the smaller the bandwidth around the center frequency is. Conversely, the smaller the *quality factor*, the wider the bandwidth.
-
-The two cut off frequencies can be found by setting the magnitude of the transfer function to the -3 dB ratio: $(1/\sqrt{2})$
-
-$$\frac{\omega L}{\sqrt{(R-\omega^2 LRC)^2+(\omega L)^2}} = \frac{1}{\sqrt{2}}$$
-$$\frac{(\omega L)^2}{(R-\omega^2 LRC)^2+(\omega L)^2} = \frac{1}{2}$$
-
-Clearly, the left hand side equals $1/2$ when
-
-$$(R-\omega^2 LRC)^2 = (\omega L)^2$$
-
-$$R-\omega^2 LRC = \pm\omega L$$
-
-$$RC \omega^2 \pm\omega - \frac{R}{L} = 0$$
-
-$$\omega_{c,\pm} = \frac{\pm1+\sqrt{1+4\frac{R^2C}{L}}}{2RC}$$
-
-$$\Delta\omega = \omega_{c,+}-\omega_{c,-} = \frac{1}{RC}$$
-
-### Prelab Question {#sec:8.1}
-
-Express the quality factor $Q$ with respect to $L$, $R$, and $C$.
-
 ## Bode plots
 
 Bode plots are log-log plots of a property vs frequency. You will find all sorts of Bode plots in datasheets for all kinds of devices, and they are also a useful way of visualizing how a filter acts.
@@ -427,24 +321,16 @@ def function_to_plot(frequency):
 frequency = np.logspace(0, 8, 1000)
 
 fig, ax = plt.subplots(1, 1, figsize=(4, 3))
-ax.loglog(frequency, function_to_plot(frequency))
-
-```
-
-The `loglog` function plots with both the x and y axes on a log scale; you can set an individual axis to log scale with
-
-```
-
-fig, ax = plt.sublots(1, 1, figsize=(4, 3))
 ax.plot(x, y)
 ax.set_xscale('log')
 ax.set_yscale('log')
 
 ```
 
-which gives you more control over which axes are on what scale.
+which gives you control over which axes are on what scale. For the plots that you will be making, 
+  try turning off and on the log-scale to see what the figure looks like. Sketch
+  these figures in your lab book.
 
-Here's [the documentation for matplotlib.pylab.loglog](https://matplotlib.org/stable/api/_as_gen/matplotlib.pyplot.loglog.html) which may be helpful to look at.
 
 ### Prelab question {#sec:9.1}
 
@@ -469,15 +355,12 @@ import matplotlib
 matplotlib.rcParams['mathtext.fontset'] = 'cm'
 matplotlib.rcParams['font.family'] = 'STIXGeneral'
 
-"""set your component values here"""
+"""set your component values, r and c, here"""
 
 frequency = np.logspace(2, 6, 100)
 
 """Calculate gain and phase shift"""
-gain, phase_shift = low_pass(r, c, frequency)
-# or
-gain = low_pass_gain(r, c, frequency)
-phase_shift = low_pass_phase(r, c, frequency)
+gain, phase_shift = T_low_pass(r, c, frequency)
 
 fig, ax1 = plt.subplots(1, 1, figsize=(4, 3))
 
@@ -636,6 +519,15 @@ data_point4 = data[4, :]
 Both C-like and Fortran-like data have their pros and cons, but Fortran-like is far more common when working with experimental data because of how simply it translates to and from saved data in the form of data files where the types of data are separated by columns (left to right) and data points are stored in successive rows (top to bottom). Ultimately it is up to you to determine your own workflows and preferences, so we'll leave this up to you to decide.
 
 ## Lab activities
+
+***In this section you will use the function generator to power your circuit.
+You will use the breadboard on the protoboard to construct your circuit but at
+no time will you use the power on the protoboard to power your circuit.***
+
+### Generating an audio signal
+
+1.  Connect a BNC-to-banana plug to the output of the function generator.
+
 
 ### Prelab question {#sec:10.1}
 Please review the lab activities so that you're better prepared when you arrive to your lab section.
