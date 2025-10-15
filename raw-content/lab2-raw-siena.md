@@ -320,104 +320,46 @@ We just practiced changing our model to better represent our experiment. Next we
 
 # Day 2 --------------------------
 
-## Hidden Voltage Dividers (Output Impedance)
+## Working with the function generator
 
-In this section we will explore how a real voltage source with an output impedance voltage divides with a load (input impedance).
+In this section we will experiment with the function generator and 
+measure the output on a function generator, 
+create audio signals with it, 
+and use a set of resistors and the potentiometer to act as a volume knob. 
 
-1.  Draw a diagram representing a real voltage source powering a load.
+***In this section you will use the function generator to power your circuit.
+You will use the breadboard on the protoboard to construct your circuit but at
+no time will you use the power on the protoboard to power your circuit.***
 
-2.  Remember last week when you set the function generator to an output termination of *High Z*? We want to do this EVERY TIME we use the function generator in this class. This does not change the output impedance of the function generator: it's ALWAYS $50\ \Omega$, but by default, it *assumes* you are impedance matching everything with $50\ \Omega$ (you worked out why this might be important to do in the prelab). Turn on your function generator and set it to *High Z*. If you don't remember how to change this setting, refer to Appendix B in Lab 1. 
+### Generating an audio signal
 
-3.  Grab a speaker (this will be your load) and use your DMM to measure the resistance of the speaker. On your diagram label the resistances of the output impedance of the function generator ($50\ \Omega$) and the impedance of your speaker.
+1.  Connect a BNC-to-banana plug to the output of the function generator.
 
-4.  What you program the function generator to deliver to your load will be $V_\text{supply}^\text{(int)}$; if the transfer function is $T=V_\text{supply}^\text{(ext)}/V_\text{supply}^\text{(int)}$, calculate this transfer function. This will determine how much of your function generator's voltage will actually reach the load.
+2.  Create a $2\ \text{V}_\text{pp}$ sine wave with a $432\ \text{Hz}$ frequency (or so) and trigger on the *Sync* (in the trigger menu, change the channel to Channel 1). This will provide a nice lower frequency tone (a $\text{C}_4$ note) at a volume that won't be too obnoxious to your neighbors.
 
-5.  Set up the function generator and the oscilloscope.
+3.  Use the probe on the oscilloscope to measure the output of the function generator.
 
-    1.  Set up the function generator and the oscilloscope so that you can read Channel 1 from the function generator with Channel 1 of the oscilloscope (use a BNC T-connector so that later you can eventually connect this to your speaker).
+4.  Confirm on the oscilloscope that the frequency and the amplitude of your wave match the settings on the function generator; i.e. measure and record the values and how you determined them.
 
-    2.  Connect the *Sync* on the function generator with Channel 4 of the oscilloscope.
-
-    3.  Create a $2\ \text{V}_\text{pp}$ sine wave with a $432\ \text{Hz}$ frequency and trigger on the *Sync* (in the trigger menu, change the channel to Channel 4). This will provide a nice lower frequency tone (a $\text{C}_4$ note) at a volume that won't be too obnoxious to your neighbors.
-
-6.  Confirm on the oscilloscope that the frequency and the amplitude of your wave match the settings on the function generator; i.e. measure and record the values and how you determined them.
-
-7.  Apply the signal from the function generator to the speaker (use the T-connector, so you can still see it on the oscilloscope). You can use mini grabbers to connect to the two ends of the speaker.
-
-    1.  Now what is the amplitude of the sine wave on Channel 1 of the oscilliscope?
-
-    2.  Why did the amplitude change after applying the load to the function generator's output? Disconnect the speaker: did the amplitude recover? Why? Reconnect the function generator to your circuit and confirm the voltage changes.
-
-4.  When you measure the voltage without the speaker, there is (virtually) no current, so no voltage drops across the $50\ \Omega$ output impedance of the function generator. In this case, we are measuring the internal, source voltage $V_\text{supply}^\text{(int)}$ ($V_\text{in}$ of our voltage divider model). When you apply the speaker, current flows and voltage drops across the output impedance, so that the full voltage doesn't reach the load $V_\text{supply}^\text{(ext)}$ ($V_\text{out}$ in our voltage divider model). Using both measurements calculate the transfer function.
-
-5.  Compare the calculated result from the measurements to the calculation from the model based on the resistances.
-
-Since neither the impedance of the speaker nor the output impedance of the function generator can be changed, in order to get more power to the speaker, you will have to design more circuitry to deliver the signal in a way that draws little to no current from the function generator. In Lab 4, you will learn to build a voltage buffer circuit that does just that.
+5.  Now disconnect the oscilloscope and connect the function generator to the speaker on the breadboard.
+If the volume is too loud, adjust the "*Amplitude*" on the oscilloscope.
 
 ## Build a Controllable Voltage Source (Volume Knob)
 
-You will now use your skills with building and testing voltage dividers to build a controllable voltage source using a potentiometer and a switch.
+You will now use your skills with building and testing circuits to build a controllable voltage source using a potentiometer.
 
-![A potentiometer (symbol shown on the right), has a wiper which connects at a variable position along a length of wire with a fixed resistance per length. The potentiometer acts like two variable resistors (as shown on the right) where $R_1+R_2$ is a fixed value (in our case, $10\text{ k}\Omega$)](../resources/lab2fig/pot.png){#fig:pot width="8cm"}
+1.  Remind yourself of how the 1kOhm potentiometer on your protoboard works, by testing it out with the DMM.
 
-## Testing the Potentiometer (pot)
+2.  Put the function generator in parallel with a) the 1kOhm potentiometer and b) a series circuit of
+a 4kOhm resistor (or thereabouts) and the speaker (note the resistance of the speaker). 
 
-1.  Set the dial to some point between 0 and 1000, but not 500. Since you have a 10-turn, $10\text{ k}\Omega$ pot, each "tick" of the dial represents ~$10\ \Omega$; therefore, the resistance between the wiper and one of the terminals should be equal to the dial value multiplied by $10\ \Omega$. The resistance between the wiper and the remaining terminal should be the previous resistance subtracted from $10\text{ k}\Omega$.
+3.  Does the 1kOhm pot act like a volume knob? Why? 
 
-2.  Use the DMM to measure the resistance between all possible pairs of connections. Determine which terminal corresponds to the wiper, and which terminals correspond to the ends of the dial. Test with a DMM at a few different dial settings to get the hang of it.
+4.  Now replace the 4kOhm resistor with a resistor on the order of hundreds of Ohms. What effect
+has this had? Why?
 
-3.  Draw a diagram of the pot including a model of the internal components and external connections using the resistance observations (which "resistor" gets smaller and which gets bigger when you turn the dial clockwise?).
+5.  With either resistor, use the oscilloscope to measure the voltage drop across the resitor that
+is in series with the speaker. Is it what you expect? What happens to the signal when you turn the
+potentiometer?
 
-## Testing the Switch
 
-![The switches on your breadboard header have three terminals. Moving the position of the lever changes which terminal the center terminal connects to. The left and right of the figure show the two possible states of the switch.](../resources/lab2fig/switch.png){#fig:switch width="7cm"}
-
-1. Connect wires to screw terminals of a switch and test with your DMM which lever position corresponds to which connections.
-
-## Build a variable voltage source
-
-1. Draw a circuit diagram that uses one pot and one switch to create a variable voltage divider that can be switched off (*Hint:* have the switch switch between connecting the output to the voltage divider or to ground).
-
-2. Check in with an instructor regarding your circuit diagram.
-
-3. Derive an expression for the output voltage based on the input voltage and the two resistances. Since the two resistances always add up to $10\text{ k}\Omega$, express it in terms of this resistance and just one of the resistances of an end of the pot to the wiper.
-
-4. Construct your voltage divider using the function generator for $V_\text{in}$ and use a scope to measure the output voltage.
-
-    - Should you include the oscilliscope input impedance in your model? Explain why or why not. Compare the scope input impedance to the resistance of the 10k pot. Consider the situation where $R_1\approx 0\ \Omega$ and $R_2\approx 10\text{ k}\Omega$; when you combine $R_2$ and the scope in parallel, does the resistance significantly deviate from when there is no scope (think back to section {@sec:parallel-model}).
-
-    - Do you need to include the function generator's $50\ \Omega$ output impedance in your model? Explain why or why not. Consider the extreme ends of having the pot turned all the way one way and all the way the other way.
-
-5. Predict the maximum and minimum output voltage (when the wiper is at one end and then the other).
-
-6. Test your model by making measurements on the scope. Make sure to include the limits of the voltage source. Do your measurements agree with your predictions? Explicitly record what criteria you used to determine whether or not the model and measurements agree.
-
-   <!--Now connect a low voltage light bulb to the output. Do not exceed a current limit of 120 mA or the fuse on your potentiometer will blow out (it is a 125 mA fuse). Describe qualitatively the brightness of the bulb as the pot knob is adjusted. What is the minimum voltage needed to see the light bulb turn on?-->
-
-7. **Bonus question:** Draw a diagram that would accurately model the circuit if you try to power the speaker with this volume knob. How will the impedance of the load impact the model? Express $V_\text{out}$ with respect to one of the resistances (from the wiper to one end of the resistor) of the potentiometer. The equation should include the $50\ \Omega$ output impedance of the function generator, $10\text{ k}\Omega$ of the total potentiometer resistance, and the measured resistance of the speaker (you can round to the nearest Ohm).
-
-<!--7. **Bonus question:** A good voltage source has very little (a few ohms) output resistance and thus very little power is dissipated in the supply. What is the output resistance of the circuit (including your power supply and external components) if it produces 10V? Would this circuit be good for creating a variable voltage source in the range of 5-10 V? HINT: Consider the power dissipated in the source. Explain using your diagram, model, and values of resistance.-->
-
-# Appendix A: Calibrating the 10-turn Potentiometer (If Needed) {#appendix-a-calibrating-the-10-turn-potentiometer-if-needed .unnumbered}
-
-1.  The potentiometer on the circuit board panel has three connections. Two of the connections are at opposite end of a resistor. The third connection is connected to a sliding \"wiper.\"
-
-2.  Your potentiometer is actually a very precise device! You can control the intermediate resistances at the level of 0.1% with a little care. To understand how, examine the dial on the potentiometer. It should have a window with a number in it, and a dial marked with a scale that goes from 00 to 99. The digit in the window increments with each full turn of the dial, so it represents the most significant digit of the setting number: if it says 3 in the window and the dial reads 55, then the setting is 355. For a 10-turn potentiometer such as yours, the dial should be able to run from 000 to 1000 by turning the knob ten full turns.
-
-3.  First, check if your pot is already calibrated! Turn the knob counterclockwise until it stops. If the dial reads 000 in this position, your pot is calibrated.
-
-4.  If the dial reads something other than 000 in this position, do the following procedure:
-
-    1.  Use a 0.050" Allen key to loosen the small set-screw on the side of the knob.
-
-    2.  Pull the entire dial off the panel.
-
-    3.  Turn the inner knob that remains on your panel counterclockwise until it stops.
-
-    4.  Turn the now-detached knob until the dial reads 000.
-
-    5.  Lock the dial by depressing the black switch on knob (and verify that the dial still reads 000).
-
-    6.  Push the dial back onto the inner knob, rotating the outside of the dial **counterclockwise** until it snaps in place against the panel and wont rotate. The dial should still read 000. If it doesnt, repeat the last three steps.
-    
-    7.  Use the Allen key to tighten the set screw. Check the calibration again: the knob should stop at 000 and 1000.
