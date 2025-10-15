@@ -17,6 +17,8 @@ permalink: /lab-guides
 
 [Lab 3 - Filters](/PHYS-3330/lab-guides/lab3)
 
+[Lab 3 - Filters (Siena)](/PHYS-3330/lab-guides/lab3-siena)
+
 [Lab 4 - Operational Amplifiers (OP-Amps) I](/PHYS-3330/lab-guides/lab4)
 
 [Lab 5 - Operational Amplifiers (OP-Amps) II](/PHYS-3330/lab-guides/lab5)
